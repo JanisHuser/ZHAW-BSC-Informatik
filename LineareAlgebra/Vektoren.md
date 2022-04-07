@@ -8,25 +8,25 @@ x_{1}
 
 $ \overrightarrow{a} \times \overrightarrow{b} $
 
+
 $$
-\begin{array}{ccc}
+\begin{pmatrix}
 a_{1}\\
 a_{2}\\
 a_{3}\\
-\end{array}
+\end{pmatrix}
 
 \times
 
-\begin{array}{ccc}
+\begin{pmatrix}
 b_{1}\\
 b_{2}\\
 b_{3}\\
-\end{array}
+\end{pmatrix}
 =
-\begin{array}{ccc}
+\begin{pmatrix}
 a_{2}*b_{3} - a_{3}*b_{2}\\
 a_{3}*b_{1} - a_{1}*b_{3}\\
 a_{1}*b_{2} - a_{2}*b_{1}\\
-\end{array}
+\end{pmatrix}
 $$
-diff --git a/LineareAlgebra/Matrizen.md b/LineareAlgebra/Matrizen.md
