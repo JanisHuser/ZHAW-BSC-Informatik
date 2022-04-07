@@ -55,3 +55,55 @@ $$\begin{pmatrix}
 - Ändert eine Matrix nicht
 $$ A \cdot E = A $$
 $$ E \cdot A = E $$
+
+## Potenzen einer Matrix
+Für eine quadratische Matrix A definieren wir Potenzen wie folgt:
+
+$$ A^0 = E $$
+
+$$ A^k = A \cdot A \cdot A
+(k \in N_{\geq1})$$
+
+### Beispiel
+$$ a =
+\begin{pmatrix}
+1 & a\\
+0 & 1\\
+\end{pmatrix}
+$$
+
+$$ A^2 = 
+\begin{pmatrix}
+1 & a\\
+0 & 1\\
+\end{pmatrix}
+
+*
+\begin{pmatrix}
+1 & a\\
+0 & 1\\
+\end{pmatrix}
+
+=
+
+\begin{pmatrix}
+1 & a+a\\
+0 & 1\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 2a\\
+0 & 1\\
+\end{pmatrix}
+
+$$
+
+$$ A^k 
+=
+\begin{pmatrix}
+1 & \color{red}k*a\\
+0 & 1\\
+\end{pmatrix}
+
+$$
+
