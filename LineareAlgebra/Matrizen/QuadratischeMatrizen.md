@@ -64,38 +64,13 @@ $$ A^0 = E $$
 $$ A^k = A \cdot A \cdot A
 (k \in N_{\geq1})$$
 
-### Beispiel
+### Beliebiger Faktor
+Gilt nur bei dieser Matrix
 $$ a =
 \begin{pmatrix}
 1 & a\\
 0 & 1\\
 \end{pmatrix}
-$$
-
-$$ A^2 = 
-\begin{pmatrix}
-1 & a\\
-0 & 1\\
-\end{pmatrix}
-
-*
-\begin{pmatrix}
-1 & a\\
-0 & 1\\
-\end{pmatrix}
-
-=
-
-\begin{pmatrix}
-1 & a+a\\
-0 & 1\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & 2a\\
-0 & 1\\
-\end{pmatrix}
-
 $$
 
 $$ A^k 
@@ -107,3 +82,18 @@ $$ A^k
 
 $$
 
+#### Funktioniert bei dieser nicht
+$$
+A=
+\begin{pmatrix}
+1 & 2\\
+-1 & 0\\
+\end{pmatrix}
+$$
+
+$$
+A^2 =
+\begin{pmatrix}
+
+\end{pmatrix}
+$$
