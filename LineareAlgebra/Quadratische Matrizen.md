@@ -16,9 +16,9 @@ $$\begin{pmatrix}
 \end{pmatrix}$$
 
 
-# Arten von quadratischen Matrizen
+## Arten von quadratischen Matrizen
 
-## Obere Dreiecksmatrix
+### Obere Dreiecksmatrix
 Alle Elemente unter der Diagonale sind = 0
 
 $U = Upper$
@@ -30,7 +30,7 @@ $$\begin{pmatrix}
 \end{pmatrix}$$
 
 
-## Untere Dreieckesmatrix
+### Untere Dreieckesmatrix
 Alle Elemente über der Diagonale sind = 0
 
 $ L = lower $
@@ -41,11 +41,17 @@ $$\begin{pmatrix}
 \ \color{red}7 & \color{red}8  & \color{red}0 \\
 \end{pmatrix}$$
 
-## Symmetrische Matrix
+### Symetrische Matrix
 
 $$\begin{pmatrix}
 \ \color{red}1 & \color{red}4  & \color{red}6 \\
 \ \color{red}4 & \color{green}2  & \color{green}5 \\
 \ \color{red}6 & \color{green}5  & 3 \\
 \end{pmatrix}$$
-diff --git a/LineareAlgebra/GeradenUndEbenen.md b/LineareAlgebra/GeradenUndEbenen.md
+
+## Multiplikation mit der Einheitsmatrix
+
+
+- Ändert eine Matrix nicht
+$$ A \cdot E = A $$
+$$ E \cdot A = E $$
