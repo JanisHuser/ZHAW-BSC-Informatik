@@ -9,6 +9,7 @@
 - [Ebenen](Ebenen.md)
 
 ## Matrizen
-- [Matrizen](Matrizen.md)
-- [Quadratische Matrizen](QuadratischeMatrizen.md)
+- [Matrizen](Matrizen/Matrizen.md)
+- [Inverse Matrizen](Matrizen/InverseMatrizen.md)
+- [Quadratische Matrizen](Matrizen/QuadratischeMatrizen.md)
 
