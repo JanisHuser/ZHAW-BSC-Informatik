@@ -8,3 +8,5 @@
 
 [Berechenbarkeit](Berechenbarkeit/Berechenbarkeit.md)
 [Ackermannfunktion](Berechenbarkeit/Ackermannfunktion.md)
+
+[Turing Maschinen](Automaten/TuringMaschinen.md)
