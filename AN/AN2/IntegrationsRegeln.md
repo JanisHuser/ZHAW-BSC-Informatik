@@ -20,9 +20,32 @@
 |$$ \frac{1}{1+x^2}$$ | $$ \arctan{x} $$ | $$ x \cdot \arctan{x} - \frac{1}{2} \ln{(1+x^2)}$$|
 
 ## Substitutionsregel
-Von links nach rechts gelesen
+
+Wenn Produkt vonrhanden links -> rechts
 $$
 
 \int_a^b
 f(\varphi(x)) \cdot \varphi'(x)dx = \int_{\varphi(a)}^{\varphi(b)} f(x)dx
+$$
+
+
+Wenn **kein** Produkt vorhandne, rechts -> links
+$$
+
+\int_{\varphi^{-1}{b}}^{\varphi{-1}{a}}
+f(\varphi{x}) \cdot \varphi'{(x)} dx
+
+=
+\int_a^b{f(x)dx}
+
+$$
+
+## Partielle Integration
+
+Wenn **keine** (teilweise) Ableitung vorhanden ist
+
+$$
+
+\int f(x) g(x) dx = f(x) G(x) - \int f'(x) G(x) dx
+
 $$
