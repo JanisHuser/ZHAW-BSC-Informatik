@@ -18,3 +18,11 @@
 |$$ \frac{1}{\sqrt{1-x^2}}$$ | $$ \arcsin{x} $$ | $$ x \cdot \arcsin{x} + \sqrt{1-x^2}$$|
 |$$ -\frac{1}{\sqrt{1-x^2}}$$ | $$ \arccos{x} $$ | $$ x \cdot \arcsin{x} - \sqrt{1-x^2}$$|
 |$$ \frac{1}{1+x^2}$$ | $$ \arctan{x} $$ | $$ x \cdot \arctan{x} - \frac{1}{2} \ln{(1+x^2)}$$|
+
+## Substitutionsregel
+Von links nach rechts gelesen
+$$
+
+\int_a^b
+f(\varphi(x)) \cdot \varphi'(x)dx = \int_{\varphi(a)}^{\varphi(b)} f(x)dx
+$$
