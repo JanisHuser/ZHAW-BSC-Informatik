@@ -12,5 +12,8 @@
 - [Matrizen](Matrizen/Matrizen.md)
 - [Inverse Matrizen](Matrizen/InverseMatrizen.md)
 - [Quadratische Matrizen](Matrizen/QuadratischeMatrizen.md)
+- [Einheitmsatrix](Matrizen/Einheitsmatrix.md)
 - [Determinante](Matrizen/Determinante.md)
 - [Laplace](Matrizen/Laplace.md)
+- [Geometrische Interpretation](Matrizen/GeometrischeInterpretation.md)
+
