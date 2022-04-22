@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - 'la/la2'
+      - 'LA/LA2'
 
 name: CreatePDFs
 
@@ -13,8 +13,8 @@ jobs:
     - uses: mkrakowitzer/actions-makepdfs@master
       if: github.ref == 'refs/heads/main'
       with:
-        markdown_dir: doc
-        output_dir: tmp
+        markdown_dir: LA/LA2
+        output_dir: LA/LA2/pdf
     - uses: actions/upload-artifact@v1
       with:
         name: platform-architecture-docs
