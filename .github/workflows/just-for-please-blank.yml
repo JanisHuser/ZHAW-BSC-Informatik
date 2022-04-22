@@ -20,9 +20,9 @@ jobs:
     - uses: actions/checkout@v1
     - uses: mkrakowitzer/actions-makepdfs@master
       with:
-        markdown_dir: LA/LA2
-        output_dir: LA/LA2/pdf
-        media_dir: LA/LA2/img
+        markdown_dir: '/LA/LA2'
+        output_dir: '/LA/LA2/pdf'
+        media_dir: '/LA/LA2/img'
     - uses: actions/upload-artifact@v1
       with:
         name: platform-architecture-docs
