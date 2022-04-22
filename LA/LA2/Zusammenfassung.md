@@ -29,4 +29,3 @@ a_{21} \cdot b_{21} +
 a_{22} \cdot b_{22}\\
 \end{pmatrix}
 $$
-diff --git a/LA/LA2/Matrizen.md b/LA/LA2/Matrizen.md

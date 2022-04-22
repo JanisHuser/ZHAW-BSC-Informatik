@@ -2,10 +2,16 @@
 
 [Zusammenfassung](Zusammenfassung.md)
 
+## LGS (Lineare Gleichungssysteme)
+- [Allgemeines LGS](LGS/AllgemeinesLGS.md)
+- [Matrizengleichung](LGS/Matrizengleichung.md)
+- [Gauss Verfahren](LGS/GaussVerfahren.md)
+
 ## Vektoren
 - [Vektoren](Vektoren.md)
 
-## Geraden und Ebenen
+## Geraden und Ebenen
+
 - [Geraden](Geraden.md)
 - [Ebenen](Ebenen.md)
 
