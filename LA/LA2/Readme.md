@@ -16,6 +16,7 @@
 - [Ebenen](Ebenen.md)
 
 ## Matrizen
+- [Zeilenstufenform](Matrizen/Zeilenstufenform)
 - [Matrizen](Matrizen/Matrizen.md)
 - [Inverse Matrizen](Matrizen/InverseMatrizen.md)
 - [Quadratische Matrizen](Matrizen/QuadratischeMatrizen.md)
