@@ -21,6 +21,20 @@
 |$$ \frac{1}{1+x^2}$$ | $$ \arctan{x} $$ | $$ x \cdot \arctan{x} - \frac{1}{2} \ln{(1+x^2)}$$|
 
 
+## Wichtige Beispiele
+
+$$
+f \rightarrow f'
+$$
+
+$$
+(\sin(2x))' = 2 \cdot \cos(2x)
+$$
+
+$$
+(\sin^2{(x)}) = 2 \cdot \sin{x} \cdot \cos x
+$$
+
 ## Substitutionsregel
 
 Wenn Produkt vonrhanden links -> rechts
@@ -51,3 +65,5 @@ $$
 \int f(x) g(x) dx = f(x) G(x) - \int f'(x) G(x) dx
 
 $$
+
+## Grenzwerte mit De L'Hospital
