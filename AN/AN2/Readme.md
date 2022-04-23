@@ -21,6 +21,6 @@ Grenzwerte der form f(x)/x
 
 
 ## Reihen
-[Folgen und Reihen](Reihen/FolgenUndReihen.md)
+[Übersicht](Reihen/Uebersicht.md)
 [Potenzreihen](Reihen/Potenzreihen.md)
 [Taylorreihen](Reihen/Taylorreihen.md)
