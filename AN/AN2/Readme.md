@@ -1,6 +1,9 @@
 # Analysis
 
-[Integrations Regeln](integrationsRegeln.md)
+[Zusammenfassung](ZusammenFassung.md)
+
+## Integrieren & Ableiten
+[Integrations Regeln](IntegrationsRegeln.md)
 
 [Ableiten](Ableiten.md)
 
@@ -12,3 +15,13 @@
 Grenzwerte der form f(x)/x
 
 [De l'hospital](DeLHospital.md)
+
+## Folgen
+[Übersicht](Folgen/Uebersicht.md)
+[Eigenschaften](Folgen/Eigenschaften.md)
+
+
+## Reihen
+[Übersicht](Reihen/Uebersicht.md)
+[Potenzreihen](Reihen/Potenzreihen.md)
+[Taylorreihen](Reihen/Taylorreihen.md)
