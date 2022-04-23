@@ -16,6 +16,11 @@ Grenzwerte der form f(x)/x
 
 [De l'hospital](DeLHospital.md)
 
-## Reihen
+## Folgen
+[Übersicht](Folgen/Uebersicht.md)
 
+
+## Reihen
+[Folgen und Reihen](Reihen/FolgenUndReihen.md)
+[Potenzreihen](Reihen/Potenzreihen.md)
 [Taylorreihen](Reihen/Taylorreihen.md)
