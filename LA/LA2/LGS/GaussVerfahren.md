@@ -81,11 +81,13 @@ $$
 
 3. Zeile (III) = 3*(I)+(III); (IV) = 4*(I)+(IV)
 
+
+<span style='color:red;'>Freie Unbekante</span>
 $$
 
 \left(
   \begin{matrix}
-    \color{lime}2 & -4 & 6 & -4 \\
+    \color{lime}2 & \color{red}-2 & 3 & -2 \\
     \color{lime}0 & 0 & 1 & 2 \\
     \color{lime}0 & 0 & 9 & 5 \\
     \color{lime}0 & 0 & -11 & 8 \\
@@ -100,7 +102,26 @@ $$
 \right)\right.
 $$
 
+Auflösen bis folgende Matrix
 
+$$
+
+\left(
+  \begin{matrix}
+    1 & -2 & 3 & -2 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0 \\
+  \end{matrix}
+\left|
+  \begin{matrix}
+    -3\\
+    3\\
+    2 \\
+    0 \\
+  \end{matrix}
+\right)\right.
+$$
 
 ### Resultierdends LSG
 $$
