@@ -18,6 +18,7 @@ Grenzwerte der form f(x)/x
 
 ## Folgen
 [Übersicht](Folgen/Uebersicht.md)
+[Eigenschaften](Folgen/Eigenschaften.md)
 
 
 ## Reihen
