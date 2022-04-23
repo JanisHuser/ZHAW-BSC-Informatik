@@ -25,3 +25,5 @@ Grenzwerte der form f(x)/x
 [Übersicht](Reihen/Uebersicht.md)
 [Potenzreihen](Reihen/Potenzreihen.md)
 [Taylorreihen](Reihen/Taylorreihen.md)
+
+## Anderes
