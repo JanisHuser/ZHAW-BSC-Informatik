@@ -1,7 +1,7 @@
 # Eigenschaften von Folgen
 
 ## Konvergent
-Wenn die Folge einen Grenzwert besitzt
+Wenn die Folge einen Grenzwert besitzt.
 
 
 $$
@@ -14,7 +14,7 @@ $$
 
 
 ## Divergent
-
+Wenn die Folge **keinen** Grenzwert besitzt.
 $$
 
 a_n = n \enspace \enspace \lim_{n \to \infty} a_n = \text{existiert nicht}
