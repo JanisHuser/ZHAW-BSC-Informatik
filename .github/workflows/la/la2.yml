@@ -1,7 +1,7 @@
 name: LA/LA2 - Convert Markdown To PDF i
 
 on:
-  push:
+  pull_request:
     paths:
     - 'LA/LA2/**.md'
   workflow_dispatch:
