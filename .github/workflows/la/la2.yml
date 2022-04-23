@@ -13,27 +13,21 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  publish:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    name: Publish Document
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - name: Markdown to PDF (LA2)
-        # You may pin to the exact commit or the version.
-        # uses: BaileyJM02/markdown-to-pdf@efc04d3f22971dfbb6b571333469119cfb6a926c
-        - uses: BaileyJM02/markdown-to-pdf@v1
-          with:
-            input_dir: LA/LA2
-            output_dir: LA/LA2/pdfs
-            # Default is true, can set to false to only get PDF files
-            build_html: false
-        - uses:
-          width:
-            name: docs
-            paths: LA/LA2/pdfs
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Publish PDF Document
+        uses: shrink/actions-document-publish@v1
+        id: publish-document
+        with:
+          sources: 'LA/LA2/*.md'
+      - name: Upload Document
+        uses: actions/upload-artifact@v2
+        id: upload-document
+        with:
+          name: 'document.pdf'
+          path: ${{ steps.publish-document.outputs.pdf }}
