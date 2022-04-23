@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Publish PDF Document
-        uses: shrink/actions-document-publish@v1
+        uses: shrink/actions-document-publish@v1.0.1
         id: publish-document
         with:
           sources: 'LA/LA2/*.md'
