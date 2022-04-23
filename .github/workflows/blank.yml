@@ -7,23 +7,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  convert_md: 
+  converttopdf:
+    name: Build PDF
     runs-on: ubuntu-latest
     steps:
-    # We must checkout the latest version of the code to get a copy of all .md files
-    - name: Checkout Code
-      uses: actions/checkout@v2.0.0
-      with:
-        fetch-depth: 1
-    - name: Create .pdfs
-      uses: scottypate/md-to-pdf@v0.1.1
-      env: {PDF_DIR: './pdfs'}
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v1.6.1
-      env:
-        # The token is built in to actions. No config required.
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        COMMIT_MESSAGE: Add .pdf files.
-        PULL_REQUEST_TITLE: Add .pdf files.
-        PULL_REQUEST_BRANCH: pdf-add
-        PULL_REQUEST_BODY: ":wave: Here are the .pdf files you requested."
+      - uses: actions/checkout@v3
+
+      - name: Build book
+        run: |-
+          npm install -g md-to-pdf
+          mkdir -p _output
+          cd LA
+          echo; echo "Input Folder Listing"
+          ls
+          echo; echo "Generating PDF"
+          for f in *.md; do cat $f; echo; done | md-to-pdf --stylesheet "../theme/style.css" > ../_output/blue-paper.pdf
+          cd ../_output
+          echo; echo "Output Folder Listing"
+          ls
+          cd ..
+      
+      - uses: actions/upload-artifact@v1
+        with:
+          name: output
+          path: _output
