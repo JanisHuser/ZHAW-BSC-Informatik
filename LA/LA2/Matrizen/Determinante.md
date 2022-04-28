@@ -81,3 +81,19 @@ a_{1} \cdot b_{2} - a_{2} \cdot b_{1}
 \mid
 
 $$
+
+$$
+\det{(A \cdot B)} = \det{(A)} \cdot \det{(B)}
+$$
+
+$$
+\det{(A^{-1})} = \frac{1}{\det{(A)}}
+$$
+
+$$
+\det{(\lambda \cdot A)} = \lambda^n \cdot \det{(A)}
+$$
+
+$$
+\det{(E)}=1
+$$
