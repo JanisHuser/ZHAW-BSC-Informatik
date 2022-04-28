@@ -32,3 +32,16 @@ x \\ -x
 \end{Bmatrix}
 $$
 
+$$
+
+\begin{Bmatrix}
+\begin{pmatrix}
+x \\
+x+1
+\end{pmatrix}
+\vert
+x \in \R
+\end{Bmatrix}
+
+$$
+
