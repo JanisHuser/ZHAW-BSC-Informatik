@@ -70,3 +70,27 @@ x_2
 -1 \\2
 \end{pmatrix}
 $$
+
+
+## Abbildungsmatrix
+- Die Bilder der Basisvektoren als Matrix werden benötigt
+- f(x) = Ax, wobei A aus demn Bildern der Einheitsvektoren besteht.
+
+
+
+### Beispiel
+$$
+
+\overrightarrow{e_1} \text{ und } \overrightarrow{e_2} \text{ sind gegeben}
+$$
+$$
+
+f(\overrightarrow{x}) = f(x_1 \cdot \overrightarrow{e_1} + x_2 \cdot \overrightarrow{e_2}) \\
+\text{Summe mit f kompatibel} \\
+
+= f(x_1 \cdot \overrightarrow{e_1}) + f(x_2 \cdot \overrightarrow{e_2}) \\
+
+\text{Skalare Multiplikation mit f kompatibel}
+$$
+
+
