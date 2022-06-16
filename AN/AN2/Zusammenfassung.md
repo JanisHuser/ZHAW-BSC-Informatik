@@ -67,3 +67,99 @@ $$
 $$
 
 ## Grenzwerte mit De L'Hospital
+Wird verwendet um Grenzwerte der Form zu berechnen
+
+$$ \frac{f(x)}{x}$$
+
+$$
+
+f,g: (a,b) \rightarrow \R
+(- \infin \leq a \leq b \leq \infin)
+$$
+
+$$
+g'(x) \neq 0 \forall x
+$$
+
+$$
+
+\lim \limits_{x \to b}{
+    \frac{f'(x)}{g'(x)}
+}
+=: c \in R
+$$
+
+### 1. Regel (Oberer Intervalstrecke)
+
+Aus 
+$$
+\lim \limits_{x \to b}{f(x)}
+=
+\lim \limits_{x \to b}{g(x)} = 0
+$$
+oder
+$$
+\lim \limits_{x \to b}{f(x)}
+=
+\lim \limits_{x \to b}{g(x)} = \pm \infin
+$$
+
+folgt
+$$
+\lim \limits_{x \to b}{
+    \frac{
+        f(x)
+    }
+    {g(x)}
+}
+=c
+$$
+
+### 2. Regel (Untere Intevalstrecke)
+
+Aus 
+$$
+\lim \limits_{x \to a}{f'(x)}
+=
+\lim \limits_{x \to a}{g'(x)} = 0
+$$
+oder
+$$
+\lim \limits_{x \to a}{f'(x)}
+=
+\lim \limits_{x \to a}{g'(x)} = \pm \infin
+$$
+
+folgt
+$$
+\lim \limits_{x \to a}{
+    \frac{
+        f'(x)
+    }
+    {g(x)}
+}
+=c
+$$
+
+## Reihen
+
+# Potenzreihen
+
+<span style='color:red'>Entwicklungspunkt</span>
+$$
+\displaystyle\sum_{k=0}^\infty (x-\color{red}a\color{black})^k
+
+=
+a_0 (x-\color{red}a\color{black})^0 + a_1(x-\color{red}a\color{black})^1 + a_n(x-\color{red}a\color{black})^n
+$$
+
+### Taylorreihen
+
+Eine beliebig oft differenzierbare Funktion und $$ a \in I$$
+
+$$
+
+f(x) = \displaystyle\sum_{k=0}^\infty (x-a)^k
+\frac{f^{(k)}(a)}{k!}(x-a)^k
+
+$$
