@@ -10,7 +10,13 @@
 | Beschreibung   | Zeichen | Formel |
 | -------- | ----------- | --- |
 | Anzahl | $$ n $$| |
+| Wert / Klasse | $$ a_i $$ | |
 | Absolute Häufigkeit | $$ h_i $$ | Anzahl |
 | Relative häufigkeit (PMF) | $$ f_i $$ | $$ \frac{h_i}{n} $$ |
 | Kummulative abs. Häufigkeit | $$ H_i $$ | $$ \text{Summe aller vorgehenden } h_i $$ |
 | Kummulative rel. Häufigkeit (CDF) | $$ F_i $$ | $$ \text{Summe aller vorgehenden } f_i $$ |
+
+
+| Beschreibung | Zeichen | Formel |
+| -- | -- | -- |
+| Empirische abs. Summenhäufigkeit | $$ H(x) $$ | $$ \sum_{n=0}^n h_i $$ |
