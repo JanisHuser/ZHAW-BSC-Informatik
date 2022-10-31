@@ -1,5 +1,0 @@
-# SQL
-
-Structured-Query-Language
-
-

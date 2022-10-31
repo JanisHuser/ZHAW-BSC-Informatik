@@ -1,6 +1,10 @@
 {
     "editor.insertSpaces": false,
     "editor.wrappingColumn": 0,
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    },
     "pandoc.htmlOptString": "-s -f gfm -t html5 --css=css/style.css"
 }
