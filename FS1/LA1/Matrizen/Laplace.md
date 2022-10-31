@@ -53,6 +53,7 @@ $$
 $$
 
 ## Nach Hauptachse multiplizieren
+
 $$
 1 \cdot
 \begin{vmatrix}
