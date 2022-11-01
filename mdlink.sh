@@ -15,4 +15,4 @@ pdf_file_loc="$1output.pdf"
 
 echo "writing pdf to $pdf_file_loc"
 
-exec $(pandoc $dt -o $pdf_file_loc)
+exec $(pandoc $dt -V geometry:margin=1cm -o $pdf_file_loc)
