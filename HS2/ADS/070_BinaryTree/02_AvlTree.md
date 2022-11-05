@@ -7,13 +7,13 @@ $$
 
 \text{Balance Factor}
 =
-|
+
 (
 	\text{Height of left subtree}
 	-
 	\text{Height of right subtree}
 )
-|
+
 $$
 
 ### Range
