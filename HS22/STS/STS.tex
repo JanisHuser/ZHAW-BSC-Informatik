@@ -1,5 +1,13 @@
 \documentclass{article}
 
+\usepackage{geometry}
+\geometry{legalpaper, margin=0.5in}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{subfiles}
+
 \begin{document}
 	\title{STS}
 	
@@ -84,8 +92,77 @@
 		\\
 	\hline
 	
-\end{tabular}
+\end{tabular} \\
 
+	Auswahl von Bereichen: 
+	$
+	F(2 \leq 4) = F(4) - F(1)
+	$
 	
 
+
+\subsection{Diagramme}
+
+\includegraphics[height=6cm]{IMG_0205}
+
+
+\section{Varianz}
+
+\subsection{Arithmetisches Mittel}
+Das Arithmetische Mittel wird auch als Durchschnitt bzwh. empirisches Mittel bezeichnet.
+
+$
+	\bar{x} = \sum_{i=1}^n a_i * f_i
+$
+
+\subsubsection{Bei klassierten Daten}
+
+$
+\bar{x} = \sum_{i=1}^n x_i
+$
+mit $ x_i $ als Klassenmitte
+
+\subsection{Empirische Varianz / Stichprobenvarianz}
+Beschreibt die mittlere quadratische Abweichung der einzelnen Werte vom empirischen Mittels.
+
+	$
+	\tilde{s}^2
+	=
+	\frac{1}{n} \cdot
+	\sum_{i=1}^n (
+	(a_i - \bar{x})^2* h_i)
+	$
+\\
+alternativ
+
+$
+\tilde{s}^2 = \frac{1}{n} \cdot \sum_{i=1}^n (x_i - \bar{x})^2
+$
+
+
+\subsection{Standardabweichung}
+ Die Standardabweichung ist ein Maß für die Streubreite der Werte eines Merkmals rund um dessen Mittelwert.
+Vereinfacht gesagt, ist die Standardabweichung die durchschnittliche Entfernung aller gemessenen Ausprägungen eines Merkmals vom Durchschnitt.
+
+$
+\bar{s} = \sqrt{\tilde{s}^2}
+$
+
+\subsection{Korrigierte empirische Varianz}
+
+$
+\tilde{s}^2 = \frac{1}{n-1} \cdot \sum_{i=1}^n ((a_i - \bar{x})^2* h_i)
+$
+
+\subsection{Korrigierte Standardabweichung}
+
+$
+s = \sqrt{s^2}
+$
+
+
+\subfile{Boxplot.tex}
+
 \end{document}
+
+
