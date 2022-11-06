@@ -21,11 +21,7 @@
 
 Auswahl von Bereichen 
 
-$$
-
-F(2 \leq 4) = F(4) - F(1)
-
-$$
+$$ F(2 \leq 4) = F(4) - F(1) $$
 
 ## Diagramm
-![](images/651CA757-23E2-4B3D-9131-AE2C418A98FC.jpeg)
+![](HS2/STS/01_DeskriptiveStatistik/images//651CA757-23E2-4B3D-9131-AE2C418A98FC.jpeg)

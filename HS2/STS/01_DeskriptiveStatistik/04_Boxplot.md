@@ -1,6 +1,6 @@
 # Boxplot
 
-![](images/6C2FB507-9AAF-4AC1-9480-A52BA6AC6674.png)
+![](HS2/STS/01_DeskriptiveStatistik/images/6C2FB507-9AAF-4AC1-9480-A52BA6AC6674.png)
 
 | Beschreibung | Formelzeichen | Berechnung |
 |--|--|--|
