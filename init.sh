@@ -2,7 +2,13 @@
 
 sudo apt-get update -y
 
+apt install 
+
+
 sudo apt-get install texlive-latex-base  \
 	texlive-latex-recommended \
 	texlive-latex-extra \
-	pandoc -y
+	pandoc \
+	texlive-science \
+	texlive-extra-utils \
+	latexmk -y
