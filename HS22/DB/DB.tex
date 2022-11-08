@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{legalpaper, margin=0.5in}
+
+\usepackage{minted}
+\begin{document}
+	
+	\section{SQL}
+	
+	\subsection{Probleme}
+	1. Auswahl im Select, wo ColumnName mit ColumnName direkt verglichen wird
+	
+	\begin{minted}{sql}
+			SELECT *
+FROM Besucher
+WHERE EXISTS (SELECT 1
+	FROM Besucher
+	WHERE Vorname=Vorname AND
+	NOT (Name=Name));
+
+	\end{minted}
+
+
+	
+	\subsection{Subqueries (in WHERE) mit EXISTS}
+	
+
+\begin{minted}{sql}
+SELECT *
+FROM Besucher AS x
+WHERE EXISTS (SELECT 1
+	FROM Besucher AS y
+	WHERE x.Vorname=y.Vorname AND
+	NOT (x.Name=y.Name));
+\end{minted}
+
+
+\subsection{Joins}
+\subsubsection{Equijoin}
+\color{red}{Kreuzprodukt + Selektionsprädikat für gemeinsame Attrivute + autom. Umbenennung/Projektion von Attributen}
+
+\begin{minted}{sql}
+SELECT R.A, R.B FROM R, S WHERE R.B = S.B;	
+
+SELECT R.A, R.B FROM R CROSS JOIN S WHERE R.B = S.B;
+
+SELECT A,B FROM R NATURAL JOIN S;
+
+SELECT R.A, R.B FROM R JOIN S ON R.B = S.B;
+\end{minted}
+
+	
+\end{document}
