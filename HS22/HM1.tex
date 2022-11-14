@@ -1,0 +1,124 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref}
+
+\usepackage{amsmath}
+
+
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% http://doc.sagemath.org/html/en/tutorial/sagetex.html
+% \usepackage{sagetex}
+
+% Enable PythonTeX to run Python – https://ctan.org/pkg/pythontex
+% \usepackage{pythontex}
+
+\begin{document}
+
+
+\section{Lösen von linearen Gleichungssystemen}
+
+\textbf{Fehler der Näherungslösung}
+$ \Delta x = \tilde{x} - x $
+
+\subsection{Vektornormen / Matrixnormen}
+
+\textbf{1-Norm , Summennorm}: \\
+1-Norm, Spaltensummennorm: $||A||_1 = \underset{1=1,...n}{max} \sum_{i=1}^{n} |a_{ji} |$
+
+% TODO
+
+$
+\left|
+\left|
+\begin{pmatrix}
+-1 \\
+2 \\
+3 \\
+\end{pmatrix}
+\right|
+\right|
+_1
+=
+1+2+3=6
+$
+
+$
+\left|
+\left|
+\begin{pmatrix}
+-1 \\
+2 \\
+3 \\
+\end{pmatrix}
+\right|
+\right|
+_2
+=
+\sqrt{1^2+2^2+3^2}= \sqrt{14}
+$
+
+$
+\left|
+\left|
+\begin{pmatrix}
+-1 \\
+2 \\
+3 \\
+\end{pmatrix}
+\right|
+\right|
+_{\infty}
+=
+\text{max} \{ 1,2,3 \} =3
+$
+
+\subsubsection{Max in der Spalte}
+
+$
+\left|
+\left|
+\begin{pmatrix}
+1 & 2 & 3 \\
+3 & 4 & -2 \\
+7 & -3 & 5 \\
+\end{pmatrix}
+\right|
+\right|
+_1
+=
+\text{max} \{1+3+7, 2+4+3, 3+2+5 \} = 11
+$
+
+
+\subsubsection{Max in der Zeile}
+
+$
+\left|
+\left|
+\begin{pmatrix}
+1 & 2 & 3 \\
+3 & 4 & -2 \\
+7 & -3 & 5 \\
+\end{pmatrix}
+\right|
+\right|
+_{\infty}
+=
+\max \{1+2+3, 3+4-2, 7-3+5 \} = 11
+$
+
+
+
+
+\end{document}
