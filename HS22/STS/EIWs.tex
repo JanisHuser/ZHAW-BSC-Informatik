@@ -1,6 +1,8 @@
 \documentclass[STS.tex]{subfiles}
 
 \usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 
 \begin{document}
 
@@ -44,5 +46,93 @@ Menge aller möglichen Ereigniss. $ \Omega $ \\
 
 \textbf{Mittelwert}: $ \mu = \frac{m}{n}$
 
+
+\subsection{Bedingte Wahrscheinlichkeiten}
+
+Wahrscheinlichkeit für das Eintreten des Eeignisses B unter der Bedingung oder Voraussetzung, dass das Ereignis A eintreitt.
+
+$ P(B|A) $
+
+\subsubsection{Wahrscheinlichkeitsbaum}
+
+\begin{itemize}
+    \item {Alle von einem Blatt (Verzweigungspunkt) aus mit Pfeilen erreichbare Ereignisse sind paarweise disjunkt (d.h. sie schliessen sich gegenseitig aus)}
+    \item{Die Summe der Übergangswahrscheinlichkeiten aller von einem Blatt ausgehenden Pfeile ist 1.}
+\end{itemize}
+
+\tikzstyle{level 1}=[level distance=1.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=1cm, sibling distance=2cm]
+\begin{tikzpicture}
+\node[end]{}
+  child {
+    node[bag] {A}
+    child {
+      node [bag] {$Z$}
+      edge from parent
+      node[left] {0.9}
+    }
+    child {
+    node [bag] {$\overline{Z}$}
+      edge from parent
+      node[right] {0.1}
+    }
+    edge from parent
+    node[left] {0.5}
+  }
+  child {
+    node[bag] {B}
+    child {
+      node [bag] {$Z$}
+      edge from parent
+      node[left] {0.7}
+    }
+    child {
+    node [bag] {$\overline{Z}$}
+      edge from parent
+      node[right] {0.1}
+    }
+    edge from parent
+    node[left] {0.3}
+  }
+  child {
+    node[bag] {C}
+    child {
+      node [bag] {$Z$}
+      edge from parent
+      node[left] {0.4}
+    }
+    child {
+    node [bag] {$\overline{Z}$}
+      edge from parent
+      node[right] {0.6}
+    }
+    edge from parent
+    node[right] {0.2}
+  }
+\end{tikzpicture}
+
+$
+P(A \cup Z) = P(A) * P(Z|A)
+=
+0.5 * 0.9 = 0.45
+$
+
+\textbf{Allgemein gilt}: Wahrscheinlichkeiten längs eines Pfades werden multipliziert.
+
+
+\textbf{Multiplikationssatz}:
+$
+P(A \cup B) = P(A) * P(B|A) = P(B) * P(A|B)$
+
+\textbf{Satz von der Totalen Wahrscheinlichkeit}:
+$
+P(B)=P(A)*P(B|A)+P( \overline{A}) * P(B| \overline{A})
+$
+
+\textbf{Satz von Bayes}: $ P(B|A) = \frac{P (A \cap B)}{P (A) }$
+
+
+\subsection{Stochastische Unabhängigkeit}
+Wenn A und B stochastisch unabhängig sind, beeinflusst das Eintreten des inene Ereignisses also das Eintreten des anderen Ereignisses nicht.
 
 \end{document}
