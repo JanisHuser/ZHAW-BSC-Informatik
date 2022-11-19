@@ -1,0 +1,59 @@
+\documentclass[STS.tex]{subfiles}
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+
+\section{Diskrete und stetige Verteilung}
+
+\textbf{Zufallsexperiment}: Ein Vorgang, bei dem folgende Bedingungen erfllt sind:
+\begin{itemize}
+    \item{Vorgäng lässt sich unter den gleichen äusseren Bedingungen beliebig oft wiederholen}
+    \item{Mehrere sich gegenseitig ausschliesende Ergebnisse möglich}
+    \item{Ergebnis lässt sich nicht mit Sicherheit voraussagen}
+\end{itemize}
+
+
+Mögliche, sich gegenseitig ausschliessende Ergebnisse $ \omega_1, \omega_2,... $ werden zur Menge $ \Omega $
+
+\textbf{diskret}: ist immer numerisch \\
+\textbf{stetig}: Sind numerische Werte, die zwischen zwei beliebigen Werten eine unendliche Anzahl von Werten aufweisen \\
+
+\subsection{Disrekte und stetige Zufahlsvariablen}
+
+\textbf{Kumulative Verteilungsfunktion}: $ F(x) = P (X \leq x)$
+
+\subsection{Für stetige Zufallsvariablen}
+
+$ F(x) = P(X \leq x)
+=
+ \int_{- \infty }^{x} f(u) du
+$
+\quad
+f ist die Dichtefunktion / PDF \\
+
+Es gilt immer: $ f(x) \geq 0 $ für alle $ x \in \mathbb{R} $
+UND
+$ \int_{- \infty }^{ \infty} f(u) du = 1
+$
+
+\textbf{Erwartungswert von X}:
+$
+\mu = E(X) = \int{ -\infty}^{ \infty} f(x) * x dx
+$
+
+\textbf{Varianz von X}:
+$
+\sigma^2 = V(X) = \int{- \infty}^{\infty} f(x) * (x- E(X))^2 dx
+$
+
+\textbf{Standardabweichung}:
+$
+\sigma = \sqrt{V(X)}
+$
+
+
+\end{document}

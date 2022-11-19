@@ -1,0 +1,6 @@
+[book]
+authors = ["Janis Huser\n\ngit config --global user.name Janis"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ZHAW-BSC-Summary"
