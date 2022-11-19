@@ -1,6 +1,6 @@
 # Boxplot
 
-![](images/6C2FB507-9AAF-4AC1-9480-A52BA6AC6674.png)
+![](images/IMG_0206.jpeg)
 
 | Beschreibung | Formelzeichen | Berechnung |
 |--|--|--|
