@@ -21,11 +21,11 @@
 
 # HS22
 
-- [Datenbanken]()
-  - [SQL]()
-    - [EBNF](HS22/DB/031_sql_EBNF.md)
-    - [DDL](HS22/DB/032_sql_ddl.md)
-    - [Datentypen](HS22DB/DB/033_sql_Datentypen.md)
+- [Datenbanken](HS22/DB/Readme.md)
+  - [SQL](HS22/DB/Readme.md)
+    - [EBNF](HS22/DB/SQL/ebnf.md)
+    - [DDL](HS22/DB/SQL/ddl.md)
+    - [Datentypen](HS22/DB/SQL/datentypen.md)
 
 - [STS](HS22/STS/Readme.md)
   - [Disrekt](HS22/STS/Diskret/Readme.md)
