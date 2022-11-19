@@ -4,3 +4,14 @@ language = "en"
 multilingual = false
 src = "."
 title = "ZHAW-BSC-Summary"
+
+
+[output.katex]
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[preprocessor.katex]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
