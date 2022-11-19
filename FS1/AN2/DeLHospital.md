@@ -1,7 +1,7 @@
 # De l'Hospital
 Wird verwendet um Grenzwerte der Form zu berechnen
 
-$$ \frac{f(x)}{x}$$
+\\[\frac{f(x)}{x}$$
 
 $$
 

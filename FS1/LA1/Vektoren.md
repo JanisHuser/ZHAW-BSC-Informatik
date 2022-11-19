@@ -6,7 +6,7 @@ x_{1}
 
 ## Skalarprodukt
 
-$ \overrightarrow{a} \times \overrightarrow{b} $
+\\(\overrightarrow{a} \times \overrightarrow{b}\\)
 
 
 $$
@@ -35,7 +35,7 @@ $$
 
 | Linear Abhängig | Linear Unabhängig | Vektor | Begründung |
 |-----|-------|------|---|
-|X||$$\overrightarrow{0}$$| $$\overrightarrow{0} = 7 \cdot \overrightarrow{0} $$ |
-| | X | $$ \begin{pmatrix}1 \\0 \end{pmatrix}$$ | $$ 0 \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix} = \overrightarrow{0}$$ |
-| | X | $$ \begin{pmatrix}1 \\ 0 \end{pmatrix},\begin{pmatrix}0 \\ 1 \end{pmatrix}$$ | $$ 0 \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix} +  0 \cdot \begin{pmatrix}0 \\ 1 \end{pmatrix} = \overrightarrow{0}$$ |
-|X||$$\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix} $$ |
+|X||$$\overrightarrow{0}$$|\\]\overrightarrow{0} = 7 \cdot \overrightarrow{0} \\[|
+| | X | \\[\begin{pmatrix}1 \\0 \end{pmatrix}\\[| \\[0 \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix} = \overrightarrow{0}\\[|
+| | X | \\[\begin{pmatrix}1 \\ 0 \end{pmatrix},\begin{pmatrix}0 \\ 1 \end{pmatrix}\\[| \\[0 \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix} +  0 \cdot \begin{pmatrix}0 \\ 1 \end{pmatrix} = \overrightarrow{0}\\[|
+|X||$$\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix} \\[|
