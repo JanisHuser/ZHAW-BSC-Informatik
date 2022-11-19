@@ -26,6 +26,7 @@
     - [EBNF](HS22/DB/SQL/ebnf.md)
     - [DDL](HS22/DB/SQL/ddl.md)
     - [Datentypen](HS22/DB/SQL/datentypen.md)
+    - [Aggregatsfunktionen](HS22/DB/SQL/Aggregatfunktionen.md)
 
 - [STS](HS22/STS/Readme.md)
   - [Disrekt](HS22/STS/Diskret/Readme.md)
