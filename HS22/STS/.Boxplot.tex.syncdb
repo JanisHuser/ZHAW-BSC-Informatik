@@ -1,1 +1,0 @@
-{"key":"build_command","value":["latexmk","-pdf","-f","-g","-bibtex","-deps","-synctex=1","-interaction=nonstopmode","-output-directory=/tmp/c0afdf8e041d47f123ba9b85df786e63d5e85b55","Boxplot.tex"]}

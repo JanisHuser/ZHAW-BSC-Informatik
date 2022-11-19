@@ -1,1 +1,0 @@
-{"key":"build_command","value":["latexmk","-pdf","-f","-g","-bibtex","-deps","-synctex=1","-interaction=nonstopmode","-output-directory=/tmp/46d1697973aa19c69b5e35a6bb9c2dd344309aac","EIWs.tex"]}
