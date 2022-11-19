@@ -37,10 +37,10 @@ $$
 ## Beweis
 Für den Beweis, dass die Ackermannfunktion nicht primitiv rekursiv ist, geht man wie folgt vor:
 - Definiere zu jeder primitiv rekursiven Funktion
-    $$f$$ 
+   \\]f\\[
     eine Funktion 
 
-    $$
+   \\]
     m(n,f) = 
     \max{
         \text{\textbraceleft}
@@ -48,6 +48,6 @@ Für den Beweis, dass die Ackermannfunktion nicht primitiv rekursiv ist, geht ma
         \Sigma \overrightarrow(x) \leq n
         \text{\textbraceright}
     }
-    $$
+   \\]
 
 - Zeige, dass

@@ -20,7 +20,7 @@ $$
 
 
 ## Mengen in Unterräumen
-Bei den nachfolgenden Beispielen wird der folgende Unterraum geprüft. $$ \R^2$$
+Bei den nachfolgenden Beispielen wird der folgende Unterraum geprüft. \\[\R^2$$
 
 $$
 

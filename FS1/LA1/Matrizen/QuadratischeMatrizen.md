@@ -53,27 +53,27 @@ $$\begin{pmatrix}
 
 
 - Ändert eine Matrix nicht
-$$ A \cdot E = A $$
-$$ E \cdot A = E $$
+\\[A \cdot E = A\\]
+\\[E \cdot A = E\\]
 
 ## Potenzen einer Matrix
 Für eine quadratische Matrix A definieren wir Potenzen wie folgt:
 
-$$ A^0 = E $$
+\\[A^0 = E\\]
 
-$$ A^k = A \cdot A \cdot A
+\\[A^k = A \cdot A \cdot A
 (k \in N_{\geq1})$$
 
 ### Beliebiger Faktor
 Gilt nur bei dieser Matrix
-$$ a =
+\\[a =
 \begin{pmatrix}
 1 & a\\
 0 & 1\\
 \end{pmatrix}
 $$
 
-$$ A^k 
+\\[A^k 
 =
 \begin{pmatrix}
 1 & \color{red}k*a\\

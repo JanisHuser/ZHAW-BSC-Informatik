@@ -1,7 +1,7 @@
 # Inverse Matrizen
 
 
-Die Inverse einer quadratischen Matrix A ist eine Matrix $$ A^-1$$
+Die Inverse einer quadratischen Matrix A ist eine Matrix \\[A^-1$$
 für die gitlt:
 $$
 A*A^1 = A^1 * A = E$$
@@ -81,7 +81,7 @@ mit n x n Koeffizientenmatrix A
 
 ### 2
 Immer lösbar
-$$ A \cdot \overrightarrow{x} = \overrightarrow{c}$$
+\\[A \cdot \overrightarrow{x} = \overrightarrow{c}$$
 
 ### 3
 $$rg(A) = n$$
@@ -105,7 +105,7 @@ die eindutige Lösung ist.
 ## Gauss-Jordan-Verfahren zur Berechnung der Inversen
 
 
-Um die Inverse einer Matrix A zu bestimmen, müssen wir die MAtrixgleichung $$ A \cdot X = E $$ lösen.
+Um die Inverse einer Matrix A zu bestimmen, müssen wir die MAtrixgleichung \\[A \cdot X = E \\[lösen.
 
 
 ### Beispiel

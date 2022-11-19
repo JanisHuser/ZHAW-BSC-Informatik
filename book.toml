@@ -4,3 +4,10 @@ language = "de"
 multilingual = true
 src = ""
 title = "BSC Computer Science Summary"
+
+
+[output.html.playground]
+editable = true
+
+[output.html]
+mathjax-support = true
