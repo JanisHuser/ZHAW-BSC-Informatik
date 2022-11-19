@@ -6,7 +6,7 @@ x_{1}
 
 ## Skalarprodukt
 
-$ \overrightarrow{a} \times \overrightarrow{b} $
+\\(\overrightarrow{a} \times \overrightarrow{b}\\)
 
 
 $$

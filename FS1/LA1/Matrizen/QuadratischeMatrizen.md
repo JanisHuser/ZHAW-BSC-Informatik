@@ -3,7 +3,7 @@
 ## Definition
 Eine Matrix A heisst quadratisch, wenn sie gleich viele Zeilen wie Spalten hat (d.h. m=n).
 
-Die Elemente $a_{11}$, $a_{22}$, $a_{mn}$ bildden dann die sogenannte Hauptdiagonale von A.
+Die Elemente\\)a_{11}$,\\)a_{22}$,\\)a_{mn}\\(bildden dann die sogenannte Hauptdiagonale von A.
 
 
 ## Hauptdiagonale
@@ -33,7 +33,7 @@ $$\begin{pmatrix}
 ### Untere Dreieckesmatrix
 Alle Elemente über der Diagonale sind = 0
 
-$ L = lower $
+\\(L = lower\\)
 
 $$\begin{pmatrix}
 \ \color{red}1 & 0  & 0 \\

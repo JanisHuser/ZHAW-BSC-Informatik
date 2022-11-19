@@ -13,7 +13,7 @@ $
 $
 \bar{x} = \sum_{i=1}^n x_i
 $
-mit $ x_i $ als Klassenmitte
+mit \\(x_i \\(als Klassenmitte
 
 
 ## Empiricshe Varianz / Stichprobenvarianz
