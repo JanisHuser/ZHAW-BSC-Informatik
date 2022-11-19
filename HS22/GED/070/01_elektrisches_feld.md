@@ -7,7 +7,7 @@ Werden erzeugt durch
 
 ## Definition als Begleiterscheinung
 
-\\[\overrightarrow{E}\\]
+\\[ \overrightarrow{E}\\]
 
 $$
 \text{Das Elektrische Feld kann als Begleiterscheinung einer Ladung } Q \text{ am ort } \overrightarrow{r}_Q \text{ angesehen werden. }
