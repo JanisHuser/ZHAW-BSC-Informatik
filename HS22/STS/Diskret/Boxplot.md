@@ -57,6 +57,5 @@ Der in der Mitte liegende Wert einer sortiereten Datenmenge
 ### Wenn n ungerade
 
 \\[
-	\frac{1}{2} [X_{[\frac{n}{2}]} + X_{[\frac{n}{2} + 1]}]
-
+	\frac{1}{2} [ X_{ [\frac{n}{2}] } + X_{[\frac{n}{2} + 1]}]
 \\]
