@@ -1,7 +1,6 @@
 # Summary
 
 # HS21
-- []
 
 
 # FS22
@@ -19,3 +18,11 @@
     - [Übersicht](FS1/Reihen/Uebersicht.md)
     - [Potenzreihen](FS1/Reihen/Potenzreihen.md)
     - [Taylorreihen](FS1/Reihen/Taylorreihen.md)
+
+# HS22
+
+- [Datenbanken]()
+  - [SQL]()
+    - [EBNF](HS22/DB/031_sql_EBNF.md)
+    - [DDL](HS22/DB/032_sql_ddl.md)
+    - [Datentypen](HS22DB/DB/033_sql_Datentypen.md)
