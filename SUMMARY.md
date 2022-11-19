@@ -26,3 +26,9 @@
     - [EBNF](HS22/DB/031_sql_EBNF.md)
     - [DDL](HS22/DB/032_sql_ddl.md)
     - [Datentypen](HS22DB/DB/033_sql_Datentypen.md)
+
+- [STS](HS22/STS/Readme.md)
+  - [Disrekt](HS22/STS/Diskret/Readme.md)
+    - [Häufigkeiten](HS22/STS/Haufigkeiten.md)
+    - [Merkmale](HS22/STS/Merkmale.md)
+    - [Varianz](HS22/STS/Varianz.md)
