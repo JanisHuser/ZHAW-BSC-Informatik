@@ -29,6 +29,7 @@
 
 - [STS](HS22/STS/Readme.md)
   - [Disrekt](HS22/STS/Diskret/Readme.md)
-    - [Häufigkeiten](HS22/STS/Haufigkeiten.md)
-    - [Merkmale](HS22/STS/Merkmale.md)
-    - [Varianz](HS22/STS/Varianz.md)
+    - [Häufigkeiten](HS22/STS/Diskret/Haufigkeiten.md)
+    - [Merkmale](HS22/STS/Diskret/Merkmale.md)
+    - [Varianz](HS22/STS/Diskret/Varianz.md)
+    - [Boxplot](HS22/STS/Diskret/Boxplot.md)
