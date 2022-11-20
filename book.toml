@@ -11,7 +11,7 @@ editable = true
 
 [output.html]
 mathjax-support = true
-additional-js = ["pyscript.js", "mermaid.min.js", "mermaid-init.js"]
+additional-js = ["pyscript.js", "mermaid.min.js", "mermaid-init.js", "load-py-modules.js"]
 
 [preprocessor.python]
 command = "/home/mdbook/.cargo/bin/mdbook-python"
