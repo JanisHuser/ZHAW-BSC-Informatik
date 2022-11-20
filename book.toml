@@ -17,3 +17,4 @@ additional-js = ["pyscript.js", "mermaid.min.js", "mermaid-init.js", "load-py-mo
 command = "/home/mdbook/.cargo/bin/mdbook-python"
 
 [preprocessor.mermaid]
+command = "/home/mdbook/.cargo/bin/mdbook-mermaid"
