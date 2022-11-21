@@ -1,6 +1,6 @@
 # Konditionszahl
 
-$ \text{cond} \( A \)  = ||A|| * ||A^1|| $
+$ \text{cond} ( A )  = ||A|| * ||A^1|| $
 
 ```python,editable
 import numpy as np
@@ -61,9 +61,7 @@ $
 ### 2-Norm, euklidische Norm
 
 $$
-||x||_2 = \srqrt{
-	\sum_{i=1}^n x_{i}^2
-}
+||x||_2 = \sqrt{ \sum_{i=1}^n x_{i}^2 }
 $$
 
 ### $ \infty $-Norm, Maximumnorm
@@ -103,7 +101,7 @@ $$
 ### 2-Norm, Spektralnorm
 
 $$
-||A||_2 = \srqt{ \rho \( A^T A \) }
+||A||_2 = \sqrt{ \rho ( A^T A ) }
 $$
 
 
@@ -176,9 +174,9 @@ $$
 
 
 = \max \{
-	\( 1+3+7 \),
-	\( 2+4+3 \),
-	\( 3+2+5 \)
+	( 1+3+7 ),
+	( 2+4+3 ),
+	( 3+2+5 )
 	\} = 11
 
 $$
@@ -188,7 +186,7 @@ $$
 \left|
 \left|
 \begin{pmatrix}
-\textcolor{red}{1} & \textcolor{red}{23}  \\
+\textcolor{red}{1} & \textcolor{red}{2} & \textcolor{red}{3}  \\
 3 & 4 & -2 \\
 7 & -3 & 5
 \end{pmatrix}
@@ -197,9 +195,9 @@ $$
 
 
 = \max \{
-	\( 1+2+3 \),
-	\( 3+4+2 \),
-	\( 7+3+5 \)
+	( 1+2+3 ),
+	( 3+4+2 ),
+	( 7+3+5 )
 	\} = 11
 
 $$
