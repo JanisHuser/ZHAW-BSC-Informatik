@@ -36,3 +36,8 @@
     - [Merkmale](HS22/STS/Diskret/Merkmale.md)
     - [Varianz](HS22/STS/Diskret/Varianz.md)
     - [Boxplot](HS22/STS/Diskret/Boxplot.md)
+
+- [HM1]()
+  - [Numerisches Zerlegen]()
+    - [QR-Verfahren](HS22/HM1/NumerischesLoesen/QR.md)
+    - [Iteratives Verfahren](HS22/HM1/NumerischesLoesen/DLR.md)
