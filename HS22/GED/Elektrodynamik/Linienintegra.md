@@ -49,7 +49,7 @@ W =
 
 $$
 
-## Spezialfall Kreis:
+## Spezialfall - Kreis
 
 ![Kreis](2F62570C-6FD0-4D56-99E3-C455A1AF3B19.jpeg)
 
@@ -60,6 +60,7 @@ $$
 $$
 
 
+### Mit Vektoren
 ```python,editable
 import numpy as np
 radius = 1
@@ -72,3 +73,61 @@ print (kraft)
 
 ```
 
+### Mit Vektorlänge
+```python,editable
+import numpy as np
+radius = 1
+
+# Absolute länge des Vektors
+U = 3
+
+kraft = 2 * pi * U
+print (kraft)
+
+```
+
+## Spezialfall - Rechteckige Schlaufe
+
+![Rechteckige Schleife](20EC7134-D1A8-425F-8AFF-0C68CB43F9A3.jpeg)
+
+$$
+
+\int_{\lambda} 
+\overrightarrow{U}
+\cdot
+d
+\overrightarrow{\lambda}
+
+=
+a
+U_1
+-
+aU_5
+$$
+
+### Mit Vektoren
+```python,editable
+import numpy as np
+u1 = np.array([1,2,3])
+u5 = np.array([5,2,3])
+
+a = 1
+
+result = a* np.absolute(u1)- a*np.absolute(u5)
+
+print (result)
+```
+
+
+### Mit Vektorlängen
+```python,editable
+import numpy as np
+u1 = 5
+u5 = 1
+
+a = 1
+
+result = a* u1- a*u5
+
+print (result)
+```
