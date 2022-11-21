@@ -3,7 +3,7 @@
 Zerlegung einer Matrix in das Produkt: 
 \\( A = Q \cdot R \\)
 
-\\( R \\) ist eine oberer Dreiecksmatrix
+\\( R \\) ist eine obere Dreiecksmatrix
 
 
 ```python,editable

@@ -41,3 +41,5 @@
   - [Numerisches Zerlegen]()
     - [QR-Verfahren](HS22/HM1/NumerischesLoesen/QR.md)
     - [Iteratives Verfahren](HS22/HM1/NumerischesLoesen/DLR.md)
+  - [Fehlerrechnung](HS22/HM1/Fehlerrechnung/Readme.md)
+    - [Vektornormen / Matrixnormen](HS22/HM1/Fehlerrechnung/Normen.md)
