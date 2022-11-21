@@ -12,8 +12,14 @@ Zusätzlich gibt es Snippets, welche das Plugin benutzen.
 
 Die folgende Blockstruktur kann verwendet werden, um Python Code einzufügen.
 
-	```python
-	python code
+	```python,editable
+	import numpy as np
 
+	print (np.array([1,2,3]))
 	```
 
+```python,editable
+import numpy as np
+
+print (np.array([1,2,3]))
+```

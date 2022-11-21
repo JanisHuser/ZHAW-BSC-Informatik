@@ -1,6 +1,6 @@
 # Taylorreihen
 
-Eine beliebig oft differenzierbare Funktion und \\[a \in I$$
+Eine beliebig oft differenzierbare Funktion und $$a \in I$$
 
 $$
 

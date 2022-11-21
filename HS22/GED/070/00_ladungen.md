@@ -21,14 +21,14 @@ $$
 \text{	:	}
 \text{Kraft auf Ladung } Q_1 \text{verursacht durch Ladung } Q_2
 
-\\[
+$$
 
-\\[
+$$
 
 
 \overrightarrow{n_{12}}  = \frac{r_{12}}{|\overrightarrow{r_{12}}|}
 
-\\[
+$$
 
 $$
 

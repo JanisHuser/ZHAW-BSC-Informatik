@@ -1,10 +1,10 @@
 # Fehlerrechnung und Aufwandabschätzung
 
-\\[
+$$
 	Ax = b
-\\]
+$$
 
-Aufgrund von den Ursachen wird nicht die exakte Lösung \\( x \\), sondern eine Näherungslösung \\( \tilde{x} \\) berechnet.
+Aufgrund von den Ursachen wird nicht die exakte Lösung $ x $, sondern eine Näherungslösung $ \tilde{x} $ berechnet.
 
 ## Ursachen
 - Rundungsfehler
@@ -13,9 +13,9 @@ Aufgrund von den Ursachen wird nicht die exakte Lösung \\( x \\), sondern eine 
 
 ## Benachbartes Gleichungssystem
 Formal wird ein "benachbartes" oder "gestörtes" Gleichungssystem eingeführt.
-\\[
+$$
 A \tilde{x} = \tilde{b} = b+ \Delta b
-\\]
+$$
 
-**Residium / Defekt**: \\( \Delta b \\)
-**Fehler der Näherungslösung**: \\( \Delta x = \tilde{x} - x \\)
+**Residium / Defekt**: $ \Delta b $
+**Fehler der Näherungslösung**: $ \Delta x = \tilde{x} - x $

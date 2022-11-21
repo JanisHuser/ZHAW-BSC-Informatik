@@ -43,3 +43,4 @@
     - [Iteratives Verfahren](HS22/HM1/NumerischesLoesen/DLR.md)
   - [Fehlerrechnung](HS22/HM1/Fehlerrechnung/Readme.md)
     - [Vektornormen / Matrixnormen](HS22/HM1/Fehlerrechnung/Normen.md)
+  - [Aufwandabschätzung](HS22/HM1/Aufwandabschatzung.md)

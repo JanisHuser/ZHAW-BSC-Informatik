@@ -1,9 +1,9 @@
 # QR Zerlegung.md
 
 Zerlegung einer Matrix in das Produkt: 
-\\( A = Q \cdot R \\)
+$ A = Q \cdot R $
 
-\\( R \\) ist eine obere Dreiecksmatrix
+$ R $ ist eine obere Dreiecksmatrix
 
 
 ```python,editable

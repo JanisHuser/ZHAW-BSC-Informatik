@@ -4,9 +4,9 @@ Zeile zuerst, Spalte später
 
 $u_{ij}$
 
-\\(i = Zeile\\)
+$i = Zeile$
 
-\\(j = Spalte\\)
+$j = Spalte$
 
 
 ## Multiplikation
