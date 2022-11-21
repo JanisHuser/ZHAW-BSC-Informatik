@@ -1,3 +1,21 @@
+# Konditionszahl
+
+\\( \text{cond} \( A \)  = ||A|| * ||A^1|| \\)
+
+```python,editable
+import numpy as np
+
+A = np.array([
+	[1, 2],
+	[3, 4]
+])
+
+cond = np.linalg.cond(A)
+
+print ("Konditionszahl", cond)
+
+```
+
 # Vektornorm
 
 \\[
@@ -24,23 +42,7 @@
 \cdot
 \frac{||b- \tilde{b}||}{||b||} \\)
 
-## Konditionszahl
 
-\\( \text{cond} \( A \)  = ||A|| * ||A^1|| \\)
-
-```python,editable
-import numpy as np
-
-A = np.array([
-	[1, 2],
-	[3, 4]
-])
-
-cond = np.linalg.cond(A)
-
-print ("Konditionszahl", cond)
-
-```
 
 ## Bedingungen
 - \\( ||x|| \geq 0 \\) und \\( ||x|| = 0 \Leftrightarrow x = 0 \\)
@@ -70,7 +72,26 @@ Für Vektoren \\( x = x_1, x_2, ..., x_n)^T \in \mathbb{R}^n \\) gibt es folgend
 ||A||_{\infty} = \max\limits_{i=1,…,n} |x_{i}|
 \\]
 
-## Matrixnormen
+# Matrixnormen
+
+## Allgemein
+
+\\[
+	\frac{||x - \tilde{x}||}{||x||}
+	\leq
+	\frac{
+		cond(A)
+	}{
+		1 - cond(A) \cdot \frac{||A- \tilde{A}||}{||A||}
+	}
+	*
+	\left(
+		\frac{||b - \tilde{A}||}{||A||}
+		+
+		\frac{||b - \tilde{b}||}{||b||}
+	\right)
+\\]
+
 Für eine \\( n \times n \\) Matrix \\( A in \mathbb{R}^{n \times n })
 ### 1-Norm, Spaltensummennorm
 
