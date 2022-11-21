@@ -44,3 +44,12 @@
   - [Fehlerrechnung](HS22/HM1/Fehlerrechnung/Readme.md)
     - [Vektornormen / Matrixnormen](HS22/HM1/Fehlerrechnung/Normen.md)
   - [Aufwandabschätzung](HS22/HM1/Aufwandabschatzung.md)
+
+- [GED](HS22/GED/Readme.md)
+  - [Elektrodynamik]()
+    - [Linienintegral](HS22/GED/Elektrodynamik/Linienintegra.md)
+    - [Elektrische Spannung](HS22/GED/Elektrodynamik/ElektrischeSpannung.md)
+    - [Fluss](HS22/GED/Elektrodynamik/Fluss.md)
+  - [Elektrotechnik](HS22/GED/Elektrotechnik/Readme.md)
+    - [Transformator](HS22/GED/Elektrotechnik/Transformator.md)
+    - [Wechselspannung](HS22/GED/Elektrotechnik/Wechselspannung.md)
