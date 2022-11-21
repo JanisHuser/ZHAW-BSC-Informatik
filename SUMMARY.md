@@ -50,3 +50,6 @@
     - [Linienintegral](HS22/GED/Elektrodynamik/Linienintegra.md)
     - [Elektrische Spannung](HS22/GED/Elektrodynamik/ElektrischeSpannung.md)
     - [Fluss](HS22/GED/Elektrodynamik/Fluss.md)
+  - [Elektrotechnik](HS22/GED/Elektrotechnik/Readme.md)
+    - [Transformator](HS22/GED/Elektrotechnik/Transformator.md)
+    - [Wechselspannung](HS22/GED/Elektrotechnik/Wechselspannung.md)
