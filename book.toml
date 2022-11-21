@@ -22,3 +22,4 @@ command = "/home/mdbook/.cargo/bin/mdbook-mermaid"
 [output.katex]
 
 [preprocessor.katex]
+command = "/home/mdbook/.cargo/bin/mdbook-katex"
