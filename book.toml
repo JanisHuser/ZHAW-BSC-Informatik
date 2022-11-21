@@ -19,7 +19,10 @@ additional-js = ["pyscript.js", "mermaid.min.js", "mermaid-init.js", "load-py-mo
 [preprocessor.mermaid]
 command = "/home/mdbook/.cargo/bin/mdbook-mermaid"
 
-[output.katex]
+#[output.katex]
 
 [preprocessor.katex]
 command = "/home/mdbook/.cargo/bin/mdbook-katex"
+
+
+#[output.pdf]
