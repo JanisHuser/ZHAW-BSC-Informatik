@@ -81,7 +81,7 @@ radius = 1
 # Absolute länge des Vektors
 U = 3
 
-kraft = 2 * pi * U
+kraft = 2 * np.pi * U
 print (kraft)
 
 ```
