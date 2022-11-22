@@ -55,5 +55,9 @@
     - [Wechselspannung](HS22/GED/Elektrotechnik/Wechselspannung.md)
 
 - [ADS](HS22/ADS/Readme.md)
+  - [Datastructures]()
+    - [Sorted](HS22/ADS/Datastructures/Sorted.md)
+
   - [Suchen](HS22/ADS/Search/Readme.md)
     - [Binary Search in sorted Array](HS22/ADS/Search/BinarySearchSortedArray.md)
+    - [Search in Lists](HS22/ADS/Search/SearchInLists.md)
