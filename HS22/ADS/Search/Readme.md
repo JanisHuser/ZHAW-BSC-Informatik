@@ -38,3 +38,5 @@ $$
 | Algorithmus | Zeitkonstante |
 |--|--|
 | Search in sorted array | $ O(\log_2 n) $ |
+| Search in multiple unsorted lists | $ O(m \cdot n) $ |
+| Search in multiple sorted lists | $ O(n) $ |
