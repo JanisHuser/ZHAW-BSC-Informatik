@@ -61,3 +61,6 @@
   - [Suchen](HS22/ADS/Search/Readme.md)
     - [Binary Search in sorted Array](HS22/ADS/Search/BinarySearchSortedArray.md)
     - [Search in Lists](HS22/ADS/Search/SearchInLists.md)
+    - [Hashing](HS22/ADS/Search/Hashing.md)
+    - [Collisions](HS22/ADS/Search/Collisions.md)
+    - [Extendible Hashing](HS22/ADS/Search/ExtendibleHasing.md)

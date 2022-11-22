@@ -2,6 +2,17 @@
 
 Storing value s in a array at their "hashed" position.
 
+## Advantages
+- Efficient searching and inserting
+- "Simple" binary trees might degenerate, hash tables are more resilient
+- Fast and easy implementation
+
+
+## Disadvantages
+- Finding min and max is complicated
+- Ordered output is impossible
+- Ranged search, partial string search is impossible.
+
 ## Issues
 
 - Multiple hash values might span a giant area
