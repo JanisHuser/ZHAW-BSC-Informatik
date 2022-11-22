@@ -8,10 +8,15 @@ title = "BSC Computer Science Summary"
 
 [output.html.playground]
 editable = true
+runnable = true
+copyable = true          # include the copy button for copying code snippets
+line-numbers = false     # displays line numbers for editable code
 
 [output.html]
 mathjax-support = true
 additional-js = ["pyscript.js", "mermaid.min.js", "mermaid-init.js", "load-py-modules.js"]
+git-repository-url="https://github.com/JanisHuser/ZHAW-BSC-Informatik"
+git-repository-icon = "fa-github"
 
 #[preprocessor.python]
 #command = "/home/mdbook/.cargo/bin/mdbook-python"
@@ -25,4 +30,10 @@ command = "/home/mdbook/.cargo/bin/mdbook-mermaid"
 command = "/home/mdbook/.cargo/bin/mdbook-katex"
 
 
-#[output.pdf]
+[output.html.print]
+enable = true    # include support for printable output
+
+[output.html.fold]
+enable = true    # whether or not to enable section folding
+level = 2         # the depth to start folding
+
