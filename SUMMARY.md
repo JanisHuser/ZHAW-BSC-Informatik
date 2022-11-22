@@ -53,3 +53,7 @@
   - [Elektrotechnik](HS22/GED/Elektrotechnik/Readme.md)
     - [Transformator](HS22/GED/Elektrotechnik/Transformator.md)
     - [Wechselspannung](HS22/GED/Elektrotechnik/Wechselspannung.md)
+
+- [ADS](HS22/ADS/Readme.md)
+  - [Suchen](HS22/ADS/Search/Readme.md)
+    - [Binary Search in sorted Array](HS22/ADS/Search/BinarySearchSortedArray.md)
