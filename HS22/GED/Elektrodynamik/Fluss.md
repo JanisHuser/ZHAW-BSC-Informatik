@@ -2,7 +2,7 @@
 
 ## Ebene
 
-```python
+```python,editable
 import numpy as np
 
 # Fläche
@@ -17,7 +17,7 @@ print(A*U)
 ## Zylinder
 
 ### Feld senkrecth auf Mantel und parallel zu Boden
-```python
+```python,editable
 import numpy as np
 
 # Radius
@@ -32,8 +32,8 @@ print(2*np.pi*r*h*U)
 ```
 
 
-### Feld senkrecth zu Boden
-```python
+### Feld senkrecht zu Boden
+```python,editable
 import numpy as np
 
 # Radius
@@ -47,7 +47,7 @@ print(2*np.pi*np.power(r,2)*U)
 
 
 ## Kugel
-```python
+```python,editable
 import numpy as np
 
 # Radius
