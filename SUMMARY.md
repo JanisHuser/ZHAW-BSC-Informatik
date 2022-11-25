@@ -36,6 +36,8 @@
     - [Merkmale](HS22/STS/Diskret/Merkmale.md)
     - [Varianz](HS22/STS/Diskret/Varianz.md)
     - [Boxplot](HS22/STS/Diskret/Boxplot.md)
+  - [Elementare Wahrscheinlichkeitsrechnung](HS22/STS/EWT/Redme.md)
+    - [Räume](HS22/STS/EWT/DiskreteWahrscheinlichkeitsraume.md)
 
 - [HM1]()
   - [Numerisches Zerlegen]()
