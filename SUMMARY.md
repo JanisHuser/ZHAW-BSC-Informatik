@@ -38,6 +38,9 @@
     - [Boxplot](HS22/STS/Diskret/Boxplot.md)
   - [Elementare Wahrscheinlichkeitsrechnung](HS22/STS/EWT/Redme.md)
     - [Räume](HS22/STS/EWT/DiskreteWahrscheinlichkeitsraume.md)
+    - [Zufallsvariablen](HS22/STS/EWT/Zufallsvariablen.md)
+    - [Bedingte Wahrscheinlichkeiten](HS22/STS/EWT/BedingteWT.md)
+    - [Stochastische Unabhängigkeit](HS22/STS/EWT/StochastischeUnabhaengigkeit.md)
 
 - [HM1]()
   - [Numerisches Zerlegen]()
