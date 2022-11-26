@@ -41,6 +41,7 @@
     - [Zufallsvariablen](HS22/STS/EWT/Zufallsvariablen.md)
     - [Bedingte Wahrscheinlichkeiten](HS22/STS/EWT/BedingteWT.md)
     - [Stochastische Unabhängigkeit](HS22/STS/EWT/StochastischeUnabhaengigkeit.md)
+    - [Verteilungen](HS22/STS/SpezielleVerteilung/Verteilungen.md)
 
 - [HM1]()
   - [Numerisches Zerlegen]()
