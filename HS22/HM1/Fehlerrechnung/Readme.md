@@ -116,3 +116,57 @@ print ("Epsilon", max_rel_error / cond_a )
 ```
 
 ### Tatsächlicher Fehler
+
+$$
+
+\frac{
+	\left|
+	\left|
+		\tilde{x} - x
+	\right|
+	\right|	
+	_{
+		\infty
+	}
+}
+{
+	\left|
+	\left|
+		x
+	\right|
+	\right|	
+	_{
+		\infty
+	}
+}
+
+\leq
+
+cond(A)
+\cdot
+(1 - \varepsilon)
+
+\leq
+error
+$$
+
+```python,edtiable
+import numpy as np
+
+A = np.array([
+	[1, 0, 2],
+	[0, 1, 0],
+	[1E-4, 0, 1E-4]
+])
+
+# Maximaler relativer Fehler 
+max_rel_error = 0.01
+order = np.Infinity
+
+cond_a = np.linalg.cond(A)
+epsilon = max_rel_error / cond_a
+
+print ("{a} ≤ (1 - {e})".format(a=cond_a, e=epsilon))
+
+print("Resultat: ", (1-epsilon)/cond_a)
+```
