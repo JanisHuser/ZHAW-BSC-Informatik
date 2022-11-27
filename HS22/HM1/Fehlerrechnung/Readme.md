@@ -19,3 +19,5 @@ $$
 
 **Residium / Defekt**: $ \Delta b $
 **Fehler der Näherungslösung**: $ \Delta x = \tilde{x} - x $
+
+
