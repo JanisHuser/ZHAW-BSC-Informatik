@@ -29,6 +29,8 @@
     - [DDL](HS22/DB/SQL/ddl.md)
     - [Datentypen](HS22/DB/SQL/datentypen.md)
     - [Aggregatsfunktionen](HS22/DB/SQL/Aggregatfunktionen.md)
+  - [SQL Queries](HS22/DB/SQL%20Queries/Readme.md)
+    - [CTEs](HS22/DB/SQL%20Queries/CTEs.md)
   - [DDL](HS22/DB/DDL_DML/DDL.md)
   - [DML](HS22/DB/DDL_DML/DML.md)
   - [Views](HS22/DB/View.md)
