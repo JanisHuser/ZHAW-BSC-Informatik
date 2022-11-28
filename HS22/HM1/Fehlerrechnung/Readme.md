@@ -24,12 +24,14 @@ $$
 
 ### Relativer Fehler
 
+Relativer Fehler der Matrix A.
+Ist immer positiv
 $$
 
 \frac{
 	\left|
 	\left|
-	\tilde{x} - x
+	A - \tilde{As}
 	\right|
 	\right|
 	_{\infty}
@@ -37,7 +39,7 @@ $$
 {
 	\left|
 	\left|
-	x
+	A
 	\right|
 	\right|
 	_{\infty}
@@ -48,7 +50,18 @@ $$
 ```python,editable
 import numpy as np
 
-x = np.array([1,1, e])
+
+A = np.array([
+	[1,2],
+	[3, 4]
+])
+
+
+As = A + np.random.rand(100, 100) / 1E5
+
+rel_error = np.linalg.norm(A - As, order) / np.linalg.norm(A, order)
+
+print ("Relativer Fehler", rel_error)
 
 ```
 
