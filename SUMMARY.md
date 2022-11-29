@@ -76,3 +76,6 @@
     - [Hashing](HS22/ADS/Search/Hashing.md)
     - [Collisions](HS22/ADS/Search/Collisions.md)
     - [Extendible Hashing](HS22/ADS/Search/ExtendibleHasing.md)
+    - [Text Search](HS22/ADS/Search/TextSearch.md)
+  - [Algorithmen](HS22/ADS/Algorithmen/Readme.md)
+    - [Knuth-Morris-Pratt](HS22/ADS/Algorithmen/KnuthMorrisPratt.md)

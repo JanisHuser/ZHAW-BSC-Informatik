@@ -1,0 +1,4 @@
+# Algorithmen
+
+| Algorithmus | Aufwand |
+|--|--|
