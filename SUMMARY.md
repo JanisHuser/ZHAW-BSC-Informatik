@@ -79,3 +79,8 @@
     - [Text Search](HS22/ADS/Search/TextSearch.md)
   - [Algorithmen](HS22/ADS/Algorithmen/Readme.md)
     - [Knuth-Morris-Pratt](HS22/ADS/Algorithmen/KnuthMorrisPratt.md)
+    - [Invertierter Index](HS22/ADS/Algorithmen//InvertedIndex.md)
+    - [Approximative Suche](HS22/ADS/Algorithmen/LevenshteinDistand.md)
+    - [Trigramm Suche](HS22/ADS/Algorithmen/TrigrammSuche.md)
+    - [Phonetische Suche](HS22/ADS/Algorithmen/PhonetischeSuche.md)
+    - [Regex](HS22/ADS/Algorithmen/Regex.md)
