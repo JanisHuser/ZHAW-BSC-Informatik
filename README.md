@@ -3,7 +3,9 @@
 Meine persönliche Formelsammlung des Informatik-Studiums an der ZHAW.
 
 ## Verwendung
-Da Github keinen Latex Compiler öffentlich verwendet, empfehle ich dir einen Editor zu verwenden. Eine Option ist der Integrierte VS-Code Editor, diesen öffnest du mit dem Druck auf die "." Taste.
+
+[Summary](http://summary.ateastar.ddns.net)
+
 
 ## Frühlingssemester (FS1)
 [Lineare Algebra](FS1/LA1/Readme.md)
