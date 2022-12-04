@@ -1,3 +1,4 @@
 # Iterative Verfahren
 
-TODO
+- [Jacobi Verfahren](Jacobi.md)
+- [Gauss-Seidel](Gauss-Seidel.md)
