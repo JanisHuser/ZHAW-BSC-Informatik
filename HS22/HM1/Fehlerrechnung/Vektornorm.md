@@ -69,3 +69,46 @@ $$
 $$
 ||A||_{\infty} = \max\limits_{i=1,…,n} |x_{i}|
 $$
+
+### Vektor
+$$
+\left|
+\left|
+\begin{pmatrix}
+-1 \\
+2 \\
+3
+\end{pmatrix}
+\right|
+\right|_1
+
+= 1+2+3 = 6
+$$
+
+$$
+\left|
+\left|
+\begin{pmatrix}
+-1 \\
+2 \\
+3
+\end{pmatrix}
+\right|
+\right|_2
+
+= \sqrt{1^2 + 2^2 + 3^2} = \sqrt{14}
+$$
+
+$$
+\left|
+\left|
+\begin{pmatrix}
+-1 \\
+2 \\
+3
+\end{pmatrix}
+\right|
+\right|_{\infty}
+
+= \max \{ 1,2,3 \} = 3
+$$

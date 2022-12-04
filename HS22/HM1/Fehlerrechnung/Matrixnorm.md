@@ -61,48 +61,6 @@ $$
 
 ## Beispiele
 
-### Vektor
-$$
-\left|
-\left|
-\begin{pmatrix}
--1 \\
-2 \\
-3
-\end{pmatrix}
-\right|
-\right|_1
-
-= 1+2+3 = 6
-$$
-
-$$
-\left|
-\left|
-\begin{pmatrix}
--1 \\
-2 \\
-3
-\end{pmatrix}
-\right|
-\right|_2
-
-= \sqrt{1^2 + 2^2 + 3^2} = \sqrt{14}
-$$
-
-$$
-\left|
-\left|
-\begin{pmatrix}
--1 \\
-2 \\
-3
-\end{pmatrix}
-\right|
-\right|_2
-
-= \max \{ 1,2,3 \} = 3
-$$
 
 ### Matrix
 

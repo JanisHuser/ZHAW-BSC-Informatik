@@ -65,8 +65,8 @@ x0 = np.array([1, -1, 3], dtype=float).reshape(3, 1)
 
 
 D = np.diagflat(np.diag(A), 0)
-L = np.tril(A, k=0) - D
-U = np.triu(A, k=0) - D
+L = np.tril(A, k=-1)
+U = np.triu(A, k=1)
 
 LU = L + U
 

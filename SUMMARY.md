@@ -61,6 +61,10 @@
     - [Vektornormen](HS22/HM1/Fehlerrechnung/Vektornorm.md)
     - [Matrixnorm](HS22/HM1/Fehlerrechnung/Matrixnorm.md)
   - [Aufwandabschätzung](HS22/HM1/Aufwandabschatzung.md)
+  - [Iterative Verfahren](HS22/HM1/IterativeVerfahren/Readme.md)
+    - [Jacobi Verfahren](HS22/HM1/IterativeVerfahren/Jacobi.md)
+    - [Gauss Seidel](HS22/HM1/IterativeVerfahren/Gauss-Seidel.md)
+    - [Konvergenz & Fehlerrechnung](HS22/HM1/IterativeVerfahren/Konvergenz.md)
 
 - [GED](HS22/GED/Readme.md)
   - [Elektrodynamik]()

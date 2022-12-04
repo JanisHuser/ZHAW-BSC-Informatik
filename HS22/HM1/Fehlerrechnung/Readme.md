@@ -1,5 +1,8 @@
 # Fehlerrechnung und Aufwandabschätzung
 
+- [Vektornormen](Vektornorm.md)
+- [Matrixnorm](Matrixnorm.md)
+
 $$
 	Ax = b
 $$
