@@ -1,0 +1,16 @@
+# Datenbanken
+
+- [DDL](DDL_DML/DDL.md)
+- [DML](DDL_DML/DML.md)
+
+- SQL
+	- [Aggregatsfunktionen](SQL/Aggregatfunktionen.md)
+	- [Datentpen](SQL/datentypen.md)
+	- [DDL](SQL/ddl.md)
+	- [EBNF](SQL/ebnf.md)
+	- [Probleme](SQL/Probleme.md)
+	- [Views](View.md)
+- SQL Queries
+	- [Common Table Expresions](SQLQueries/CTEs.md)
+- [PgSQL](pgSQL.md)
+- [Konsitenzbedingungen](Konsistenzbedingungen.md)

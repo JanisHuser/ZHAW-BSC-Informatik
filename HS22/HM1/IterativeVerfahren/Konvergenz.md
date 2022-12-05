@@ -68,19 +68,22 @@ $$
 import numpy as np
 
 A = np.array([
-	[4, -1, 1],
-	[-2, 5, 1],
-	[1, -2, 5]
-], dtype='float64')
+    [8, 5, 2],
+    [5, 9, 1],
+    [4, 2, 7]
+],dtype='float64')
 
-b = np.array([5,11,12], dtype='float64').reshape(3,1)
+b = np.array([19, 5, 34], dtype='float64').reshape(3,1)
+
+
+
 
 x = [
-	 np.array([1, -1, 3]).reshape(3, 1),
-	 np.array([2.25, -0.333, 4.5714]).reshape(3, 1),
-     np.array([1.4405, -1.2024, 3.6667]).reshape(3, 1),
-     np.array([2.2098, 0.6521, 4.3776]).reshape(3, 1),
-    ] # <- Fill x in here
+	np.array([1, -1, 3]).reshape(3, 1),
+    np.array([ 2.25, -0.3333, 4.5714]).reshape(3,1),
+    np.array([ 1.4405, -1.2024, 3.6667] ).reshape(3,1),
+    np.array([2.2098, -0.6521, 4.3776] ).reshape(3,1),
+]
 n = 3
 
 option = 'jacobi'
@@ -101,17 +104,16 @@ else:
 
 B_norm = np.linalg.norm(B, np.inf)
 
-relative_x_error = np.linalg.norm(x[1] - x[0], np.inf)
-estimation = B_norm**n / (1 - B_norm) * relative_x_error
+x_norm = np.linalg.norm(x[3] - x[2], np.inf)
+estimation = B_norm / (1 - B_norm) * relative_x_error
 
 print ("D^{-1}", '\n', D_inv)
 print ("B", '\n', B)
 print ("B norm", B_norm)
-print ("Relativer X fehler", '\n', relative_x_error)
-print (" A-Priori Estimation", estimation)
 
 print ("!!Aufschreiben")
-print (f"log(((1-{B_norm:.4f})/{x_norm:.4f}) * {tolerance:.4f} / log({B_norm:.4f})= {n:.4f}={n}")
+print (f"{B_norm:.4f}/(1-{B_norm:.4f}) * {x_norm:.4f}={estimation:.4f}")
+log({B_norm:.4f})= {n:.4f}={n}")
 ```
 
 ### Geschätze Iterationen
@@ -197,23 +199,26 @@ $$
 import numpy as np
 
 A = np.array([
-	[4, -1, 1],
-	[-2, 5, 1],
-	[1, -2, 5]
-], dtype='float64')
+    [8, 5, 2],
+    [5, 9, 1],
+    [4, 2, 7]
+],dtype='float64')
 
-b = np.array([5,11,12], dtype='float64').reshape(3,1)
+b = np.array([19, 5, 34], dtype='float64').reshape(3,1)
 
-	x = [
+
+
+
+x = [
 	np.array([1, -1, 3]).reshape(3, 1),
-    np.array([2.25,-1.0278, 3.8651]).reshape(3,1),
-    np.array([1.4405, -0.7526, 4.2491]).reshape(3,1),
-    np.array([2.209, -1.0795, 3.9028]),
+    np.array([ 2.25, -0.3333, 4.5714]).reshape(3,1),
+    np.array([ 1.4405, -1.2024, 3.6667] ).reshape(3,1),
+    np.array([2.2098, -0.6521, 4.3776] ).reshape(3,1),
 ]
-n = 2
+n = 3
 
-option = 'jacobi'
-# option = 'gauss-seodel'
+# option = 'jacobi'
+option = 'gauss-seodel'
 
 D = np.diagflat(np.diag(A), 0)
 L = np.tril(A, k=-1)
@@ -230,13 +235,14 @@ else:
 
 B_norm = np.linalg.norm(B, np.inf)
 
-relative_x_error = np.linalg.norm(x[n] - x[n-1], np.inf)
-estimation = B_norm / (1 - B_norm) * relative_x_error
+x_norm = np.linalg.norm(x[3] - x[2], np.inf)
+estimation = (B_norm / (1 - B_norm)) * x_norm
 
 print ("D^{-1}", '\n', D_inv)
 print ("B", '\n', B)
 print ("B norm", B_norm)
 
 print ("!!Aufschreiben")
-print (f"{B_norm:.4f}/(1-{B_norm:.4f}) * {relative_x_error:.4f}={estimation:.4f}")
+print (f"{B_norm:.4f}/(1-{B_norm:.4f}) * {x_norm:.4f}={estimation:.4f}")
+
 ```

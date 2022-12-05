@@ -23,17 +23,7 @@
 
 # HS22
 
-- [Datenbanken](HS22/DB/Readme.md)
-  - [SQL](HS22/DB/Readme.md)
-    - [EBNF](HS22/DB/SQL/ebnf.md)
-    - [DDL](HS22/DB/SQL/ddl.md)
-    - [Datentypen](HS22/DB/SQL/datentypen.md)
-    - [Aggregatsfunktionen](HS22/DB/SQL/Aggregatfunktionen.md)
-  - [SQL Queries](HS22/DB/SQL%20Queries/Readme.md)
-    - [CTEs](HS22/DB/SQL%20Queries/CTEs.md)
-  - [DDL](HS22/DB/DDL_DML/DDL.md)
-  - [DML](HS22/DB/DDL_DML/DML.md)
-  - [Views](HS22/DB/View.md)
+- [Datenbanken](HS22/DB/Datenbanken.md)
 
 - [STS](HS22/STS/Readme.md)
   - [Disrekt](HS22/STS/Diskret/Readme.md)
