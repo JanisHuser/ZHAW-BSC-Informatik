@@ -7,7 +7,8 @@ Wiederholtes Anwenden der Bernouilli Verteilung
 
 $$
 P(X = k)
-\pmatrix{begin}
+=
+\begin{pmatrix}
 n \\
 k
 \end{pmatrix}

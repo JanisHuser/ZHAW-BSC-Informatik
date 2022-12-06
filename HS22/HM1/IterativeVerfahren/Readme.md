@@ -4,7 +4,7 @@
 - [Gauss-Seidel](Gauss-Seidel.md)
 - [Konvergenz & Fehlerabschätzungen](Konvergenz.md)
 
-```python,edtiable
+```python,editable
 import numpy as np
 from enum import Enum
 from typing import List, Tuple
