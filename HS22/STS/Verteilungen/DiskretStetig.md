@@ -5,7 +5,7 @@
 | Dichtefunktion / PDF/PMF | $ f(x) = P(X = x) $ | $ f(x) = F'(x) \neq P(X = x) $|
 | Kummulative Verteilungsfunktion / CDF | $ F(x) = P(X \leq x) = \sum\limits_{u<$ -->
 
-![](images/C747D368-C378-4744-BE95-9B217102BE84.jpeg)
+![](C747D368-C378-4744-BE95-9B217102BE84.jpeg)
 
 ## Satz
 
