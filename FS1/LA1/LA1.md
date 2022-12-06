@@ -1,5 +1,3 @@
-# Lineare Algebra
-
 [Zusammenfassung](Zusammenfassung.md)
 
 ## LGS (Lineare Gleichungssysteme)

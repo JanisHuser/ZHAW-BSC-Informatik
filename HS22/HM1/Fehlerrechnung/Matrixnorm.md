@@ -1,23 +1,6 @@
 
 # Matrixnormen
 
-```python,editable
-import numpy as np
-
-A = np.array([
-	[1, 0],
-	[0, 1]
-])
-
-
-order = np.Infinity
-# Unendlich
-
-norm = np.linal.norm(A, np.Infinity)
-print ("Kondition von A": norm)
-
-```
-
 ## Allgemein
 
 $$
@@ -36,7 +19,7 @@ $$
 	\right)
 $$
 
-Für eine $ n \times n $ Matrix $ A in \mathbb{R}^{n \times n })
+Für eine $n \times n$ Matrix $A in \mathbb{R}^{n \times n }$
 ### 1-Norm, Spaltensummennorm
 
 
@@ -56,13 +39,7 @@ $$
 $$
 ||A||_{\infty} = \max\limits_{i=1,…,n} \sum_{j=1}^n |a_{ij}|
 $$
-
-
-
-## Beispiele
-
-
-### Matrix
+## Beispiel
 
 $$
 
