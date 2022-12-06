@@ -136,3 +136,99 @@ S(X)
 $$
 
 ## Gauss'sche Normalverteilung
+$$
+X
+\sim
+N( \mu; \sigma)
+$$
+$$
+
+\rho_{\mu, \sigma}(x)
+=
+\frac{1}{
+\sqrt{2 \pi \cdot \sigma}
+}
+\cdot
+e^{
+- \frac{1}{2}
+(
+\frac{x - \mu}
+{ \sigma }
+)^2
+}
+$$
+
+
+## Kummulative Verteilungsfunktion (CDF)
+
+$$
+\Phi_{\mu, \sigma}(x)
+=
+P(X \leq x)
+=
+\int_{-\infty}^{x}
+\rho_{\mu, \sigma}(t) dt
+=
+\frac{1}
+{\sqrt{2 \pi \cdot \sigma}}
+\cdot
+
+\int_{- \infty}^{x}
+e^{
+-\frac{1}{2}
+(
+\frac{x - \mu}{
+\sigma
+}
+)^2
+}
+dt
+$$
+
+### Standardnormalverteilung
+
+$ \mu = 0 $ und $ \sigma = 1 $
+$$
+
+\rho (x)
+=
+\frac{1}{
+\sqrt{2 \pi}
+}
+
+\cdot
+
+e^{
+-
+\frac{1}{2}
+x^2
+}
+
+$$
+
+### Intervall
+
+**P(U > u)**: $ 1 - \Phi(u) $
+
+## Tabelle
+
+### Normalverteilt
+$$
+U = \frac{X - \mu}{\sigma}
+$$
+$$
+P(U \leq \frac{x - \mu}{\sigma})
+$$
+
+### Intervall bestimmen
+
+$$
+[
+\mu - u
+\cdot \sigma
+;
+\mu + u
+\cdot \sigma
+]
+$$
+
