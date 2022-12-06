@@ -50,6 +50,7 @@
     - [Bedingte Wahrscheinlichkeiten](HS22/STS/EWT/BedingteWT.md)
     - [Stochastische Unabhängigkeit](HS22/STS/EWT/StochastischeUnabhaengigkeit.md)
   - [Verteilungen](HS22/STS/SpezielleVerteilung/Verteilungen.md)
+	  - [Cheat Sheet](HS22/STS/SpezielleVerteilung/CheatSheet.md)
     - [Diskret / Stetig](HS22/STS/SpezielleVerteilung/DiskretStetig.md)
     - [Bernouilli](HS22/STS/SpezielleVerteilung/Bernoulli.md)
     - [Binominal](HS22/STS/SpezielleVerteilung/Binominal.md)
