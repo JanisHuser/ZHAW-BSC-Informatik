@@ -1,3 +1,0 @@
-# Elektrotechnik
-
-- [Transformator](Transformator.md)

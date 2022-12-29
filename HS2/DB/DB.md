@@ -1,0 +1,14 @@
+- [DDL](HS2/DB/DDL_DML/DDL.md)
+- [DML](DML.md)
+
+- SQL
+	- [Aggregatsfunktionen](Aggregatfunktionen.md)
+	- [Datentpen](datentypen.md)
+	- [DDL](HS2/DB/SQL/ddl.md)
+	- [EBNF](ebnf.md)
+	- [Probleme](Probleme.md)
+	- [Views](View.md)
+- SQL Queries
+	- [Common Table Expresions](CTEs.md)
+- [PgSQL](pgSQL.md)
+- [Konsitenzbedingungen](Konsistenzbedingungen.md)
