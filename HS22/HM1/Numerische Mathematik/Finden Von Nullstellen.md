@@ -78,3 +78,67 @@ solution = scipy.optimize.root(g, 1.5)
 print(f"x* ={solution.x}")
 ```
 
+# Konvergenzordnung
+Ist ein Mass für die Konvergenzgeschwindigkeit eines iterativen Verfahrens.
+- Je grösser die Konvergenzordnung, desto schneller konvergiert das Verfahren
+
+## Festlegung
+
+- Sei $x_0, x_1, ..., x_n$ eine von einem iterativen Verfahren stammende Zahlenfolge, die gegen eine Zahl $\overline{x}$ konvergiert.
+- sei $c_x$ eine Zahl $\geq 1$. 
+
+Dann hat das Verfahren die Konvergenzordnung $q_x$ für Alle n
+$$
+\left|
+x_{m+1} - \overline{x}
+\right|
+
+\leq
+c
+\cdot
+\left|
+x_n - \overline{x}
+\right|^{q_x}
+$$
+
+```python
+import numpy as np
+
+from Scripts.Iterationen import calc_newton
+from Scripts.Fehlerrechnung import calc_convergence
+
+f = "x**2 -2"
+x0 = 1.
+n = 5
+xq = np.sqrt(2.)
+
+x = calc_newton(f, x0, n, False)
+
+calc_convergence(x, xq)
+```
+
+# Fehlerabschätzungskriterium
+
+Wenn $f(x_n - \varepsilon) \cdot f(x_n + \varepsilon) < 0$ ist, dann gilt $|x_n - \overline{x}| < \varepsilon$
+
+```python
+import numpy as np
+
+from Scripts.Iterationen import calc_sekante
+from Scripts.Fehlerrechnung import calc_err_abs
+
+def f(x):
+    return x**2 - 2
+
+x0 = 0.
+x1 = 1.
+epsilon = 0.001
+x_abs = np.sqrt(2.)
+x = calc_sekante(f, x0, x1, epsilon, True)
+xr = x[len(x)-1]
+    
+print(f"Approximativer Wert: {xr}")
+print(f"Exakter Wert: {x_abs}")
+
+print(f"Tatsächlicher Fehler: {calc_err_abs(x_abs, xr)}")
+```

@@ -81,3 +81,5 @@ def multiply(a: Number, b: Number, precision: Number) -> Number:
     number = Scientific(mantisse * 10**(max_exponent*2), max_exponent *2)
   
     return number.get_mantisse() * 10**(number.get_exponent())
+
+    

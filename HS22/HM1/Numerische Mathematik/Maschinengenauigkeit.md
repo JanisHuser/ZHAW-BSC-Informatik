@@ -73,4 +73,3 @@ abs_err = calc_err_abs(x, xr)
 print (f"Rel. Fehler {rel_err}")
 print (f"Abs. Fehler {abs_err}")
 ```
-
