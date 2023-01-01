@@ -95,3 +95,113 @@ Wenn die Konditionszahl $k(x)$ **viel grösser als 1** ist, dann vergrössert si
 $$
 k(x) > 100
 $$
+
+## Konditionszahl einer Matrix
+$$
+A \cdot x = b
+$$
+$$
+A \cdot \tilde{x} = \tilde{b}
+$$
+$$
+cond(A) =
+\left|
+\left|
+A
+\right|
+\right|
+\cdot
+\left|
+\left|
+A^{-1}
+\right|
+\right|
+
+$$
+```python
+import numpy as np
+
+A = np.array([
+    [2, 5, 0],
+    [-2, 2, 6],
+    [1, 0, 3]
+])
+
+print (f"Konditionszahl von A: {np.linalg.cond(A)}")
+```
+
+# Fehlerabschätzung
+
+$$
+
+\frac{
+\left|
+\left|
+\tilde{x} -x
+\right|
+\right|
+}{
+\left|
+\left|
+x
+\right|
+\right|
+}
+
+
+\le
+
+\frac{
+cond(A)
+}{
+1 - cond(A)
+\cdot
+\frac{
+\left|
+\left|
+\tilde{A} - A
+\right|
+\right|
+}{
+\left|
+\left|
+A
+\right|
+\right|
+}
+}
+
+\cdot
+\left(
+
+\frac{
+\left|
+\left|
+\tilde{A} - A
+\right|
+\right|
+}{
+\left|
+\left|
+A
+\right|
+\right|
+}
++
+\frac{
+\left|
+\left|
+\tilde{b} - b
+\right|
+\right|
+}{
+\left|
+\left|
+b
+\right|
+\right|
+}
+\right)
+$$
+
+## Norm einer Matrix
