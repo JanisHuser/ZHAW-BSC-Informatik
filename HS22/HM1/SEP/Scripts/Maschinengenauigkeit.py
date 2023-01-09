@@ -6,7 +6,7 @@ class Scientific():
     def __init__(self, x, precision):
         notation = np.format_float_scientific(x, precision = precision)
         number, exponent = notation.split('e')
-        self._precission = precision
+        self._precision = precision
 
         number = float(number)
         number /= 10
@@ -31,6 +31,16 @@ class Scientific():
             return
         self._exponent = exponent
         self._mantisse *= 10**diff
+
+
+    def get_value(self):
+        mantisse = round(self._mantisse, self._precision)
+
+        return (mantisse, self._exponent)
+
+    def as_float(self):
+        return self._mantisse * 10**self._exponent
+
         
 
 def calc_eps(B: Number, n: Number) -> Number:
@@ -40,7 +50,7 @@ def calc_eps(B: Number, n: Number) -> Number:
     Berechnet die obere Schranke
     """
     eps = 1/2
-    eps * B**(1-n)
+    eps *= B**(1-n)
     
     return eps
     

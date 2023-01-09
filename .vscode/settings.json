@@ -6,5 +6,9 @@
         "strings": "off",
         "other": "off"
     },
-    "pandoc.htmlOptString": "-s -f gfm -t html5 --css=css/style.css"
+    "pandoc.htmlOptString": "-s -f gfm -t html5 --css=css/style.css",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.banditEnabled": false,
+    "python.linting.pylamaEnabled": true
 }
