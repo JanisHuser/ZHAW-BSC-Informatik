@@ -38,12 +38,12 @@ def calc_cond(f: str, log: bool = True):
         print (f"f(x) = {f}")
         print (f"f'(x) = {fa}")
         
-    eq = f"({str(fa)} *x)/({f})"
+    eq = f"(({str(fa)}) *x)/({f})"
     
     if log:
         print (f"k(x) = {eq}")
-        
-    return sp.sympify(eq)
+    
+    return sp.simplify(eq)
 
     
     
