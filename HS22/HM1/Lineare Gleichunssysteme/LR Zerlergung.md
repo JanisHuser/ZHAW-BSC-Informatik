@@ -33,12 +33,6 @@ $$
 2. Lineares Gleichungssystem $L \cdot y = b$ lösen
 3. Anschliessen das Gleichungssystem $R \cdot x = y$
 
-
-
-$$
-
-$$
-
 ```python
 import numpy as np
 from Scripts.NumSolve import calc_gauss
