@@ -4,3 +4,5 @@
 book
 
 .obsidian
+
+__pycache__
