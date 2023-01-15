@@ -39,20 +39,22 @@ def calc_fixpunkt_with_tolerance(F,
     n: Anzahl Iterationen
     '''
     i = 0
-    x = x0
+    x = [x0]
+    
+    f = sp.sympify(f)
     
     if log:
          print (f"i\t F(x)")
-         print (f"{0}\t {x0}")
+         print (f"{0}\t {x[i]}")
     
-    while np.abs(x - xq > tolerance):
-        x = F(x)
-        i += 1
+    while np.abs(x[i] - xq > tolerance):
+        x.append(F(x))
         
         if log:
-            print (f"{i}\t {x}")
+            print (f"{i}\t {x[i]}")
         
-    return i
+        i += 1
+    return x
 
     
 def calc_sekante(f, x0, x1, epsilon, log: bool = True):
@@ -89,6 +91,24 @@ def calc_sekante(f, x0, x1, epsilon, log: bool = True):
         
     return x  
 
+def do_newton_step(f: str, x_last: Number):
+    '''
+    Berechnet einen Schritt des Newtonverfahren
+    f: Funktion
+    x0: Startwert
+    n: Anzahl Iterationen
+    Returns: x nach n Iterationen
+    '''
+    f = sp.sympify(f)
+    x = sp.symbols('x')
+    df = sp.diff (f, x)
+    
+    expr = f / df
+    
+    xn = expr.evalf(subs={'x': x_last})
+    
+    return x_last - xn
+    
 def calc_newton(f: str, x0: Number, n: Number, log: bool = True):
     '''
     Berechnet das Newtonverfahren
@@ -116,4 +136,39 @@ def calc_newton(f: str, x0: Number, n: Number, log: bool = True):
         if log:
             print (f"{i}\t {x[i]}")
             
+    return x
+    
+    
+    
+def calc_newton_with_tolerance(f: str, x0: Number, tolerance: Number, log: bool = True):
+    '''
+    Berechnet das Newtonverfahren
+    f: Funktion
+    x0: Startwert
+    tolerance: Wird solange wiederholt, bis err < tolerance
+    Returns: x
+    '''
+    f = sp.sympify(f)
+    x = sp.symbols('x')
+    df = sp.diff (f, x)
+    i = 0
+    x = [x0]
+    err = np.inf
+    
+    if log:
+        print (f"i\t F(x)\tErr")
+        print (f"{0}\t {x[0]}, np.inf")
+        
+    expr = f / df
+    
+    i = 1
+    while err > tolerance:
+        xn = x[i-1] - expr.evalf(subs={'x': x[i-1]})
+        x.append(xn)
+        err = np.abs(x[i] - x[i-1])
+        if log:
+            print (f"{i}\t {x[i]},\t{err}")
+        
+        i += 1
+    
     return x

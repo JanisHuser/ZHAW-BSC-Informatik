@@ -30,6 +30,49 @@ $$
 **Mantisse**: $m=(\pm 0.m_1 m_2 m_3 m_n)_B$
 **Exponent**: $e =(\pm e_1 e_2 e_3 3_n)_B$
 
+### Maximaler darstellbarer Exponent
+$$
+e_{max} = (e)_b
+$$
+$$
+e_{min} = e_{max} -1
+$$
+e = 111 (Zusätzlich zum Vorzeichen 3 Stellen)
+b = 2 (Dualsystem)
+$$
+(111)_2 = 2^2+2^1+2^0 = 7
+$$
+### Maximal darstellbare Zahlen
+$$
+x_{max} = (1-B^{-n}) \cdot B^{e_{max}}
+$$
+$$
+x_{min}= B^{e_{min}-1}
+$$
+```python
+from Scripts.Maschinengenauigkeit import Scientific
+
+b = 2 # Basis
+e = 3 # Anzahl Stellen im Exponent
+n = 5 # Stellen der Mantisse
+
+max_exp = 0
+for i in range(e):
+    max_exp += b**i
+
+min_exp = -1*max_exp
+print (f"Kleinster Exponent: {min_exp}")
+print (f"Grösster Exponent: {max_exp}")
+
+x_min = Scientific(b ** (min_exp-1), 4)
+x_max = Scientific((1-b **-n) * b ** max_exp, 4)
+
+
+print (f"Kleinste darstellbare Zahl: {x_min.get_value()}")
+print (f"Grösste darstellbare Zahl: {x_max.get_value()}")
+```
+
+
 ## Norm IEEE 754
 
 **Float64**: $x=(-1=^S \cdot (1+m) \cdot 2^{e-b}$
