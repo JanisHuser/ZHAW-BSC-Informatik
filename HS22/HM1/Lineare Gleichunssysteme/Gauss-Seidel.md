@@ -37,40 +37,31 @@ $$
 B = -(D+L)^{-1}U
 $$
 ```python
+from Scripts.Iteration.Jacobi import Jacobi
+from Scripts.Iteration.GaussSeidel import GaussSeidel
 import numpy as np
+import math
 
-# Setting some variables
-A = np.array([
-    [8, 5, 2],
-    [5, 9, 1],
-    [4, 2, 7]
-],dtype='float64')
+n = 6
+c = 4
+x0 = np.zeros(n).reshape(n,1)
+tolerance = 10**(-3)
 
-b = np.array([19, 5, 34], dtype='float64').reshape(3,1)
-x0 = np.array([1, -1, 3], dtype=float).reshape(3, 1)
+jacobi = GaussSeidel(
+    Jacobi.create_A_diagonal(n, c),
+    Jacobi.create_b_diagonal(n, c),
+    x0)
 
+print ("B")
+B = jacobi.calc_B()
+print (B)
 
-D = np.diagflat(np.diag(A), 0)
-L = np.tril(A, k=-1)
-U = np.triu(A, k=1)
+print (f"Inf Norm von B: {np.linalg.norm(B, np.inf)}")
+estimation = jacobi.estimate_a_priori(tolerance)
+print (f"A-Priori abschätzung: {estimation}  => {round(estimation)}")
 
+# result = jacobi.iterate(tolerance, True)
+result = jacobi.iterate_n(int(math.ceil(estimation)), False)
 
-D_inv = np.linalg.inv(D)
-B = np.dot(-1, np.linalg.inv(np.add(D, L)).dot(U))
-
-
-    
-xi = [x0]
-    
-np.set_printoptions(precision=4)
-for i in range(3):
-	xi = x[i]
-	xn = np.add(B.dot(xi), np.linalg.inv(np.add(D, L)).dot(b))
-	print ("{i}. Schritt")
-	print (xn, "\n")
-	x.append(xn)
-
-
-print ("B",'\n', B)
-print ("B_norm", np.linalg.norm(B, np.inf))
+# def calc_a_posteriori_error(self,B, x, xn) -> Number:
 ```

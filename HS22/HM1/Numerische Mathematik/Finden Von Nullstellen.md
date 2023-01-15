@@ -117,6 +117,20 @@ x = calc_newton(f, x0, n, False)
 calc_convergence(x, xq)
 ```
 
+**Iteriere bis Fehler kleiner als Toleranz**
+```python
+from Scripts.Iterationen import calc_newton_with_tolerance
+
+f = "exp(x) - (sqrt(2) +2)"
+
+x0 = 0.5
+eps = 10**(-7)
+x = calc_newton_with_tolerance(f, x0, eps, True)
+
+print ("================")
+print (f"Resultat: {x[len(x)-1]}")
+```
+
 # Fehlerabschätzungskriterium
 
 Wenn $f(x_n - \varepsilon) \cdot f(x_n + \varepsilon) < 0$ ist, dann gilt $|x_n - \overline{x}| < \varepsilon$

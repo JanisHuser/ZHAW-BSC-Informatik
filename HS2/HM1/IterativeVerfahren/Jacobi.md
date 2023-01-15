@@ -67,14 +67,16 @@ x0 = np.array([1, -1, 3], dtype=float).reshape(3, 1)
 D = np.diagflat(np.diag(A), 0)
 L = np.tril(A, k=-1)
 U = np.triu(A, k=1)
-
 LU = L + U
 
 D_inv = np.linalg.inv(D)
 D_inv_LU = np.dot(D_inv, LU)
 D_inv_b = D_inv.dot(b)
 
+B = np.dot(-1, np.linalg.inv(np.add(L, R)))
 
+print ("B")
+print(B)
     
 xi_1 = x0
     

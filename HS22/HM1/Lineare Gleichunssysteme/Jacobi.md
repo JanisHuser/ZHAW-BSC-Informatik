@@ -33,58 +33,47 @@ $$
 
 ## Algorithmus
 
-Gegeben Startvektor $ x^{alt} $
-für $ m=1,... $ bis Erfüllung eines Abbruchkriteriums
-	$ x = b $
-	fürr $ i=1 $ bis $ n $
-		für $ j = 1 $ bis $ n $
-			falls $ j \neq i $
-				$ x_i = x_i - a_{ij} x_j^{alt};
+Gegeben Startvektor $x^{alt}$
+für $m=1,...$ bis Erfüllung eines Abbruchkriteriums
+	$x = b$
+	fürr $i=1$ bis $n$
+		für $j = 1$ bis $n$
+			falls $j \neq i$
+				$x_i = x_i - a_{ij} x_j^{alt}$;
 		ende
-		$ x_i = x_i / a_{ii}; $
-	
-	ende
-	$ x^{alt} = x_i;
+		$x_i = x_i / a_{ii};$
+ 	 ende
+	 $x^{alt} = x_i$;
 ende
 
 
 ```python
+from Scripts.Iteration.Jacobi import Jacobi
 import numpy as np
+import math
 
-# Setting some variables
-A = np.array([
-    [8, 5, 2],
-    [5, 9, 1],
-    [4, 2, 7]
-],dtype='float64')
+n = 6
+c = 4
+x0 = np.zeros(n).reshape(n,1)
+tolerance = 10**(-3)
 
-b = np.array([19, 5, 34], dtype='float64').reshape(3,1)
-x0 = np.array([1, -1, 3], dtype=float).reshape(3, 1)
+jacobi = Jacobi(
+    Jacobi.create_A_diagonal(n, c),
+    Jacobi.create_b_diagonal(n, c),
+    x0)
 
+print ("B")
+B = jacobi.calc_B()
+print (B)
 
-D = np.diagflat(np.diag(A), 0)
-L = np.tril(A, k=-1)
-U = np.triu(A, k=1)
+print (f"Inf Norm von B: {np.linalg.norm(B, np.inf)}")
+estimation = jacobi.estimate_a_priori(tolerance)
+print (f"A-Priori abschätzung: {estimation}  => {round(estimation)}")
 
-LU = L + U
+# result = jacobi.iterate(tolerance, True)
+result = jacobi.iterate_n(int(math.ceil(estimation)), False)
 
-D_inv = np.linalg.inv(D)
-D_inv_LU = np.dot(D_inv, LU)
-D_inv_b = D_inv.dot(b)
-
-
-    
-xi_1 = x0
-    
-np.set_printoptions(precision=4)
-for i in range(3):
-	xi = xi_1
-	xi_1 = -1 * np.dot(D_inv_LU, xi) + D_inv_b
-	print ("{i}. Schritt")
-	print (xi_1, "\n")
-        
-print ("L+U = LU", L, U, LU, "\n")
-print ("D^-1 * LU = ", D_inv, D_inv_LU, "\n")
+# def calc_a_posteriori_error(self,B, x, xn) -> Number:
 
 ```
 
