@@ -14,6 +14,15 @@ $$
 \tilde{x} - x
 }{x}
 \right|
+
+=
+K(x_0)
+\cdot
+\left|
+\frac{x - x_0}
+{x_0}
+\right|
+
 $$
 
 # Rundungsprinzipien
@@ -67,7 +76,7 @@ $$
 
 # Konditionszahl
 $$
-k(x) =
+K(x) =
 
 \left|
 \frac{f'(x) \cdot x}{f(x)}
@@ -87,13 +96,13 @@ print (f"Konditionszahl k(x) = {calc_cond(f)}")
 ### Gute Konditionierung
 Wenn die Konditionszahl $k(x)$ **kleiner als 1** oder **nur wenig grösser als 1** ist, dann verkleinert sicht der relative Fehler bei Funktionsauswertung oder vergrössert sich nur leicht.
 $$
-k(X) < 10
+K(X) < 10
 $$
 
 ### Schlechte Konditionierung
 Wenn die Konditionszahl $k(x)$ **viel grösser als 1** ist, dann vergrössert sich der relative Fehler bei Funktionsauswertung stark.
 $$
-k(x) > 100
+K(x) > 100
 $$
 
 ## Konditionszahl einer Matrix

@@ -1,5 +1,6 @@
 # Aufteilung
 ## Variation (mit Reihenfolge)
+- Wesentliche Reihenfolge
 ### Mit Wiederholung
 $$
 n^k
@@ -14,7 +15,8 @@ n!
 }
 $$
 
-## Kombination (ohhe Reihenfolge)
+## Kombination (ohne Reihenfolge)
+-  Keine wesentliche Reihenfolge
 ### Mit Wiederholung
 $$
 \begin{pmatrix}
@@ -58,7 +60,7 @@ n \\
 0
 \end{pmatrix} = 1
 $$
-## Symmetrie
+## Symmetrie.
 $$
 \begin{pmatrix}
 n \\

@@ -1,12 +1,12 @@
 ![[Pasted image 20230101105818.png]]
 
 ## Absolute und relative Häufigkeitsfunktionen
-Sei $(x_1, \cdots, x_n)$ eine STichprobe eines metrischen Merkmals.
+Sei $(x_1, \cdots, x_n)$ eine Stichprobe eines metrischen Merkmals.
 
 **Empirische absolute Häufigkeitsfunktion**
 $h: \mathbb{R} \rightarrow \mathbb{R}, h(x) =$ Anzahl der  $\le i \le n$ mit $x_i = x$ 
 
-**Empirische relative Häufigkeitsfunktion (PMF)**
+**Empirische relative Häufigkeitsfunktion (PMF / PDF)**
 $f: \mathbb{R} \rightarrow [0, 1], f(x) = \frac{h(x)}{n}$
 
 
@@ -63,6 +63,7 @@ a_{i+1} - a_i
 }
 $$
 
+
 # Kenngrössen
 
 ## Quantille, Perzentille, Quartille, Median
@@ -76,6 +77,34 @@ $$
 ### Wenn $z = n \cdot q$ keine ganze Zahl
 $$
 R_q = x_{z}
+$$
+## In einer Klasse
+
+**Quantil:** $q$
+**Wert bei q**: $R_q$
+
+$$
+\frac{
+F(b) - F(a)
+}
+{
+b-a
+}
+=
+\frac{q-F(a)}
+{R_q -a}
+$$
+$$
+R_q =
+a +
+\frac{(b-a)}
+{F(b) \cdot F(a)}
+\cdot
+(q - F(a))
+$$
+$$
+q = \frac{(F(b) - F(a)) \cdot (R_q -a)}
+{b -a} + F(a)
 $$
 ## Boxplot
 **Quartilsabstand**: $Q_3 - Q_1$
