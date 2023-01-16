@@ -80,3 +80,97 @@ for eigenvalue in eigenvalues:
 #     
     print("Eigenplane:", eigenplane)
 ```
+
+## Schreibweise
+**Eigenvektor**: $EV$
+**Eigenraum**: $E$
+**Faktor (nicht als Zahl angeben)**: $\mu$
+
+$$
+E_{\lambda_2} =
+\{
+x |
+x =
+\mu
+\left(
+EV
+\right)
+,
+\mu
+\in
+\mathbb{R}
+\}
+$$
+
+# Mises-Iteration
+- Sei $A \in \mathbb{R}^{n \times n}$ eine diagonalisierbare Matrix mit den Eigenwerten $\lambda_1, ..., \lambda_n$ und dem betraggsmässig grössten Eigenwert $\lambda_1$ mit
+$$
+\left|
+\lambda_1
+\right|
+\gt
+\left|
+\lambda_2
+\right|
+\ge
+...
+\ge
+\left|
+\lambda_n
+\right|
+$$
+so konvergieren für (fast) jeden Startvektor $v^{(0)} \in \mathbb{C}^n$ mit Länge 1 die Folgen
+$$
+v^{(k+1)}
+=
+\frac{
+Av^{(k)}
+}
+{
+\left|
+\left|
+Av^{(k)}
+\right|
+\right|_2
+}
+$$
+$$
+\lambda^{(k+1)}
+=
+\frac{
+(v^{(k)})^T
+Av^{(k)}
+}
+{
+(v^{(k)})^T
+v^{(k)}
+}
+$$
+
+für $k \rightarrow \infty$  gegen einen Eigenvektor $v$ zum Eigenwert $\lambda_1$ von A (also $v^{(k)} \rightarrow v$ und $\lambda^{(k)} \rightarrow \lambda_1$)
+
+```python
+import numpy as np
+from Scripts.Eigen.MisesIteration import MisesIteration
+
+# Define matrix
+A = np.array([
+    [1, 1, 0],
+    [3, -1, 2],
+    [2, -1, 3]
+])
+
+# Anfangsvektor
+x = np.array([1, 0, 0])
+
+mises_iteration = MisesIteration(A, x)
+
+# Logging einstellen
+mises_iteration.enable_log(True)
+
+# Iteriere 4 mal
+iterations = mises_iteration.iterate_n(4)
+
+# Iteriere bis Differenz 0.01 getroffen
+iterations = mises_iteration.iterate(0.01)
+```
