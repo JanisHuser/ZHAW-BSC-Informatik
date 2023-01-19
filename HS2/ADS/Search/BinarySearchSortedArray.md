@@ -3,7 +3,7 @@
 Searching a letter in a sorted array of letters.
 
 ## Idea
-Usage of two indices $ l $ and $ r $.
+Usage of two indices $l$ and $r$.
 Decrease the area the two indices span until the item has been found or no letter is left.
 
 
@@ -42,7 +42,7 @@ static int binary(int[] a, int s) {
 	int m = (1 + r) / 2;
 
 	while (l + 1 < r && a[m] != s) {
-		if (a[m] < 0) {
+		if (a[m] < s) {
 			l = m;
 		} else {
 			r = m;

@@ -78,6 +78,7 @@ class LinalgBase():
             
         return x
         
+    
         
     def iterate(self, tolerance=-1, log: bool = False):
         i = 0

@@ -122,4 +122,7 @@ def calc_qr(A: np.array):
         R = np.dot(Qi, R)
         Q = np.dot(Q, np.transpose(Qi))
         
+        print ("Q", Q)
+        print ("R", R)
+        
     return (np.round(Q, 4), np.round(R, 4))

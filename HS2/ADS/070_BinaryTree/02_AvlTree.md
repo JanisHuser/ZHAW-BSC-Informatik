@@ -88,8 +88,8 @@ Used when the left subtree has a greater height than the right subtree
 
 1. Do left rotation on x-y.
 
-![](lr_1.png)
 
+![](lr_1.png)
 2. Do right rotation on y-z.
 
 ![](lr_2.png)
