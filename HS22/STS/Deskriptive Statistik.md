@@ -42,7 +42,6 @@ $F: \mathbb{R} \rightarrow [0,1], F(x) =$ Summe aller PMF Werte $f(y)$ mit $y \l
 $$
 b_i = \frac{F(i)-F(i-1)}{PDF}
 $$
-
 $$
 a \lt x \le b \Rightarrow F(b) - F(a)
 $$
@@ -55,15 +54,15 @@ x -a_i
 }
 =
 \frac{
-F(a_{i+1} - F(a_i))
+F(a_{i+1})- F(a_i)
 }{
 a_{i+1} - a_i
 }
+$$$$
+f(x) = \frac{f_i}{n \cdot d_i}
 $$
 
-
 # Kenngrössen
-
 ## Quantille, Perzentille, Quartille, Median
 **q-Quantil:** Wenn der Anteil der Stichprobenwerte $\lt R$ mindestens $q$ und der Anteil der Stichprobenwerte $\gt R$ mindestens $1-q$ ist.
 **Perzentil: $p$** $100/p Quantil$
