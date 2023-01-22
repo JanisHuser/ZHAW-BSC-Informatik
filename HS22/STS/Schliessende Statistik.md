@@ -1,6 +1,6 @@
 ## Schätzfunktion
 $$
-\Theta = g(X_1, ..., X_n
+\Theta = g(X_1, ..., X_n)
 $$
 **Grundgesamtheit:** $\theta$ 
 **Erwartungsgetreu:** $E(\Theta) = \theta$
@@ -14,6 +14,9 @@ $$
 
 ## Vertrauensintervalle
 ![[Pasted image 20230122152745.jpg]]
+
+<div style="page-break-after: always;"></div>
+
 ## Hypothesentests
 Vorgehen bei einem Parametertest
 
@@ -33,6 +36,8 @@ Dabei müssen wir Folgendes berücksichtigen:
 gemäss Tabelle "Übersicht über die wichtigsten Parametertests" (vorletzte Kolonne). 
 6. **Testentscheidung fällen**
 Liegt der Testwert im Annahmebereich oder im kritischen Bereich?
+
+<div style="page-break-after: always;"></div>
 
 ## Übersicht über die wichtisgten Parametertests
 ![[Pasted image 20230122152035.jpg]]![[Pasted image 20230122152103.jpg]]
