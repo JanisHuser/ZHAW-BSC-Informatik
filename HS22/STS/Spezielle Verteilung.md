@@ -35,6 +35,8 @@ $\sigma = S(X) = \sqrt{V(X)}$
 $E(X) = E(X^2) = p$
 $V(X) = p \cdot (1-p)$
 
+<div style="page-break-after: always;"></div>
+
 ## Binomialverteilung
 **Anzahl Wiederholungen:** $n$
 **Wahrscheinlichkeit für ein Ergebnis 1:** $p$
@@ -78,14 +80,20 @@ $\sigma^2 = V(X) = \lambda$
 $\sigma = S(X) = \sqrt{\lambda}$
 Wenn $n \ge 50$ und $p \le 0.1$: $B(n,p) \approx Poi(n \cdot p)$
 
+<div style="page-break-after: always;"></div>
+
 ## Gauss'sche Normalverteilung
 $$
 X \sim
 N(\mu, \sigma)$$
 **PDF:** $\varphi_{\mu, \sigma}(X) = \frac{1}{\sqrt{2 \pi} \cdot \sigma} \cdot e^{-\frac{1}{2}\left( \frac{x - \mu}{\sigma}\right)^2}$
-![[Pasted image 20230103144839.png]]
 **CDF:** $\phi_{\mu, \sigma}(x) =P(X \le x) = \int\limits_{-\infty}^{x} e^{-\frac{1}{2}\left( \frac{t-\mu}{\sigma} \right)^2}$ 
-![[Pasted image 20230103150206.png]]
+
+| PDF | CDF |
+| -- | -- |
+| ![[Pasted image 20230103144839.png]] | ![[Pasted image 20230103150206.png]] |
+
+
 **Standardnormalverteilung:**$\mu=0$ und $\sigma =1$
 $X \sim N(0; 1)$
 $\varphi(x) = \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{1}{2} x^2}$
