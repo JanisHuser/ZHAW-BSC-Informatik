@@ -21,6 +21,8 @@ $H: \mathbb{R} -> \mathbb{R}, H(x) =$ Summe aller $h(y)$ mit $y \le x$
 #### Empirische relative Summenhäufigkeit / Kummulative Verteilungsfunktion (CDF)
 $F: \mathbb{R} \rightarrow [0,1], F(x) =$ Summe aller PMF Werte $f(y)$ mit $y \le x$.
 
+<div style="page-break-after: always;"></div>
+
 ## Eigenschaften der PMF und CDF
 
 ### Nichtklassierten Stichproben
@@ -34,6 +36,7 @@ $F: \mathbb{R} \rightarrow [0,1], F(x) =$ Summe aller PMF Werte $f(y)$ mit $y \l
 - Der Anteil aller Stichprobenwerte $x_i$ mit $x_i > b$ ist $1 - F(b)$
 
 ## Klassierte Stichproben
+
 **Klassenbreite:** $b_i$
 **Relative Häufigkeiten:** $f_i = \frac{h_i}{n}$
 **relative Häufigkeitsfunktion:** $g(x) = f_i$
@@ -58,23 +61,30 @@ F(a_{i+1})- F(a_i)
 }{
 a_{i+1} - a_i
 }
-$$$$
+$$
+$$
 f(x) = \frac{f_i}{n \cdot d_i}
 $$
+<div style="page-break-after: always;"></div>
 
 # Kenngrössen
+
 ## Quantille, Perzentille, Quartille, Median
 **q-Quantil:** Wenn der Anteil der Stichprobenwerte $\lt R$ mindestens $q$ und der Anteil der Stichprobenwerte $\gt R$ mindestens $1-q$ ist.
 **Perzentil: $p$** $100/p Quantil$
 
 ### Wenn $z = n \cdot q$ eine ganze Zahl
+
 $$
 R_q = \frac{1}{2} (x_z + x_{z+1})
 $$
+
 ### Wenn $z = n \cdot q$ keine ganze Zahl ($z$ ist die nächstgrössere Zahl) 
+
 $$
 R_q = x_{z}
 $$
+
 ## In einer Klasse
 **Quantil:** $q$
 **Wert bei q**: $R_q$
@@ -104,13 +114,19 @@ $$
 q = \frac{(F(b) - F(a)) \cdot (R_q -a)}
 {b -a} + F(a)
 $$
+
 ## Boxplot
+
 **Quartilsabstand**: $Q_3 - Q_1$
 **Untere Antenne:** $\le Q_1 - 1.5 (Q_3 - Q_1)$
 **Obere Antenne:** $\ge + 1.5(Q_3 - Q_1)$
-![[Pasted image 20230101165432.png]]
+
+![[Pasted image 20230101165432.png|500]]
+
+<div style="page-break-after: always;"></div>
 
 ## Stichprobenmittelwert
+
 **Klassenmitten:** $M_i = \frac{a_{i+1} + a_i}{2}$
 **Stichprobenmittelwert:** $\overline{x} = \sum\limits_{i=1}^{m} M_i \cdot f_i$
 **(Stichproben-)Varianz:** $\tilde{s}^2 = \sum\limits_{i=1}^{n} (M_i - \overline{x})^2 \cdot f_i$

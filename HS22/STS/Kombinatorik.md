@@ -1,67 +1,16 @@
-# Aufteilung
 ## Variation (mit Reihenfolge)
 - Wesentliche Reihenfolge
-### Mit Wiederholung
-$$
-n^k
-$$
-
-### Ohne Wiederholung
-$$
-\frac{
-n!
-}{
-(n-k)!
-}
-$$
+**Mit Wiederholung:** $n^k$
+**Ohne Wiederholung:** $\frac{n!}{(n-k)!}$
 
 ## Kombination (ohne Reihenfolge)
 -  Keine wesentliche Reihenfolge
-### Mit Wiederholung
-$$
-\begin{pmatrix}
-n + k -1 \\
-k
-\end{pmatrix}
-$$
-
-### Ohne Wiederholung
-$$
-\frac{
-n!
-}{
-(n-k)!k!
-}
-=
-\begin{pmatrix}
-n \\
-k
-\end{pmatrix}
-$$
-
+**Mit Wiederholung:** $\begin{pmatrix}n + k -1 \\ k\end{pmatrix}$
+**Ohne Wiederholung:** $\frac{n!}{(n-k)!k!}=\begin{pmatrix}n \\ k\end{pmatrix}$
 
 # Binominalkoeffizienten
-
-## Leere Menge
-$$
-\begin{pmatrix}
-n \\
-0
-\end{pmatrix} = 1
-$$
-## Symmetrie.
-$$
-\begin{pmatrix}
-n \\
-k
-\end{pmatrix}
-
-=
-\begin{pmatrix}
-n \\
-k + 1
-\end{pmatrix}
-$$
+**Leere Menge:** $\begin{pmatrix} n \\ 0 \end{pmatrix} = 1$
+**Symmetrie:** $\begin{pmatrix} n \\ k \end{pmatrix} = \begin{pmatrix} n \\ k + 1 \end{pmatrix}$
 
 ## Pascal'sches Dreieck - Rekursion
 
@@ -132,6 +81,7 @@ k
 a^k
 b^{n-k}
 $$
+
 ### Binominalkoeffizient
 $$
 \begin{pmatrix}
@@ -144,7 +94,8 @@ n!
 }{
 (n-k)! \cdot k!
 }
-$$TR: $n$ "ncR" $k$
+$$
+TR: $n$ "ncR" $k$
 
 ### Auswahl ohne zurücklegen
 **Anzahl Möglichkeiten:** $n$

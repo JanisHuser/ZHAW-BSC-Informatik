@@ -36,6 +36,9 @@ $$
 $$
 S(X) = \sqrt{V(X)}
 $$
+
+<div style="page-break-after: always;"></div>
+
 ## Bedingte Wahrscheinlichkeit
 **Multiplikationssatz:**$P(A \cap B) = P(A|B) \cdot P(B) = P(B|A) \cdot P(A)$
 **Satz der totalen Wahrscheinlichkeit:** $P(A) = P(A|B) \cdot P(B) + P(A| \overline{B}) \cdot P(\overline{B})$
@@ -44,4 +47,3 @@ $$
 
 ## Stochastische Unabhängigkeit
 - Wenn $A$ und $B$ stochastisch unabhängig sind, beeinflusst das Eintreten des einen Ereignisses das Eintreten des des anderen Ereignisses nicht.
-- 
