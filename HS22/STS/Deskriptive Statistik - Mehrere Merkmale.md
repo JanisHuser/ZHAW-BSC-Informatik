@@ -3,11 +3,12 @@
 **Arithmetisches Mittel der quadrierten x-Merkmale:** $\overline{x^2} = \frac{1}{n} \sum\limits_{i=1}^{n} x_i$
 **Arithmetisches Mittel der quadrierten y-Merkmale:** $\overline{y^2} = \frac{1}{n} \sum\limits_{i=1}^{n} y_i$
 **Arithmetische Mittel des Produktes der x- und y-Merkmale:** $\overline{xy} = \frac{1}{n} \sum\limits_{i=1}^{n} x_i y_i$
-**Varianz**: $\tilde{s_x}^2 = \overline{x^2} - \overline{x}^2$
+**Varianz**: $V(x) = \tilde{s_x}^2 = \overline{x^2} - \overline{x}^2$ 
 **Standardabweichung:** $\tilde{s_x} = \sqrt{\tilde{s_x}^2}$
 
-**(Empirische) Kovarianz:** $\tilde{s}_{xy} = \frac{1}{n} (x_i -\overline{x}) \cdot (y_i - \overline{y})$
+**(Empirische) Kovarianz:** $\tilde{s}_{xy} = \frac{1}{n} (x_i -\overline{x}) \cdot (y_i - \overline{y}) = (\overline{x \cdot y}- \overline{x} \cdot \overline{y})$
 **(Empirischer) Korrelationskoeffizient nach Pearson $\tilde{s_x} \neq 0$ und $\tilde{s_y} \neq 0$:** $r_{xy} = \frac{\tilde{s_{xy}}}{\tilde{s_x} \cdot \tilde{s_y}}$ 
+**Bestimmtheitsmass (linearität):** $R^2 = (r_{xy})^2$ (Multiplizert mit $100$ ergibt %)
 
 ## Interpretierung
 | $r_{xy}$ | Bedeutung                                                        |
@@ -22,6 +23,12 @@
 - $-1 \le r_{xy} \le 1$
 - $\tilde{s}_{xy} = \overline{xy} = \overline{x} \cdot \overline{y}$
 - $r_{xy} = \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\sqrt{\overline{x^2} - \overline{x}^2} \cdot \sqrt{\overline{y^2} - \overline{y}^2}}$
+
+$E(X+Y) = E(X) + E(Y)$
+$E(\alpha X) = \alpha \cdot E(X)$
+
+$V(X+Y) = V(X) + V(Y)$
+$V(\alpha x) = \alpha^2 \cdot V(X)$
 
 ## Rangkorrelation
 $rg(x_i)$: Arithmetisches Mittel der Indizes aller Stichprobenwerte $x_i$ in der ge

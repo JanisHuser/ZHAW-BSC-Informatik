@@ -41,18 +41,7 @@ $$
 
 
 # Binominalkoeffizienten
-$$
-\begin{pmatrix}
-n \\
-k
-\end{pmatrix}
-=
-\frac{
-n!
-}{
-(n-k)! \cdot k!
-}
-$$
+
 ## Leere Menge
 $$
 \begin{pmatrix}
@@ -143,3 +132,40 @@ k
 a^k
 b^{n-k}
 $$
+### Binominalkoeffizient
+$$
+\begin{pmatrix}
+n \\
+k
+\end{pmatrix}
+=
+\frac{
+n!
+}{
+(n-k)! \cdot k!
+}
+$$TR: $n$ "ncR" $k$
+
+### Auswahl ohne zurücklegen
+**Anzahl Möglichkeiten:** $n$
+**Anzahl die zu ziehen sind:** $k$
+$$
+M
+=
+\begin{pmatrix}
+n \\
+k
+\end{pmatrix}
+=
+\frac{
+n!
+}{
+(n-k)! \cdot k!
+}
+$$
+### Anzahl totale Möglichkeiten
+**Anzahl zur Auswahl:** $n$
+$$
+M = n!
+$$
+

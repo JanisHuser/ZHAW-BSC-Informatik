@@ -92,6 +92,11 @@ $\varphi(x) = \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{1}{2} x^2}$
 
 ## Zentraller Grenzwertsatz
 Alle unabhängigen Zufallsvariablen haben denselben Erwartungswert $\mu$ und dieselbe Varianz $\sigma^2$
-**Summe:**$S_n= \sum\limits_{i=1}^{n}X_i$
-**Arithmetisches Mittel:** $\overline{X}_n = \frac{S_n}{n}$
+**Summe:**$S_n= \sum\limits_{i=1}^{n}X_i = N(n \cdot \mu, \sqrt{2} \cdot \sigma)$
+**Arithmetisches Mittel:** $\overline{X}_n = \frac{S_n}{n} = N(n \cdot \mu, \frac{\sigma}{\sqrt{n}})$
 **Zufallsvariable:** $U_n = \frac{S_n - n \mu}{\frac{n} \cdot |sigma} = \frac{\overline{X}_n - \mu}{\frac{\sigma}{\sqrt{n}}}$
+
+$E(S_n) = n \cdot \mu$
+$V(S_n) = n \cdot \sigma^2$
+$E(\overline{X_n}) = \mu$
+$V(\overline{X_n}) = \frac{\sigma^2}{n}$

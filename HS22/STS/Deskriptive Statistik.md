@@ -9,10 +9,6 @@ $h: \mathbb{R} \rightarrow \mathbb{R}, h(x) =$ Anzahl der  $\le i \le n$ mit $x_
 **Empirische relative Häufigkeitsfunktion (PMF / PDF)**
 $f: \mathbb{R} \rightarrow [0, 1], f(x) = \frac{h(x)}{n}$
 
-
-![[Pasted image 20230101111959.png]]
-![[Pasted image 20230101112012.jpg]]
-
 ## Absolute und relative Summenhäufigkeit
 
 ### Für nichtklassierte Stichproben
@@ -24,10 +20,6 @@ $H: \mathbb{R} -> \mathbb{R}, H(x) =$ Summe aller $h(y)$ mit $y \le x$
 
 #### Empirische relative Summenhäufigkeit / Kummulative Verteilungsfunktion (CDF)
 $F: \mathbb{R} \rightarrow [0,1], F(x) =$ Summe aller PMF Werte $f(y)$ mit $y \le x$.
-
-![[Pasted image 20230101112022.png]]
-![[Pasted image 20230101112026.png]]
-
 
 ## Eigenschaften der PMF und CDF
 
@@ -41,9 +33,15 @@ $F: \mathbb{R} \rightarrow [0,1], F(x) =$ Summe aller PMF Werte $f(y)$ mit $y \l
 - Der Anteil aller Stichprobenwerte $x_i$ mit $a \lt x_i \le b$ ist $F(b) - F(a)$ 
 - Der Anteil aller Stichprobenwerte $x_i$ mit $x_i > b$ ist $1 - F(b)$
 
-
-
 ## Klassierte Stichproben
+**Klassenbreite:** $b_i$
+**Relative Häufigkeiten:** $f_i = \frac{h_i}{n}$
+**relative Häufigkeitsfunktion:** $g(x) = f_i$
+**Empirische Dichtefunktion (PDF):** $f(x) = \frac{g(x)}{b_i}$
+**Kumulative Verteilungsfunktion:** $F(X) = \sum\limits_{i=1}^{x} f(i)$
+$$
+b_i = \frac{F(i)-F(i-1)}{PDF}
+$$
 
 $$
 a \lt x \le b \Rightarrow F(b) - F(a)
@@ -74,14 +72,15 @@ $$
 $$
 R_q = \frac{1}{2} (x_z + x_{z+1})
 $$
-### Wenn $z = n \cdot q$ keine ganze Zahl
+### Wenn $z = n \cdot q$ keine ganze Zahl ($z$ ist die nächstgrössere Zahl) 
 $$
 R_q = x_{z}
 $$
 ## In einer Klasse
-
 **Quantil:** $q$
 **Wert bei q**: $R_q$
+**Endwert der unteren Klasse:** $a$
+**Endwert der oberen Klasse:** $b$
 
 $$
 \frac{
@@ -108,8 +107,8 @@ q = \frac{(F(b) - F(a)) \cdot (R_q -a)}
 $$
 ## Boxplot
 **Quartilsabstand**: $Q_3 - Q_1$
-**Untere Antenne:** $\ge Q_1 - 1.5 (Q_3 - Q_1)$
-**Obere Antenne:** $le + 1.5(Q_3 - Q_1)$
+**Untere Antenne:** $\le Q_1 - 1.5 (Q_3 - Q_1)$
+**Obere Antenne:** $\ge + 1.5(Q_3 - Q_1)$
 ![[Pasted image 20230101165432.png]]
 
 ## Stichprobenmittelwert
