@@ -26,4 +26,4 @@ class ThetaJoin(BaseJoin):
         
         selected_data = select.do(combined_data, log)
         
-        return header, selected_data
+        return header, self.clean_data(data, log)

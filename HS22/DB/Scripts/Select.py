@@ -1,5 +1,8 @@
-class Select():
+from .BaseOperand import BaseOperand
+
+class Select(BaseOperand):
     def __init__(self, headers, selection: str):
+        super().__init__()
         self._headers = headers
         self._selection = selection
         
@@ -28,9 +31,6 @@ class Select():
             if eval(selection):
                 result.append(row)
                 
-                if log:
-                    print (*row, sep='\t')
-                
-        return result
+        return self.clean_data(result, log)
             
         

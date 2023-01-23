@@ -17,11 +17,6 @@ class SetIntersect(SetBase):
         for row in a:
             if row in b:
                 results.append(row)
-                
-        if log:
-            for row in results:
-                print(*row, sep='\t')
-                
-                
-        return results
+            
+        return self.clean_data(results, log)
         

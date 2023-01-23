@@ -36,8 +36,6 @@ class CartesianJoin(BaseJoin):
                 combined.extend(row_b)
                 
                 data.append(combined)
-                
-                if log:
-                    print(*combined, sep='\t')
             
-        return header, data
+            
+        return header, self.clean_data(data, log)

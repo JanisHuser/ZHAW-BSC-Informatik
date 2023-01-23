@@ -73,11 +73,27 @@ data_r = [
 ]
 
 data_s = [
-    ['Carrie Fisher', '123 Mapple St.', 'F', '999'],
-    
+    ['Carrie Fisher', '123 Mapple St.', 'F', '999'],   
 ]
 
 subtract = SetSubtract(header)
-
 subtracted_data = subtract.do(data_r, data_s, True)
+```
+
+## Duplikate entfernen
+
+$$
+\phi
+$$
+```python
+from Scripts.Sets.Set_Helpers import remove_duplicates
+data_r = [
+    ['Carrie Fisher', '123 Mapple St.', 'F', '999'],
+    ['Carrie Fisher', '123 Mapple St.', 'F', '999'],
+    ['New DATA HERE', '123 Mapple St.', 'F', '999']
+]
+
+setified = remove_duplicates(data_r)
+for row in setified:
+    print (*row, sep='\t')
 ```

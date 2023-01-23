@@ -15,13 +15,7 @@ class SetUnion(SetBase):
             print (*self._header, sep='\t')
         
         for row in b:
-            if row not in a:
-                results.append(row)
-                
-        if log:
-            for row in results:
-                print(*row, sep='\t')
-                
-                
-        return results
+            results.append(row)
+        
+        return self.clean_data(results, log)
                 

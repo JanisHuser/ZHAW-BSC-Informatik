@@ -18,10 +18,5 @@ class SetSubtract(SetBase):
             if row not in b:
                 results.append(row)
                 
-        if log:
-            for row in results:
-                print(*row, sep='\t')
-                
-                
-        return results
+        return self.clean_data(results, log)
         

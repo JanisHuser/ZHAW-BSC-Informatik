@@ -1,9 +1,10 @@
+from .BaseOperand import BaseOperand
 
-class Projection():
+class Projection(BaseOperand):
     def __init__(self, headers, columns):
+        super().__init__()
         self._headers = headers
         self._columns = columns
-        
         
         for col in columns:
             if col not in headers:
@@ -30,8 +31,10 @@ class Projection():
             for i in columns:
                 new_row.append(row[i])
                 
-            if log:
-                print(*new_row, sep='\t')
             result.append(new_row)
             
-        return result
+        return self.clean_data(result, log)
+        
+        
+    def set_bag(self, enable: bool):
+        self._is_bag = enable

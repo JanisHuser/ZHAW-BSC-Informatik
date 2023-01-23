@@ -47,13 +47,11 @@ class NaturalJoin(BaseJoin):
                 for i, h in enumerate(self._map_B):
                     if h not in self._map_A:
                         row_copy.append(r[i])
-                
-                if log:
-                    print (*row_copy, sep='\t')
+                    
                 results.append(row_copy)
             
             
-        return (headers, results)
+        return (headers, self.clean_data(data, log))
         #for rowA in a:
             
             

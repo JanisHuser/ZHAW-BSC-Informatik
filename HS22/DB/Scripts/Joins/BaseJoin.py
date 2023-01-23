@@ -1,6 +1,9 @@
-class BaseJoin():
+from ..BaseOperand import BaseOperand
+
+class BaseJoin(BaseOperand):
     
     def __init__(self, attributes_A, attributes_B):
+        super().__init__()
         # Remove this dependency in the future
         # If this thing is ever used again
         self._map_A = attributes_A
