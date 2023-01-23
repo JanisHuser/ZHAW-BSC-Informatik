@@ -65,3 +65,23 @@ new_data = projection.do(data, True)
 $$
 \rho_{\text{neuerName}}(R)
 $$
+
+# Group By
+```python
+from Scripts.GroupBy import GroupBy
+
+headers = [
+    'A', 'B', 'C'
+]
+
+data = [
+    [1, 0, 0],
+    [1, 0, 1],
+    [1, 1, 0],
+    [0, 1, 0]
+]
+
+columns = 'B'
+projection = GroupBy(headers, columns)
+new_data = projection.group_by(data, False, True)
+```
