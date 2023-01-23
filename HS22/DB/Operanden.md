@@ -37,6 +37,7 @@ new_data = select.do(data, True)
 $$
 \pi_{spalten}
 $$
+
 ```python
 from Scripts.Projection import Projection
 
@@ -52,8 +53,10 @@ data = [
 ]
 
 columns = ['A', 'C']
+# Setze erweiterungen, kann auch leer gelassen werden
+extensions = [('2*A+C', 'X')]
 
-projection = Projection(headers, columns)
+projection = Projection(headers, columns, extensions)
 new_data = projection.do(data, True)
 ```
 
