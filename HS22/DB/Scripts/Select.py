@@ -10,11 +10,22 @@ class Select():
         if log:
             print(*self._headers, sep='\t')
         
+            
+        safe_headers = []
+        selection = self._selection
+        for h in self._headers:
+            safe_header = h.replace('.', '_')
+            safe_headers.append((h, safe_header))
+            
+            selection = selection.replace(h, safe_header)
+            
+            
         for row in data:
-            for i, h in enumerate(self._headers):
+            for i, header in enumerate(safe_headers):
+                h = header[1]
                 locals()[h] = row[i]
                 
-            if eval(self._selection):
+            if eval(selection):
                 result.append(row)
                 
                 if log:
