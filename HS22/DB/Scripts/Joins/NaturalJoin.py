@@ -28,7 +28,7 @@ class NaturalJoin(BaseJoin):
                 
     def join(self, a, b, log: bool = False):
     
-        results = []
+        data = []
         
         headers = list(self._map_A)
         for h in self._map_B:
@@ -47,15 +47,9 @@ class NaturalJoin(BaseJoin):
                 for i, h in enumerate(self._map_B):
                     if h not in self._map_A:
                         row_copy.append(r[i])
-                
-                if log:
-                    print (*row_copy, sep='\t')
-                results.append(row_copy)
+                    
+                data.append(row_copy)
             
             
-        return (headers, results)
-        #for rowA in a:
-            
-            
-            
+        return (headers, self.clean_data(data, log))            
     

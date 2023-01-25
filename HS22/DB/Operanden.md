@@ -37,6 +37,7 @@ new_data = select.do(data, True)
 $$
 \pi_{spalten}
 $$
+
 ```python
 from Scripts.Projection import Projection
 
@@ -52,8 +53,10 @@ data = [
 ]
 
 columns = ['A', 'C']
+# Setze erweiterungen, kann auch leer gelassen werden
+extensions = [('2*A+C', 'X')]
 
-projection = Projection(headers, columns)
+projection = Projection(headers, columns, extensions)
 new_data = projection.do(data, True)
 ```
 
@@ -62,3 +65,23 @@ new_data = projection.do(data, True)
 $$
 \rho_{\text{neuerName}}(R)
 $$
+
+# Group By
+```python
+from Scripts.GroupBy import GroupBy
+
+headers = [
+    'A', 'B', 'C'
+]
+
+data = [
+    [1, 0, 0],
+    [1, 0, 1],
+    [1, 1, 0],
+    [0, 1, 0]
+]
+
+columns = 'B'
+projection = GroupBy(headers, columns)
+new_data = projection.group_by(data, False, True)
+```
