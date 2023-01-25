@@ -28,14 +28,28 @@ class Projection(BaseOperand):
                 
         if log:
             print(*keys, sep='\t')
-                
+        
+        safe_headers = []
+
+        for h in self._headers:
+            safe_header = h.replace('.', '_')
+            safe_headers.append((h, safe_header))
+            
+            for e, d in self._extensions:
+                e = e.replace(h, safe_header)
+        
+            for i, col in enumerate(self._columns):
+                self._columns[i] = col.replace(h, safe_header)
+        
+        print (self._columns)
         for row in data:
             new_row = []
             
             for i in columns:
                 new_row.append(row[i])  
             
-            for i, h in enumerate(self._headers):
+            for i, header in enumerate(safe_headers):
+                h = header[1]
                 locals()[h] = row[i]
                 
             for equation, header in self._extensions:

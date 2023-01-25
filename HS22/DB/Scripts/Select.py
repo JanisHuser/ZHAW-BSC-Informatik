@@ -22,7 +22,6 @@ class Select(BaseOperand):
             
             selection = selection.replace(h, safe_header)
             
-            
         for row in data:
             for i, header in enumerate(safe_headers):
                 h = header[1]

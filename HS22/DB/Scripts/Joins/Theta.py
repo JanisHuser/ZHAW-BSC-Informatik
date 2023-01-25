@@ -19,6 +19,9 @@ class ThetaJoin(BaseJoin):
         cartesian = CartesianJoin(self._header_A, self._header_B, self._name_A, self._name_B)
         cartesian.set_bag(self._is_bag)
         
+        
+        #query = query.replace('.', '_')
+        
         header, combined_data = cartesian.join(a, b, log)
         
         if log:
@@ -28,4 +31,4 @@ class ThetaJoin(BaseJoin):
         selected_data = select.do(combined_data, log)
         
         
-        return header, self.clean_data(data, log)
+        return header, self.clean_data(selected_data, log)
