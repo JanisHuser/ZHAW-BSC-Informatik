@@ -17,7 +17,7 @@ class ThetaJoin(BaseJoin):
         if log:
             print ("Apply Cartesian Join")
         cartesian = CartesianJoin(self._header_A, self._header_B, self._name_A, self._name_B)
-        cartesian.set_bag(self.is_bag)
+        cartesian.set_bag(self._is_bag)
         
         header, combined_data = cartesian.join(a, b, log)
         
