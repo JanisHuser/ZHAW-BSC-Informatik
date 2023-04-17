@@ -8,9 +8,9 @@
 | C | 192.0.0.0 - 223.255.255.255 | 255.255.255.X |
 
 ## Subnetzmaske berechnen
-**Anzahl Clients**: $n$
+**Anzahl benötigte Ip Adressen**: $n$
 
-**Anzahl Clients**: $b = n + 2$ Bits aus Tabelle lesen
+**Anzahl zum Rechnen**: $b = n + 2$ Bits aus Tabelle lesen
 
 **Maske**: $/(32 - b)$
 
