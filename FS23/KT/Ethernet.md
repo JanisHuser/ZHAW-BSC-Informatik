@@ -32,3 +32,7 @@
 | 0 | / 16 | 65536 -2 |
 
 Wenn alternative Schreibweise nicht gegeben ist, dann wird anstelle von X 0 verwendet.
+
+## Default Routing
+
+Alles was 
