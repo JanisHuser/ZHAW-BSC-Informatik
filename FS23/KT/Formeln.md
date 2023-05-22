@@ -8,7 +8,10 @@
 | Signalleistung | $S$ | | |
 | Rauschleistung | $N$ | | |
 | Kanalkapazität | $C$ | | $B \cdot ld(1 + \frac{S}{N})$ |
-| Nettobitrate | | | $\text{Bruttobitrate} \cdot \frac{\text{Nutzdaten}}{\text{Nutzdaten} + \text{Header}}$
+| Nettobitrate | | | $\text{Bruttobitrate} \cdot \frac{\text{Nutzdaten}}{\text{Nutzdaten} + \text{Header}}$ |
+| Maximale Bitrate | $R$ | $\frac{\text{bit}}{\text{s}}$ | $R \leq 2B \cdot \log_2(M)$ |
+| Bandbreite | $B$ | MiB | |
+| max. Symbolrate | $f_s$ | Hz | $2B$ |
 
 ## Fehlerkorrektur
 
