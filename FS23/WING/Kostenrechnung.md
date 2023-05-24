@@ -63,6 +63,7 @@ Die hergestellten Güter und die erbrachten Dienstleistungen werden als Kostentr
 ### Zuschlagssätze
 
 ### Zuschlagsatz
+**G**emein**K**osten**Z**uschlag (GKZ)
 $$
 \frac{
 \text{Endstellenkosten (ESK) der Hauptkostenstelle}

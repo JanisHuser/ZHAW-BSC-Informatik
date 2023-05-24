@@ -1,7 +1,25 @@
-**Materialkosten**: Einzel-Mateial + Material-Gemeinkosten
-**Fertigungskosten**: Einzel-Löhne + Fertigungs-Gemeinkosten
-**Herstellungskosten**: Materialkosten + Fertigungskosten
-**Selbstkosten**: Herstellkosten + Verwaltungs-Gemeinkosten
+![[Pasted image 20230523110832.png]]
 
-**Nettoerlös (Netto-Verkaufspreis exkl. MwSt)**: Selbstkosten + Reingewinn
+## Nettoverkaufspreis
+\+ Verkaufssonderkosten
+\= Nettobarverkaufspreis
+\+ Skonto
+\= Nettokreditverkafspreis
+\+ Rabatt
+\= Bruttokreditverkaufspreis
+\+ MwST.
+\= Bruttokreditverkaufspreis
 
+## Bruttokreditankaufspreis
+Katalogpreis des Lieferanten
+
+\- Rabatt/-e
+\= Nettokreditankaufspreis (= Rechnungsbetrag)
+\- Skonto
+\= Nettobareinkaufspreis
+\+ Bezugskosten
+\= Einstandswert / Einstandspreis
+
+## Gesamt-Kalkulation
+auf 5 Rappen gerundent (am Ende)
+![[Pasted image 20230523112034.png]]
