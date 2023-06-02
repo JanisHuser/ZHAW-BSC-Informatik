@@ -1,6 +1,7 @@
 # Ethernet
 
 ## Klasse bestimmen
+
 | Klasse | Addressbereich | Netzmaske |
 |--|--|--|
 | A | 0.0.0.0 - 127.255.255.255 | 255.X.0.0 |
@@ -32,7 +33,3 @@
 | 0 | / 16 | 65536 -2 |
 
 Wenn alternative Schreibweise nicht gegeben ist, dann wird anstelle von X 0 verwendet.
-
-## Default Routing
-
-Alles was 
