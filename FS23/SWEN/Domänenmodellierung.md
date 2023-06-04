@@ -51,3 +51,5 @@ Sind in einer Klasse Attribute vorhanden, die normalerweise zu einem eigenen Typ
 
 ## Beschreibungsklasse
 Attribute, die für alle Artikel eines Typs gleich sind, werden in eine eigene Klasse herausgezogen.
+
+

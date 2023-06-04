@@ -1,7 +1,7 @@
 | Beschreibung | Symbol |Einheit | Formel |
 |--|--|--|--|
 | Signaldämpfung || db | $10*log(\frac{P_E}{P_A})$ |
-| Signaldämpfung über Spannung | | db | $20 * log(\frac{U_E}{U_A})$ |
+| Signaldämpfung über Spannung | | db | $20 * log(\frac{U_E}{U_A})^2$ |
 | Amplitude | $A$ | V | |
 | Maximale Anzahl erkennbare Zustände | $M$ |bit/s |$1+\frac{A}{\Delta V}$ |
 | Maximal erreichbare Bitrate (Hartley's Gesetz) | $R$ | bit/s | $R \le 2 \cdot B ld(M) = 2B \cdot ld(M)$
