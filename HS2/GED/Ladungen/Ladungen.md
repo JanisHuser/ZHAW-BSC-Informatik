@@ -1,7 +1,0 @@
--  [Ladungen](00_ladungen.md)
-- [Elektrisches Feld](01_elektrisches_feld.md)
-- [Magnetisches Feld](02_magnetisches_feld.md)
-- [Superpositionsprinzip](03_superpositionsprinzip.md)
-- [Lorentzkraft](04_lorentzkraft.md)
-- [Freies Geladenes Teilchen](06_freies_geladenes_teilchen.md)
-- [Generator](07_generator.md)

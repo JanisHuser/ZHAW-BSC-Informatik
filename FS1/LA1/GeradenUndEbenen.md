@@ -1,2 +1,0 @@
-# Geraden und Ebenen
-
