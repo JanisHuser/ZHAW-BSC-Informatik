@@ -41,6 +41,7 @@ jobs:
           mdbook-version: 'latest'
 
       - run: cargo install mdbook_katex_css_download
+      - run: mdbook_katex_css_download
       - run: mdbook build
 
       - name: Deploy
