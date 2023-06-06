@@ -3,10 +3,10 @@
 | Beschreibung | Symbol |Einheit | Formel |
 |--|--|--|--|
 | Framerate | $F_R$ |$\frac{\text{Frames}}{\text{s}}$|$F_R = \frac{B}{8 \cdot (F_L + IFG) \cdot 8}$|
-| Bitrate | $B$ |||
+| Bitrate | $B$ | | |
 | Framelänge | $F_L$ |Bits| Data + Prä + SFD + FCS = Data + 7Bit + 1Bit + 4Byte |
-| Nutzbitrate | $N$ || $N = F_R \cdot P \cdot 8$|
-| Payload | $P$ |||
+| Nutzbitrate | $N$ | | $N = F_R \cdot P \cdot 8$|
+| Payload | $P$ | | |
 
 ## Übertragungsarten
 

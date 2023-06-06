@@ -19,10 +19,10 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Dezimal | 1 | 2 | 4 | 8 | 16| 32| 64|128|256|
 
-Es werden jeweils zwei Adressen für
+Es werden jeweils zwei Adressen für \\
 - Broadcast (höchste Adresse)
 - Netzadresse (tiefste Adresse)
-benötigt.
+benötigt.  \\
 
 | CIDR | Subnet Maske | Anzahl Adressen | Nutzbare Adressen |
 |-|-|-|-|
