@@ -1,0 +1,853 @@
+<!DOCTYPE HTML>
+<html lang="de" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>IPC - My ZHAW Notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../../FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/KT/Zusammenfassung.html"><strong aria-hidden="true">1.1.</strong> Zusammenfassung</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Formeln.html"><strong aria-hidden="true">1.2.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Schichten.html"><strong aria-hidden="true">1.3.</strong> OSI Schichten</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.4.</strong> Ethernet</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/WING/index.html"><strong aria-hidden="true">2.</strong> WING</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/WING/SGMM.html"><strong aria-hidden="true">2.1.</strong> SGMMM</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Materialwirtschaft.html"><strong aria-hidden="true">2.2.</strong> Materialwirtschaft</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kostenrechnung.html"><strong aria-hidden="true">2.3.</strong> Kostenrechnung</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Finanzen.html"><strong aria-hidden="true">2.4.</strong> Finanzen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kalkulationen.html"><strong aria-hidden="true">2.5.</strong> Kalkulationen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Strategie.html"><strong aria-hidden="true">2.6.</strong> Strategie</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Marketing.html"><strong aria-hidden="true">2.7.</strong> Marketing</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/SNP/index.html"><strong aria-hidden="true">3.</strong> SNP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/SNP/Grundlagen.html"><strong aria-hidden="true">3.1.</strong> Grundlagen</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Arrays.html"><strong aria-hidden="true">3.2.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Modulare Programmierung.html"><strong aria-hidden="true">3.3.</strong> Modulare Programmierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Pointers.html"><strong aria-hidden="true">3.4.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Parameter By Reference.html"><strong aria-hidden="true">3.5.</strong> Pass By Reference</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Dynamische Allozierung.html"><strong aria-hidden="true">3.6.</strong> Dynamische Allozierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/File IO.html"><strong aria-hidden="true">3.7.</strong> File IO</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Multithreading und so weiter.html"><strong aria-hidden="true">3.8.</strong> Multithreading</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/IPC - Inter Process Communication.html" class="active"><strong aria-hidden="true">3.9.</strong> IPC</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Sync.html"><strong aria-hidden="true">3.10.</strong> Sync</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My ZHAW Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/src/FS23/SNP/IPC - Inter Process Communication.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Kommunikation zwischen zwei Prozessen</p>
+<h1 id="posix-signale"><a class="header" href="#posix-signale">POSIX Signale</a></h1>
+<p>Diese Signale können jedem Prozess gesendet werden. Somit sind die nachfolgenden Signale universal Anwendbar.</p>
+<p>Mit htop können alle Prozesse unter Linux angesehen werden. Dieser dient als zudem als Task-Manager und erlaubt es Prozessen ein bestimmtes POSIX Signal zu senden.</p>
+<pre><code class="language-shell">htop
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th>Signal</th><th>Default Aktion</th><th>Beschreibung</th></tr></thead><tbody>
+<tr><td>SIGINT</td><td>Terminiert</td><td> Interrupt Signal von der Tastatur (Ctrl-C)</td></tr>
+<tr><td>SIGQUIT</td><td> Code Dump</td><td> Quit-Signal von der Tastatur (Ctrl-\)</td></tr>
+<tr><td>SIGABRT</td><td>Code Dump</td><td>Abort Signal via <strong>abort()</strong> oder <strong>assert()</strong></td></tr>
+<tr><td>SIGKILL</td><td> Terminiert</td><td>Kill-Signal</td></tr>
+<tr><td>SIGSEGV</td><td>Code Dump</td><td>Unzulässiger Speicherzugriff</td></tr>
+<tr><td>SIGALRM</td><td>Terminiert</td><td>Timer-Signal durch <strong>alarm()</strong> ausgelöst</td></tr>
+<tr><td> SIGTERM</td><td>Terminiert</td><td> Terminierungs-Signal</td></tr>
+<tr><td>SIGSTOP</td><td> Stoppt  den prozess</td><td>Stoppt den Prozess (oder ignoriert falls gestoppt)</td></tr>
+<tr><td> SIGCONT</td><td>Reaktiviert den Prozess</td><td>Reaktiviert den Prozess (oder ignoriert falls am laufen)</td></tr>
+</tbody></table>
+</div>
+<h2 id="beenden-des-prozesses"><a class="header" href="#beenden-des-prozesses">Beenden des Prozesses</a></h2>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;signal.h&gt;
+
+
+// sag dem Childprozess, dass es normal (gracefully) beenden soll
+// speichert alles und beendet dann
+int status = kill(child_pid, SIGTERM);
+
+if (status != 0)
+{
+	// Prozess konnte nicht beendet werden
+}
+</code></pre>
+<h2 id="signale-verarbeiten"><a class="header" href="#signale-verarbeiten">Signale verarbeiten</a></h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#incldue &lt;stdlib.h&gt;
+#incldue &lt;unistd.h&gt;
+#include &lt;sys/wait.h&gt;
+
+
+static pid_t start_child(int wait_for_signal)
+{
+	pid_t cpid = fork();
+	if (cpid == -1)
+	{
+		perror (&quot;Fehler beim fork&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if (cpid &gt; 0)
+	{
+		// Der Parent gibt die child id zurück
+		// child hat cpid von 0
+		return cpid;
+	}
+
+	// Nur der Child Prozess kommt soweit
+	if (wait_for_signal)
+	{
+		// Nur der child 2 kommt soweit
+		if (pause() == -1)
+		{
+			perror(&quot;Fehler bei pause()&quot;);
+			exit(EXIT_FAILURE);
+		}
+	}
+	
+
+	exit (123);
+}
+
+static void wait_for_child()
+{
+	int wsts;
+
+	// bllockiere bis ein Child Prozess beendet ist
+	pid_t = wait(&amp;wsts);
+
+	if (wpid == -1)
+	{
+		perror(&quot;Fehler in wait&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if (WIFEXITED(wsts))
+	{
+		printf(&quot;Child %d: exit=%d (status=0x%04X)\n&quot;, wpid, WEXITSTATUS(wsts), wsts); 
+	}
+
+	if (WIFSIGNALED(wsts))
+	{
+		printf(&quot;Child %d: signal=%d (status=0x%04X)\n&quot;, wpid, WTERMSIG(wsts), wsts);
+	}
+}
+
+int main()
+{
+	pid_t cpid1 = start_child(0); // beendet mit exit code
+	pid_t cpid2 = start_chld(1); // beendet mit signal
+
+	sleep(1);
+
+	// sag dem Prozess2 dass er sich beenden soll
+	if (kill(cpid2, SIGTERM) == -1)
+	{
+		perror(&quot;Prozess 2 konnte nicht beendet werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	wait_for_chlid();
+	wait_for_chld();
+}
+
+</code></pre>
+<h1 id="posix-pipe"><a class="header" href="#posix-pipe">POSIX PIPE</a></h1>
+<ul>
+<li>Dient als FIFO (First In First Out) Buffer von fixer Maximalgrösse.</li>
+<li>Unidirektional, von einer zu der anderen Seite.</li>
+</ul>
+<p>Mit dem Pipe befehl wird eine Unidirektionale Verbindung erstellt.</p>
+<pre><code class="language-c">
+int fd[2];
+
+pipe(fd);
+
+// Lese Seite der Pipe
+fd[0];
+
+// Schreibseite der Pipe
+fd[1];
+
+// schliessen der Read Pipe
+close(fd[0]);
+
+// Daten auf Schreib Pipe senden
+// 12: länge des zu sendenden strings
+write(fd[1], &quot;Hello world\n&quot;, 12);
+
+
+// Lesen von Read Pipe
+// Geschieht erst, nachdem alle Kopien
+// Des Write Buffers geschlossen worden sind
+// Somit ist dies: BLOCKING
+read(fd[0], buffer, BUFFER_SIZE);
+</code></pre>
+<h2 id="anonymous-pipe"><a class="header" href="#anonymous-pipe">Anonymous Pipe</a></h2>
+<pre><code class="language-c">
+#include &lt;sys/types.h&gt;
+#includne &lt;unistd.h&gt;
+
+const int BUFFER_SIZE = 100;
+
+void main (void)
+{
+	int fd[2];
+	char buffer[BUFFER_SIZE];
+	ssize_t nBytes;
+
+	status = pipe(fd);
+	if (status == -1)
+	{
+		perror(&quot;Pipe konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	pid_t child_id = fork();
+
+	if (child_id == -1)
+	{
+		perror(&quot;Child Prozess konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if (child_id == 0)
+	{
+		// Wir sind in Child Prozess
+
+		// Da wir nichts mit der Schreibpipe zu tun haben, 
+		// können wir diese schliessen
+		close(fd[1]);
+
+		// Lese Daten von readpipe in buffer
+		// Maximale Länge BUFFER_SIZE
+		nbytes = read(fd[0], buffer, BUFFER_SIZE);
+
+		// Wir haben unser Zeugs mit der readpipe gemacht,
+		// jetzt können wir die pipe schliessen
+		close(fd[0]);
+
+		exit(EXIT_SUCESS);
+	}
+
+	if (child_id != 0)
+	{
+		// Sind in Parent Prozess
+		// Dieses if ist eigentlich nicht mehr notwendig
+
+		// Wir wollen nichts lesen,
+		// daher können wir in diesem Prozess die Pipe zumachen
+		close(fd[0]);
+
+		// Jetzt schreiben wir unsere Daten auf
+		// die Lesepipe
+		write (fd[1], &quot;Hello world\n&quot;, 12);
+
+		// Schliessen der Pipe
+		close(fd[1]);
+
+		exit(EXIT_SUCCESS);
+	}
+}
+
+</code></pre>
+<h2 id="non-blocking-version"><a class="header" href="#non-blocking-version">Non Blocking Version</a></h2>
+<p>In machen Fällen ist es notwendig, dass wir die Lesevorgänge der Pipe nicht blockierend machen. </p>
+<pre><code class="language-c">void set_nonblocking(int fd)
+{
+	// Lese alle bisher gesetzten Flags
+	// Wir wollen nur das nonblocking flag setzen
+	int flags = fcntl (fd, F_GETFL, 0);
+
+	if (flags == -1)
+	{
+		perror(&quot;Pipe Attribute konnten nicht gelesen werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	int result = fcntl(fd, F_SETFL, flags | O_NONBLOCK);
+	if (result == -1)
+	{
+		perror(&quot;Pipe Attribute konnten nicht gesetzt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+}
+
+
+int fd[2];
+
+if (pipe(fd))
+{
+	perror(&quot;Pipe konnte nicht erstellt werden&quot;);
+	exit(EXIT_FAILURE);
+}
+
+// pipe auf non blocking setzen
+set_nonblocking(fd[0]);
+
+
+// HOWTO LESEN
+int reading = 1;
+while (reading)
+{
+	int n = read(fd[0], buffer, BUFFER_SIZE);
+	
+	if (n == 0)
+	{
+		// polling aufhören
+		// da pipe geschlossen worden ist
+		close(fd[0]);
+		reading = 0;
+		continue;
+	}
+
+	if (n &gt; 0)
+	{
+		// gelesene Daten verwenden
+	}
+	else if (errno = EAGAIN)
+	{
+		// poll interval abwarten
+		// Es kann passieren, dass wir den Intervall so kurz halten
+		// dass wir das Lock der pipe nicht wirklich frei lassen
+		// dies wird als spin-lock bezeichnet 
+	}
+	else
+	{
+		// Da haben wir verkackt
+		// Ernsthafter fehler
+	}
+}
+</code></pre>
+<h2 id="named-pipes"><a class="header" href="#named-pipes">Named Pipes</a></h2>
+<p>Named pipes erlauben es, dass zwei unterschiedliche (sich nicht kennende) Prozesse eine Pipeverbindung aufbauen.</p>
+<pre><code class="language-shell">mkfifo pfad -m Mode
+</code></pre>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+
+
+int fd = mkfifo(&quot;Pfad&quot;, mode_t modus);
+
+// Jetzt kannst du diesen Buffer
+// wie in FileIO mit 
+// - fread
+// - fwrite
+// - fclose
+// verwenden
+</code></pre>
+<h1 id="posix-message-queue"><a class="header" href="#posix-message-queue">POSIX Message Queue</a></h1>
+<p>Maximale Kapazität von NxM Bytes
+- <strong>N</strong>: Maximale Anzahl Messages
+- <strong>M</strong>: Maximale Grösse einer Message (Bytes)</p>
+<p>Mehrere Leser und Schreiber</p>
+<ul>
+<li>Jede Meldung wird beim lesen aus der Queue entfernt</li>
+</ul>
+<p>Der name der Queue zeigt auf eine Datei im Filesystem. Daher sollte diese auch mit einem „/„ anfangen, um immer die gleiche Queue zu verwenden.</p>
+<pre><code class="language-c">
+// Öffnen einer Queue
+// soll diese für alle gleich sein, dann / vorne anfügen,
+// ansonsten ist die pipe relativ dem aktuellen Verzeichniss
+
+mqd_t mqdes = mq_open (&quot;/sideshow-bob&quot;, O_RDWR | O_CREAT, 
+                   0664, NULL);
+
+
+// Öffnen einer Queue mit Attributen
+
+</code></pre>
+<p><a href="https://github.com/tisnik/message-queues-examples/blob/master/unix-messages/posix/example1/publisher.c">Nachfolgendes Beispiel ist von hier</a></p>
+<h3 id="publisher"><a class="header" href="#publisher">Publisher</a></h3>
+<pre><code class="language-c">/*
+ * Example used in following article:
+ *
+ * Implementace front zpráv podle normy POSIX
+ * https://www.root.cz/clanky/implementace-front-zprav-podle-normy-posix/
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;mqueue.h&gt;
+
+#define QUEUE_NAME &quot;/queue1&quot;
+
+int main(void)
+{
+    mqd_t message_queue_id;
+    unsigned int priority = 0;
+    char message_text[100];
+    int status;
+
+    message_queue_id = mq_open(QUEUE_NAME, O_RDWR | O_CREAT | O_EXCL, S_IRWXU | S_IRWXG, NULL);
+    if (message_queue_id == -1) {
+        perror(&quot;Unable to create queue&quot;);
+        return 2;
+    }
+
+    strcpy(message_text, &quot;Hello world!&quot;);
+
+    status = mq_send(message_queue_id, message_text, strlen(message_text)+1, priority);
+    if (status == -1) {
+        perror(&quot;Unable to send message&quot;);
+        return 2;
+    }
+
+    status = mq_close(message_queue_id);
+    if (status == -1) {
+        perror(&quot;Unable to close message queue&quot;);
+        return 2;
+    }
+
+    return 0;
+}
+</code></pre>
+<h3 id="subscriber"><a class="header" href="#subscriber">Subscriber</a></h3>
+<pre><code class="language-c">/*
+ * Example used in following article:
+ *
+ * Implementace front zpráv podle normy POSIX
+ * https://www.root.cz/clanky/implementace-front-zprav-podle-normy-posix/
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;mqueue.h&gt;
+
+#define QUEUE_NAME &quot;/queue1&quot;
+
+int main(void)
+{
+    mqd_t message_queue_id;
+    char message_text[10000];
+    unsigned int sender;
+    int status;
+
+    message_queue_id = mq_open(QUEUE_NAME, O_RDWR);
+    if (message_queue_id == -1) {
+        perror(&quot;Unable to open queue&quot;);
+        return 2;
+    }
+
+    status = mq_receive(message_queue_id, message_text, sizeof(message_text), &amp;sender);
+    if (status == -1) {
+        perror(&quot;Unable to receive message&quot;);
+        return 2;
+    }
+    printf(&quot;Received message (%d bytes) from %d: %s\n&quot;, status, sender, message_text);
+
+    status = mq_close(message_queue_id);
+    if (status == -1) {
+        perror(&quot;Unable to close message queue&quot;);
+        return 2;
+    }
+
+    return 0;
+}
+</code></pre>
+<h1 id="posix-socket"><a class="header" href="#posix-socket">POSIX Socket</a></h1>
+<p>Erlaubt Kommunikation über Netzwerk, oder über virtuelles LAN in einem System.</p>
+<h2 id="verbindungsorientiert"><a class="header" href="#verbindungsorientiert">Verbindungsorientiert</a></h2>
+<h3 id="client"><a class="header" href="#client">Client</a></h3>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/un.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define RECEIVE_TIMEOUT 0
+#define SEND_TIMEOUT 0
+
+int sockfd;
+
+void connect_server (void)
+{
+	struct addrinfo hints, *server_info, *p;
+	
+	// alles auf 0 setzen
+	memset(&amp;hints, 0, sizeof(hints)); 
+	hints.ai_familiy = AF_INET;
+	hints.ai_socktype = SOCK_STREAM;
+
+	// Hole Infos zu Socket auf
+	// localhost und port 80
+	int status = getaddrinfo(&quot;localhost&quot;, &quot;80&quot;, &amp;hints, &amp;server_info);
+	if (status != 0) {
+	    perror(&quot;getaddrinfo konnte nicht ausgeführt werden&quot;);
+	    exit(EXIT_FAILURE);
+	}
+
+	for (p = server_info; p != NULL; p = p-&gt;ai_next) {
+		if ((sockfd = socket(p-&gt;ai_family, p-&gt;ai_socktype, p-&gt;ai_protocol)) == -1)
+		{
+			perror (&quot;socket error&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		if (connect(sockfd, p-&gt;ai_addr, p-&gt;ai_addrlen) == -1) {
+			close(sockfd);
+			perror (&quot;Es konnte keine Verbinung hergestellt werden&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		// wenn erfolgreich verbunden, aus der Schleife ausbrechen
+		break;
+   }
+
+    if (p == NULL) {
+        perror (&quot;Es konnte keine Verbinung hergestellt werden&quot;);
+		exit(EXIT_FAILURE);
+    }
+
+
+	// SOCKET VERBUNDEN
+}
+
+void write(char * buffer, int len)
+{
+	int totalSent = 0;
+
+	while (totalSent &lt; len) {
+		int bytesSent = send(
+			communicationSocket,
+			buffer + totalSent,
+			len - totalSent,
+			SEND_TIMEOUT);
+
+		if (bytesSent == -1) {
+			perror (&quot;Error in send&quot;);
+			exit(EXIT_FAILURE);
+		}
+		totalSent += bytesSent;
+   }
+}
+
+int read(char *buffer, int len)
+{
+	int totalReceived = 0;
+
+	while (totalReceived &lt; len) {
+		int bytesReceived = recv(
+			communicationSocket,
+			buffer + totalReceived,
+			len - totalReceived, 
+			RECEIVE_TIMEOUT);
+			
+		if (bytesReceived == -1) {
+			perror(&quot;Error in Receive&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		totalReceived += bytesReceived;
+	}
+
+	return totalReceived;
+}
+
+void main (void)
+{
+	connect_server();
+
+	write (&quot;Hello World&quot;, 11);
+
+	char bufffer[1000];
+	int read = read(buffer, 1000);
+
+	close(sockf);
+}
+</code></pre>
+<h3 id="server"><a class="header" href="#server">Server</a></h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+
+#include &lt;netdb.h&gt;
+#include &lt;unistd.h&gt;
+
+
+#define RECEIVE_TIMEOUT 0
+#define SEND_TIMEOUT 0
+#define MAX_QUEUE 1
+
+void server_init(){
+   // BEGIN-STUDENTS-TO-ADD-CODE
+
+   struct addrinfo hints, *server_info, *p;
+
+   memset(&amp;hints, 0, sizeof(hints));
+
+   hints.ai_family = AF_INET;
+   hints.ai_socktype = SOCK_STREAM;
+
+   int status = getaddrinfo(NULL,&quot;80&quot; , &amp;hints, &amp;server_info);
+   if(status != 0){
+      ExitOnError(status, &quot;getaddrinfo&quot;);
+   }
+
+   int sockfd;
+   for (p = server_info; p != NULL; p = p-&gt;ai_next) {
+      if ((sockfd = socket(p-&gt;ai_family, p-&gt;ai_socktype, p-&gt;ai_protocol)) == -1) {
+         perror(&quot;socket error&quot;);
+         exit(EXIT_FAILURE);
+      }
+
+      if (bind(sockfd, p-&gt;ai_addr, p-&gt;ai_addrlen) == -1) {
+         close(sockfd);
+         perror(&quot;connect error&quot;);
+         exit(EXIT_FAILURE);
+      }
+
+      break; // wenn erfolgreich verbunden, aus der Schleife ausbrechen
+   }
+
+   ListeningSocket = sockfd;
+
+   listen(ListeningSocket, MAX_QUEUE);
+
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+int getRequest(char* requestBuffer, int max_len)
+{
+   // BEGIN-STUDENTS-TO-ADD-CODE
+   int bytesReceived = recv(
+      connectedSocket,
+      requestBuffer,
+      max_len -1,
+      RECEIVE_TIMEOUT);
+   requestBuffer[bytesReceived] = '\0';
+   return bytesReceived;
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+void sendResponse(char* response, int resp_len)
+{
+   // BEGIN-STUDENTS-TO-ADD-CODE
+   send(connectedSocket, response, resp_len, 0);
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+void server_close_connection(void)
+{
+   // BEGIN-STUDENTS-TO-ADD-CODE
+   close(connectedSocket);
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+
+int wait_client(void) {
+   connectedSocket = accept(ListeningSocket, 0, 0);
+   return connectedSocket;
+}
+
+void main (void)
+{
+	server_init();
+	wait_client();
+
+	char buffer[1000];
+
+	getRequest(buffer, 1000);
+	sendResponse(&quot;Hello World&quot;, 11);
+	server_close_connection();
+}
+
+
+</code></pre>
+<h2 id="verbindungslos"><a class="header" href="#verbindungslos">Verbindungslos</a></h2>
+<p>Client/Server Architektur
+• Client</p>
+<ul>
+<li>Socketdefinition (getaddrinfo(), socket())</li>
+<li>keine Verbindungsanfrage</li>
+<li>bidirektionales Lesen/Schreiben (recfrom(), sendto())</li>
+<li>danach Socket schliessen (close())
+• Server</li>
+<li>Socketdefinition (getaddrinfo(), socket(), bind())</li>
+<li>kein Abwarten und Akzeptieren von Verbindungsanfragen</li>
+<li>bidirektionales Lesen/Schreiben (recfrom(), sendto())</li>
+<li>danach eventuell Socket schliessen (close())</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../FS23/SNP/Multithreading und so weiter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../FS23/SNP/Sync.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../FS23/SNP/Multithreading und so weiter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../FS23/SNP/Sync.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_line_numbers = true;
+        </script>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

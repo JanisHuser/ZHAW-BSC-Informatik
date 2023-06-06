@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../FS23/KT/Formeln.html"><strong aria-hidden="true">1.1.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../FS23/KT/Schichten.html"><strong aria-hidden="true">1.2.</strong> ISO Schichten</a></li><li class="chapter-item expanded "><a href="../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.3.</strong> Ethernet</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="FS23/KT/Zusammenfassung.html"><strong aria-hidden="true">1.1.</strong> Zusammenfassung</a></li><li class="chapter-item expanded "><a href="FS23/KT/Formeln.html"><strong aria-hidden="true">1.2.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="FS23/KT/Schichten.html"><strong aria-hidden="true">1.3.</strong> OSI Schichten</a></li><li class="chapter-item expanded "><a href="FS23/KT/Ethernet.html"><strong aria-hidden="true">1.4.</strong> Ethernet</a></li></ol></li><li class="chapter-item expanded "><a href="FS23/WING/index.html"><strong aria-hidden="true">2.</strong> WING</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="FS23/WING/SGMM.html"><strong aria-hidden="true">2.1.</strong> SGMMM</a></li><li class="chapter-item expanded "><a href="FS23/WING/Materialwirtschaft.html"><strong aria-hidden="true">2.2.</strong> Materialwirtschaft</a></li><li class="chapter-item expanded "><a href="FS23/WING/Kostenrechnung.html"><strong aria-hidden="true">2.3.</strong> Kostenrechnung</a></li><li class="chapter-item expanded "><a href="FS23/WING/Finanzen.html"><strong aria-hidden="true">2.4.</strong> Finanzen</a></li><li class="chapter-item expanded "><a href="FS23/WING/Kalkulationen.html"><strong aria-hidden="true">2.5.</strong> Kalkulationen</a></li><li class="chapter-item expanded "><a href="FS23/WING/Strategie.html"><strong aria-hidden="true">2.6.</strong> Strategie</a></li><li class="chapter-item expanded "><a href="FS23/WING/Marketing.html"><strong aria-hidden="true">2.7.</strong> Marketing</a></li></ol></li><li class="chapter-item expanded "><a href="FS23/SNP/index.html"><strong aria-hidden="true">3.</strong> SNP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="FS23/SNP/Grundlagen.html"><strong aria-hidden="true">3.1.</strong> Grundlagen</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Arrays.html"><strong aria-hidden="true">3.2.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Modulare Programmierung.html"><strong aria-hidden="true">3.3.</strong> Modulare Programmierung</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Pointers.html"><strong aria-hidden="true">3.4.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Parameter By Reference.html"><strong aria-hidden="true">3.5.</strong> Pass By Reference</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Dynamische Allozierung.html"><strong aria-hidden="true">3.6.</strong> Dynamische Allozierung</a></li><li class="chapter-item expanded "><a href="FS23/SNP/File IO.html"><strong aria-hidden="true">3.7.</strong> File IO</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Multithreading und so weiter.html"><strong aria-hidden="true">3.8.</strong> Multithreading</a></li><li class="chapter-item expanded "><a href="FS23/SNP/IPC - Inter Process Communication.html"><strong aria-hidden="true">3.9.</strong> IPC</a></li><li class="chapter-item expanded "><a href="FS23/SNP/Sync.html"><strong aria-hidden="true">3.10.</strong> Sync</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,9 +151,195 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="kt---fs2023"><a class="header" href="#kt---fs2023">KT - FS2023</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="formeln"><a class="header" href="#formeln">FORMELN</a></h1>
+<p><strong>Log umschreiben</strong></p>
+<ul>
+<li>$2^x = 8$</li>
+<li>$x = \log_2{(8)}$ </li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
+<tr><td>Signaldämpfung</td><td></td><td>db</td><td>$10*log(\frac{P_E}{P_A})$</td></tr>
+<tr><td>Signaldämpfung über Spannung</td><td></td><td>db</td><td>$20 * log(\frac{U_E}{U_A})^2$</td></tr>
+<tr><td>Amplitude</td><td>$A$</td><td>V</td><td></td></tr>
+<tr><td>Maximale Anzahl erkennbare Zustände</td><td>$M$</td><td>bit/s </td><td>$1+\frac{A}{\Delta V}$</td></tr>
+<tr><td>Maximal erreichbare Bitrate (Hartley's Gesetz)</td><td>$R$</td><td> bit/s</td><td> $R \le 2 \cdot B ld(M) = 2B \cdot ld(M)$</td></tr>
+<tr><td>Signalleistung</td><td> $S$</td><td></td><td></td></tr>
+<tr><td>Rauschleistung</td><td>$N$</td><td></td><td></td></tr>
+<tr><td>Kanalkapazität</td><td> $C$</td><td></td><td>$B \cdot ld(1 + \frac{S}{N})$</td></tr>
+<tr><td>Nettobitrate</td><td></td><td></td><td>$\text{Bruttobitrate} \cdot \frac{\text{Nutzdaten}}{\text{Nutzdaten} + \text{Header}}$</td></tr>
+<tr><td>Maximale Bitrate</td><td>$R$</td><td> $\frac{\text{bit}}{\text{s}}$</td><td> $R \leq 2B \cdot \log_2(M)$</td></tr>
+<tr><td> Unterscheidbare Signalzustände</td><td> $M$</td><td> Anzahl</td><td></td></tr>
+<tr><td>Amplitude</td><td> $A$</td><td></td><td>$A = (M-1) \cdot \Delta V$</td></tr>
+<tr><td>Bandbreite</td><td> $B$</td><td> $\frac{bits}{s}$</td><td></td></tr>
+<tr><td>max. Symbolrate</td><td>$f_s$</td><td>Hz</td><td>$2B$</td></tr>
+</tbody></table>
+</div>
+<h1 id="osi-referenzmodell"><a class="header" href="#osi-referenzmodell">OSI Referenzmodell</a></h1>
+<p><strong>Verbindungsorientiert</strong></p>
+<ul>
+<li>Verbindungsaufbau nötig</li>
+<li>Ziel muss bereit sein</li>
+</ul>
+<p><strong>Verbindungslos</strong></p>
+<ul>
+<li>Jederzeit Nachrichten schicken</li>
+<li>Ziel muss nicht „bereit“ sein</li>
+</ul>
+<p><strong>Zuverlässig</strong></p>
+<ul>
+<li>Kein Datenverlust</li>
+<li>Sicherung durch Fehelr-Erkennung -/korrektur</li>
+<li>Text-Nachrichten</li>
+</ul>
+<p><strong>Unzuverlässig</strong></p>
+<ul>
+<li>Möglicher Datenverlust</li>
+<li>Keine Sicherung</li>
+<li>Streaming</li>
+</ul>
+<p><img src="FS23/KT/media/Pasted%20image%2020230604133437.png" alt="" /></p>
+<p><img src="FS23/KT/media/Pasted%20image%2020230604133513.png" alt="" /></p>
+<h1 id="Übertragungsmedien"><a class="header" href="#Übertragungsmedien">Übertragungsmedien</a></h1>
+<p><strong>Lichtgeschwindigkeit</strong>: $c_0 = 299‘792‘458 \frac{m}{s}$
+<strong>Ausbreitungsgeschwindigkeit</strong>: $C_{Medium} = 200‘000 \frac{km}{s} \approx \frac{2}{3} C_0$</p>
+<h2 id="signale"><a class="header" href="#signale">Signale</a></h2>
+<p>Für Übertragungsmedien ist die Dämpfung pro Distanz massgebend. Typischerweise in $dB$ pro 100m angegeben.</p>
+<h2 id="kabeltypen"><a class="header" href="#kabeltypen">Kabeltypen</a></h2>
+<ul>
+<li><strong>Koaxialkabel</strong>: Geeignet für hochfrequente Signale</li>
+<li><strong>Twinaxial-Kabel</strong>: Hoher Schutz</li>
+<li><strong>Twisted-Pair</strong> (TP): Häufig im Einsatz (Shielded / Unshieded)</li>
+<li><strong>Glasfaser</strong>: Hohe Bandbreite, Geringe Dämpfung, Resistent</li>
+</ul>
+<h1 id="physical-layer-bitübertragungsschicht"><a class="header" href="#physical-layer-bitübertragungsschicht">Physical Layer (Bitübertragungsschicht)</a></h1>
+<h2 id="serielle-asynchrone-Übertragung-ohne-synchronisations-takt"><a class="header" href="#serielle-asynchrone-Übertragung-ohne-synchronisations-takt">Serielle asynchrone Übertragung (ohne Synchronisations-Takt)</a></h2>
+<p>Zwischen Sender und Empfänger werden folgende Abmachungen gemacht</p>
+<ul>
+<li>Bitrate</li>
+<li>Anzahl Datenbits (Typischerweise 1 Byte)</li>
+<li>Anzahl Stopbits (Typischerweise 1 Bit)
+<img src="FS23/KT/media/Pasted%20image%2020230604135039.png" alt="" />
+Die <em>Taktrückgewinnung</em> ist möglich, solange regelmässig Zustandsänderungen auftreten.</li>
+</ul>
+<h2 id="serielle-synchrone-Übertragung"><a class="header" href="#serielle-synchrone-Übertragung">Serielle synchrone Übertragung</a></h2>
+<p>Bei der synchronen Übertragung arbeitet der Empfänger mit dem gleichen Takt wie der Sender</p>
+<ul>
+<li>Es werden keine Start- und Stopbits benötigt</li>
+<li>Der Takt muss zusätzlich übertragen werden</li>
+</ul>
+<p>Die Übertragung des Takts erfolgt über ein Codierungsverfahren oder eine zusätzliche Leitung.</p>
+<h2 id="kommunikationsarten-verkehrsbeziehung"><a class="header" href="#kommunikationsarten-verkehrsbeziehung">Kommunikationsarten (Verkehrsbeziehung)</a></h2>
+<ul>
+<li><strong>Simplex</strong>: Ein Kanal, in eine Richtung</li>
+<li><strong>Halbduplex</strong>: Ein Kanal, abwechslungsweise in zwei Richtungen</li>
+<li><strong>Vollduplex</strong>: Ein Kanal pro Richtung</li>
+</ul>
+<h2 id="arten-der-verbindungen-kopplung"><a class="header" href="#arten-der-verbindungen-kopplung">Arten der Verbindungen (Kopplung)</a></h2>
+<ul>
+<li><strong>Punkt-Punkt</strong>: Direkte  Verbindung zweier Kommunikationspartner</li>
+<li><strong>Shared Medium</strong>: Mehrere Partner verwenden das gleiche Medium</li>
+</ul>
+<h2 id="datenübertragungsrate"><a class="header" href="#datenübertragungsrate">Datenübertragungsrate</a></h2>
+<ul>
+<li><strong>Baudrate</strong>: Symbole pro Sekunde</li>
+<li><strong>Zeichenrate</strong>: Zeichen pro Sekunde</li>
+</ul>
+<h1 id="data-link-layer"><a class="header" href="#data-link-layer">Data Link Layer</a></h1>
+<h2 id="framing"><a class="header" href="#framing">Framing</a></h2>
+<h3 id="asynchron"><a class="header" href="#asynchron">Asynchron</a></h3>
+<p>Keine Daten -&gt; Nichts wird gesendet
+Zu Beginn eines Frames wird ein Start-Bit gesendet</p>
+<h3 id="synchron"><a class="header" href="#synchron">Synchron</a></h3>
+<ul>
+<li>Frames werden ohne Unterbruch gesendet
+<img src="FS23/KT/media/Pasted%20image%2020230604141236.png" alt="" /></li>
+</ul>
+<h2 id="fehlererkennung--fehlerkorrektur"><a class="header" href="#fehlererkennung--fehlerkorrektur">Fehlererkennung / Fehlerkorrektur</a></h2>
+<p><strong>FER</strong> (<strong>F</strong>rame <strong>E</strong>rror <strong>R</strong>atio)
+<strong>RER</strong> (<strong>R</strong>esidual <strong>E</strong>rror <strong>R</strong>atio)
+<strong>BER</strong> (<strong>B</strong>it <strong>E</strong>rror <strong>R</strong>atio)</p>
+<h2 id="parity"><a class="header" href="#parity">Parity</a></h2>
+<p><strong>Even Parity</strong>: Wenn die Anzahl Bits, die 1 sind, gerade ist, dann ist der Wert: 1
+<strong>Odd Parity</strong>: Wenn die Anzahl Bits, die 1 sind, ungerade ist, dann ist der Wert 1</p>
+<h1 id="local-area-networks-lan"><a class="header" href="#local-area-networks-lan">Local Area Networks (LAN)</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
+<tr><td>Framerate</td><td> $F_R$</td><td>$\frac{\text{Frames}}{\text{s}}$</td><td>$F_R = \frac{B}{8 \cdot (F_L + IFG) \cdot 8}$</td></tr>
+<tr><td>Bitrate</td><td> $B$</td><td></td><td></td></tr>
+<tr><td>Framelänge</td><td>$F_L$</td><td>Bits</td><td>Data + Prä + SFD + FCS = Data + 7Bit + 1Bit + 4Byte</td></tr>
+<tr><td>Nutzbitrate</td><td>$N$</td><td></td><td>$N = F_R \cdot P \cdot 8$</td></tr>
+<tr><td>Payload</td><td> $P$</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<h2 id="Übertragungsarten"><a class="header" href="#Übertragungsarten">Übertragungsarten</a></h2>
+<ul>
+<li><strong>Unicast</strong>: an einzelne Stationen</li>
+<li><strong>Broadcast</strong>: an alle Stationen</li>
+<li><strong>Multicast</strong>: an eine Gruppe von Stationen</li>
+</ul>
+<h2 id="leitungscode"><a class="header" href="#leitungscode">Leitungscode</a></h2>
+<p>Als <strong>Leitungscode</strong> wird ein Manchester eingesetzt</p>
+<ul>
+<li>1 positive Flanke, 1 negative Flanken</li>
+<li>Erlaubt die Taktrückgewinnung auf einfache Weise</li>
+<li>Benötigt die doppelte Bandbreite des theoretischen Minimums 
+<img src="FS23/KT/media/Pasted%20image%2020230604142706.png" alt="" /></li>
+</ul>
+<h2 id="kollosionen"><a class="header" href="#kollosionen">Kollosionen</a></h2>
+<p>Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen erkannt werden. 
+<img src="FS23/KT/media/Pasted%20image%2020230604143542.png" alt="" /></p>
+<h3 id="kollosionserkennung"><a class="header" href="#kollosionserkennung">Kollosionserkennung</a></h3>
+<p><img src="FS23/KT/media/Pasted%20image%2020230604155515.png" alt="" /></p>
+<h2 id="topologie"><a class="header" href="#topologie">Topologie</a></h2>
+<p><img src="FS23/KT/media/Pasted%20image%2020230604143612.png" alt="" /></p>
+<div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
+<tr><td>Nutzdaten</td><td> $N$</td><td> Bits</td><td></td></tr>
+<tr><td>Länge zwischen Switch und Knoten</td><td> $l$</td><td>$m$</td><td></td></tr>
+<tr><td>Bandbreite</td><td>$B$</td><td>$\frac{bits}{s}$</td><td></td></tr>
+<tr><td>Framedauer</td><td> $t_{\text{frame}}$</td><td>s</td><td>$\frac{N + 8 \cdot (\text{Prä/SFD}) + 12 (\text{Macs}) + 2 (\text{Type} + 4 (\text{FCS})) }{B}$</td></tr>
+<tr><td> Transferdauer</td><td> $t_{\text{transfer}}$</td><td>s</td><td> $\frac{l}{c_\text{Medium}}$</td></tr>
+</tbody></table>
+</div>
+<h2 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h2>
+<p><img src="FS23/KT/media/Pasted%20image%2020230604160442.png" alt="" /></p>
+<h2 id="ieee-mac-adressen"><a class="header" href="#ieee-mac-adressen">IEEE Mac Adressen</a></h2>
+<p><img src="FS23/KT/media/Pasted%20image%2020230604161209.png" alt="" /></p>
+<h1 id="switched-lan-und-ethernet-technologien"><a class="header" href="#switched-lan-und-ethernet-technologien">Switched LAN und Ethernet Technologien</a></h1>
+<h2 id="vlan"><a class="header" href="#vlan">VLAN</a></h2>
+<p>Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
+<img src="FS23/KT/media/Pasted%20image%2020230606160751.png" alt="" /></p>
+<h2 id="spanning-tree-protokoll-stp"><a class="header" href="#spanning-tree-protokoll-stp">Spanning Tree Protokoll (STP)</a></h2>
+<ul>
+<li>Alle Knoten werden genau einmal verbunden</li>
+<li>Verbindungen, die zu Schleifen führen werden deaktiviert</li>
+</ul>
+<p><strong>Bridge Identifier:</strong> Priorität + Mac Adresse</p>
+<ol>
+<li>Root bestimmen mittels Bridge-Identifier </li>
+<li>Direkt angeschlossene Bridges bestätigen</li>
+<li>Weitere Verbindungen abhängig von Kosten und Bridge-Identifier eintragen</li>
+</ol>
+<h2 id="ethernet-systeme"><a class="header" href="#ethernet-systeme">Ethernet Systeme</a></h2>
+<p><strong>Autonegotiation</strong>: Ermittlung der besten Betriebsart durch Austausch derLeistungsmerkmale zweier Netzwerkkomponenten
+<strong>Link Pulses</strong></p>
+<ul>
+<li>NLP: Link Presence Detection</li>
+<li>FLP: Autonegotiation, Autopolarity</li>
+</ul>
+<p><img src="FS23/KT/media/Pasted%20image%2020230606161909.png" alt="" /></p>
+<h1 id="internet--network-layer"><a class="header" href="#internet--network-layer">Internet / Network Layer</a></h1>
+<h1 id="transport-layer"><a class="header" href="#transport-layer">Transport Layer</a></h1>
+<h1 id="application-layer"><a class="header" href="#application-layer">Application Layer</a></h1>
+<h1 id="base64"><a class="header" href="#base64">Base64</a></h1>
+<ol>
+<li>ASCII in binär umwandeln</li>
+<li>Binär in je 6 grosse Bitgruppen abstechen</li>
+<li>Wenn letzer Block kleiner als 6, mit 0 auffüllen</li>
+<li>Tabelle nachsehen und Char nehmen
+<img src="FS23/KT/media/Pasted%20image%2020230606162428.png" alt="" /></li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
 <tr><td>Signaldämpfung</td><td></td><td>db</td><td>$10*log(\frac{P_E}{P_A})$</td></tr>
-<tr><td>Signaldämpfung über Spannung</td><td></td><td>db</td><td>$20 * log(\frac{U_E}{U_A})$</td></tr>
+<tr><td>Signaldämpfung über Spannung</td><td></td><td>db</td><td>$20 * log(\frac{U_E}{U_A})^2$</td></tr>
 <tr><td>Amplitude</td><td>$A$</td><td>V</td><td></td></tr>
 <tr><td>Maximale Anzahl erkennbare Zustände</td><td>$M$</td><td>bit/s </td><td>$1+\frac{A}{\Delta V}$</td></tr>
 <tr><td>Maximal erreichbare Bitrate (Hartley's Gesetz)</td><td>$R$</td><td> bit/s</td><td> $R \le 2 \cdot B ld(M) = 2B \cdot ld(M)$</td></tr>
@@ -182,7 +368,7 @@
 <li>Stehen keine Daten zur Übertragung an, so wird nichts gesendet (Ruhezustand)</li>
 <li>Der Beginn eines Frames wird mit einem Start-Bit angezeigt; mit der Frame-Grenze ist auc hdie Byte-Grenze gegeben</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ethernet-1"><a class="header" href="#ethernet-1">Ethernet</a></h1>
 <h2 id="klasse-bestimmen"><a class="header" href="#klasse-bestimmen">Klasse bestimmen</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Klasse</th><th>Addressbereich</th><th>Netzmaske</th></tr></thead><tbody>
 <tr><td>A</td><td>0.0.0.0 - 127.255.255.255</td><td>255.X.0.0</td></tr>
@@ -210,8 +396,2325 @@
 </tbody></table>
 </div>
 <p>Wenn alternative Schreibweise nicht gegeben ist, dann wird anstelle von X 0 verwendet.</p>
-<h2 id="default-routing"><a class="header" href="#default-routing">Default Routing</a></h2>
-<p>Alles was </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wing"><a class="header" href="#wing">WING</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p>![[Pasted image 20230522092522.png]]</p>
+<h2 id="umweltsphären"><a class="header" href="#umweltsphären">Umweltsphären</a></h2>
+<p>Bezeichnen relevante Bezugsräume im Umfeld der Unternehmung.</p>
+<p><strong>Ökonomische (wirtschaftliche) Umwelt</strong>
+Rahmenbedingungen für ein Unternehmen (Entwicklung der Wirtschaft, Arbeitsmarkt, Teuerung, Wirtschaftsbeziehungen zum Ausland, etc.)</p>
+<p><strong>Technologische Umwelt</strong>
+Umfasst alles, was in den Berich Technik- und Naturwissensschaften fällt (Produktionsverfahren, Materialien, Transport- und Kommunikationsmittel, etc)</p>
+<p><strong>Soziale Umwelt</strong>
+Betrifft den Menschen mit seinen Wünschen und Vorstellungen (politische und gesellschaftliche Trendds, Wohlbefinden der einzelnen Menschen, etc)</p>
+<p><strong>Ökologische Umwelt</strong>
+Betrifft den Gesamthaushalt der Natur (Rohstoffe, Energie, Klima, Abfälle, etc)</p>
+<h2 id="anspruchsgruppen--stakeholder"><a class="header" href="#anspruchsgruppen--stakeholder">Anspruchsgruppen / Stakeholder</a></h2>
+<p>![[Pasted image 20230522093150.png]]</p>
+<h2 id="begriffskategorien"><a class="header" href="#begriffskategorien">Begriffskategorien</a></h2>
+<h3 id="ordnungsmomente"><a class="header" href="#ordnungsmomente">Ordnungsmomente</a></h3>
+<ul>
+<li>Stategie</li>
+<li>Struktur</li>
+<li>Kultur</li>
+</ul>
+<h3 id="entwicklungsmodi"><a class="header" href="#entwicklungsmodi">Entwicklungsmodi</a></h3>
+<ul>
+<li>Optimierung</li>
+<li>Erneuerung (schaffung von völlig neuem)</li>
+</ul>
+<h3 id="prozesse"><a class="header" href="#prozesse">Prozesse</a></h3>
+<ul>
+<li>Managementprozess (Grundlegende Aufgaben, der Lenkung eines Unternehmens)</li>
+<li>Geschäftsprozess (Leistungserstellung, Vertrieb)</li>
+<li>Unterstützungsprozess (Personal, EDV, Finanzen)</li>
+</ul>
+<h2 id="interaktionsthemen"><a class="header" href="#interaktionsthemen">Interaktionsthemen</a></h2>
+<p>Gegendstände der Austauschbeziehungen zwischen Anspruchsgruppen und der Unternehmung</p>
+<ul>
+<li>Personen- und kulturgebundene Elemente</li>
+<li>Objektgebunde Elemente (Resourcen)</li>
+</ul>
+<h3 id="interaktionsthemenanalye"><a class="header" href="#interaktionsthemenanalye">Interaktionsthemenanalye</a></h3>
+<ol>
+<li>Was beschreibt das <strong>Interaktionsthema</strong>, also den streitbaren Sachverhalt?
+<ol>
+<li>Welche <strong>Resource</strong> (Produktionsfaktor) des Unternehmens ist betroffen?</li>
+<li>In welcher <strong>Umweltsphäre</strong> (Kontext) spielt sich der Sachverhalt ab?</li>
+</ol>
+</li>
+<li>Welche <strong>Anspruchsgruppe</strong> ist betroffen?
+<ol>
+<li>Welche <strong>Anliegen</strong> (veralgemeinerungsfähige Ziele) brint die Ansrpuchsgruppe vor?</li>
+<li>Welchce <strong>Interessen</strong> (unmittelbarer Eigennutzen) verfolgt die Anspruchsgruppe dabei?</li>
+<li>Welche <strong>Normen</strong> (Gesetze und Regeln) stützen das Anliegen der Anspruchsgruppen?</li>
+<li>Welche <strong>Werte</strong> (grundlegende Ansichten) stützen die Anliegen der Anspruchsgruppe?</li>
+</ol>
+</li>
+<li>Was sind aus Unternehemssicht die...
+<ol>
+<li><strong>Gefahren</strong>, die sich aus der Situation für die betreffende Unternehmung ergeben?</li>
+<li><strong>Reaktionsmöglichkeiten</strong>, die vom betreffenden Unternehmen ergriffen werden können?</li>
+</ol>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><div class="table-wrapper"><table><thead><tr><th>Technische Ausgabe</th><th>Wirtschaftliche Ausgabe</th></tr></thead><tbody>
+<tr><td>Die erforderliche Menge und Qualität des Materials ist zur richtigen Zeit am richtigen Ort bereitzustellen.</td><td>Die Kosten der Materialbeschaffung sind zu optimieren</td></tr>
+</tbody></table>
+</div>
+<h1 id="bestandteile"><a class="header" href="#bestandteile">Bestandteile</a></h1>
+<h2 id="beschaffungslogistik"><a class="header" href="#beschaffungslogistik">Beschaffungslogistik</a></h2>
+<ul>
+<li><strong>Bedarfsmittlung</strong>: Wie viel Material wird benötigt</li>
+<li><strong>Beschaffungsmarktforschung</strong>: Welche Preise gelten auf dem Markt? Welche Lieferanten drängen sich auf?</li>
+</ul>
+<h2 id="lagerlostik"><a class="header" href="#lagerlostik">Lagerlostik</a></h2>
+<ul>
+<li><strong>Lagerung</strong>: Wo sollen die Materialien gelagert werden?</li>
+<li><strong>Innenbetrieblicher Transport</strong>: Wie gelangen die Materialien zu den Verarbeitungsstellen?</li>
+<li><strong>Bestandsermittlung</strong>: Wie wird der aktuelle Lagerbestand ermittelt?</li>
+</ul>
+<h2 id="produktionslogistik"><a class="header" href="#produktionslogistik">Produktionslogistik</a></h2>
+<ul>
+<li><strong>Verbrauchsermittlung</strong>: Wie viel Material verbraucht die Fertigung?</li>
+<li><strong>Produktionsplanung</strong>: Wie kann der Produktionsprozess optimiert werden?</li>
+</ul>
+<h2 id="absatzlogistik-extern"><a class="header" href="#absatzlogistik-extern">Absatzlogistik (extern)</a></h2>
+<ul>
+<li><strong>Distribution</strong>: Wie wird der Vertrieb der Endprodukte organisiert?</li>
+</ul>
+<h2 id="entsorgungslogistik"><a class="header" href="#entsorgungslogistik">Entsorgungslogistik</a></h2>
+<p><strong>Entsorgung</strong>: Welche Materialien können wieder verwendet werden?</p>
+<h1 id="beschaffungskonzepte"><a class="header" href="#beschaffungskonzepte">Beschaffungskonzepte</a></h1>
+<h2 id="vorratsbeschaffung-order-to-stock"><a class="header" href="#vorratsbeschaffung-order-to-stock">Vorratsbeschaffung (order to stock)</a></h2>
+<p>Die Beschaffungsmenge ist grööser als der aktuelle Beschaffungsbedarf. Dieses Konzept bietet sich bei erwarteten Preissteigerungen, bei vermutenden Lieferengpässen und bei unverderblichen Materialien an.</p>
+<h2 id="fallweise-beschaffung-order-to-make"><a class="header" href="#fallweise-beschaffung-order-to-make">Fallweise Beschaffung (order to make)</a></h2>
+<p>Der Beschaffungsvorgang wird ausgelöst, wenn ein Materialbedarf festgestellt wird. <strong>Die Lagerhaltung wird damit an den Lieferanten übertragen.</strong> Dieses Konzept bietet sich nur dann an, wenn das Material jederzeit beschaffbar ist, der Materialbedarf nicht für längere Zeit im Voraus geplant werden kann und eine Vorratsbeschaffung aufgrund der hohen Kapitalbindung kostspielig wäre.</p>
+<h2 id="just-in-time-jit"><a class="header" href="#just-in-time-jit">Just in Time (JIT)</a></h2>
+<p>Dieses Konzept passt die Beschaffung in zeitlicher und mengenmässiger Hinsicht genau dem Bedarf an. Dabei beginnt im Unterschied zur &quot;Fallweisen Beschaffung&quot; auch der <strong>Lieferant erst dann mit der Fertigung, wenn ein Kundenauftrag vorliegt.</strong> Eine Lagerhaltung erübrigt sich entsprechend sowohl beim Besteller als auch beim Lieferanten. Dieses Konzept bietet sich dann an, wenn auf eine <strong>pünktliche Lieferung des Lieferanten vertraut ewden kann.</strong> Kleinste Verspätungen würden zu einem Produktionsstopp führen.</p>
+<h2 id="insourcing"><a class="header" href="#insourcing">Insourcing</a></h2>
+<p>Verlagerung von zuvor im Markt bezogenen Leistungen in die eigene Wertschöpfung.</p>
+<p><strong>Vorteile:</strong></p>
+<ul>
+<li>Reduktion von Lieferzeiten</li>
+<li>Unabhängigkeit von Lieferanten, Preisen und Absatzmengen</li>
+<li>Aufrechterhaltung von Qualitätsstandards</li>
+<li>Auslastung der Fertigungskapazitäten</li>
+</ul>
+<h2 id="outsourcing"><a class="header" href="#outsourcing">Outsourcing</a></h2>
+<p>Verlagerung von Teilen der Wertschöpfung auf externe Lieferanten (langfristig)</p>
+<p><strong>Vorteile</strong></p>
+<ul>
+<li>Minimierung der Fixkosten</li>
+<li>Beschaffungsmenge der Zeitspanne flexibel planbar</li>
+<li>Minimierung der Lagerkosten</li>
+<li>Ausweichmöglichkeit bei Kapazitätsengpässen</li>
+</ul>
+<h1 id="magisches-dreieck"><a class="header" href="#magisches-dreieck">Magisches Dreieck</a></h1>
+<p><strong>Besteht aus:</strong></p>
+<ul>
+<li>Kapitalbindung und Lagerunterhalt</li>
+<li>Beschaffungskosten</li>
+<li>Lieferbereitschaft</li>
+</ul>
+<p><strong>Ziele:</strong></p>
+<ul>
+<li>Lieferbereitschaft</li>
+<li>Beschaffunskosten</li>
+<li>Kapitalbindung</li>
+</ul>
+<p><strong>Zielkonflikte:</strong></p>
+<ul>
+<li>Lieferbereitschaft vs. Kapitalbindung</li>
+<li>Beschaffungskosten vs. Kapitalbindung</li>
+</ul>
+<h1 id="analysen"><a class="header" href="#analysen">Analysen</a></h1>
+<h2 id="abc-analyse"><a class="header" href="#abc-analyse">ABC-Analyse</a></h2>
+<p>![[Pasted image 20230524205826.png]]
+| Kategorie | Wertanteil am Gesamtwert | Mengenanteil an der Gesamtmenge |
+|-|-|-|
+| A Güter | 70% - 80% | &lt; 30% |
+| B Güter | 15% - 20% | 30% - 50% |
+| C Güter | 5% - 10% | 40% - 60% |</p>
+<h2 id="xyz-analyse"><a class="header" href="#xyz-analyse">XYZ-Analyse</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Kategorie</th><th>Bedarf / Vorhersagegenauigkeit</th><th> Beispiel</th></tr></thead><tbody>
+<tr><td>X Güter</td><td> Regelmässiger Bedarf/Vorhersagegenauigkeit hoch</td><td>Grundnahrungsmittel</td></tr>
+<tr><td>Y Güter</td><td>Schwankender Bedarf/ Vorhersagegenauigkeit begrenzt</td><td> Glace</td></tr>
+<tr><td>Z Güter</td><td>Unregelmässiger Bedarf/Vorhersagegenauigkeit gering</td><td> Medikamente</td></tr>
+</tbody></table>
+</div>
+<h1 id="lagerfunktionen"><a class="header" href="#lagerfunktionen">Lagerfunktionen</a></h1>
+<h2 id="zeitüberbrückung"><a class="header" href="#zeitüberbrückung">Zeitüberbrückung</a></h2>
+<p>Das Lager soll den Bedarf der Produktion an Materialien so schnell wie möglich bereitstellen und damit die Zeit bist zur Auslieferung überbrücken. Damit wird eine reibungslose Produktion sichergestellt.</p>
+<h2 id="sicherung"><a class="header" href="#sicherung">Sicherung</a></h2>
+<p>Unternehmen unterliegen unvorhergesehenen Liefer- oder Bedarfsschwankungen. Arbeitet ein Lieferanten nicht fristgerecht, muss ein Unternehmen auf seine Sicherheitsbestände zurückgreifen können, um Produktionsausfälle zu vermeiden.</p>
+<h2 id="spekulation"><a class="header" href="#spekulation">Spekulation</a></h2>
+<p>Auch Materialpreise unterliegen Preisschwankungen. Erwartet ein Unternehmen einen Preisanstieg (z.B. durch Verteuerung von Rohstoffen, Wechselkursschwankungen), kann ein Einkauf auf Vorrat trotz zusätzlicher Lagerkosten sinnvoll sein.</p>
+<h2 id="veredelung-bzw-umformung"><a class="header" href="#veredelung-bzw-umformung">Veredelung bzw. Umformung</a></h2>
+<p>Durch die Lagerung entsteht eine gewollte Qualitätsverbesserung der Bestände. Gewisse halbfertige Produkte müssen beispielsweise zuerst auskühlen, bevor sie weiterverarbeitet werden können; andere durchlaufen vor der Auslieferung zuerst einen Reifeprozess, wie z.B. Käse. In diesem Fall ist die Lagerung Teil des Produktionsprozesses. Sie steigert den Wert des Produktes.</p>
+<h2 id="assortierung"><a class="header" href="#assortierung">Assortierung</a></h2>
+<p>Bei Handelswaren dient die Lagerhaltung der Sortierung von Sammellieferungen oder teilweise auch der Warenpräsentation.</p>
+<h1 id="kennzahlen"><a class="header" href="#kennzahlen">Kennzahlen</a></h1>
+<h2 id="durchschnittlicher-lagerbestand"><a class="header" href="#durchschnittlicher-lagerbestand">Durchschnittlicher Lagerbestand</a></h2>
+<p>Zählt zu den zentralen Kennzahlen der Lagerhaltung. Sie geben Auskunft darüber, wie hoch der Lagerbestand im Durchschnitt ist.
+$$
+\frac{
+\text{Anfangsbestand} + \text{Endbestand}
+}{2}
+$$</p>
+<h2 id="lagerumschlagshäufigkeit"><a class="header" href="#lagerumschlagshäufigkeit">Lagerumschlagshäufigkeit</a></h2>
+<p>Diese Zahl gibt an, wie oft der durchschnittliche Lagerbestand in einem Jahr umgesetzt wird. Je niedriger diese Zahl, desto tiefer ist die Umschlagshäufigkeit. <strong>Je höher der Lagerumschlag, desto niedriger ist das im Lager gebundene Kapital</strong>.
+$$
+\frac{
+\text{Jahresverbrauch}
+}{
+\text{Durchschn. Lagerbestand}
+}
+$$</p>
+<h2 id="durschnittliche-lagerdauer"><a class="header" href="#durschnittliche-lagerdauer">Durschnittliche Lagerdauer</a></h2>
+<p>Diese Kennzahl gibt an, wie lange das Gut im Durchschnitt im Lager verbleibt. Je kürzer die Lagerung, desto geringer ist die Kapitalbindungsdauer. Die durchschnittliche Lagerdauer sinkt mit steigender Umschlagshäufigkeit ist.
+$$
+\frac{
+360
+}{
+\text{Umschlagshäufigkeit}
+}
+$$</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="finanzbuchhaltung-fibu"><a class="header" href="#finanzbuchhaltung-fibu">Finanzbuchhaltung (FIBU)</a></h2>
+<p>Der laufende Geschäftsverkehr chronisch (im Journal) und systematisch (in den Konten) erfasst.</p>
+<p>Die Finanzbuchhaltung dient</p>
+<ul>
+<li>der Ermittlung der Vermögenslage mittels <strong>Inventar und Bilanz</strong></li>
+<li>der Feststellung des Erfolges mittels <strong>Erfolgsrechnung</strong></li>
+<li>Die Liquiditätssteuerung und Finanzplanung mittels <strong>Geldflussrechnung</strong></li>
+</ul>
+<p>Die Zahlen der Finanzbuchhaltung sind für die Führung der Unternehmung zum Teil ungeeignet, weil sie einerseits stile Reserven enthalten und anderseits nur den Gesamterfolg und nicht den Erfolg je Prdukt oder Dienstleistung ausweisen.</p>
+<h2 id="betriebsbuchhaltung"><a class="header" href="#betriebsbuchhaltung">Betriebsbuchhaltung</a></h2>
+<p>In der Betriebsbuchhaltung werden die durch die Leistungserstellung entstandenen Kosten erfasst und den durch die Leistungsveräusserungen erzielten Erlösen gegenübergestellt.</p>
+<p>Die Kostenerfassung erfolgt nach</p>
+<ul>
+<li><strong>Kostenarten</strong> (z.B. Materialkosten, Personalkosten, Abschreibungen)</li>
+<li><strong>Kostenstellen</strong> (z.B. nach verschiedenen Abteilungen wie Einkauf, Lager, Fabrkation, Verkauf)</li>
+<li><strong>Kostenträgern</strong> (z.B. nach den hergestellten Produkten oder Leistungen)</li>
+</ul>
+<p>Die Betriebsbuchhaltung ist eine rein interne Rechnung. Sie stellt Unterlagen für die Kalkulation sowie die <strong>Kosten- und Erfolgskontrolle</strong> bereit.</p>
+<p>![[Pasted image 20230523070929.png]]</p>
+<h2 id="vollkostenrechnung"><a class="header" href="#vollkostenrechnung">Vollkostenrechnung</a></h2>
+<p>Verteilt die gesamten Kosten auf die verschiedenen Kostenträger</p>
+<div class="table-wrapper"><table><thead><tr><th>Kostenarten</th><th> Kostenstellen</th><th> Kostenträger</th></tr></thead><tbody>
+<tr><td>Welche Kosten fallen an?</td><td>  Wo fallen Kosten an?</td><td>Wofür fallen Kosten an?</td></tr>
+<tr><td>z.B. Vollkornmehl, Hefe, Salz und Wasser, sowie Mietkosten für die Backstube, den Lagerraum und die Verkaufsläden</td><td> z.B. in der Backstube, im Lagerraum und in den Verkaufsläden</td><td>z.B. für Vollkornbrote oder Apfelkrapfen</td></tr>
+</tbody></table>
+</div>
+<p>-&gt; Graphische Darstellungsform der Vollkostenrechnung ist der Betriebsabrechnungsbogen BAB</p>
+<h2 id="kostenartenrechnung"><a class="header" href="#kostenartenrechnung">Kostenartenrechnung</a></h2>
+<h3 id="einzelkosten-direkte-kosten"><a class="header" href="#einzelkosten-direkte-kosten">Einzelkosten (direkte Kosten)</a></h3>
+<p><strong>Erklärung</strong>: Alle während dem Leistungsprozess für ein bestimmtes Produkt (Kostenträger) entstandenen Kosten, welche sich diesem direkt zuordnen lassen.
+<strong>Beispiel</strong>: Die Materialkosten können jedem einzelnen Produkt genau zugeordnet werden. Ein Kleid braucht eine genau bestimmte Menge Stoff.
+<strong>Verwendung</strong>: Übertragung in die Kostenträgerrechnung</p>
+<h3 id="gemeinkosten-indirekte-kosten"><a class="header" href="#gemeinkosten-indirekte-kosten">Gemeinkosten (indirekte Kosten)</a></h3>
+<p><strong>Erklärung</strong>: Alle während dem Leistungsprozess entstandenen Kosten, welche sich nicht einem bestimmten Produkt zuordnen lassen, sondern zur Erstellung mehrerer Produkte angefallen sind. Es ist nur bekannt, in welchem Bereich sie entstanden sind.
+<strong>Beispiele</strong>: Die Mietkosten für das Fabrikationsgebäude lassen sich nicht direkt den einzelnen Produkten zuordnen, denn sie werden von allen erstellten Produkten gemeinsam verursacht.
+<strong>Verwendung</strong>: Übertragung in die Kostenstellenrechnung</p>
+<h2 id="sachliche-abgrenzung"><a class="header" href="#sachliche-abgrenzung">Sachliche Abgrenzung</a></h2>
+<ul>
+<li><strong>Kalkulatorische Zinsen</strong> (berücksichtigt, dass eigentlich auf dem Eigenkapital auch ein Zins bezahlt werden müsste -&gt; Opportunitätskosten)</li>
+<li><strong>Kalkulatorischer Unternehmerlohn</strong>: fkitives Gehalt des Unternehmers</li>
+<li><strong>Kalukatorische Mieter</strong>: fiktive Miete für die Benutzung eigener Räumlichkeiten des Unternehmens -&gt; Opportunitätskosten</li>
+<li><strong>Stille Reserven</strong>: Über-/Unterbewertung Anlagevermögen, Lager</li>
+<li><strong>Kalkulatorische Abschreibungen</strong>: Abweichender Abschreibungsaufwand</li>
+</ul>
+<h2 id="kostenstellenrechnung"><a class="header" href="#kostenstellenrechnung">Kostenstellenrechnung</a></h2>
+<ul>
+<li>Verteilugn der Kostenarten (Gemeinkosten) auf Kostenstellen</li>
+<li>Umlage von Kostenstellenkosten auf andere Kostenstellen (innerbetriebliche Leistungsverrechnung)</li>
+<li>Ermittlung von Zuschlagssätzen für die Kostenträgerrechnung</li>
+<li>Ermittlung von Soll-Ist-Abweichungen zur Wirtschaftlichkeitskontrolle</li>
+</ul>
+<h2 id="kostenträgerrechnung"><a class="header" href="#kostenträgerrechnung">Kostenträgerrechnung</a></h2>
+<p>Die hergestellten Güter und die erbrachten Dienstleistungen werden als Kostenträger bezeichnet. Diese Kostenträger haben die von ihnen verursachten Kosten zu tragen.
+![[Pasted image 20230523072859.png]]</p>
+<h3 id="zuschlagssätze"><a class="header" href="#zuschlagssätze">Zuschlagssätze</a></h3>
+<h3 id="zuschlagsatz"><a class="header" href="#zuschlagsatz">Zuschlagsatz</a></h3>
+<p><strong>G</strong>emein<strong>K</strong>osten<strong>Z</strong>uschlag (GKZ)
+$$
+\frac{
+\text{Endstellenkosten (ESK) der Hauptkostenstelle}
+}
+{
+\text{Bezugsgrösse der Hauptkostenstelle}
+}
+\times
+100
+$$</p>
+<h3 id="mateiralgemeinkostenzuschlagsatz"><a class="header" href="#mateiralgemeinkostenzuschlagsatz">Mateiralgemeinkostenzuschlagsatz</a></h3>
+<p>$$
+\frac{
+\text{Materialgemeinkosten}
+}
+{
+\text{Materialeinzelkosten}
+}
+\times
+100
+$$</p>
+<h3 id="fertigungsgemeinkostenzuschlagsatz"><a class="header" href="#fertigungsgemeinkostenzuschlagsatz">Fertigungsgemeinkostenzuschlagsatz</a></h3>
+<p>$$
+\frac{
+\text{Fertigungsgemeinkosten}
+}
+{
+\text{Fertigungseinzelkosten}
+}
+\times
+100
+$$</p>
+<h3 id="verwaltungskostenzuschlagsatz"><a class="header" href="#verwaltungskostenzuschlagsatz">Verwaltungskostenzuschlagsatz</a></h3>
+<p>$$
+\frac{
+\text{Verwalltungskosten}
+}
+{
+\text{Herstellkosten}
+}
+\times
+100
+$$</p>
+<h3 id="vertriebsgemeinkostenzuschlagsatz"><a class="header" href="#vertriebsgemeinkostenzuschlagsatz">Vertriebsgemeinkostenzuschlagsatz</a></h3>
+<p>$$
+\frac{
+\text{Vertriebsgemeinkosten}
+}
+{
+\text{Herstellkosten}
+}
+\times
+100
+$$</p>
+<h2 id="teilkostenrechnung"><a class="header" href="#teilkostenrechnung">Teilkostenrechnung</a></h2>
+<p>Umfasst alle Kostenrechnungssysteme, welche sich auf die Betrachtugn der direkt einem Kostenobjekt zurechenbaren Kosten (=Einzelkosten) beschränken.</p>
+<p><strong>Fixkosten</strong>: Diese Kosten fallen in konstanter Höhe an, unabhängig von produzierten Mengen eines Produkts, z.B. Mietkosten.
+<strong>Variable Kosten</strong>: Diese Kosten hängen von den produzierten Menge eines Produktes ab, z.B. Materialeinzelkosten
+<strong>Deckungsbeitrag</strong>: Dieser entsteht, wenn der Verkaufspreis grösser als die variablen Kosten pro Stück ist. Er steht zur Deckung der fixen Kosten zur Verfügung.
+<strong>Break-Even-Absatzmenge</strong>: Bei dieser Verkaufsmenge wir dei Gewinnschwelle erreicht.</p>
+<p><strong>Gesamtkosten</strong> Fixkosten + variable Kosten 
+![[Pasted image 20230523073711.png]]</p>
+<h2 id="break-even-analyse-gewinnschwelle--nutzschwelle"><a class="header" href="#break-even-analyse-gewinnschwelle--nutzschwelle">Break-Even-Analyse (Gewinnschwelle / Nutzschwelle)</a></h2>
+<p>![[Pasted image 20230523073747.png]]</p>
+<h3 id="mengenmässige-nutzschwelle-berechnen"><a class="header" href="#mengenmässige-nutzschwelle-berechnen">Mengenmässige Nutzschwelle berechnen</a></h3>
+<p><strong>Deckungsbeitrag / Stück</strong>: $\text{Stückerlos} - \text{variable Kosten}$</p>
+<p>$$
+\frac{
+\text{Fixkosten}
+}{
+\text{Deckungsbeitrag / Stücl}
+}
+$$</p>
+<h3 id="break-even-point-berechnen"><a class="header" href="#break-even-point-berechnen">Break-Even-Point berechnen</a></h3>
+<p>Kostenfunktion = Erlösfunktion
+Fixkosten (FK) + [var. Kosten (VK) /Stk * Menge(x)] = Preis(P)/Stk. * Menge(x)</p>
+<h4 id="break-even-absatzmenge-x"><a class="header" href="#break-even-absatzmenge-x">Break-Even-Absatzmenge (x)</a></h4>
+<h2>$$
+\frac{
+\text{Fixkosten (FK)}
+}{
+\text</h2>
+<p>\text{variable Kosten (VK)/Stk}
+}</p>
+<p>$$
+$$
+\frac{
+\text{Fixkosten (FK)}
+}{
+\text{Deckungsbetrag/Stk}
+}</p>
+<p>$$</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="bilanz"><a class="header" href="#bilanz">Bilanz</a></h2>
+<p>Zeigt Aktiv- und Passivbestände am Schluss bzwh. am Anfang einer Rechnungsperiode. Sie ist eine Momentanaufnahme, denn sie bezieht sich auf einen <strong>Zeitpunkt</strong>. Die Bilanz zeigt das <strong>Vermögen</strong> eines Unternehmens.</p>
+<h3 id="funktionen"><a class="header" href="#funktionen">Funktionen</a></h3>
+<p><strong>Dokumentation</strong>: Stellt eine BEstandsaufnahme der im Unternehmen vorhandenen Vermögen und Schulden an einem Stichtag dar
+<strong>Gewinnermittlung</strong>: In der Bilanz wird der Gewinn bzwh. der Verlust einer bestimmten Periode ersichtlich.
+<strong>Information</strong>: Informiert intern (als Steuerungsinstrument für das Unternehmen) sowie extern (z.B. Kapitalgeber, Staat, usw.) über die finanziellle Lage des Unternehmens.</p>
+<h2 id="erfolgsrechnung"><a class="header" href="#erfolgsrechnung">Erfolgsrechnung</a></h2>
+<p>Sie zeigt die einer Rechnungs-periode, also in einem <strong>Zeitraum</strong>, entstandenen Aufwendungen und Erträge. Sie gibt dinene Einblick in das betriebliche Geschehen (Leistung) der Unternehmung und zeigt die <strong>Finanzierung des Vermögens</strong>.</p>
+<p>![[Pasted image 20230522204950.png]]</p>
+<h2 id="aktiven"><a class="header" href="#aktiven">Aktiven</a></h2>
+<p>![[Pasted image 20230522205414.png]]</p>
+<h2 id="passiven"><a class="header" href="#passiven">Passiven</a></h2>
+<p>![[Pasted image 20230522205428.png]]</p>
+<h2 id="erfolgsrechnung-1"><a class="header" href="#erfolgsrechnung-1">Erfolgsrechnung</a></h2>
+<p>![[Pasted image 20230522205550.png]]</p>
+<p>![[Pasted image 20230522205631.png]]</p>
+<p>![[Pasted image 20230522205811.png]]</p>
+<div style="break-before: page; page-break-before: always;"></div><p>![[Pasted image 20230523110832.png]]</p>
+<h2 id="nettoverkaufspreis"><a class="header" href="#nettoverkaufspreis">Nettoverkaufspreis</a></h2>
+<p>+ Verkaufssonderkosten
+= Nettobarverkaufspreis
++ Skonto
+= Nettokreditverkafspreis
++ Rabatt
+= Bruttokreditverkaufspreis
++ MwST.
+= Bruttokreditverkaufspreis</p>
+<h2 id="bruttokreditankaufspreis"><a class="header" href="#bruttokreditankaufspreis">Bruttokreditankaufspreis</a></h2>
+<p>Katalogpreis des Lieferanten</p>
+<p>- Rabatt/-e
+= Nettokreditankaufspreis (= Rechnungsbetrag)
+- Skonto
+= Nettobareinkaufspreis
++ Bezugskosten
+= Einstandswert / Einstandspreis</p>
+<h2 id="gesamt-kalkulation"><a class="header" href="#gesamt-kalkulation">Gesamt-Kalkulation</a></h2>
+<p>auf 5 Rappen gerundent (am Ende)
+![[Pasted image 20230523112034.png]]</p>
+<div style="break-before: page; page-break-before: always;"></div><p>![[Pasted image 20230522154421.png]]</p>
+<h2 id="strategische-analyse"><a class="header" href="#strategische-analyse">Strategische Analyse</a></h2>
+<h3 id="swot-analyse"><a class="header" href="#swot-analyse">SWOT-Analyse</a></h3>
+<p>![[Pasted image 20230522173721.png]]
+![[Pasted image 20230522173754.png]]</p>
+<h3 id="pestel-analyse"><a class="header" href="#pestel-analyse">PESTEL-Analyse</a></h3>
+<p>![[Pasted image 20230522173819.png]]</p>
+<h3 id="5-forces-modell-von-porter"><a class="header" href="#5-forces-modell-von-porter">5-Forces Modell von Porter</a></h3>
+<p>![[Pasted image 20230522173840.png]]</p>
+<h2 id="unternehmensstrategie"><a class="header" href="#unternehmensstrategie">Unternehmensstrategie</a></h2>
+<h3 id="elemente"><a class="header" href="#elemente">Elemente</a></h3>
+<p><strong>Identität</strong></p>
+<ul>
+<li>Wer sind wir?</li>
+<li>Welchen generellen <strong>Sinn und/oder Zweck</strong> erfüllt unsere Existenz?</li>
+</ul>
+<p><strong>Ziele</strong></p>
+<ul>
+<li>Welchen wirtschaftlichen <strong>Zweck</strong> verfolgen wir?</li>
+<li>Welche <strong>Produkte/Dienstleistungen</strong> stellen wir her?</li>
+</ul>
+<p><strong>Verhaltensgrundsätze</strong></p>
+<ul>
+<li>Wie verhalten wir uns gegenüber <strong>Anspruchsgruppen</strong>?</li>
+<li>Welche <strong>Grundsätze</strong> gelten für unser tägliches Handeln?</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>Elemente</th><th>Frage</th><th>Erläuterung</th></tr></thead><tbody>
+<tr><td>Differenzierung</td><td>Wie können wir gewinnen</td><td> Kunden für uns gewinnen / Von Konkurrenz abheben</td></tr>
+<tr><td>Wirtschaftlichkeit</td><td> Wie gelangen wir dzu unseren Einnahmen?</td><td>Tiefe Produktionskosten / Hohe Verkaufspreise</td></tr>
+</tbody></table>
+</div>
+<h3 id="strategische-entscheidungen"><a class="header" href="#strategische-entscheidungen">Strategische Entscheidungen</a></h3>
+<p><strong>Müssen zur Kultur, der Organisation, den Werten und zum Leitbild passen!</strong></p>
+<h3 id="strategisches-planen"><a class="header" href="#strategisches-planen">Strategisches Planen</a></h3>
+<p>![[Pasted image 20230522202343.png]]</p>
+<p>![[Pasted image 20230522202420.png]]</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="absatzmärkte"><a class="header" href="#absatzmärkte">Absatzmärkte</a></h2>
+<h3 id="b---to----b"><a class="header" href="#b---to----b">B - to  - B</a></h3>
+<p>Busniess to Business-Marketing (Fachkundengeschäft)</p>
+<ul>
+<li>Vermarktung von einem Unternehmen zu einem andern Unternehmen (z.B. Produktionsmaschinen)</li>
+</ul>
+<h3 id="b---to---c"><a class="header" href="#b---to---c">B - to - C</a></h3>
+<p>Business to Consumer Marketing (Privatkundengeschäft)</p>
+<ul>
+<li>Vermarktugn von einem Unternehmen zu einem Privathaushalt (z.B. Konsumgüter)</li>
+</ul>
+<h3 id="c---to---c"><a class="header" href="#c---to---c">C - to - C</a></h3>
+<p>Customer-to-Customer Marketing</p>
+<ul>
+<li>Vermarktung von einem Privathaushalt zu einem anderen Privathaushalt (z.B. Privatverkauf über eBay)</li>
+</ul>
+<h2 id="marktforschung"><a class="header" href="#marktforschung">Marktforschung</a></h2>
+<h3 id="quantitativ-marktdaten"><a class="header" href="#quantitativ-marktdaten">Quantitativ (Marktdaten)</a></h3>
+<p>Ziel: Zahlenwerte über den Markt ermitteln</p>
+<ul>
+<li>Wie gross ist das Marktvolumen?</li>
+<li>Wie gross ist der Marktanteil eines Unternehmens?</li>
+</ul>
+<h3 id="qualitativ-kundenbenbedürfnisse"><a class="header" href="#qualitativ-kundenbenbedürfnisse">Qualitativ (Kundenbenbedürfnisse)</a></h3>
+<p>Motive für Verhaltenswiesen der Konsumenten herausfinden</p>
+<ul>
+<li>Welche Erwartungen haben Kunden von bestimmten Produkten?</li>
+<li>Warum kauft ein Kunde ein bestimmtes Produkt?</li>
+</ul>
+<h2 id="erhebungsmethoden"><a class="header" href="#erhebungsmethoden">Erhebungsmethoden</a></h2>
+<h3 id="primärmarktforschung"><a class="header" href="#primärmarktforschung">Primärmarktforschung</a></h3>
+<p>Ermittlung neuer, bisher noch nicht erfasster Daten</p>
+<ul>
+<li>Befragung (mündlich oder schriftlich mittels Fragebogen)</li>
+<li>Beobachtungen (können verdeckt oder offen durchgefüht werden)</li>
+<li>Experimente, z.B. Wirkungsweisen von Produkten</li>
+<li>Kundenkaretn</li>
+</ul>
+<h3 id="sekundärmarktforschung"><a class="header" href="#sekundärmarktforschung">Sekundärmarktforschung</a></h3>
+<p>Die Auswertungen basieren auf bereits vorhandenen Daten, die ursprünglich für andere Zwecke erfasst wurden.</p>
+<ul>
+<li>innerbetriebliche Quellen wie Absatzstatistiken, Reparaturlisten oder Kundenreklamationen</li>
+<li>externe Quellen, z.B. Forschungsergebnisse, veröffentlichte Statistiken, Geschäftsberichte anderer Unternehmen</li>
+</ul>
+<h1><strong>Marktvolumen</strong>: Tatsächlicher Absatz bzwh. Umsatz aller Anbieter auf dem Markt
+<strong>Marktpotenzial</strong>: Anzahl möglicher Kundne, bzwh. Menge wenn alle Kunden kaufbereit sind (beim gegebenen Preis)
+<strong>Marktkapazität</strong>: Gesamtanzahl möglicher Kunden, bzwhl. max. Menge an Produkten, die gebraucht /verbraucht werden können (wenn Preis kene Rolle spielt)
+<strong>Marktanteil</strong>: Abgesetze Menge, bzwh. Umsatz eines Anbieters / ihres Unternehmens im Verhältnis zum gesamten Marktvolume
+$$
+\text</h1>
+<p>\frac{
+\text{Martkvolumen}
+}{
+\text{Marktpotenzial}
+}
+\times
+100
+$$</p>
+<h2 id="marketing-4-p-mix"><a class="header" href="#marketing-4-p-mix">Marketing 4-P-Mix</a></h2>
+<p>Gibt vor ob man sich als Unternehmen gesamthaft auf möglichst höhe Qualität, oder möglichst tiefe Preise fokussiert</p>
+<h3 id="prduct-produkt"><a class="header" href="#prduct-produkt">Prduct (Produkt)</a></h3>
+<ul>
+<li>Absatzsprogramm / Sortimen</li>
+<li>Produkteigenschaften</li>
+<li>Verpackung</li>
+<li>Serviceleistungen</li>
+<li>Garantieleistungen</li>
+</ul>
+<h3 id="price-preis"><a class="header" href="#price-preis">Price (Preis)</a></h3>
+<ul>
+<li>Preisbestimmung</li>
+<li>Preisstrategie</li>
+<li>Konditionen</li>
+</ul>
+<h3 id="place-distribution"><a class="header" href="#place-distribution">Place (Distribution)</a></h3>
+<ul>
+<li>Absatzwege</li>
+<li>Transportmittel</li>
+</ul>
+<h3 id="promotion-kommunikation"><a class="header" href="#promotion-kommunikation">Promotion (Kommunikation)</a></h3>
+<ul>
+<li>Werbung</li>
+<li>Öffentlichkeitsarbeit</li>
+<li>Sponsoring</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snp-fs2023"><a class="header" href="#snp-fs2023">SNP FS2023</a></h1>
+<ul>
+<li><a href="FS23/SNP/Grundlagen.html">Grundlagen</a></li>
+<li><a href="FS23/SNP/Arrays.html">Arrays</a></li>
+<li><a href="FS23/SNP/Modulare%20Programmierung.html">Modulare Programmierung</a></li>
+<li><a href="FS23/SNP/Pointers.html">Pointers</a></li>
+<li><a href="FS23/SNP/Parameter%20By%20Reference.html">Pass By Reference</a></li>
+<li><a href="FS23/SNP/Dynamische%20Allozierung.html">Dynamische Allozierung</a></li>
+<li><a href="FS23/SNP/File%20IO.html">File IO</a></li>
+<li><a href="FS23/SNP/Multithreading%20und%20so%20weiter.html">Multithreading und so.</a></li>
+<li><a href="FS23/SNP/IPC%20-%20Inter%20Process%20Communication.html">IPC</a></li>
+<li><a href="FS23/SNP/Sync.html">Sync</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="motivation"><a class="header" href="#motivation">Motivation</a></h1>
+<h2 id="effizient"><a class="header" href="#effizient">Effizient</a></h2>
+<ul>
+<li>C erlaubt es, sehr effizienten Code zu schreiben.</li>
+<li>Der verbraucht Arbeitsspeicher (Memory Footprint) ist sehr leicht.</li>
+<li>Die Ausführungsgeschwindigkeit ist hoch, weil Optimierungen zur Compilezeit ausgeführt werden.</li>
+</ul>
+<h2 id="verbreitet"><a class="header" href="#verbreitet">Verbreitet</a></h2>
+<ul>
+<li>C/C++ ist mit grossem Abstand die wichtigste System- und systemnahe Sprache</li>
+</ul>
+<h2 id="systemverständnis"><a class="header" href="#systemverständnis">Systemverständnis</a></h2>
+<ul>
+<li>C fördert und bedingt das Verständnis für das unterliegende System</li>
+</ul>
+<h1 id="hauptprgrogramm"><a class="header" href="#hauptprgrogramm">Hauptprgrogramm</a></h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;    //printf
+#include &lt;stdlih.h&gt;
+
+void main (void)
+{
+	printf(&quot;Hello world in C\n&quot;); // Newline ist wichtig
+	return EXIT_STATUS;
+}
+</code></pre>
+<h1 id="datentypen"><a class="header" href="#datentypen">Datentypen</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Datentyp</th><th> Bytes</th><th>Wertbereich</th></tr></thead><tbody>
+<tr><td>signed char</td><td>1</td><td> -128 bis 127</td></tr>
+<tr><td>unsigned char</td><td> 1</td><td> 0 bis 255</td></tr>
+<tr><td>[signed] short [int]</td><td>2</td><td> -32768 bis 32767</td></tr>
+<tr><td>unsigned short [int]</td><td>2</td><td>0 bis 65636</td></tr>
+<tr><td>[signed] int</td><td>4</td><td>-2^31 bis 2^31-1</td></tr>
+<tr><td>unsigned [int]</td><td>4</td><td> 0 bis 2^32-1</td></tr>
+<tr><td>[signed] long [int]</td><td> 8</td><td> -2^63 bis 2^63-1</td></tr>
+<tr><td>unsigned long [int]</td><td> 8</td><td> 0 bis 2^64-1</td></tr>
+<tr><td>[signed] long long [int]</td><td> 8</td><td> -2^63 bis 2^63-1</td></tr>
+<tr><td>unsigned long [int]</td><td> 8</td><td> -2^63 bis 2^64-1</td></tr>
+<tr><td>long double</td><td> 19</td><td> 1.2 * 10^4932 bis 1.2 * 10^4932</td></tr>
+</tbody></table>
+</div>
+<h1 id="standard--typen"><a class="header" href="#standard--typen">Standard  Typen</a></h1>
+<h2 id="integer"><a class="header" href="#integer">Integer</a></h2>
+<pre><code class="language-c">#include &lt;stdint.h&gt;
+
+int8_t signedValue;
+uint8_t unsignedValue;
+
+int16_t signedValue;
+uint16_t unsignedValue;
+
+int32_t signedValue;
+uint32_t unsignedValue;
+
+int64_t signedValue;
+uint64_t unsignedValue;
+</code></pre>
+<h2 id="bool"><a class="header" href="#bool">Bool</a></h2>
+<pre><code class="language-c">#include &lt;stdbool.h&gt;
+
+bool trueValue = true;
+bool falseValue = false;
+</code></pre>
+<h1 id="literalle--konstanten"><a class="header" href="#literalle--konstanten">Literalle / Konstanten</a></h1>
+<ul>
+<li>Im Code eingefügte, unveränderliche Werte</li>
+<li>Ist die Zahlt zu gross für int, wird diese als long interpretiert.</li>
+</ul>
+<pre><code class="language-c">
+int decimal = 3987; // beginnt mit 1 - 9
+
+unsigned int octal = 037;  // starts with 0
+
+unsigned int hexadecimal = 0x23; // starts with 0X or 0x
+
+char asciiCode = 'A'; // single ascii code 
+
+double decimalPoint = 1.23;
+
+double exponent = 1.6e3;
+
+</code></pre>
+<h2 id="explizite-angabe"><a class="header" href="#explizite-angabe">Explizite Angabe</a></h2>
+<pre><code class="language-c">
+int interpretedAsLong = 134L;
+
+int interpretedAsLongLong = 134LL;
+
+// U kann alleine, oder zusätzlich zu L / LL hinzufgefügt werden.
+int interpretedAsUnsigned = 134U;
+
+float interpretedAsFloat = 1.23F; // f geht auch
+
+double interpretedAsDouble = 1.23L; // Long float
+
+</code></pre>
+<h2 id="zeichenliterale"><a class="header" href="#zeichenliterale">Zeichenliterale</a></h2>
+<div class="table-wrapper"><table><thead><tr><th> Zeichen</th><th> Beschreibung</th></tr></thead><tbody>
+<tr><td>\n</td><td>new line</td></tr>
+<tr><td>\t</td><td>horizontal tab</td></tr>
+<tr><td>\</td><td>backslash</td></tr>
+<tr><td>\'</td><td> Single quote</td></tr>
+<tr><td>\&quot;</td><td> double quote</td></tr>
+<tr><td> \0</td><td> Ascii Code 0</td></tr>
+</tbody></table>
+</div>
+<h2 id="ascii-tabelle"><a class="header" href="#ascii-tabelle">Ascii Tabelle</a></h2>
+<p>![[Pasted image 20230527113117.png]]</p>
+<h2 id="strings"><a class="header" href="#strings">Strings</a></h2>
+<p>Durch Anführungszeichen eingeschlossene Zeichenfolgen werden als strings interpretiert.</p>
+<pre><code class="language-c">char[] iAmString = &quot;Hello World!&quot;;
+</code></pre>
+<h2 id="symbolische-konstanten"><a class="header" href="#symbolische-konstanten">Symbolische Konstanten</a></h2>
+<p>Symbolische Konstanten werden Textmässig ersetzt.</p>
+<pre><code class="language-c">#define MAX_LENGTH 1000
+</code></pre>
+<p><strong>Anwendung</strong></p>
+<pre><code class="language-c">#define MAX_LENGTH 1000
+
+int length = MAX_LENGTH; // MAX_LENGTH wird durch den Wert im define ersetzt
+</code></pre>
+<h1 id="definitionen"><a class="header" href="#definitionen">Definitionen</a></h1>
+<ul>
+<li>Sind Variablen ausserhalb von Funktionen definiert, sind diese lokal in der Source (.c) Datei.</li>
+</ul>
+<h2 id="variablen"><a class="header" href="#variablen">Variablen</a></h2>
+<p>Eine Variable sollte immer auf einen Wert initialisiert werden, da es keine Standardwerte gibt.</p>
+<pre><code class="language-c">
+double hoehe;
+int laenge, breite; // mach das nicht
+double r,
+	radius = 15.0;  // Besser so, dann ist es klar, dass nur radius auf 15.0 ist
+</code></pre>
+<h2 id="konstanten"><a class="header" href="#konstanten">Konstanten</a></h2>
+<p>Konstanten sind nicht veränderlich.</p>
+<pre><code class="language-c">const double pi = 3.14159;
+</code></pre>
+<h2 id="typ-alias"><a class="header" href="#typ-alias">Typ Alias</a></h2>
+<p>Erlaubt es eigene Typen zu definieren, oder auch Synonyme.</p>
+<pre><code class="language-c">typedef int Index; // sagt, dass Index von typ int ist.
+
+Index index = 0; // Index kann jetzt als Typ verwendet werden
+</code></pre>
+<pre><code class="language-c">typedef struct position
+{
+	int x;
+	int y;
+} Position;
+
+Position position;
+position.x = 1;
+position.y = 2;
+</code></pre>
+<h1 id="statisch"><a class="header" href="#statisch">Statisch</a></h1>
+<p>Statische Variablen sind prozessübergreifend. </p>
+<pre><code class="language-c">static int value;
+</code></pre>
+<ul>
+<li>Wenn im Header definiert, dann sind diese sobald diese inkludiert wird, verfügbar.</li>
+<li>Wenn in der Source Datei definiert, dann sind diese in der gleichen Datei in allen Prozessen verfügbar.</li>
+</ul>
+<h2 id="bit-operatoren"><a class="header" href="#bit-operatoren">Bit-Operatoren</a></h2>
+<p>![[Pasted image 20230527114235.png]]</p>
+<h1 id="vorrang-und-reihenfolge"><a class="header" href="#vorrang-und-reihenfolge">Vorrang und Reihenfolge</a></h1>
+<p>![[Pasted image 20230527114338.png]]</p>
+<h2 id="type-casts"><a class="header" href="#type-casts">Type Casts</a></h2>
+<p>Ein type cast wird benötigt, um ein typ <strong>explizit</strong> in einen anderen Typen zu wandeln</p>
+<pre><code class="language-c">int value = 5;
+int divider = 3;
+double result = (double) value / divider;
+</code></pre>
+<h2 id="kontrollstrukturen"><a class="header" href="#kontrollstrukturen">Kontrollstrukturen</a></h2>
+<h3 id="if-else--else-if"><a class="header" href="#if-else--else-if">If-Else / Else-if</a></h3>
+<pre><code class="language-c">const int SOME_CONSTANT = 10;
+int value = 5;
+if (value &gt; SOME_CONSTANT) {
+	// Do something if greater than SOME_CONSTANT
+} else if (value &lt; SOME_CONSTANT) {
+	// Do something if less than SOME_CONSTANT
+} else {
+	// Do something if equal to SOME_CONSTANT
+}
+</code></pre>
+<h3 id="for-schleife"><a class="header" href="#for-schleife">For-Schleife</a></h3>
+<pre><code class="language-c">for (int i=1; i &lt;= 5; i++) {
+	// Mache etwas in der for schleif
+}
+</code></pre>
+<h2 id="while"><a class="header" href="#while">While</a></h2>
+<p>Zuerst wird die Bedingung geprüft, dann der Inhalt der Schleife ausgeführt</p>
+<pre><code class="language-c">int i=0; // Initialisierung its wichtig
+while (i &lt; 5)
+{
+	// Mache etwas in der for schleife
+	i++; // i muss manuell verändert werden
+}
+</code></pre>
+<h2 id="do-while"><a class="header" href="#do-while">Do while</a></h2>
+<p>Im Gegensatz zur While schleife, wird in der Do-While der Inhalt der Schleife zuerst ausgeführt.</p>
+<pre><code class="language-c">int i=0; // Initialisierung its wichtig
+do
+{
+	// Mache etwas in der for schleife
+	i++; // i muss manuell verändert werden
+	// WIRD MINDESTENS 1 MAL AUSGEFÜHRT
+}
+while (i &lt; 5);
+</code></pre>
+<h2 id="switch"><a class="header" href="#switch">Switch</a></h2>
+<p><strong>Es können keine Strings evaluiert werden!!</strong></p>
+<pre><code class="language-c">int n;
+switch (n)
+{
+case 1:
+{
+	// Wenn 1
+	break;
+}
+case 2:
+case 3:
+{
+	// Wenn 2 oder 3
+	break;
+}
+default:
+{
+	// Alles andere
+	break;
+}
+
+}
+</code></pre>
+<h1 id="input"><a class="header" href="#input">Input</a></h1>
+<p>stdout / stdin / stderr sind auf der Konsole</p>
+<h2 id="konstanten-string-auf-stdout-ausgeben"><a class="header" href="#konstanten-string-auf-stdout-ausgeben">Konstanten String auf StdOut ausgeben</a></h2>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int result = puts(&quot;Hello world&quot;);
+if (result == EOF) 
+{
+	// Konnte nicht geschrieben werden
+}
+</code></pre>
+<h3 id="einzelnes-zeichen-auf-stdout-ausgeben"><a class="header" href="#einzelnes-zeichen-auf-stdout-ausgeben">Einzelnes Zeichen auf StdOut ausgeben</a></h3>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int result = putchar('A');
+if (result == EOF) 
+{
+	// Konnte nicht geschrieben werden
+}
+</code></pre>
+<h3 id="einzelnes-zeichen-von-stdin-lesen"><a class="header" href="#einzelnes-zeichen-von-stdin-lesen">Einzelnes Zeichen von StdIn lesen</a></h3>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+char c = getchar();
+
+// Das Zeichen wird in c gespeichert
+</code></pre>
+<h3 id="formatierte-ausgabe--eingabe"><a class="header" href="#formatierte-ausgabe--eingabe">Formatierte Ausgabe / Eingabe</a></h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+printf(format, arg1, arg2, . . .); // für Ausgabe
+
+scanf(format, &amp;x, &amp;y, &amp;z); // Parameter (ausser string (char*)) mit &amp; angeben
+
+</code></pre>
+<p>Der Parameter <em>format</em> ist ein String. Jedes der zusätzlichen Argumente (arg1, arg2, …) ist in diesem Forhanden und kann folgedes bedeuten.</p>
+<div class="table-wrapper"><table><thead><tr><th>Zeichenfolge</th><th> Bedeutung</th></tr></thead><tbody>
+<tr><td>%d, %i</td><td>int</td></tr>
+<tr><td>%u</td><td>unsigned int</td></tr>
+<tr><td>%c</td><td>char</td></tr>
+<tr><td>%s</td><td>String (char *)</td></tr>
+<tr><td>%f</td><td>float</td></tr>
+</tbody></table>
+</div>
+<h4 id="formatierung-von-float"><a class="header" href="#formatierung-von-float">Formatierung von Float</a></h4>
+<p>%m.df</p>
+<div class="table-wrapper"><table><thead><tr><th>Symbol</th><th>Bedeutung</th></tr></thead><tbody>
+<tr><td>m</td><td>Minimale Länge des Outputs</td></tr>
+<tr><td>d</td><td>Anzahl dezimalstellen</td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+double value = 5.12345;
+
+printf(&quot;%f&quot;, value); //5.123450 (dezimal standard=6)
+
+printf(&quot;%.3f&quot;, value); //5.123
+
+printf(&quot;%10.3f&quot;, value); //      5.123 (6 Leerzeichen)
+
+</code></pre>
+<h2 id="enums"><a class="header" href="#enums">Enums</a></h2>
+<pre><code class="language-c">enum Wochentage
+{
+	Monday,  // int wert ist 0
+	Tuesday, // int wert ist 1, nachfolgende sind vortlaufend
+	Wednesday,
+	Thursday = 13, // int wert ist 13 
+	Friday, // int wert ist 14
+	Saturday,
+	Sunday
+};
+
+// Direkt auf Monday zugreifen, keine Angabe des Namespaces notwendig
+Wochentag tag = Monday;
+
+
+int dayOfWeek = tag; // 
+</code></pre>
+<h2 id="strukturen--datenklassen"><a class="header" href="#strukturen--datenklassen">Strukturen / Datenklassen</a></h2>
+<pre><code class="language-c">struct Point3D
+{
+	double x;
+	double y;
+	double z;
+}
+
+struct Point3D ptA = {1.0, 3.0, 4.0}; // Standard initialisierung
+
+ptA.x = 5.0; // Zugriff
+</code></pre>
+<p><strong>Mit Typedef</strong></p>
+<pre><code class="language-c">typedef struct
+{
+	double x;
+	double y;
+	double z;
+} Point3D;
+
+Point3D ptA = {1.0, 3.0, 4.0}; // Standard initialisierung
+
+ptA.x = 5.0; // Zugriff
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>Arrays werden als <strong>ANEINANDERLIEGENDE</strong> Blocks im Memory definiert.</p>
+<p><strong>Länge</strong>: Die Länge des Arrays <strong>MUSS</strong> zur Kompilierzeit bekannt sein.
+<strong>Index:</strong> Beginnt bei 0</p>
+<pre><code class="language-c">const int ARRAY_LEN = 6;
+int[ARRAY_LEN] array = { 0 }; // Alle Werte auf 0 setzem
+</code></pre>
+<h2 id="modifzieren-des-arrays"><a class="header" href="#modifzieren-des-arrays">Modifzieren des Arrays</a></h2>
+<pre><code class="language-c">const int ARRAY_LEN = 6;
+int[ARRAY_LEN] array = { 0 }; // Alle Werte auf 0 setzem
+
+array[2] = 6; // setzte 3. Element auf 6
+
+// AUFPASSEN BEI DER INDEXIERUNG
+// Es wird keine IndexOutOfRange Exception geworfen, wenn ausserhalbt des Blockes geschrieben wird
+arrray[12] = 7;
+array[-3] = 9;
+
+</code></pre>
+<h2 id="initialisierung-eines-arrays"><a class="header" href="#initialisierung-eines-arrays">Initialisierung eines Arrays</a></h2>
+<pre><code class="language-c">int array[] = { 1, 2, 3}; // alloziert einen Array der Länge 3
+</code></pre>
+<h2 id="länge-eines-arrays"><a class="header" href="#länge-eines-arrays">Länge eines Arrays</a></h2>
+<h3 id="bevorzug"><a class="header" href="#bevorzug">Bevorzug</a></h3>
+<pre><code class="language-c">const size_t ARRAY_LEN = 100;
+
+int array[ARRAY_LEN] = { 0 };
+
+for (size_t i =0; i &lt; ARRAY_LEN; i++) {
+	array[i] = i;
+}
+</code></pre>
+<h3 id="dynamische-länge"><a class="header" href="#dynamische-länge">„Dynamische“ Länge</a></h3>
+<pre><code class="language-c">
+int array[100] = { 0 };
+
+// Nicht in einer Funktion möglich!!
+size_t len = sizeof(array) / sizeof(array[0]);
+
+for (size_t i =0; i &lt; len; i++) {
+	array[i] = i;
+}
+</code></pre>
+<h1 id="mehrdimensionale-arrays"><a class="header" href="#mehrdimensionale-arrays">Mehrdimensionale Arrays</a></h1>
+<p>Wie ein Schachbrett</p>
+<pre><code class="language-c">
+int array[2][3] = {
+	{ 1, 2, 3 },
+	{ 4, 5, 7}
+};
+
+array[0][0] = 5; // Zugriff
+</code></pre>
+<h1 id="char-arrays-und-strings"><a class="header" href="#char-arrays-und-strings">Char Arrays und Strings</a></h1>
+<p>In Format: %s</p>
+<p>String terminator: <strong>Ein char array wird immer mit \0 beendet, ansonsten ist es unmöglich die Länge zu bestimmen.</strong>
+-&gt; Also Grösse immer um 1 erhöhen als gewünschte Länge</p>
+<pre><code class="language-c">char hello[] = &quot;hello, world&quot;; // kann modifziert werden
+
+/*
+h
+e
+l
+l
+o
+,
+
+w
+o
+r
+l
+d
+\0
+*/
+</code></pre>
+<p>Es ist aber möglich, den String-Terminator zu entfernen, indem man folgendes macht.</p>
+<pre><code class="language-c">
+char[12] hello = &quot;Hello, World&quot;;
+</code></pre>
+<h2 id="string-funktionen"><a class="header" href="#string-funktionen">String Funktionen</a></h2>
+<pre><code class="language-c">#include &lt;string.h&gt;
+char[] hello = &quot;Hello world&quot;;
+
+// String läng bestimmen
+int laenge = strlen(hello);
+
+// String vergleich
+int result = stcmp(hello, &quot;Hi&quot;);
+// 0 = beide sind gleich
+// &gt; 0 wenn der erste string einen grösseren Ascii Wert hat als der zweite
+// &lt; 0 wenn der zweite string einen grösseren Ascii wert hat als der erste
+
+</code></pre>
+<h3 id="string-kopieren"><a class="header" href="#string-kopieren">String kopieren</a></h3>
+<p>Kopiert source in dest, egal ob die Länge passt.
+Rückgabewert ist ein Pointer zur destination</p>
+<pre><code class="language-c">char* strcpy(char dest[], const char source[]);
+</code></pre>
+<p>Kopiert source in dest, mit der maximalen Länge num
+Rückgabewert ist ein Pointer zur destination</p>
+<pre><code class="language-c">char* strncpy(char dest[], const char source[], size_t num);
+</code></pre>
+<h2 id="strings-aneinanderhängen"><a class="header" href="#strings-aneinanderhängen">Strings aneinanderhängen</a></h2>
+<p>Hängt eine Kopie von source an destination.</p>
+<pre><code class="language-c">char * strcat ( char * destination, const char * source );
+</code></pre>
+<p>Hängt die ersten num Zeichen von source an destination.</p>
+<pre><code class="language-c">char * strncat ( char * destination, const char * source, size_t num );
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>Wird benötigt um Aufgaben aufzutrennen, und zu  vereinfachen</p>
+<h2 id="header"><a class="header" href="#header">Header</a></h2>
+<p>Datei endet mit .h</p>
+<pre><code class="language-c">// list.h
+#ifndef __LIST_H__
+#define __LIST_H__
+
+// Diese Defines sind wichtig, da sonst der Header doppelt kompiliert werden kann. Macht auch Probleme mit Defines, Konstanten, statics und Methodendeklarationen
+
+
+// Methode wird im Header deklariert
+// so weiss jedes andere Modul, heyy in dieser Datei finde ich die deklaration
+// ausprogrammiert wird diese aber in der source (.c) datei
+void list_clear(void);
+
+// Diese Variable ist GLOBAL in ALLEN Dateien, die list.h inkludieren vorhanden
+static int iAmGlobal = 0;
+
+#endif __LIST_H__
+</code></pre>
+<p>Können aber auch durch folgendes ersetzt werden</p>
+<pre><code class="language-c">// list.h
+#pragma once
+
+</code></pre>
+<h1 id="source"><a class="header" href="#source">Source</a></h1>
+<pre><code class="language-c">// list.s
+
+#include &quot;list.h&quot;
+
+// ist für jedes include separat definiert
+int iAmSpecific = 3;
+
+// ist für jedes include gleich, kann für Prozesskommunikation verwendet werden.
+static int iAmProcessWide = 5;
+
+void list_clear()
+{
+	// globale variable modifizieren
+	iAmGlobal = 2;
+
+	// verändert die Dateispezifische Variable
+	iAmSpecific = 5;
+}
+</code></pre>
+<h1 id="makefile"><a class="header" href="#makefile">Makefile</a></h1>
+<p>Du gucken da: https://devhints.io/makefile</p>
+<div style="break-before: page; page-break-before: always;"></div><p>Pointers zeigen auf eine Adresse im Speicher.</p>
+<pre><code class="language-c">int *p; // Pointer auf ein Objekt vom typ int
+
+char *c[20]; // Array von 20 Pointern auf Objekte vom typ char
+
+double (*d)[20]; // Ist ein Pointer, der af ein Array mit 20 Elementen zeigt
+
+char **ppc; // Zeigt auf ein Objekt vom Typ Pointer
+			// das auf ein Objekt vom Typ char zeigt
+
+int * p, q; // p ist pointer
+			// q ist KEIN pointer
+</code></pre>
+<p><strong>Sizeof</strong>: Systemarchitektur abhängig (32 bit = 32/8 -&gt; 4 byte)</p>
+<h2 id="operatoren"><a class="header" href="#operatoren">Operatoren</a></h2>
+<pre><code class="language-c">int i;
+
+int *p;
+int *op;
+
+p = &amp;i;  // p zeigt auf die Adresse von i
+
+*p = 4; // modifiziert den Wert von i
+
+// Zeigt auf die gleiche Adresse wie p zum ZEITPUNKT des setzens.
+op = p;
+*op += 5; // modifiziert Objket i
+
+</code></pre>
+<p>Pointer müssen immer auf etwas zeigen, sonst wird <strong>IRGENDEIN</strong> Speicher modifizert.</p>
+<h2 id="der-geilste-pointer"><a class="header" href="#der-geilste-pointer">Der geilste Pointer</a></h2>
+<pre><code class="language-c">double d = 1.0;
+
+// Void pointer, zeigt auf alles mögliche
+void *vp = &amp;d;
+
+// Zuerst auf double pointer casten
+// dann wert von double auslesen
+printf(&quot;%f&quot;, * (double*)vp);
+</code></pre>
+<h2 id="konstante-pointers"><a class="header" href="#konstante-pointers">Konstante Pointers</a></h2>
+<p>Konstant = nicht mehr modifizierbar</p>
+<pre><code class="language-c">int i = 15;
+int * const p = &amp;i;
+
+// i kann modifizert werden
+i = 16;
+printf(&quot;%d&quot;, *p);
+
+// p aber nicht mehr
+p++; // DAS GEHT NICHT!!!
+</code></pre>
+<h2 id="null-pointer"><a class="header" href="#null-pointer">NULL Pointer</a></h2>
+<p>Hat die Adresse 0</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int *p1 = 0; //blöde idee, vorallem nicht lesbar
+int *p2 = NULL; // perfekt
+
+</code></pre>
+<h2 id="für-strukturen"><a class="header" href="#für-strukturen">Für strukturen</a></h2>
+<pre><code class="language-c">
+typedef struct {
+  int studNr;
+  char name[30];
+  char vorname[30];
+} Student;
+
+Student notPointer;
+Student *pointer;
+
+
+notPointer.studNr = 4;
+strcpy(notPointer.name, &quot;Mueller&quot;);
+
+// Hey, ich zeige auf den notPointer
+pointer = &amp;notPointer;
+
+printf(&quot;%s&quot;, (*pointer).name); // Mueller
+
+</code></pre>
+<h1 id="pointer-arithmetik"><a class="header" href="#pointer-arithmetik">Pointer Arithmetik</a></h1>
+<pre><code class="language-c">int a[5] = {2, 4, 6, 8, 10};
+int *p = a;
+
+
+// alle folgenden Zeilen sind identisch
+a[3]     = 1; // vom Compiler intern als *(a + 3) = 1 generiert
+*(a + 3) = 1; // a steht für die Start Adresse von a
+*(p + 3) = 1; // p ist auf die Start Adresse von a gesetzt
+p[3]     = 1; // vom Compiler intern als *(p + 3) = 1 generiert
+</code></pre>
+<h2 id="iterator"><a class="header" href="#iterator">Iterator</a></h2>
+<pre><code class="language-c">int a[5];
+
+// a+5 ist die Adresse *hinter* das
+// letzte Element des Arrays: C++ Stil
+
+for(int *it = a; it != a+5; ++it) {
+	*it = 0;
+}
+
+</code></pre>
+<p>oder</p>
+<pre><code class="language-c">int array[5];
+
+int *it = &amp;array[0]; // zeigt auf das erste Element von a
+int *end = &amp;array[5]; // zeigt auf das letze Element von a
+    
+for(it; it != end; ++it) {
+	*it = 0;
+}
+
+</code></pre>
+<h1 id="string-literale"><a class="header" href="#string-literale">String Literale</a></h1>
+<pre><code class="language-c">
+char * str = &quot;I am a literal&quot;;
+
+printf(&quot;%s&quot;, str);
+
+printf(&quot;%c&quot;, str[0]);
+</code></pre>
+<h2 id="jagged-arrays"><a class="header" href="#jagged-arrays">Jagged Arrays</a></h2>
+<p>Eindimensionale Arrays von pointern.</p>
+<pre><code class="language-c">char *jagged[] = {
+	&quot;January&quot;,
+	&quot;February&quot;,
+	&quot;March&quot;,
+	&quot;April&quot;,
+	&quot;Mai&quot;,
+	&quot;June&quot;,
+	&quot;July&quot;,
+	&quot;August&quot;,
+	&quot;September&quot;,
+	&quot;October&quot;,
+	&quot;November&quot;,
+	&quot;December&quot; };
+
+
+if (jagged[3][2] == ‘r') {
+...
+}
+// jagged[3] is “April”
+// jagged[3][2] is the third character of April
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p><strong>POINTER WIRD ÜBERGEBEN</strong></p>
+<pre><code class="language-c">
+void swap (int *a, int *b)
+{
+	int saved_a = *a; // Wert von a zwischenspeichern
+	*a = *b;
+	*b = saved_a; // WIHCTIG: Wert anpassen, und nicht Adresse
+}
+</code></pre>
+<h2 id="read-only"><a class="header" href="#read-only">Read only</a></h2>
+<pre><code class="language-c">void print_array(const int *a, int n)
+{
+	// const verhindert die Modifikation von a
+}
+</code></pre>
+<h2 id="arrays-übergeben"><a class="header" href="#arrays-übergeben">Arrays übergeben</a></h2>
+<pre><code class="language-c">void print_array(int *a, int n)
+{ }
+</code></pre>
+<p>ist gleich wie</p>
+<pre><code class="language-c">void print_array(int a[], int n)
+{ }
+</code></pre>
+<h2 id="structs-übergeben"><a class="header" href="#structs-übergeben">Structs übergeben</a></h2>
+<pre><code class="language-c">void do_something(struct *s)
+{ }
+</code></pre>
+<pre><code class="language-c">void do_something(const struct *s)
+{
+	// struct kann nicht überschrieben werden
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="heap"><a class="header" href="#heap">Heap</a></h2>
+<p>Zur Laufzeit dynamisch Speicher vom Heap anfordern</p>
+<pre><code class="language-c">// aus stdlib.h
+// alloziert &quot;size&quot; Bytes vom Heap und gibt die Start Adresse zurück
+void *malloc(size_t size);
+// alloziert &quot;nitems&quot; mal &quot;size&quot; Bytes, setzt sie auf 0, und gibt die Adresse zurück void *calloc(size_t nitems, size_t size);
+// vergrössert (oder verkleinert) einen vorgängig angeforderten Speicherbereich
+void *realloc(void *ptr, size_t size);
+// gibt einen oben angeforderten Speicherbereich frei
+void free(void *ptr);
+
+</code></pre>
+<h2 id="beispiel"><a class="header" href="#beispiel">Beispiel</a></h2>
+<pre><code class="language-c">#include &lt;stdlib.h&gt;
+
+typedef struct {
+	char firstName[30];
+	char lastName[30];
+} Person;
+
+Person* pointerToPerson = (Person*)malloc(sizeof(Person));
+
+if (pointerToPerson == NULL) {
+	// Etwas ist schief gelaufen. Pointer kann NICHT verwendet werden!!
+	return;
+}
+
+// Wandlung in Person, dann firstname setzen
+strcpy((*pointerToPerson).firstName, &quot;firstname&quot;);
+
+// Direkter Speicherzugriff
+strcpy(pointerToPerson-&gt;lastName, &quot;lastName&quot;);
+
+
+printf(&quot;%s&quot;, pointerToPerson-&gt;firstName);
+
+printf(&quot;%s&quot;, (*pointerToPerson).lastName);
+
+//GANNZ WICHTIG
+free(pointerToPerson); // Speicherplatz wieder frei geben
+
+</code></pre>
+<h2 id="probleme"><a class="header" href="#probleme">Probleme</a></h2>
+<h3 id="buffer-overflow"><a class="header" href="#buffer-overflow">Buffer Overflow</a></h3>
+<ul>
+<li>z.B. Schreiben von 21 Zeichen langem String in 20 Zeichen langen Array,</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="datei-öffnen"><a class="header" href="#datei-öffnen">Datei öffnen</a></h2>
+<p>Eine Datei kann in unterschiedliche Modis geöffnet werden.</p>
+<div class="table-wrapper"><table><thead><tr><th>Modus</th><th>Beschreibung</th><th>Datei nicht vorhanden</th></tr></thead><tbody>
+<tr><td>r</td><td>ASCII lesen</td><td>NULL</td></tr>
+<tr><td>rb</td><td>Binär lesen</td><td>NULL</td></tr>
+<tr><td>w</td><td>ASCII schreiben</td><td>Erstellt Datei</td></tr>
+<tr><td>wb</td><td>Binäres schreiben</td><td>Erstellt Datei</td></tr>
+<tr><td>a</td><td>Anfügen</td><td>Erstellt Datei</td></tr>
+<tr><td>ab</td><td>Binäres Anfügen</td><td>Erstellt Datei</td></tr>
+<tr><td>r+</td><td>Lesen und schreiben</td><td>NULL</td></tr>
+<tr><td>rb+</td><td>Lesen und schreiben in binär</td><td>NULL</td></tr>
+<tr><td>w+</td><td>lesen und schreiben</td><td>Erstellt Datei</td></tr>
+<tr><td>wb+</td><td>Lesen und schreiben in binär</td><td>Erstellt Datei</td></tr>
+<tr><td>ab+</td><td>Anfügen und lesen in binär</td><td>Erstellt Datei</td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+FILE *f = fopen(&quot;Pfad&quot;, &quot;mode&quot;);
+</code></pre>
+<h2 id="datei-lesen-line-by-line"><a class="header" href="#datei-lesen-line-by-line">Datei lesen (line by line)</a></h2>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+char * line = NULL;
+size_t len = 0;
+ssize_t read;
+FILE *f = fopen(&quot;Pfad&quot;, &quot;r&quot;);
+
+if (f == NULL) { // das gleiche wie if (!f)
+	perror(&quot;Datei konnte nicht geöffnet werden!&quot;);
+	exit(-1);
+}
+
+while ((read = getline(&amp;line, &amp;len, f)) != -1) {
+	printf(&quot;Retrieved line of length %zu:\n&quot;, read);
+	printf(&quot;%s&quot;, line);
+}
+
+// Datei wieder schliessen
+fclose(f);
+
+if (line)
+{
+	free (line);
+}
+
+</code></pre>
+<h2 id="datei-schreiben-by-charater"><a class="header" href="#datei-schreiben-by-charater">Datei schreiben (by Charater)</a></h2>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+char * line = NULL;
+size_t len = 0;
+ssize_t read;
+FILE *f = fopen(&quot;Pfad&quot;, &quot;w&quot;);
+
+if (f == NULL) { // das gleiche wie if (!f)
+	perror(&quot;Datei konnte nicht geöffnet werden!&quot;);
+	exit(-1);
+}
+
+fprintf(f, &quot;format\n&quot;, arg1);
+
+
+// Datei wieder schliessen
+fclose(f);
+
+if (line)
+{
+	free (line);
+}
+
+</code></pre>
+<h2 id="datei-anfügen"><a class="header" href="#datei-anfügen">Datei anfügen</a></h2>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+char * line = NULL;
+size_t len = 0;
+ssize_t read;
+FILE *f = fopen(&quot;Pfad&quot;, &quot;a
+				&quot;);
+
+if (f == NULL) { // das gleiche wie if (!f)
+	perror(&quot;Datei konnte nicht geöffnet werden!&quot;);
+	exit(-1);
+}
+
+fprintf(f, &quot;format\n&quot;, arg1);
+
+
+// Datei wieder schliessen
+fclose(f);
+
+if (line)
+{
+	free (line);
+}
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="multi-tasking"><a class="header" href="#multi-tasking">Multi-Tasking</a></h2>
+<p><strong>Task</strong>: Eine Aufgabe die von der CPU abgearbeitet wird
+<strong>Batch-Ausführen</strong>: Führ die anstehenden Tasks <strong>nacheinander</strong> durch.
+<strong>Multi-Tasking</strong>: Führt die Prozesse <strong>gleichzeitig / nebeneinander</strong> aus</p>
+<h3 id="scheduling"><a class="header" href="#scheduling">Scheduling</a></h3>
+<p><strong>Kooperativ</strong>: Jeder Task entschieden, wann sie die Kontrolle an einen anderen Task abgibt.
+<strong>Präemptiv</strong>: Kontrollübergabe an den nächsten Task wird erzwungen
+<strong>Scheduler</strong></p>
+<ul>
+<li>Unterbricht präemtiv</li>
+<li>entscheidet welche Tasks dran sind
+<ul>
+<li>Round robin (im Kreis herum)</li>
+<li>Priority driven</li>
+</ul>
+</li>
+</ul>
+<h1 id="fork"><a class="header" href="#fork">Fork</a></h1>
+<p>Nach dem fork existiert der Kindprozess als Kopie des original Prozesses.</p>
+<ul>
+<li>Bisherige Variablen werden also exakt kopiert</li>
+<li>Somit sind auch offene Files dann „doppelt“ vorhanden. Also immer aufpassen</li>
+</ul>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/wait.h&gt;
+
+#define PERROR_AND_EXIT(M) do { perror(M); exit(EXIT_FAILURE); } while(0)
+
+int main()
+{
+
+	// Erstelle neuen Child prozess
+	// setzt DANACH die childId
+	pid_t childId = fork();
+	if (childId == -1)
+	{
+	  PERROR_AND_EXIT(&quot;fork&quot;);
+	}
+  
+	if (childId &gt; 0)
+	{
+		// ChildId ist gesetzt, also sind wir im Parent
+		printf(&quot;Parent: %d forked child %d\n&quot;, getpid(), cpid);
+	
+		int wstatus;
+
+		// Jetzt warten wir, bis der Prozess des Kindes
+		// fertig ist, 0 -&gt; kein timeout also unendlich lange
+		pid_t wpid = waitpid(cpid, &amp;wstatus, 0);
+		printf(&quot;Child exited with status: %d \n&quot;, WEXITSTATUS(wstatus));
+
+		// jetzt beenden wir den Parent mit Success
+		exit(EXIT_SUCCESS);
+	}
+	else
+	{
+		// Da childId noch nicht gesetzt ist, zum Zeitpunkt des forks
+		// Wissen wir, dass wir im child sind
+
+
+		printf(&quot;Child: %d forked by parent %d\n&quot;, getpid(), getppid());
+		sleep(3);
+		exit(123);
+	}
+}
+
+// Parent erstellt neues Kind
+// Kind wird ausgeführt, blockiert parent bis abgeschlossen (exit)
+// Parent wird abgeschlossen (exit)
+</code></pre>
+<h1 id="exec"><a class="header" href="#exec">Exec</a></h1>
+<p>Ersetzt den Childprozess durch ein anders ausführbares Programm.</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/wait.h&gt;
+
+#define PERROR_AND_EXIT(M) do { perror(M); exit(EXIT_FAILURE); } while(0)
+
+int main()
+{
+	// Erstelle neuen Child prozess
+	// setzt DANACH die childId
+	pid_t childId = fork(); // Erstelle neues Kind
+	if (childId == -1)
+	{
+		PERROR_AND_EXIT(&quot;fork&quot;);
+	}
+	
+	if (childId &gt; 0)
+	{
+		// ChildId ist gesetzt, also sind wir im Parent
+		printf(&quot;Parent: %d forked child %d\n&quot;, getpid(), cpid);
+	
+		int wstatus;
+
+		// Jetzt warten wir, bis der Prozess des Kindes
+		// fertig ist, 0 -&gt; kein timeout also unendlich lange
+		pid_t wpid = waitpid(cpid, &amp;wstatus, 0);
+		printf(&quot;Child exited with status: %d \n&quot;, WEXITSTATUS(wstatus));
+
+		// jetzt beenden wir den Parent mit Success
+		exit(EXIT_SUCCESS);
+	}
+	else
+	{
+		// Da childId noch nicht gesetzt ist, zum Zeitpunkt des forks
+		// Wissen wir, dass wir im child sind
+
+
+		// Wir definieren die Befehle einzel
+		// in diesem fall „ls -l“
+		static char *eargv[] = { &quot;ls&quot;, &quot;-l&quot;, NULL };
+		
+		if (execv(&quot;/bin/ls&quot;, eargv) == -1)
+		{
+			PERROR_AND_EXIT(&quot;execv: /bin/ls&quot;)
+		}
+
+		// Das exec denn Prozess ersetzt, wird diese Zeile nie getroffen
+	}
+}
+</code></pre>
+<h1 id="system"><a class="header" href="#system">System</a></h1>
+<ol>
+<li>Spaltet einen Prozess ab <strong>fork())</strong></li>
+<li>startet die System-Shell, führt in dieser Shell das angegebene Kommando aus</li>
+<li>Wartet blockierend auf das Terminieren des Prozesses (waitpid())</li>
+</ol>
+<h3 id="wexitstatus"><a class="header" href="#wexitstatus">WEXITSTATUS</a></h3>
+<p>Extrahiert den Exitcode aus dem zurückgegebenen Status des system() Befehles</p>
+<pre><code class="language-c">int ret = system(&quot;/bin/ls -l&quot;);
+</code></pre>
+<h1 id="popen"><a class="header" href="#popen">POPEN</a></h1>
+<p>![[Pasted image 20230527193800.png]]</p>
+<h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
+<p>Da das OS die Threads selber verwaltet, kann es sein, dass die Ausgabe auf der Konsole sich verändert. Wenn jetzt z.B. der Child Prozess eine höhere Priorität hat, dann ist es möglich, dass dieser <strong>VOR</strong> dem Main prozess endet.</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;pthread.h&gt;
+
+#define PERROR_AND_EXIT(M) do { perror(M); exit(EXIT_FAILURE); } while(0)
+
+// Definiere den worker thread, diese Funktion
+// wird im thread später ausgeführt
+void *worker(void *arg)
+{
+	printf(&quot;worker\n&quot;);
+	sleep(3);
+	static int ret_value = 123;
+	return &amp;ret_value;
+}
+
+int main()
+{
+	pthread_t thread;
+
+	// erstelle neuen thread
+	// thread -&gt; speichere diesen in die thread adresse
+	// NULL -&gt; pthread_attr_t: erlaubt also einige Attribute zu setzen
+	// worker -&gt; welche Funktion soll ausgefüht werden
+	// NULL -&gt; argument zur Funktion, da kann auch alles mögliche drin stehen
+	
+	int status = pthread_create(&amp;thread, NULL, worker, NULL);
+	if (status != 0)
+	{
+		// Thread konnte nicht erstellt werden
+		exit (status);
+	}
+
+	printf(&quot;main\n&quot;);
+	
+	static void *retVal;
+	status = pthread_join(thread, &amp;retVal);
+	if (status != 0)
+	{
+		// Thread konnte nicht beigetreten werden,
+		// es ist etwas schief gelaufen
+		exit (status);
+	}
+
+	printf(&quot;worker retval = %d\n&quot;, *((int*)retval));
+	exit (EXIT_SUCCESS);
+}
+
+</code></pre>
+<h2 id="loslassen-eines-threads-detach"><a class="header" href="#loslassen-eines-threads-detach">Loslassen eines Threads (Detach)</a></h2>
+<p><strong>Funktion</strong>: pthread_detach() 
+Gibt an, dass sobald der Thread beendet wird, die Ressourcen freigegeben werden. Normalerweise passiert dies erst beim <strong>pthread_join</strong>. </p>
+<p>-&gt; Es darf <strong>NICHT</strong> mit pthread_join auf den Prozess gewartet werden, da dieser bereits weg sein kann.</p>
+<h2 id="terminierung-eines-threads"><a class="header" href="#terminierung-eines-threads">Terminierung eines Threads</a></h2>
+<ul>
+<li><strong>return</strong>: Standardmässig, der Rückgabewert wird bei pthread_join zurückgegeben.</li>
+<li><strong>pthread_exit</strong>: so ist es möglich, den thread zu beenden. Der Rückgabewert wird bei <strong>pthread_join</strong> gelesen.</li>
+<li><strong>exit</strong> beendet den übergeordneten Prozess</li>
+<li><strong>pthread_cancel</strong>: Wird verwendet um den Prozess zu beenden.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p>Kommunikation zwischen zwei Prozessen</p>
+<h1 id="posix-signale"><a class="header" href="#posix-signale">POSIX Signale</a></h1>
+<p>Diese Signale können jedem Prozess gesendet werden. Somit sind die nachfolgenden Signale universal Anwendbar.</p>
+<p>Mit htop können alle Prozesse unter Linux angesehen werden. Dieser dient als zudem als Task-Manager und erlaubt es Prozessen ein bestimmtes POSIX Signal zu senden.</p>
+<pre><code class="language-shell">htop
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th>Signal</th><th>Default Aktion</th><th>Beschreibung</th></tr></thead><tbody>
+<tr><td>SIGINT</td><td>Terminiert</td><td> Interrupt Signal von der Tastatur (Ctrl-C)</td></tr>
+<tr><td>SIGQUIT</td><td> Code Dump</td><td> Quit-Signal von der Tastatur (Ctrl-\)</td></tr>
+<tr><td>SIGABRT</td><td>Code Dump</td><td>Abort Signal via <strong>abort()</strong> oder <strong>assert()</strong></td></tr>
+<tr><td>SIGKILL</td><td> Terminiert</td><td>Kill-Signal</td></tr>
+<tr><td>SIGSEGV</td><td>Code Dump</td><td>Unzulässiger Speicherzugriff</td></tr>
+<tr><td>SIGALRM</td><td>Terminiert</td><td>Timer-Signal durch <strong>alarm()</strong> ausgelöst</td></tr>
+<tr><td> SIGTERM</td><td>Terminiert</td><td> Terminierungs-Signal</td></tr>
+<tr><td>SIGSTOP</td><td> Stoppt  den prozess</td><td>Stoppt den Prozess (oder ignoriert falls gestoppt)</td></tr>
+<tr><td> SIGCONT</td><td>Reaktiviert den Prozess</td><td>Reaktiviert den Prozess (oder ignoriert falls am laufen)</td></tr>
+</tbody></table>
+</div>
+<h2 id="beenden-des-prozesses"><a class="header" href="#beenden-des-prozesses">Beenden des Prozesses</a></h2>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;signal.h&gt;
+
+
+// sag dem Childprozess, dass es normal (gracefully) beenden soll
+// speichert alles und beendet dann
+int status = kill(child_pid, SIGTERM);
+
+if (status != 0)
+{
+	// Prozess konnte nicht beendet werden
+}
+</code></pre>
+<h2 id="signale-verarbeiten"><a class="header" href="#signale-verarbeiten">Signale verarbeiten</a></h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#incldue &lt;stdlib.h&gt;
+#incldue &lt;unistd.h&gt;
+#include &lt;sys/wait.h&gt;
+
+
+static pid_t start_child(int wait_for_signal)
+{
+	pid_t cpid = fork();
+	if (cpid == -1)
+	{
+		perror (&quot;Fehler beim fork&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if (cpid &gt; 0)
+	{
+		// Der Parent gibt die child id zurück
+		// child hat cpid von 0
+		return cpid;
+	}
+
+	// Nur der Child Prozess kommt soweit
+	if (wait_for_signal)
+	{
+		// Nur der child 2 kommt soweit
+		if (pause() == -1)
+		{
+			perror(&quot;Fehler bei pause()&quot;);
+			exit(EXIT_FAILURE);
+		}
+	}
+	
+
+	exit (123);
+}
+
+static void wait_for_child()
+{
+	int wsts;
+
+	// bllockiere bis ein Child Prozess beendet ist
+	pid_t = wait(&amp;wsts);
+
+	if (wpid == -1)
+	{
+		perror(&quot;Fehler in wait&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if (WIFEXITED(wsts))
+	{
+		printf(&quot;Child %d: exit=%d (status=0x%04X)\n&quot;, wpid, WEXITSTATUS(wsts), wsts); 
+	}
+
+	if (WIFSIGNALED(wsts))
+	{
+		printf(&quot;Child %d: signal=%d (status=0x%04X)\n&quot;, wpid, WTERMSIG(wsts), wsts);
+	}
+}
+
+int main()
+{
+	pid_t cpid1 = start_child(0); // beendet mit exit code
+	pid_t cpid2 = start_chld(1); // beendet mit signal
+
+	sleep(1);
+
+	// sag dem Prozess2 dass er sich beenden soll
+	if (kill(cpid2, SIGTERM) == -1)
+	{
+		perror(&quot;Prozess 2 konnte nicht beendet werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	wait_for_chlid();
+	wait_for_chld();
+}
+
+</code></pre>
+<h1 id="posix-pipe"><a class="header" href="#posix-pipe">POSIX PIPE</a></h1>
+<ul>
+<li>Dient als FIFO (First In First Out) Buffer von fixer Maximalgrösse.</li>
+<li>Unidirektional, von einer zu der anderen Seite.</li>
+</ul>
+<p>Mit dem Pipe befehl wird eine Unidirektionale Verbindung erstellt.</p>
+<pre><code class="language-c">
+int fd[2];
+
+pipe(fd);
+
+// Lese Seite der Pipe
+fd[0];
+
+// Schreibseite der Pipe
+fd[1];
+
+// schliessen der Read Pipe
+close(fd[0]);
+
+// Daten auf Schreib Pipe senden
+// 12: länge des zu sendenden strings
+write(fd[1], &quot;Hello world\n&quot;, 12);
+
+
+// Lesen von Read Pipe
+// Geschieht erst, nachdem alle Kopien
+// Des Write Buffers geschlossen worden sind
+// Somit ist dies: BLOCKING
+read(fd[0], buffer, BUFFER_SIZE);
+</code></pre>
+<h2 id="anonymous-pipe"><a class="header" href="#anonymous-pipe">Anonymous Pipe</a></h2>
+<pre><code class="language-c">
+#include &lt;sys/types.h&gt;
+#includne &lt;unistd.h&gt;
+
+const int BUFFER_SIZE = 100;
+
+void main (void)
+{
+	int fd[2];
+	char buffer[BUFFER_SIZE];
+	ssize_t nBytes;
+
+	status = pipe(fd);
+	if (status == -1)
+	{
+		perror(&quot;Pipe konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	pid_t child_id = fork();
+
+	if (child_id == -1)
+	{
+		perror(&quot;Child Prozess konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	if (child_id == 0)
+	{
+		// Wir sind in Child Prozess
+
+		// Da wir nichts mit der Schreibpipe zu tun haben, 
+		// können wir diese schliessen
+		close(fd[1]);
+
+		// Lese Daten von readpipe in buffer
+		// Maximale Länge BUFFER_SIZE
+		nbytes = read(fd[0], buffer, BUFFER_SIZE);
+
+		// Wir haben unser Zeugs mit der readpipe gemacht,
+		// jetzt können wir die pipe schliessen
+		close(fd[0]);
+
+		exit(EXIT_SUCESS);
+	}
+
+	if (child_id != 0)
+	{
+		// Sind in Parent Prozess
+		// Dieses if ist eigentlich nicht mehr notwendig
+
+		// Wir wollen nichts lesen,
+		// daher können wir in diesem Prozess die Pipe zumachen
+		close(fd[0]);
+
+		// Jetzt schreiben wir unsere Daten auf
+		// die Lesepipe
+		write (fd[1], &quot;Hello world\n&quot;, 12);
+
+		// Schliessen der Pipe
+		close(fd[1]);
+
+		exit(EXIT_SUCCESS);
+	}
+}
+
+</code></pre>
+<h2 id="non-blocking-version"><a class="header" href="#non-blocking-version">Non Blocking Version</a></h2>
+<p>In machen Fällen ist es notwendig, dass wir die Lesevorgänge der Pipe nicht blockierend machen. </p>
+<pre><code class="language-c">void set_nonblocking(int fd)
+{
+	// Lese alle bisher gesetzten Flags
+	// Wir wollen nur das nonblocking flag setzen
+	int flags = fcntl (fd, F_GETFL, 0);
+
+	if (flags == -1)
+	{
+		perror(&quot;Pipe Attribute konnten nicht gelesen werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	int result = fcntl(fd, F_SETFL, flags | O_NONBLOCK);
+	if (result == -1)
+	{
+		perror(&quot;Pipe Attribute konnten nicht gesetzt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+}
+
+
+int fd[2];
+
+if (pipe(fd))
+{
+	perror(&quot;Pipe konnte nicht erstellt werden&quot;);
+	exit(EXIT_FAILURE);
+}
+
+// pipe auf non blocking setzen
+set_nonblocking(fd[0]);
+
+
+// HOWTO LESEN
+int reading = 1;
+while (reading)
+{
+	int n = read(fd[0], buffer, BUFFER_SIZE);
+	
+	if (n == 0)
+	{
+		// polling aufhören
+		// da pipe geschlossen worden ist
+		close(fd[0]);
+		reading = 0;
+		continue;
+	}
+
+	if (n &gt; 0)
+	{
+		// gelesene Daten verwenden
+	}
+	else if (errno = EAGAIN)
+	{
+		// poll interval abwarten
+		// Es kann passieren, dass wir den Intervall so kurz halten
+		// dass wir das Lock der pipe nicht wirklich frei lassen
+		// dies wird als spin-lock bezeichnet 
+	}
+	else
+	{
+		// Da haben wir verkackt
+		// Ernsthafter fehler
+	}
+}
+</code></pre>
+<h2 id="named-pipes"><a class="header" href="#named-pipes">Named Pipes</a></h2>
+<p>Named pipes erlauben es, dass zwei unterschiedliche (sich nicht kennende) Prozesse eine Pipeverbindung aufbauen.</p>
+<pre><code class="language-shell">mkfifo pfad -m Mode
+</code></pre>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+
+
+int fd = mkfifo(&quot;Pfad&quot;, mode_t modus);
+
+// Jetzt kannst du diesen Buffer
+// wie in FileIO mit 
+// - fread
+// - fwrite
+// - fclose
+// verwenden
+</code></pre>
+<h1 id="posix-message-queue"><a class="header" href="#posix-message-queue">POSIX Message Queue</a></h1>
+<p>Maximale Kapazität von NxM Bytes
+- <strong>N</strong>: Maximale Anzahl Messages
+- <strong>M</strong>: Maximale Grösse einer Message (Bytes)</p>
+<p>Mehrere Leser und Schreiber</p>
+<ul>
+<li>Jede Meldung wird beim lesen aus der Queue entfernt</li>
+</ul>
+<p>Der name der Queue zeigt auf eine Datei im Filesystem. Daher sollte diese auch mit einem „/„ anfangen, um immer die gleiche Queue zu verwenden.</p>
+<pre><code class="language-c">
+// Öffnen einer Queue
+// soll diese für alle gleich sein, dann / vorne anfügen,
+// ansonsten ist die pipe relativ dem aktuellen Verzeichniss
+
+mqd_t mqdes = mq_open (&quot;/sideshow-bob&quot;, O_RDWR | O_CREAT, 
+                   0664, NULL);
+
+
+// Öffnen einer Queue mit Attributen
+
+</code></pre>
+<p><a href="https://github.com/tisnik/message-queues-examples/blob/master/unix-messages/posix/example1/publisher.c">Nachfolgendes Beispiel ist von hier</a></p>
+<h3 id="publisher"><a class="header" href="#publisher">Publisher</a></h3>
+<pre><code class="language-c">/*
+ * Example used in following article:
+ *
+ * Implementace front zpráv podle normy POSIX
+ * https://www.root.cz/clanky/implementace-front-zprav-podle-normy-posix/
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;mqueue.h&gt;
+
+#define QUEUE_NAME &quot;/queue1&quot;
+
+int main(void)
+{
+    mqd_t message_queue_id;
+    unsigned int priority = 0;
+    char message_text[100];
+    int status;
+
+    message_queue_id = mq_open(QUEUE_NAME, O_RDWR | O_CREAT | O_EXCL, S_IRWXU | S_IRWXG, NULL);
+    if (message_queue_id == -1) {
+        perror(&quot;Unable to create queue&quot;);
+        return 2;
+    }
+
+    strcpy(message_text, &quot;Hello world!&quot;);
+
+    status = mq_send(message_queue_id, message_text, strlen(message_text)+1, priority);
+    if (status == -1) {
+        perror(&quot;Unable to send message&quot;);
+        return 2;
+    }
+
+    status = mq_close(message_queue_id);
+    if (status == -1) {
+        perror(&quot;Unable to close message queue&quot;);
+        return 2;
+    }
+
+    return 0;
+}
+</code></pre>
+<h3 id="subscriber"><a class="header" href="#subscriber">Subscriber</a></h3>
+<pre><code class="language-c">/*
+ * Example used in following article:
+ *
+ * Implementace front zpráv podle normy POSIX
+ * https://www.root.cz/clanky/implementace-front-zprav-podle-normy-posix/
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;mqueue.h&gt;
+
+#define QUEUE_NAME &quot;/queue1&quot;
+
+int main(void)
+{
+    mqd_t message_queue_id;
+    char message_text[10000];
+    unsigned int sender;
+    int status;
+
+    message_queue_id = mq_open(QUEUE_NAME, O_RDWR);
+    if (message_queue_id == -1) {
+        perror(&quot;Unable to open queue&quot;);
+        return 2;
+    }
+
+    status = mq_receive(message_queue_id, message_text, sizeof(message_text), &amp;sender);
+    if (status == -1) {
+        perror(&quot;Unable to receive message&quot;);
+        return 2;
+    }
+    printf(&quot;Received message (%d bytes) from %d: %s\n&quot;, status, sender, message_text);
+
+    status = mq_close(message_queue_id);
+    if (status == -1) {
+        perror(&quot;Unable to close message queue&quot;);
+        return 2;
+    }
+
+    return 0;
+}
+</code></pre>
+<h1 id="posix-socket"><a class="header" href="#posix-socket">POSIX Socket</a></h1>
+<p>Erlaubt Kommunikation über Netzwerk, oder über virtuelles LAN in einem System.</p>
+<h2 id="verbindungsorientiert"><a class="header" href="#verbindungsorientiert">Verbindungsorientiert</a></h2>
+<h3 id="client"><a class="header" href="#client">Client</a></h3>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/un.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define RECEIVE_TIMEOUT 0
+#define SEND_TIMEOUT 0
+
+int sockfd;
+
+void connect_server (void)
+{
+	struct addrinfo hints, *server_info, *p;
+	
+	// alles auf 0 setzen
+	memset(&amp;hints, 0, sizeof(hints)); 
+	hints.ai_familiy = AF_INET;
+	hints.ai_socktype = SOCK_STREAM;
+
+	// Hole Infos zu Socket auf
+	// localhost und port 80
+	int status = getaddrinfo(&quot;localhost&quot;, &quot;80&quot;, &amp;hints, &amp;server_info);
+	if (status != 0) {
+	    perror(&quot;getaddrinfo konnte nicht ausgeführt werden&quot;);
+	    exit(EXIT_FAILURE);
+	}
+
+	for (p = server_info; p != NULL; p = p-&gt;ai_next) {
+		if ((sockfd = socket(p-&gt;ai_family, p-&gt;ai_socktype, p-&gt;ai_protocol)) == -1)
+		{
+			perror (&quot;socket error&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		if (connect(sockfd, p-&gt;ai_addr, p-&gt;ai_addrlen) == -1) {
+			close(sockfd);
+			perror (&quot;Es konnte keine Verbinung hergestellt werden&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		// wenn erfolgreich verbunden, aus der Schleife ausbrechen
+		break;
+   }
+
+    if (p == NULL) {
+        perror (&quot;Es konnte keine Verbinung hergestellt werden&quot;);
+		exit(EXIT_FAILURE);
+    }
+
+
+	// SOCKET VERBUNDEN
+}
+
+void write(char * buffer, int len)
+{
+	int totalSent = 0;
+
+	while (totalSent &lt; len) {
+		int bytesSent = send(
+			communicationSocket,
+			buffer + totalSent,
+			len - totalSent,
+			SEND_TIMEOUT);
+
+		if (bytesSent == -1) {
+			perror (&quot;Error in send&quot;);
+			exit(EXIT_FAILURE);
+		}
+		totalSent += bytesSent;
+   }
+}
+
+int read(char *buffer, int len)
+{
+	int totalReceived = 0;
+
+	while (totalReceived &lt; len) {
+		int bytesReceived = recv(
+			communicationSocket,
+			buffer + totalReceived,
+			len - totalReceived, 
+			RECEIVE_TIMEOUT);
+			
+		if (bytesReceived == -1) {
+			perror(&quot;Error in Receive&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		totalReceived += bytesReceived;
+	}
+
+	return totalReceived;
+}
+
+void main (void)
+{
+	connect_server();
+
+	write (&quot;Hello World&quot;, 11);
+
+	char bufffer[1000];
+	int read = read(buffer, 1000);
+
+	close(sockf);
+}
+</code></pre>
+<h3 id="server"><a class="header" href="#server">Server</a></h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+
+#include &lt;netdb.h&gt;
+#include &lt;unistd.h&gt;
+
+
+#define RECEIVE_TIMEOUT 0
+#define SEND_TIMEOUT 0
+#define MAX_QUEUE 1
+
+void server_init(){
+   // BEGIN-STUDENTS-TO-ADD-CODE
+
+   struct addrinfo hints, *server_info, *p;
+
+   memset(&amp;hints, 0, sizeof(hints));
+
+   hints.ai_family = AF_INET;
+   hints.ai_socktype = SOCK_STREAM;
+
+   int status = getaddrinfo(NULL,&quot;80&quot; , &amp;hints, &amp;server_info);
+   if(status != 0){
+      ExitOnError(status, &quot;getaddrinfo&quot;);
+   }
+
+   int sockfd;
+   for (p = server_info; p != NULL; p = p-&gt;ai_next) {
+      if ((sockfd = socket(p-&gt;ai_family, p-&gt;ai_socktype, p-&gt;ai_protocol)) == -1) {
+         perror(&quot;socket error&quot;);
+         exit(EXIT_FAILURE);
+      }
+
+      if (bind(sockfd, p-&gt;ai_addr, p-&gt;ai_addrlen) == -1) {
+         close(sockfd);
+         perror(&quot;connect error&quot;);
+         exit(EXIT_FAILURE);
+      }
+
+      break; // wenn erfolgreich verbunden, aus der Schleife ausbrechen
+   }
+
+   ListeningSocket = sockfd;
+
+   listen(ListeningSocket, MAX_QUEUE);
+
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+int getRequest(char* requestBuffer, int max_len)
+{
+   // BEGIN-STUDENTS-TO-ADD-CODE
+   int bytesReceived = recv(
+      connectedSocket,
+      requestBuffer,
+      max_len -1,
+      RECEIVE_TIMEOUT);
+   requestBuffer[bytesReceived] = '\0';
+   return bytesReceived;
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+void sendResponse(char* response, int resp_len)
+{
+   // BEGIN-STUDENTS-TO-ADD-CODE
+   send(connectedSocket, response, resp_len, 0);
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+void server_close_connection(void)
+{
+   // BEGIN-STUDENTS-TO-ADD-CODE
+   close(connectedSocket);
+   // END-STUDENTS-TO-ADD-CODE
+}
+
+
+int wait_client(void) {
+   connectedSocket = accept(ListeningSocket, 0, 0);
+   return connectedSocket;
+}
+
+void main (void)
+{
+	server_init();
+	wait_client();
+
+	char buffer[1000];
+
+	getRequest(buffer, 1000);
+	sendResponse(&quot;Hello World&quot;, 11);
+	server_close_connection();
+}
+
+
+</code></pre>
+<h2 id="verbindungslos"><a class="header" href="#verbindungslos">Verbindungslos</a></h2>
+<p>Client/Server Architektur
+• Client</p>
+<ul>
+<li>Socketdefinition (getaddrinfo(), socket())</li>
+<li>keine Verbindungsanfrage</li>
+<li>bidirektionales Lesen/Schreiben (recfrom(), sendto())</li>
+<li>danach Socket schliessen (close())
+• Server</li>
+<li>Socketdefinition (getaddrinfo(), socket(), bind())</li>
+<li>kein Abwarten und Akzeptieren von Verbindungsanfragen</li>
+<li>bidirektionales Lesen/Schreiben (recfrom(), sendto())</li>
+<li>danach eventuell Socket schliessen (close())</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p>Sync / Semaphores und Signals werden verwendet um Zugriff auf geteilte Ressourcen zu koordinieren. Zudem können damit Threads aufeinander warten.</p>
+<p>Syncs werden notwendig, wenn ein Thread auf einen anderen warten <strong>muss</strong>.</p>
+<ul>
+<li>z.B. wenn eine Resource im einten geöffnet ist, dann darf der andere diese erst öffnen, sobald der erste durch ist.</li>
+<li>Oder in einer kritischen Funktion, die <strong>IMMER</strong> ganz durchlaufen werden muss.</li>
+</ul>
+<pre><code class="language-c">// Mit dem volatile keyword wird klargestellt,
+// dass diese Resource von mehreren Threads verwendet wird.
+volatile int iAmShared = 0;
+</code></pre>
+<h1 id="mutex---mutual-exclusion"><a class="header" href="#mutex---mutual-exclusion">Mutex - Mutual Exclusion</a></h1>
+<ul>
+<li>Resourcen werden gegenseitig ausgeschlossen, ein Task blockiert den Eintritt für andere Tasks in die Crititcal Section</li>
+</ul>
+<h2 id="probleme-1"><a class="header" href="#probleme-1">Probleme</a></h2>
+<ul>
+<li>Runtime Kosten (locks dauern)</li>
+<li>Rekursion</li>
+<li>Kein Unlock (Bei early return)</li>
+<li>Deadlock</li>
+</ul>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#incldue &lt;phtread.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+
+const int N = 100000000;
+
+// shared value
+volatile int value = 0;
+
+pthread_mutx_t mutex;
+
+void * thread_method(void * arg)
+{
+	int delta = *(int*) arg;
+
+	for (int i = 0; i &lt; N; i++)
+	{
+		if (pthread_mutex_lock(&amp;mutex) != 0)
+		{
+			perror(&quot;Mutex konnte nicht besetzt werden&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		// Gemeinsame Variable auslesen
+		int a = value;
+
+		// Modifiziern
+		a += delta;
+
+		// Variable wieder setzen
+		value = a;
+
+
+		// Mutex wieder freigeben
+		if (pthread_mutex_unlock(&amp;mutex) != 0)
+		{
+			perror(&quot;Mutex konnte nicht freigegeben werden&quot;);
+			exit(EXIT_FAILURE);
+		}
+	}
+	return NULL;
+}
+
+int main (void)
+{
+	if (phtread_mutex_init(&amp;mutex, NULL) != 0)
+	{
+		perror(&quot;Mutex konnte nicht initialisiert werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	pthread_t th_inc;
+	pthread_t th_dec;
+
+
+	int inc = +1;
+	int dec = -1;
+	if (pthread_create(&amp;th_inc, NULL, count, &amp;inc) != 0)
+	{
+		perror(&quot;Thread konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+	
+	if (pthread_create(&amp;th_dec, NULL, count, &amp;dec) != 0)
+	{
+		perror(&quot;Thread konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	// noch auf threads waretn
+	if (pthread_join(th_inc, NULL) != 0)
+	{
+		perror(&quot;Thread konnte nicht beendet werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+	if (pthread_join(th_dec, NULL) != 0)
+	{
+		perror(&quot;Thread konnte nicht beendet werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+}
+</code></pre>
+<h1 id="semaphore"><a class="header" href="#semaphore">Semaphore</a></h1>
+<p>Tasks können über Semaphoren Synchronisationspunkte vereinbaren</p>
+<h2 id="probleme-2"><a class="header" href="#probleme-2">Probleme</a></h2>
+<ul>
+<li>Synchronisation kostet Zeit</li>
+<li>Wenn ein wait zu viel, bzwh. ein signal zu wenig</li>
+<li>Deadlocks, System kann komplett blockiert werden</li>
+</ul>
+<pre><code class="language-c">// C program to demonstrate working of Semaphores
+#include &lt;stdio.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;semaphore.h&gt;
+#include &lt;unistd.h&gt;
+
+sem_t mutex;
+
+void* thread(void* arg)
+{
+	//wait
+	sem_wait(&amp;mutex);
+	printf(&quot;\nEntered..\n&quot;);
+
+	//critical section
+	sleep(4);
+	
+	//signal
+	printf(&quot;\nJust Exiting...\n&quot;);
+	sem_post(&amp;mutex);
+}
+
+
+int main()
+{
+
+	// 1 -&gt; Initial value
+	// unbedingt auf das achten
+	sem_init(&amp;mutex, 0, 1);
+	pthread_t t1,t2;
+	pthread_create(&amp;t1,NULL,thread,NULL);
+	sleep(2);
+	pthread_create(&amp;t2,NULL,thread,NULL);
+	pthread_join(t1,NULL);
+	pthread_join(t2,NULL);
+	sem_destroy(&amp;mutex);
+	return 0;
+}
+
+</code></pre>
 
                     </main>
 

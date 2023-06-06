@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html lang="de" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Zusammenfassung - My ZHAW Notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../../FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/KT/Zusammenfassung.html" class="active"><strong aria-hidden="true">1.1.</strong> Zusammenfassung</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Formeln.html"><strong aria-hidden="true">1.2.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Schichten.html"><strong aria-hidden="true">1.3.</strong> OSI Schichten</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.4.</strong> Ethernet</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/WING/index.html"><strong aria-hidden="true">2.</strong> WING</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/WING/SGMM.html"><strong aria-hidden="true">2.1.</strong> SGMMM</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Materialwirtschaft.html"><strong aria-hidden="true">2.2.</strong> Materialwirtschaft</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kostenrechnung.html"><strong aria-hidden="true">2.3.</strong> Kostenrechnung</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Finanzen.html"><strong aria-hidden="true">2.4.</strong> Finanzen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kalkulationen.html"><strong aria-hidden="true">2.5.</strong> Kalkulationen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Strategie.html"><strong aria-hidden="true">2.6.</strong> Strategie</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Marketing.html"><strong aria-hidden="true">2.7.</strong> Marketing</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/SNP/index.html"><strong aria-hidden="true">3.</strong> SNP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/SNP/Grundlagen.html"><strong aria-hidden="true">3.1.</strong> Grundlagen</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Arrays.html"><strong aria-hidden="true">3.2.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Modulare Programmierung.html"><strong aria-hidden="true">3.3.</strong> Modulare Programmierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Pointers.html"><strong aria-hidden="true">3.4.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Parameter By Reference.html"><strong aria-hidden="true">3.5.</strong> Pass By Reference</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Dynamische Allozierung.html"><strong aria-hidden="true">3.6.</strong> Dynamische Allozierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/File IO.html"><strong aria-hidden="true">3.7.</strong> File IO</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Multithreading und so weiter.html"><strong aria-hidden="true">3.8.</strong> Multithreading</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/IPC - Inter Process Communication.html"><strong aria-hidden="true">3.9.</strong> IPC</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Sync.html"><strong aria-hidden="true">3.10.</strong> Sync</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My ZHAW Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/src/FS23/KT/Zusammenfassung.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="formeln"><a class="header" href="#formeln">FORMELN</a></h1>
+<p><strong>Log umschreiben</strong></p>
+<ul>
+<li>$2^x = 8$</li>
+<li>$x = \log_2{(8)}$ </li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
+<tr><td>Signaldämpfung</td><td></td><td>db</td><td>$10*log(\frac{P_E}{P_A})$</td></tr>
+<tr><td>Signaldämpfung über Spannung</td><td></td><td>db</td><td>$20 * log(\frac{U_E}{U_A})^2$</td></tr>
+<tr><td>Amplitude</td><td>$A$</td><td>V</td><td></td></tr>
+<tr><td>Maximale Anzahl erkennbare Zustände</td><td>$M$</td><td>bit/s </td><td>$1+\frac{A}{\Delta V}$</td></tr>
+<tr><td>Maximal erreichbare Bitrate (Hartley's Gesetz)</td><td>$R$</td><td> bit/s</td><td> $R \le 2 \cdot B ld(M) = 2B \cdot ld(M)$</td></tr>
+<tr><td>Signalleistung</td><td> $S$</td><td></td><td></td></tr>
+<tr><td>Rauschleistung</td><td>$N$</td><td></td><td></td></tr>
+<tr><td>Kanalkapazität</td><td> $C$</td><td></td><td>$B \cdot ld(1 + \frac{S}{N})$</td></tr>
+<tr><td>Nettobitrate</td><td></td><td></td><td>$\text{Bruttobitrate} \cdot \frac{\text{Nutzdaten}}{\text{Nutzdaten} + \text{Header}}$</td></tr>
+<tr><td>Maximale Bitrate</td><td>$R$</td><td> $\frac{\text{bit}}{\text{s}}$</td><td> $R \leq 2B \cdot \log_2(M)$</td></tr>
+<tr><td> Unterscheidbare Signalzustände</td><td> $M$</td><td> Anzahl</td><td></td></tr>
+<tr><td>Amplitude</td><td> $A$</td><td></td><td>$A = (M-1) \cdot \Delta V$</td></tr>
+<tr><td>Bandbreite</td><td> $B$</td><td> $\frac{bits}{s}$</td><td></td></tr>
+<tr><td>max. Symbolrate</td><td>$f_s$</td><td>Hz</td><td>$2B$</td></tr>
+</tbody></table>
+</div>
+<h1 id="osi-referenzmodell"><a class="header" href="#osi-referenzmodell">OSI Referenzmodell</a></h1>
+<p><strong>Verbindungsorientiert</strong></p>
+<ul>
+<li>Verbindungsaufbau nötig</li>
+<li>Ziel muss bereit sein</li>
+</ul>
+<p><strong>Verbindungslos</strong></p>
+<ul>
+<li>Jederzeit Nachrichten schicken</li>
+<li>Ziel muss nicht „bereit“ sein</li>
+</ul>
+<p><strong>Zuverlässig</strong></p>
+<ul>
+<li>Kein Datenverlust</li>
+<li>Sicherung durch Fehelr-Erkennung -/korrektur</li>
+<li>Text-Nachrichten</li>
+</ul>
+<p><strong>Unzuverlässig</strong></p>
+<ul>
+<li>Möglicher Datenverlust</li>
+<li>Keine Sicherung</li>
+<li>Streaming</li>
+</ul>
+<p><img src="media/Pasted%20image%2020230604133437.png" alt="" /></p>
+<p><img src="media/Pasted%20image%2020230604133513.png" alt="" /></p>
+<h1 id="Übertragungsmedien"><a class="header" href="#Übertragungsmedien">Übertragungsmedien</a></h1>
+<p><strong>Lichtgeschwindigkeit</strong>: $c_0 = 299‘792‘458 \frac{m}{s}$
+<strong>Ausbreitungsgeschwindigkeit</strong>: $C_{Medium} = 200‘000 \frac{km}{s} \approx \frac{2}{3} C_0$</p>
+<h2 id="signale"><a class="header" href="#signale">Signale</a></h2>
+<p>Für Übertragungsmedien ist die Dämpfung pro Distanz massgebend. Typischerweise in $dB$ pro 100m angegeben.</p>
+<h2 id="kabeltypen"><a class="header" href="#kabeltypen">Kabeltypen</a></h2>
+<ul>
+<li><strong>Koaxialkabel</strong>: Geeignet für hochfrequente Signale</li>
+<li><strong>Twinaxial-Kabel</strong>: Hoher Schutz</li>
+<li><strong>Twisted-Pair</strong> (TP): Häufig im Einsatz (Shielded / Unshieded)</li>
+<li><strong>Glasfaser</strong>: Hohe Bandbreite, Geringe Dämpfung, Resistent</li>
+</ul>
+<h1 id="physical-layer-bitübertragungsschicht"><a class="header" href="#physical-layer-bitübertragungsschicht">Physical Layer (Bitübertragungsschicht)</a></h1>
+<h2 id="serielle-asynchrone-Übertragung-ohne-synchronisations-takt"><a class="header" href="#serielle-asynchrone-Übertragung-ohne-synchronisations-takt">Serielle asynchrone Übertragung (ohne Synchronisations-Takt)</a></h2>
+<p>Zwischen Sender und Empfänger werden folgende Abmachungen gemacht</p>
+<ul>
+<li>Bitrate</li>
+<li>Anzahl Datenbits (Typischerweise 1 Byte)</li>
+<li>Anzahl Stopbits (Typischerweise 1 Bit)
+<img src="media/Pasted%20image%2020230604135039.png" alt="" />
+Die <em>Taktrückgewinnung</em> ist möglich, solange regelmässig Zustandsänderungen auftreten.</li>
+</ul>
+<h2 id="serielle-synchrone-Übertragung"><a class="header" href="#serielle-synchrone-Übertragung">Serielle synchrone Übertragung</a></h2>
+<p>Bei der synchronen Übertragung arbeitet der Empfänger mit dem gleichen Takt wie der Sender</p>
+<ul>
+<li>Es werden keine Start- und Stopbits benötigt</li>
+<li>Der Takt muss zusätzlich übertragen werden</li>
+</ul>
+<p>Die Übertragung des Takts erfolgt über ein Codierungsverfahren oder eine zusätzliche Leitung.</p>
+<h2 id="kommunikationsarten-verkehrsbeziehung"><a class="header" href="#kommunikationsarten-verkehrsbeziehung">Kommunikationsarten (Verkehrsbeziehung)</a></h2>
+<ul>
+<li><strong>Simplex</strong>: Ein Kanal, in eine Richtung</li>
+<li><strong>Halbduplex</strong>: Ein Kanal, abwechslungsweise in zwei Richtungen</li>
+<li><strong>Vollduplex</strong>: Ein Kanal pro Richtung</li>
+</ul>
+<h2 id="arten-der-verbindungen-kopplung"><a class="header" href="#arten-der-verbindungen-kopplung">Arten der Verbindungen (Kopplung)</a></h2>
+<ul>
+<li><strong>Punkt-Punkt</strong>: Direkte  Verbindung zweier Kommunikationspartner</li>
+<li><strong>Shared Medium</strong>: Mehrere Partner verwenden das gleiche Medium</li>
+</ul>
+<h2 id="datenübertragungsrate"><a class="header" href="#datenübertragungsrate">Datenübertragungsrate</a></h2>
+<ul>
+<li><strong>Baudrate</strong>: Symbole pro Sekunde</li>
+<li><strong>Zeichenrate</strong>: Zeichen pro Sekunde</li>
+</ul>
+<h1 id="data-link-layer"><a class="header" href="#data-link-layer">Data Link Layer</a></h1>
+<h2 id="framing"><a class="header" href="#framing">Framing</a></h2>
+<h3 id="asynchron"><a class="header" href="#asynchron">Asynchron</a></h3>
+<p>Keine Daten -&gt; Nichts wird gesendet
+Zu Beginn eines Frames wird ein Start-Bit gesendet</p>
+<h3 id="synchron"><a class="header" href="#synchron">Synchron</a></h3>
+<ul>
+<li>Frames werden ohne Unterbruch gesendet
+<img src="media/Pasted%20image%2020230604141236.png" alt="" /></li>
+</ul>
+<h2 id="fehlererkennung--fehlerkorrektur"><a class="header" href="#fehlererkennung--fehlerkorrektur">Fehlererkennung / Fehlerkorrektur</a></h2>
+<p><strong>FER</strong> (<strong>F</strong>rame <strong>E</strong>rror <strong>R</strong>atio)
+<strong>RER</strong> (<strong>R</strong>esidual <strong>E</strong>rror <strong>R</strong>atio)
+<strong>BER</strong> (<strong>B</strong>it <strong>E</strong>rror <strong>R</strong>atio)</p>
+<h2 id="parity"><a class="header" href="#parity">Parity</a></h2>
+<p><strong>Even Parity</strong>: Wenn die Anzahl Bits, die 1 sind, gerade ist, dann ist der Wert: 1
+<strong>Odd Parity</strong>: Wenn die Anzahl Bits, die 1 sind, ungerade ist, dann ist der Wert 1</p>
+<h1 id="local-area-networks-lan"><a class="header" href="#local-area-networks-lan">Local Area Networks (LAN)</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
+<tr><td>Framerate</td><td> $F_R$</td><td>$\frac{\text{Frames}}{\text{s}}$</td><td>$F_R = \frac{B}{8 \cdot (F_L + IFG) \cdot 8}$</td></tr>
+<tr><td>Bitrate</td><td> $B$</td><td></td><td></td></tr>
+<tr><td>Framelänge</td><td>$F_L$</td><td>Bits</td><td>Data + Prä + SFD + FCS = Data + 7Bit + 1Bit + 4Byte</td></tr>
+<tr><td>Nutzbitrate</td><td>$N$</td><td></td><td>$N = F_R \cdot P \cdot 8$</td></tr>
+<tr><td>Payload</td><td> $P$</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<h2 id="Übertragungsarten"><a class="header" href="#Übertragungsarten">Übertragungsarten</a></h2>
+<ul>
+<li><strong>Unicast</strong>: an einzelne Stationen</li>
+<li><strong>Broadcast</strong>: an alle Stationen</li>
+<li><strong>Multicast</strong>: an eine Gruppe von Stationen</li>
+</ul>
+<h2 id="leitungscode"><a class="header" href="#leitungscode">Leitungscode</a></h2>
+<p>Als <strong>Leitungscode</strong> wird ein Manchester eingesetzt</p>
+<ul>
+<li>1 positive Flanke, 1 negative Flanken</li>
+<li>Erlaubt die Taktrückgewinnung auf einfache Weise</li>
+<li>Benötigt die doppelte Bandbreite des theoretischen Minimums 
+<img src="media/Pasted%20image%2020230604142706.png" alt="" /></li>
+</ul>
+<h2 id="kollosionen"><a class="header" href="#kollosionen">Kollosionen</a></h2>
+<p>Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen erkannt werden. 
+<img src="media/Pasted%20image%2020230604143542.png" alt="" /></p>
+<h3 id="kollosionserkennung"><a class="header" href="#kollosionserkennung">Kollosionserkennung</a></h3>
+<p><img src="media/Pasted%20image%2020230604155515.png" alt="" /></p>
+<h2 id="topologie"><a class="header" href="#topologie">Topologie</a></h2>
+<p><img src="media/Pasted%20image%2020230604143612.png" alt="" /></p>
+<div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
+<tr><td>Nutzdaten</td><td> $N$</td><td> Bits</td><td></td></tr>
+<tr><td>Länge zwischen Switch und Knoten</td><td> $l$</td><td>$m$</td><td></td></tr>
+<tr><td>Bandbreite</td><td>$B$</td><td>$\frac{bits}{s}$</td><td></td></tr>
+<tr><td>Framedauer</td><td> $t_{\text{frame}}$</td><td>s</td><td>$\frac{N + 8 \cdot (\text{Prä/SFD}) + 12 (\text{Macs}) + 2 (\text{Type} + 4 (\text{FCS})) }{B}$</td></tr>
+<tr><td> Transferdauer</td><td> $t_{\text{transfer}}$</td><td>s</td><td> $\frac{l}{c_\text{Medium}}$</td></tr>
+</tbody></table>
+</div>
+<h2 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h2>
+<p><img src="media/Pasted%20image%2020230604160442.png" alt="" /></p>
+<h2 id="ieee-mac-adressen"><a class="header" href="#ieee-mac-adressen">IEEE Mac Adressen</a></h2>
+<p><img src="media/Pasted%20image%2020230604161209.png" alt="" /></p>
+<h1 id="switched-lan-und-ethernet-technologien"><a class="header" href="#switched-lan-und-ethernet-technologien">Switched LAN und Ethernet Technologien</a></h1>
+<h2 id="vlan"><a class="header" href="#vlan">VLAN</a></h2>
+<p>Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
+<img src="media/Pasted%20image%2020230606160751.png" alt="" /></p>
+<h2 id="spanning-tree-protokoll-stp"><a class="header" href="#spanning-tree-protokoll-stp">Spanning Tree Protokoll (STP)</a></h2>
+<ul>
+<li>Alle Knoten werden genau einmal verbunden</li>
+<li>Verbindungen, die zu Schleifen führen werden deaktiviert</li>
+</ul>
+<p><strong>Bridge Identifier:</strong> Priorität + Mac Adresse</p>
+<ol>
+<li>Root bestimmen mittels Bridge-Identifier </li>
+<li>Direkt angeschlossene Bridges bestätigen</li>
+<li>Weitere Verbindungen abhängig von Kosten und Bridge-Identifier eintragen</li>
+</ol>
+<h2 id="ethernet-systeme"><a class="header" href="#ethernet-systeme">Ethernet Systeme</a></h2>
+<p><strong>Autonegotiation</strong>: Ermittlung der besten Betriebsart durch Austausch derLeistungsmerkmale zweier Netzwerkkomponenten
+<strong>Link Pulses</strong></p>
+<ul>
+<li>NLP: Link Presence Detection</li>
+<li>FLP: Autonegotiation, Autopolarity</li>
+</ul>
+<p><img src="media/Pasted%20image%2020230606161909.png" alt="" /></p>
+<h1 id="internet--network-layer"><a class="header" href="#internet--network-layer">Internet / Network Layer</a></h1>
+<h1 id="transport-layer"><a class="header" href="#transport-layer">Transport Layer</a></h1>
+<h1 id="application-layer"><a class="header" href="#application-layer">Application Layer</a></h1>
+<h1 id="base64"><a class="header" href="#base64">Base64</a></h1>
+<ol>
+<li>ASCII in binär umwandeln</li>
+<li>Binär in je 6 grosse Bitgruppen abstechen</li>
+<li>Wenn letzer Block kleiner als 6, mit 0 auffüllen</li>
+<li>Tabelle nachsehen und Char nehmen
+<img src="media/Pasted%20image%2020230606162428.png" alt="" /></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../FS23/KT/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../FS23/KT/Formeln.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../FS23/KT/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../FS23/KT/Formeln.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_line_numbers = true;
+        </script>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

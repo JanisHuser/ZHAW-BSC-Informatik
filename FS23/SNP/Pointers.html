@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="de" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pointers - My ZHAW Notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../../FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/KT/Zusammenfassung.html"><strong aria-hidden="true">1.1.</strong> Zusammenfassung</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Formeln.html"><strong aria-hidden="true">1.2.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Schichten.html"><strong aria-hidden="true">1.3.</strong> OSI Schichten</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.4.</strong> Ethernet</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/WING/index.html"><strong aria-hidden="true">2.</strong> WING</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/WING/SGMM.html"><strong aria-hidden="true">2.1.</strong> SGMMM</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Materialwirtschaft.html"><strong aria-hidden="true">2.2.</strong> Materialwirtschaft</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kostenrechnung.html"><strong aria-hidden="true">2.3.</strong> Kostenrechnung</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Finanzen.html"><strong aria-hidden="true">2.4.</strong> Finanzen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kalkulationen.html"><strong aria-hidden="true">2.5.</strong> Kalkulationen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Strategie.html"><strong aria-hidden="true">2.6.</strong> Strategie</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Marketing.html"><strong aria-hidden="true">2.7.</strong> Marketing</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/SNP/index.html"><strong aria-hidden="true">3.</strong> SNP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/SNP/Grundlagen.html"><strong aria-hidden="true">3.1.</strong> Grundlagen</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Arrays.html"><strong aria-hidden="true">3.2.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Modulare Programmierung.html"><strong aria-hidden="true">3.3.</strong> Modulare Programmierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Pointers.html" class="active"><strong aria-hidden="true">3.4.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Parameter By Reference.html"><strong aria-hidden="true">3.5.</strong> Pass By Reference</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Dynamische Allozierung.html"><strong aria-hidden="true">3.6.</strong> Dynamische Allozierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/File IO.html"><strong aria-hidden="true">3.7.</strong> File IO</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Multithreading und so weiter.html"><strong aria-hidden="true">3.8.</strong> Multithreading</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/IPC - Inter Process Communication.html"><strong aria-hidden="true">3.9.</strong> IPC</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Sync.html"><strong aria-hidden="true">3.10.</strong> Sync</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My ZHAW Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/src/FS23/SNP/Pointers.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Pointers zeigen auf eine Adresse im Speicher.</p>
+<pre><code class="language-c">int *p; // Pointer auf ein Objekt vom typ int
+
+char *c[20]; // Array von 20 Pointern auf Objekte vom typ char
+
+double (*d)[20]; // Ist ein Pointer, der af ein Array mit 20 Elementen zeigt
+
+char **ppc; // Zeigt auf ein Objekt vom Typ Pointer
+			// das auf ein Objekt vom Typ char zeigt
+
+int * p, q; // p ist pointer
+			// q ist KEIN pointer
+</code></pre>
+<p><strong>Sizeof</strong>: Systemarchitektur abhängig (32 bit = 32/8 -&gt; 4 byte)</p>
+<h2 id="operatoren"><a class="header" href="#operatoren">Operatoren</a></h2>
+<pre><code class="language-c">int i;
+
+int *p;
+int *op;
+
+p = &amp;i;  // p zeigt auf die Adresse von i
+
+*p = 4; // modifiziert den Wert von i
+
+// Zeigt auf die gleiche Adresse wie p zum ZEITPUNKT des setzens.
+op = p;
+*op += 5; // modifiziert Objket i
+
+</code></pre>
+<p>Pointer müssen immer auf etwas zeigen, sonst wird <strong>IRGENDEIN</strong> Speicher modifizert.</p>
+<h2 id="der-geilste-pointer"><a class="header" href="#der-geilste-pointer">Der geilste Pointer</a></h2>
+<pre><code class="language-c">double d = 1.0;
+
+// Void pointer, zeigt auf alles mögliche
+void *vp = &amp;d;
+
+// Zuerst auf double pointer casten
+// dann wert von double auslesen
+printf(&quot;%f&quot;, * (double*)vp);
+</code></pre>
+<h2 id="konstante-pointers"><a class="header" href="#konstante-pointers">Konstante Pointers</a></h2>
+<p>Konstant = nicht mehr modifizierbar</p>
+<pre><code class="language-c">int i = 15;
+int * const p = &amp;i;
+
+// i kann modifizert werden
+i = 16;
+printf(&quot;%d&quot;, *p);
+
+// p aber nicht mehr
+p++; // DAS GEHT NICHT!!!
+</code></pre>
+<h2 id="null-pointer"><a class="header" href="#null-pointer">NULL Pointer</a></h2>
+<p>Hat die Adresse 0</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int *p1 = 0; //blöde idee, vorallem nicht lesbar
+int *p2 = NULL; // perfekt
+
+</code></pre>
+<h2 id="für-strukturen"><a class="header" href="#für-strukturen">Für strukturen</a></h2>
+<pre><code class="language-c">
+typedef struct {
+  int studNr;
+  char name[30];
+  char vorname[30];
+} Student;
+
+Student notPointer;
+Student *pointer;
+
+
+notPointer.studNr = 4;
+strcpy(notPointer.name, &quot;Mueller&quot;);
+
+// Hey, ich zeige auf den notPointer
+pointer = &amp;notPointer;
+
+printf(&quot;%s&quot;, (*pointer).name); // Mueller
+
+</code></pre>
+<h1 id="pointer-arithmetik"><a class="header" href="#pointer-arithmetik">Pointer Arithmetik</a></h1>
+<pre><code class="language-c">int a[5] = {2, 4, 6, 8, 10};
+int *p = a;
+
+
+// alle folgenden Zeilen sind identisch
+a[3]     = 1; // vom Compiler intern als *(a + 3) = 1 generiert
+*(a + 3) = 1; // a steht für die Start Adresse von a
+*(p + 3) = 1; // p ist auf die Start Adresse von a gesetzt
+p[3]     = 1; // vom Compiler intern als *(p + 3) = 1 generiert
+</code></pre>
+<h2 id="iterator"><a class="header" href="#iterator">Iterator</a></h2>
+<pre><code class="language-c">int a[5];
+
+// a+5 ist die Adresse *hinter* das
+// letzte Element des Arrays: C++ Stil
+
+for(int *it = a; it != a+5; ++it) {
+	*it = 0;
+}
+
+</code></pre>
+<p>oder</p>
+<pre><code class="language-c">int array[5];
+
+int *it = &amp;array[0]; // zeigt auf das erste Element von a
+int *end = &amp;array[5]; // zeigt auf das letze Element von a
+    
+for(it; it != end; ++it) {
+	*it = 0;
+}
+
+</code></pre>
+<h1 id="string-literale"><a class="header" href="#string-literale">String Literale</a></h1>
+<pre><code class="language-c">
+char * str = &quot;I am a literal&quot;;
+
+printf(&quot;%s&quot;, str);
+
+printf(&quot;%c&quot;, str[0]);
+</code></pre>
+<h2 id="jagged-arrays"><a class="header" href="#jagged-arrays">Jagged Arrays</a></h2>
+<p>Eindimensionale Arrays von pointern.</p>
+<pre><code class="language-c">char *jagged[] = {
+	&quot;January&quot;,
+	&quot;February&quot;,
+	&quot;March&quot;,
+	&quot;April&quot;,
+	&quot;Mai&quot;,
+	&quot;June&quot;,
+	&quot;July&quot;,
+	&quot;August&quot;,
+	&quot;September&quot;,
+	&quot;October&quot;,
+	&quot;November&quot;,
+	&quot;December&quot; };
+
+
+if (jagged[3][2] == ‘r') {
+...
+}
+// jagged[3] is “April”
+// jagged[3][2] is the third character of April
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../FS23/SNP/Modulare Programmierung.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../FS23/SNP/Parameter By Reference.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../FS23/SNP/Modulare Programmierung.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../FS23/SNP/Parameter By Reference.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_line_numbers = true;
+        </script>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

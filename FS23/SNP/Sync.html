@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="de" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sync - My ZHAW Notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../../FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/KT/Zusammenfassung.html"><strong aria-hidden="true">1.1.</strong> Zusammenfassung</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Formeln.html"><strong aria-hidden="true">1.2.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Schichten.html"><strong aria-hidden="true">1.3.</strong> OSI Schichten</a></li><li class="chapter-item expanded "><a href="../../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.4.</strong> Ethernet</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/WING/index.html"><strong aria-hidden="true">2.</strong> WING</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/WING/SGMM.html"><strong aria-hidden="true">2.1.</strong> SGMMM</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Materialwirtschaft.html"><strong aria-hidden="true">2.2.</strong> Materialwirtschaft</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kostenrechnung.html"><strong aria-hidden="true">2.3.</strong> Kostenrechnung</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Finanzen.html"><strong aria-hidden="true">2.4.</strong> Finanzen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Kalkulationen.html"><strong aria-hidden="true">2.5.</strong> Kalkulationen</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Strategie.html"><strong aria-hidden="true">2.6.</strong> Strategie</a></li><li class="chapter-item expanded "><a href="../../FS23/WING/Marketing.html"><strong aria-hidden="true">2.7.</strong> Marketing</a></li></ol></li><li class="chapter-item expanded "><a href="../../FS23/SNP/index.html"><strong aria-hidden="true">3.</strong> SNP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../FS23/SNP/Grundlagen.html"><strong aria-hidden="true">3.1.</strong> Grundlagen</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Arrays.html"><strong aria-hidden="true">3.2.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Modulare Programmierung.html"><strong aria-hidden="true">3.3.</strong> Modulare Programmierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Pointers.html"><strong aria-hidden="true">3.4.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Parameter By Reference.html"><strong aria-hidden="true">3.5.</strong> Pass By Reference</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Dynamische Allozierung.html"><strong aria-hidden="true">3.6.</strong> Dynamische Allozierung</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/File IO.html"><strong aria-hidden="true">3.7.</strong> File IO</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Multithreading und so weiter.html"><strong aria-hidden="true">3.8.</strong> Multithreading</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/IPC - Inter Process Communication.html"><strong aria-hidden="true">3.9.</strong> IPC</a></li><li class="chapter-item expanded "><a href="../../FS23/SNP/Sync.html" class="active"><strong aria-hidden="true">3.10.</strong> Sync</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My ZHAW Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/src/FS23/SNP/Sync.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Sync / Semaphores und Signals werden verwendet um Zugriff auf geteilte Ressourcen zu koordinieren. Zudem können damit Threads aufeinander warten.</p>
+<p>Syncs werden notwendig, wenn ein Thread auf einen anderen warten <strong>muss</strong>.</p>
+<ul>
+<li>z.B. wenn eine Resource im einten geöffnet ist, dann darf der andere diese erst öffnen, sobald der erste durch ist.</li>
+<li>Oder in einer kritischen Funktion, die <strong>IMMER</strong> ganz durchlaufen werden muss.</li>
+</ul>
+<pre><code class="language-c">// Mit dem volatile keyword wird klargestellt,
+// dass diese Resource von mehreren Threads verwendet wird.
+volatile int iAmShared = 0;
+</code></pre>
+<h1 id="mutex---mutual-exclusion"><a class="header" href="#mutex---mutual-exclusion">Mutex - Mutual Exclusion</a></h1>
+<ul>
+<li>Resourcen werden gegenseitig ausgeschlossen, ein Task blockiert den Eintritt für andere Tasks in die Crititcal Section</li>
+</ul>
+<h2 id="probleme"><a class="header" href="#probleme">Probleme</a></h2>
+<ul>
+<li>Runtime Kosten (locks dauern)</li>
+<li>Rekursion</li>
+<li>Kein Unlock (Bei early return)</li>
+<li>Deadlock</li>
+</ul>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#incldue &lt;phtread.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+
+const int N = 100000000;
+
+// shared value
+volatile int value = 0;
+
+pthread_mutx_t mutex;
+
+void * thread_method(void * arg)
+{
+	int delta = *(int*) arg;
+
+	for (int i = 0; i &lt; N; i++)
+	{
+		if (pthread_mutex_lock(&amp;mutex) != 0)
+		{
+			perror(&quot;Mutex konnte nicht besetzt werden&quot;);
+			exit(EXIT_FAILURE);
+		}
+
+		// Gemeinsame Variable auslesen
+		int a = value;
+
+		// Modifiziern
+		a += delta;
+
+		// Variable wieder setzen
+		value = a;
+
+
+		// Mutex wieder freigeben
+		if (pthread_mutex_unlock(&amp;mutex) != 0)
+		{
+			perror(&quot;Mutex konnte nicht freigegeben werden&quot;);
+			exit(EXIT_FAILURE);
+		}
+	}
+	return NULL;
+}
+
+int main (void)
+{
+	if (phtread_mutex_init(&amp;mutex, NULL) != 0)
+	{
+		perror(&quot;Mutex konnte nicht initialisiert werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	pthread_t th_inc;
+	pthread_t th_dec;
+
+
+	int inc = +1;
+	int dec = -1;
+	if (pthread_create(&amp;th_inc, NULL, count, &amp;inc) != 0)
+	{
+		perror(&quot;Thread konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+	
+	if (pthread_create(&amp;th_dec, NULL, count, &amp;dec) != 0)
+	{
+		perror(&quot;Thread konnte nicht erstellt werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+	// noch auf threads waretn
+	if (pthread_join(th_inc, NULL) != 0)
+	{
+		perror(&quot;Thread konnte nicht beendet werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+	if (pthread_join(th_dec, NULL) != 0)
+	{
+		perror(&quot;Thread konnte nicht beendet werden&quot;);
+		exit(EXIT_FAILURE);
+	}
+
+}
+</code></pre>
+<h1 id="semaphore"><a class="header" href="#semaphore">Semaphore</a></h1>
+<p>Tasks können über Semaphoren Synchronisationspunkte vereinbaren</p>
+<h2 id="probleme-1"><a class="header" href="#probleme-1">Probleme</a></h2>
+<ul>
+<li>Synchronisation kostet Zeit</li>
+<li>Wenn ein wait zu viel, bzwh. ein signal zu wenig</li>
+<li>Deadlocks, System kann komplett blockiert werden</li>
+</ul>
+<pre><code class="language-c">// C program to demonstrate working of Semaphores
+#include &lt;stdio.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;semaphore.h&gt;
+#include &lt;unistd.h&gt;
+
+sem_t mutex;
+
+void* thread(void* arg)
+{
+	//wait
+	sem_wait(&amp;mutex);
+	printf(&quot;\nEntered..\n&quot;);
+
+	//critical section
+	sleep(4);
+	
+	//signal
+	printf(&quot;\nJust Exiting...\n&quot;);
+	sem_post(&amp;mutex);
+}
+
+
+int main()
+{
+
+	// 1 -&gt; Initial value
+	// unbedingt auf das achten
+	sem_init(&amp;mutex, 0, 1);
+	pthread_t t1,t2;
+	pthread_create(&amp;t1,NULL,thread,NULL);
+	sleep(2);
+	pthread_create(&amp;t2,NULL,thread,NULL);
+	pthread_join(t1,NULL);
+	pthread_join(t2,NULL);
+	sem_destroy(&amp;mutex);
+	return 0;
+}
+
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../FS23/SNP/IPC - Inter Process Communication.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../FS23/SNP/IPC - Inter Process Communication.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_line_numbers = true;
+        </script>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../../ace.js"></script>
+        <script src="../../editor.js"></script>
+        <script src="../../mode-rust.js"></script>
+        <script src="../../theme-dawn.js"></script>
+        <script src="../../theme-tomorrow_night.js"></script>
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
