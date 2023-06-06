@@ -9,6 +9,7 @@
 | Payload | $P$ |||
 
 ## Übertragungsarten
+
 - **Unicast**: an einzelne Stationen
 - **Broadcast**: an alle Stationen
 - **Multicast**: an eine Gruppe von Stationen
@@ -16,22 +17,26 @@
 ## Leitungscode
 
 Als **Leitungscode** wird ein Manchester eingesetzt
+
 - 1 positive Flanke, 1 negative Flanken
 - Erlaubt die Taktrückgewinnung auf einfache Weise
 - Benötigt die doppelte Bandbreite des theoretischen Minimums 
-<img src="../media/Pasted%20image%2020230604142706.png"  width="300" />
+
+<img src="../media/Pasted image 20230604142706.png"  width="300" />
 
 ## Kollosionen
 Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen erkannt werden. 
-<img src="../media/Pasted%20image%2020230604143542.png" width="300"  />
+
+<img src="../media/Pasted image 20230604143542.png" width="300"  />
 
 ### Kollosionserkennung
-<img src="../media/Pasted%20image%2020230604155515.png" width="300" />
 
+<img src="../media/Pasted image 20230604155515.png" width="300" />
 
 
 ## Topologie
-<img src="../media/Pasted%20image%2020230604143612.png" width="300" />
+
+<img src="../media/Pasted image 20230604143612.png" width="300" />
 
 | Beschreibung | Symbol |Einheit | Formel |
 |--|--|--|--|
@@ -42,8 +47,9 @@ Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen er
 | Transferdauer | $t_{\text{transfer}}$ | s | $\frac{l}{c_\text{Medium}}$
 
 ## Ethernet
-<img src="../media/Pasted%20image%2020230604160442.png" width="300" />
+
+<img src="../media/Pasted image 20230604160442.png" width="300" />
 
 ## IEEE Mac Adressen
 
-<img src="../media/Pasted%20image%2020230604161209.png" width="300" />
+<img src="../media/Pasted image 20230604161209.png" width="300" />

@@ -3,14 +3,19 @@
 ## Serielle asynchrone Übertragung (ohne Synchronisations-Takt)
 
 Zwischen Sender und Empfänger werden folgende Abmachungen gemacht
+
 - Bitrate
 - Anzahl Datenbits (Typischerweise 1 Byte)
 - Anzahl Stopbits (Typischerweise 1 Bit)
-![](media/Pasted image 20230604135039.png)
+
+<img src="../media/Pasted image 20230604135039.png" width="300"/>
+
 Die *Taktrückgewinnung* ist möglich, solange regelmässig Zustandsänderungen auftreten.
 
 ## Serielle synchrone Übertragung
+
 Bei der synchronen Übertragung arbeitet der Empfänger mit dem gleichen Takt wie der Sender
+
 - Es werden keine Start- und Stopbits benötigt
 - Der Takt muss zusätzlich übertragen werden
 

@@ -2,7 +2,7 @@
 
 ## Verallgemeinerter Tangentengleichung
 
-Es gilt: \((x) \approx g(x)$ 
+Es gilt:  $(x) \approx g(x)$ 
 
 $$
 g(x)
@@ -14,7 +14,7 @@ Df(x^{(0)})
 (x - x^{(0)})
 $$
 
-## Spezialfall \(: \mathbb{R}^2 \to \mathbb{R}$ 
+## Spezialfall  $: \mathbb{R}^2 \to \mathbb{R}$ 
 
 ## Python
 ```python

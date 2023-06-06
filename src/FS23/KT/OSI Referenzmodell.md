@@ -22,6 +22,6 @@
 - Keine Sicherung
 - Streaming
 
-<img src="media/Pasted%20image%2020230604133437.png" width="300" />
+<img src="media/Pasted image 20230604133437.png" width="300" />
 
-<img src="media/Pasted%20image%2020230604133513.png" width="300" />
+<img src="media/Pasted image 20230604133513.png" width="300" />

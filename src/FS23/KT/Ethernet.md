@@ -9,9 +9,9 @@
 | C | 192.0.0.0 - 223.255.255.255 | 255.255.255.X |
 
 ## Subnetzmaske berechnen
-**Anzahl benötigte Ip Adressen**: \($
+**Anzahl benötigte Ip Adressen**:  $$
 
-**Anzahl zum Rechnen**: \( = n + \) Bits aus Tabelle lesen
+**Anzahl zum Rechnen**:  $ = n + \) Bits aus Tabelle lesen
 
 **Maske**: $/(32 - b)$
 
@@ -48,23 +48,30 @@ benötigt.
 **Anzahl nutzbare Adressen**: $ 2^(32-CIDR) - 2 $
 
 ## VLAN
+
 Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
-<img src="media/Pasted%20image%2020230606160751.png" width="300" />
+
+<img src="media/Pasted image 20230606160751.png" width="300" />
 
 ## Spanning Tree Protokoll (STP)
+
 - Alle Knoten werden genau einmal verbunden
 - Verbindungen, die zu Schleifen führen werden deaktiviert
 
 **Bridge Identifier:** Priorität + Mac Adresse
+
 1. Root bestimmen mittels Bridge-Identifier 
 2. Direkt angeschlossene Bridges bestätigen
 3. Weitere Verbindungen abhängig von Kosten und Bridge-Identifier eintragen
 
 ## Ethernet Systeme
+
 **Autonegotiation**: Ermittlung der besten Betriebsart durch Austausch derLeistungsmerkmale zweier Netzwerkkomponenten
+
 **Link Pulses**
+
 - NLP: Link Presence Detection
 - FLP: Autonegotiation, Autopolarity
 
 
-<img src="media/Pasted%20image%2020230606161909.png" width="300" />
+<img src="media/Pasted image 20230606161909.png" width="300" />

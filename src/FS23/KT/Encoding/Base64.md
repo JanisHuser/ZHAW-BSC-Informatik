@@ -5,4 +5,4 @@
 3. Wenn letzer Block kleiner als 6, mit 0 auffüllen
 4. Tabelle nachsehen und Char nehmen
 
-<img src="media/Pasted%20image%2020230606162428.png" width="300" />
+<img src="../media/Pasted image 20230606162428.png" width="300" />

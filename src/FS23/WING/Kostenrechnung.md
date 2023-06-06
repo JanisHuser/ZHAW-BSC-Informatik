@@ -137,7 +137,7 @@ Umfasst alle Kostenrechnungssysteme, welche sich auf die Betrachtugn der direkt 
 ![[Pasted image 20230523073747.png]]
 
 ### Mengenmässige Nutzschwelle berechnen
-**Deckungsbeitrag / Stück**: \(text{Stückerlos} - \text{variable Kosten}$
+**Deckungsbeitrag / Stück**:  $text{Stückerlos} - \text{variable Kosten}$
 
 $$
 \frac{
