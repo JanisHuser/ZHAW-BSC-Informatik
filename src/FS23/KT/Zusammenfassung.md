@@ -42,7 +42,7 @@
 - Keine Sicherung
 - Streaming
 
-![](media/Pasted%20image%2020230604133437.png)
+![](media/Pasted%20image%2020230604133437.png | width=100)
 
 ![](media/Pasted%20image%2020230604133513.png)
 
@@ -69,7 +69,7 @@ Zwischen Sender und Empfänger werden folgende Abmachungen gemacht
 - Bitrate
 - Anzahl Datenbits (Typischerweise 1 Byte)
 - Anzahl Stopbits (Typischerweise 1 Bit)
-![](media/Pasted%20image%2020230604135039.png)
+![](media/Pasted image 20230604135039.png)
 Die *Taktrückgewinnung* ist möglich, solange regelmässig Zustandsänderungen auftreten.
 
 ## Serielle synchrone Übertragung
@@ -102,7 +102,7 @@ Zu Beginn eines Frames wird ein Start-Bit gesendet
 
 ### Synchron
 - Frames werden ohne Unterbruch gesendet
-![](media/Pasted%20image%2020230604141236.png)
+<img src="media/Pasted%20image%2020230604141236.png"  width="300px" />
 
 ## Fehlererkennung / Fehlerkorrektur
 **FER** (**F**rame **E**rror **R**atio)
@@ -134,19 +134,19 @@ Als **Leitungscode** wird ein Manchester eingesetzt
 - 1 positive Flanke, 1 negative Flanken
 - Erlaubt die Taktrückgewinnung auf einfache Weise
 - Benötigt die doppelte Bandbreite des theoretischen Minimums 
-![](media/Pasted%20image%2020230604142706.png)
+<img src="media/Pasted%20image%2020230604142706.png"  width="300" />
 
 ## Kollosionen
 Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen erkannt werden. 
-![](media/Pasted%20image%2020230604143542.png)
+<img src="media/Pasted%20image%2020230604143542.png" width="300"  />
 
 ### Kollosionserkennung
-![](media/Pasted%20image%2020230604155515.png)
+<img src="media/Pasted%20image%2020230604155515.png" width="300" />
 
 
 
 ## Topologie
-![](media/Pasted%20image%2020230604143612.png)
+<img src="media/Pasted%20image%2020230604143612.png" width="300" />
 
 | Beschreibung | Symbol |Einheit | Formel |
 |--|--|--|--|
@@ -157,17 +157,17 @@ Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen er
 | Transferdauer | $t_{\text{transfer}}$ | s | $\frac{l}{c_\text{Medium}}$
 
 ## Ethernet
-![](media/Pasted%20image%2020230604160442.png)
+<img src="media/Pasted%20image%2020230604160442.png" width="300" />
 
 ## IEEE Mac Adressen
-![](media/Pasted%20image%2020230604161209.png)
+<img src="media/Pasted%20image%2020230604161209.png" width="300" />
 
 
 # Switched LAN und Ethernet Technologien
 
 ## VLAN
 Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
-![](media/Pasted%20image%2020230606160751.png)
+<img src="media/Pasted%20image%2020230606160751.png" width="300" />
 
 ## Spanning Tree Protokoll (STP)
 - Alle Knoten werden genau einmal verbunden
@@ -184,7 +184,7 @@ Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Po
 - NLP: Link Presence Detection
 - FLP: Autonegotiation, Autopolarity
 
-![](media/Pasted%20image%2020230606161909.png)
+<img src="media/Pasted%20image%2020230606161909.png" width="300" />
 
 
 # Internet / Network Layer
@@ -198,4 +198,4 @@ Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Po
 2. Binär in je 6 grosse Bitgruppen abstechen
 3. Wenn letzer Block kleiner als 6, mit 0 auffüllen
 4. Tabelle nachsehen und Char nehmen
-![](media/Pasted%20image%2020230606162428.png)
+<img src="media/Pasted%20image%2020230606162428.png" width="300" />
