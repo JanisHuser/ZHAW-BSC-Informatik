@@ -1,19 +1,23 @@
 # OSI Referenzmodell
 
 **Verbindungsorientiert**
+
 - Verbindungsaufbau nötig
 - Ziel muss bereit sein
 
 **Verbindungslos**
+
 - Jederzeit Nachrichten schicken
 - Ziel muss nicht „bereit“ sein
 
 **Zuverlässig**
+
 - Kein Datenverlust
 - Sicherung durch Fehelr-Erkennung -/korrektur
 - Text-Nachrichten
 
 **Unzuverlässig**
+
 - Möglicher Datenverlust
 - Keine Sicherung
 - Streaming
