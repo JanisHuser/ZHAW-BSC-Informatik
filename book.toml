@@ -8,9 +8,9 @@ edition = "2018"
 
 [output.html]
 mathjax-support = true
-site-url = "/ZHAW-BSC-Informatik"
-git-repository-url = "https://github.com/JanisHuser/ZHAW-BSC-Informatik"
-edit-url-template = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/{path}"
+site-url = "/ZHAW-BSC-Informatik/"
+git-repository-url = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook"
+edit-url-template = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/{path}"
 
 [output.html.playground]
 editable = true
