@@ -6,7 +6,7 @@
 	- [OSI Schichten](FS23/KT/OSI%20Referenzmodell.md)
 	- [Übertragungsmedien](FS23/KT/Uebertragungsmedien.md)
 	- [Layers]()
-		- [Data Link Layer](FS23/KT/Layers/Data%20Link%20Layer.md)
+		- [Data Link Layer](FS23/KT/Layers/DataLink Layer.md)
 		- [Physical Layer](FS23/KT/Layers/Physical%20Layer.md)
 	- [Ethernet](FS23/KT/Ethernet.md)
 	- [LAN](FS23/KT/LAN.md)
