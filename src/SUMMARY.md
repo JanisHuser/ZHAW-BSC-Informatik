@@ -3,7 +3,7 @@
 # FS23
 - [KT](FS23/KT/Readme.md)
 	- [Formeln](FS23/KT/Formeln.md)
-	- [OSI Schichten](FS23/KT//OSI%20Referenzmodell.md)
+	- [OSI Schichten](FS23/KT/OSI%20Referenzmodell.md)
 	- [Übertragungsmedien](FS23/KT/Uebertragungsmedien.md)
 	- [Layers]()
 		- [Data Link Layer](FS23/KT/Layers/Data%20Link%20Layer.md)
