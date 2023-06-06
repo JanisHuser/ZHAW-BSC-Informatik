@@ -1,6 +1,6 @@
 ## Skalarwertige Funktionen mit mehreren Variablen
 
-- Eine Funktion mit $n$ unabhängigen Variablen $x_1, …, x_n$ und einer abhängigen Variablen $y$ versteht man eine Vorschrift, die jedem geordneten Zahlentupel ($x_1, x_2, …, x_n$) aus einer Definitionsmenge $D \in \mathbb{R}^n$ genau ein Element $y$ aus einer Wertemenge $\mathbb{W} \in \mathbb{R}$ zuordnet.
+- Eine Funktion mit \($ unabhängigen Variablen \(_1, …, x_\) und einer abhängigen Variablen \($ versteht man eine Vorschrift, die jedem geordneten Zahlentupel (\(_1, x_2, …, x_\)) aus einer Definitionsmenge \( \in \mathbb{R}^\) genau ein Element \($ aus einer Wertemenge \(mathbb{W} \in \mathbb{R}$ zuordnet.
 Symbolische Schreibweise:
 
 $$
@@ -9,7 +9,7 @@ $$
 $$
 (x_1,x_2,…,x_n) \mapsto y = f(x_1, x_2, …, x_n)
 $$
-- Da das Ergebnis $y \in \mathbb{R}$ ein Skalar (eine Zahl) ist, redet man von einer **skalarwertigen** Funktion.
+- Da das Ergebnis \( \in \mathbb{R}$ ein Skalar (eine Zahl) ist, redet man von einer **skalarwertigen** Funktion.
 
 ## Partielle Ableitung
 $$
@@ -17,7 +17,7 @@ z = f(x,y) = x^5 + x^7
 $$
 ### Beispiel
 
-Gegen ist die folgende Funktion: $f(x,y) = x^5 + y^7$. Soll diese nach x abgeleitet werden, dann entsteht nachstehendes. Da y als Zahl angesehen wird, fällt dieses weg.
+Gegen ist die folgende Funktion: \((x,y) = x^5 + y^\). Soll diese nach x abgeleitet werden, dann entsteht nachstehendes. Da y als Zahl angesehen wird, fällt dieses weg.
 $$
 \frac{
 \partial f(x,y)
@@ -29,7 +29,7 @@ $$
 $$
 
 ### Definition
-Für eine Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ mit einer Variablen ist die Ableitung an der Stelle $x_0$ bekanntlich definiert als:
+Für eine Funktion \(: \mathbb{R} \rightarrow \mathbb{R}$ mit einer Variablen ist die Ableitung an der Stelle \(_\) bekanntlich definiert als:
 $$
 f’(x_0) = \lim\limits_{\Delta x \rightarrow 0}
 \frac{
@@ -38,7 +38,7 @@ f(x_0 + \Delta x) - f(x_0)
 \Delta x
 }
 $$
-Aus geometrischer Sicht entspricht dies der Steigung $m = f‘(x_0)$ der im Punkt $(x_0, f(x_0))$ angelegten Kurventangente
+Aus geometrischer Sicht entspricht dies der Steigung \( = f‘(x_0)$ der im Punkt $(x_0, f(x_0))$ angelegten Kurventangente
 $$
 t(x) = f(x_0) + f‘(x_0)(x- x_0)
 $$
