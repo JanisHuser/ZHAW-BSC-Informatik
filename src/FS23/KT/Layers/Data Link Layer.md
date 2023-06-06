@@ -12,7 +12,7 @@ Zu Beginn eines Frames wird ein Start-Bit gesendet
 
 - Frames werden ohne Unterbruch gesendet
 
-<img src="../media/Pasted image 20230604141236.png"  width="300px" />
+<img src="../media/data_link_layer_sync.png"  width="300px" />
 
 ## Fehlererkennung / Fehlerkorrektur
 

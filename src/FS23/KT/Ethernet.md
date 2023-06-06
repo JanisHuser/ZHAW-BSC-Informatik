@@ -14,10 +14,11 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Dezimal | 1 | 2 | 4 | 8 | 16| 32| 64|128|256|
 
-Es werden jeweils zwei Adressen für \\
+Es werden jeweils zwei Adressen für benötigt:
+
 - Broadcast (höchste Adresse)
 - Netzadresse (tiefste Adresse)
-benötigt.  \\
+
 
 | CIDR | Subnet Maske | Anzahl Adressen | Nutzbare Adressen |
 |-|-|-|-|
@@ -40,13 +41,14 @@ benötigt.  \\
 
 
 **Anzahl Adressen**: $ 2^(32-CIDR) $
+
 **Anzahl nutzbare Adressen**: $ 2^(32-CIDR) - 2 $
 
 ## VLAN
 
 Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
 
-<img src="media/Pasted image 20230606160751.png" width="300" />
+<img src="media/VLAN.png" width="300" />
 
 ## Spanning Tree Protokoll (STP)
 
@@ -69,4 +71,4 @@ Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Po
 - FLP: Autonegotiation, Autopolarity
 
 
-<img src="media/Pasted image 20230606161909.png" width="300" />
+<img src="media/EthernetFrame.png" width="300" />
