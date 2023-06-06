@@ -7,7 +7,7 @@ language = "de"
 edition = "2018"
 
 [output.html]
-mathjax-support = true
+mathjax-support = false
 site-url = "/ZHAW-BSC-Informatik/"
 git-repository-url = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook"
 edit-url-template = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/{path}"
