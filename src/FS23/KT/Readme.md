@@ -3,7 +3,7 @@
 
 # Chapter 1
 
-Here is an inline example, $ \pi(\theta) $,
+Here is an inline example, $\pi(\theta)$,
 
 an equation,
 
