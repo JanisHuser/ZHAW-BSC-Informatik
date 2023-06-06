@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>My ZHAW Notes</title>
-        <meta name="robots" content="noindex" />
+        <title>KT - My ZHAW Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -86,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../FS23/KT/index.html"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../FS23/KT/Formeln.html"><strong aria-hidden="true">1.1.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../FS23/KT/Schichten.html"><strong aria-hidden="true">1.2.</strong> ISO Schichten</a></li><li class="chapter-item expanded "><a href="../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.3.</strong> Ethernet</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">FS23</li><li class="chapter-item expanded "><a href="../FS23/KT/index.html" class="active"><strong aria-hidden="true">1.</strong> KT</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../FS23/KT/Formeln.html"><strong aria-hidden="true">1.1.</strong> Formeln</a></li><li class="chapter-item expanded "><a href="../FS23/KT/Schichten.html"><strong aria-hidden="true">1.2.</strong> ISO Schichten</a></li><li class="chapter-item expanded "><a href="../FS23/KT/Ethernet.html"><strong aria-hidden="true">1.3.</strong> Ethernet</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -124,6 +123,9 @@
                         <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+                        <a href="https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/src/../FS23/KT/Readme.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -151,73 +153,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="kt---fs2023"><a class="header" href="#kt---fs2023">KT - FS2023</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><div class="table-wrapper"><table><thead><tr><th>Beschreibung</th><th> Symbol</th><th>Einheit</th><th> Formel</th></tr></thead><tbody>
-<tr><td>Signaldämpfung</td><td></td><td>db</td><td>$10*log(\frac{P_E}{P_A})$</td></tr>
-<tr><td>Signaldämpfung über Spannung</td><td></td><td>db</td><td>$20 * log(\frac{U_E}{U_A})$</td></tr>
-<tr><td>Amplitude</td><td>$A$</td><td>V</td><td></td></tr>
-<tr><td>Maximale Anzahl erkennbare Zustände</td><td>$M$</td><td>bit/s </td><td>$1+\frac{A}{\Delta V}$</td></tr>
-<tr><td>Maximal erreichbare Bitrate (Hartley's Gesetz)</td><td>$R$</td><td> bit/s</td><td> $R \le 2 \cdot B ld(M) = 2B \cdot ld(M)$</td></tr>
-<tr><td>Signalleistung</td><td> $S$</td><td></td><td></td></tr>
-<tr><td>Rauschleistung</td><td>$N$</td><td></td><td></td></tr>
-<tr><td>Kanalkapazität</td><td> $C$</td><td></td><td>$B \cdot ld(1 + \frac{S}{N})$</td></tr>
-<tr><td>Nettobitrate</td><td></td><td></td><td>$\text{Bruttobitrate} \cdot \frac{\text{Nutzdaten}}{\text{Nutzdaten} + \text{Header}}$</td></tr>
-<tr><td>Maximale Bitrate</td><td>$R$</td><td> $\frac{\text{bit}}{\text{s}}$</td><td> $R \leq 2B \cdot \log_2(M)$</td></tr>
-<tr><td>Bandbreite</td><td> $B$</td><td> MiB</td><td></td></tr>
-<tr><td>max. Symbolrate</td><td>$f_s$</td><td>Hz</td><td>$2B$</td></tr>
-</tbody></table>
-</div>
-<h2 id="fehlerkorrektur"><a class="header" href="#fehlerkorrektur">Fehlerkorrektur</a></h2>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="schichten"><a class="header" href="#schichten">Schichten</a></h1>
-<h2 id="data-link-layer-sicherungsschicht"><a class="header" href="#data-link-layer-sicherungsschicht">Data Link Layer (Sicherungsschicht)</a></h2>
-<p><strong>Aufgaben</strong></p>
-<ul>
-<li>Realisierung einer sicheren (fehlerfreien) Verbindung zwischen direkt miteinander verbundenen Systemen</li>
-<li>Framing</li>
-<li>Fluss - Steuerung</li>
-<li>Adressierung</li>
-<li>Medium Zugriff</li>
-</ul>
-<p><strong>Asynchrone Übertragung</strong></p>
-<ul>
-<li>Stehen keine Daten zur Übertragung an, so wird nichts gesendet (Ruhezustand)</li>
-<li>Der Beginn eines Frames wird mit einem Start-Bit angezeigt; mit der Frame-Grenze ist auc hdie Byte-Grenze gegeben</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h1>
-<h2 id="klasse-bestimmen"><a class="header" href="#klasse-bestimmen">Klasse bestimmen</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Klasse</th><th>Addressbereich</th><th>Netzmaske</th></tr></thead><tbody>
-<tr><td>A</td><td>0.0.0.0 - 127.255.255.255</td><td>255.X.0.0</td></tr>
-<tr><td>B</td><td>128.0.0.0 - 191.255.255.255</td><td>255.255.X.0</td></tr>
-<tr><td>C</td><td>192.0.0.0 - 223.255.255.255</td><td>255.255.255.X</td></tr>
-</tbody></table>
-</div>
-<h2 id="subnetzmaske-berechnen"><a class="header" href="#subnetzmaske-berechnen">Subnetzmaske berechnen</a></h2>
-<p><strong>Anzahl benötigte Ip Adressen</strong>: $n$</p>
-<p><strong>Anzahl zum Rechnen</strong>: $b = n + 2$ Bits aus Tabelle lesen</p>
-<p><strong>Maske</strong>: $/(32 - b)$</p>
-<div class="table-wrapper"><table><thead><tr><th>Bits</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead><tbody>
-<tr><td>Dezimal</td><td>1</td><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td><td>128</td><td>256</td></tr>
-</tbody></table>
-</div><div class="table-wrapper"><table><thead><tr><th>Wert</th><th>Alternative Schreibweise</th><th>Anzahl adressierbare Interfaces</th></tr></thead><tbody>
-<tr><td>255</td><td>/24</td><td>255 -2</td></tr>
-<tr><td>254</td><td>/23</td><td>512 - 2</td></tr>
-<tr><td>252</td><td>/22</td><td>1024 - 2</td></tr>
-<tr><td>248</td><td>/21</td><td>2048 -2</td></tr>
-<tr><td>240</td><td>/20</td><td>4096 -2</td></tr>
-<tr><td>224</td><td>/19</td><td>8192 -2</td></tr>
-<tr><td>192</td><td>/18</td><td>16384 -2</td></tr>
-<tr><td>128</td><td>/17</td><td>32768 - 2</td></tr>
-<tr><td>0</td><td>/ 16</td><td>65536 -2</td></tr>
-</tbody></table>
-</div>
-<p>Wenn alternative Schreibweise nicht gegeben ist, dann wird anstelle von X 0 verwendet.</p>
-<h2 id="default-routing"><a class="header" href="#default-routing">Default Routing</a></h2>
-<p>Alles was </p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
+                            <a rel="next" href="../FS23/KT/Formeln.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -226,6 +170,9 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
+                    <a rel="next" href="../FS23/KT/Formeln.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -256,13 +203,6 @@
 
         <!-- Custom JS scripts -->
 
-        <script>
-        window.addEventListener('load', function() {
-            MathJax.Hub.Register.StartupHook('End', function() {
-                window.setTimeout(window.print, 100);
-            });
-        });
-        </script>
 
     </div>
     </body>
