@@ -164,3 +164,38 @@ Können durch die Überlagerungen von Signalen entstehen. Kollosionen müssen er
 
 
 # Switched LAN und Ethernet Technologien
+
+## VLAN
+Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
+![](media/Pasted%20image%2020230606160751.png)
+
+## Spanning Tree Protokoll (STP)
+- Alle Knoten werden genau einmal verbunden
+- Verbindungen, die zu Schleifen führen werden deaktiviert
+
+**Bridge Identifier:** Priorität + Mac Adresse
+1. Root bestimmen mittels Bridge-Identifier 
+2. Direkt angeschlossene Bridges bestätigen
+3. Weitere Verbindungen abhängig von Kosten und Bridge-Identifier eintragen
+
+## Ethernet Systeme
+**Autonegotiation**: Ermittlung der besten Betriebsart durch Austausch derLeistungsmerkmale zweier Netzwerkkomponenten
+**Link Pulses**
+- NLP: Link Presence Detection
+- FLP: Autonegotiation, Autopolarity
+
+![](media/Pasted%20image%2020230606161909.png)
+
+
+# Internet / Network Layer
+
+# Transport Layer
+
+# Application Layer
+
+# Base64
+1. ASCII in binär umwandeln
+2. Binär in je 6 grosse Bitgruppen abstechen
+3. Wenn letzer Block kleiner als 6, mit 0 auffüllen
+4. Tabelle nachsehen und Char nehmen
+![](media/Pasted%20image%2020230606162428.png)
