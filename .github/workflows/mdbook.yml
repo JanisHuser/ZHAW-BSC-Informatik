@@ -39,9 +39,7 @@ jobs:
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: 'latest'
-
-      - run: cargo install mdbook_katex_css_download
-      - run: mdbook_katex_css_download
+      - run: cargo install mdbook-katex
       - run: mdbook build
 
       - name: Deploy
