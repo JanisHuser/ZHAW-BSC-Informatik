@@ -5,7 +5,15 @@
 	- [Zusammenfassung](FS23/KT/Zusammenfassung.md)
 	- [Formeln](FS23/KT/Formeln.md)
 	- [OSI Schichten](FS23/KT/Schichten.md)
+	- [Übertragungsmedien](FS23/KT/Uebertragungsmedien.md)
+	- [Layers]()
+		- [Data Link Layer](FS23/KT/Layers/Data%20Link%20Layer.md)
+		- [Physical Layer](FS23/KT/Layers/Physical%20Layer.md)
 	- [Ethernet](FS23/KT/Ethernet.md)
+	- [LAN](FS23/KT/LAN.md)
+	# Encoding
+		- [Base64](FS23/KT/Encoding/Base64.md)
+	
 
 - [WING](FS23/WING/Readme.md)
 	- [SGMMM](FS23/WING/SGMM.md)
