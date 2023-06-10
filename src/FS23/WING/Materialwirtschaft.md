@@ -73,7 +73,9 @@ Verlagerung von Teilen der Wertschöpfung auf externe Lieferanten (langfristig)
 # Analysen
 ## ABC-Analyse
 
-![[Pasted image 20230524205826.png]]
+
+![](media/Pasted%20image%2020230524205826.png)
+
 | Kategorie | Wertanteil am Gesamtwert | Mengenanteil an der Gesamtmenge |
 |-|-|-|
 | A Güter | 70% - 80% | < 30% |

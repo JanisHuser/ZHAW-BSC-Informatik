@@ -1,4 +1,4 @@
-![[Pasted image 20230523110832.png]]
+![](media/Pasted%20image%2020230523110832.png)
 
 ## Nettoverkaufspreis
 \+ Verkaufssonderkosten
@@ -22,4 +22,6 @@ Katalogpreis des Lieferanten
 
 ## Gesamt-Kalkulation
 auf 5 Rappen gerundent (am Ende)
-![[Pasted image 20230523112034.png]]
+
+
+![](media/Pasted%20image%2020230523112034.png)
