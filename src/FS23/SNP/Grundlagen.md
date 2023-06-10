@@ -122,7 +122,7 @@ double interpretedAsDouble = 1.23L; // Long float
 | \\0 | Ascii Code 0 |
 
 ## Ascii Tabelle
-![[Pasted image 20230527113117.png]]
+![](media/Pasted%20image%2020230527113117.png)
 
 ## Strings
 Durch Anführungszeichen eingeschlossene Zeichenfolgen werden als strings interpretiert.
@@ -200,10 +200,13 @@ static int value;
 - Wenn in der Source Datei definiert, dann sind diese in der gleichen Datei in allen Prozessen verfügbar.
 
 ## Bit-Operatoren
-![[Pasted image 20230527114235.png]]
+
+![](media/Pasted%20image%2020230527114235.png)
+
 
 # Vorrang und Reihenfolge
-![[Pasted image 20230527114338.png]]
+
+![](media/Pasted%20image%2020230527114338.png)
 
 ## Type Casts
 

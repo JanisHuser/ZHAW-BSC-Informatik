@@ -53,4 +53,4 @@ void list_clear()
 
 # Makefile
 
-Du gucken da: https://devhints.io/makefile
+Du gucken da: ![Makefile cheatsheet](https://devhints.io/makefile)

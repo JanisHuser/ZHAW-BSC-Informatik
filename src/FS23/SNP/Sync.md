@@ -21,7 +21,7 @@ volatile int iAmShared = 0;
 
 ```c
 #include <sys/types.h>
-#incldue <phtread.h>
+#include <phtread.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
