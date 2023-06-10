@@ -11,6 +11,7 @@ mathjax-support = false
 site-url = "/ZHAW-BSC-Informatik/"
 git-repository-url = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook"
 edit-url-template = "https://github.com/JanisHuser/ZHAW-BSC-Informatik/tree/mdbook/{path}"
+additional-js = ["pyscript.js", "load-py-modules.js"]
 
 [output.html.playground]
 editable = true         # allows editing the source code
@@ -55,3 +56,8 @@ no-css = false
 include-src = false
 block-delimiter = { left = "$$", right = "$$" }
 inline-delimiter = { left = "$", right = "$" }
+
+
+
+[preprocessor.python]
+command = "/home/mdbook/.cargo/bin/mdbook-python
