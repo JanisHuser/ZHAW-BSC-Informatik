@@ -31,6 +31,7 @@
 	- [Ausgleichsrechnung](FS23/HM2/Ausgleichsrechnung.md)
 	- [Numerische Integration](FS23/HM2/Numerische%20Integration.md)
 	- [Gewöhnliche Differentialgleichung](FS23/HM2/Gewoehnliche%20Differentialgleichungen.md)
+	- [Chat GPT Zusammenfassung](FS23/HM2/ChatGPTExport.md)
 
 - [SNP](FS23/SNP/Readme.md)
 	- [Grundlagen](FS23/SNP/Grundlagen.md)
