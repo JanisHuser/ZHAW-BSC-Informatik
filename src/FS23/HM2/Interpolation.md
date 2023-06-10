@@ -5,11 +5,11 @@ Die Interpolation ist ein Speziialfall der linearen Ausgleichsrechnung, bei dem 
 ## Polynominterpolation
 
 ```python
-# Sample data points
+#Sample data points
 x = [1, 2, 3, 4, 5]
 y = [2, 1, 3, 2, 4]
 
-# Polynomial interpolation
+#Polynomial interpolation
 n = len(x)
 coefficients = []
 
@@ -25,7 +25,7 @@ for k in range(n):
     coefficient = y[k] * (numerator / denominator)
     coefficients.append(coefficient)
 
-# Evaluate the polynomial at a specific point
+#Evaluate the polynomial at a specific point
 x_new = 2.5
 y_new = sum(coefficients[i] * x_new**(n-1-i) for i in range(n))
 
@@ -38,12 +38,12 @@ print("Interpolated value at x =", x_new, "is y =", y_new)
 x = [8.00, 10.00, 12.00, 14.00]
 y = [11.2, 13.4, 15.3, 19.5]
 
-# X für welches y berechnet werden soll  
+#X für welches y berechnet werden soll  
 xp = 11
 
 m = len(x)
 
-# Grad des Polynoms
+#Grad des Polynoms
 n = m -1
 yp = 0
 
