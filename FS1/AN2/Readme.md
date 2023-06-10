@@ -1,6 +1,6 @@
 # Analysis
 
-[Zusammenfassung](ZusammenFassung.md)
+[Zusammenfassung](Zusammenfassung.md)
 
 ## Integrieren & Ableiten
 [Integrations Regeln](IntegrationsRegeln.md)
