@@ -18,7 +18,7 @@ Die Kostenerfassung erfolgt nach
 
 Die Betriebsbuchhaltung ist eine rein interne Rechnung. Sie stellt Unterlagen für die Kalkulation sowie die **Kosten- und Erfolgskontrolle** bereit.
 
-![[Pasted image 20230523070929.png]]
+![](media/Pasted%20image%2020230523070929.png)
 
 ## Vollkostenrechnung
 Verteilt die gesamten Kosten auf die verschiedenen Kostenträger
@@ -57,8 +57,8 @@ Verteilt die gesamten Kosten auf die verschiedenen Kostenträger
 
 ## Kostenträgerrechnung
 Die hergestellten Güter und die erbrachten Dienstleistungen werden als Kostenträger bezeichnet. Diese Kostenträger haben die von ihnen verursachten Kosten zu tragen.
-![[Pasted image 20230523072859.png]]
 
+![](media/Pasted%20image%2020230523072859.png)
 
 ### Zuschlagssätze
 
@@ -131,10 +131,12 @@ Umfasst alle Kostenrechnungssysteme, welche sich auf die Betrachtugn der direkt 
 **Break-Even-Absatzmenge**: Bei dieser Verkaufsmenge wir dei Gewinnschwelle erreicht.
 
 **Gesamtkosten** Fixkosten + variable Kosten 
-![[Pasted image 20230523073711.png]]
+
+![](media/Pasted%20image%2020230523073711.png)
 
 ## Break-Even-Analyse (Gewinnschwelle / Nutzschwelle)
-![[Pasted image 20230523073747.png]]
+
+![](media/Pasted%20image%2020230523073747.png)
 
 ### Mengenmässige Nutzschwelle berechnen
 **Deckungsbeitrag / Stück**:  $text{Stückerlos} - \text{variable Kosten}$

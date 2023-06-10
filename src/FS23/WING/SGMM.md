@@ -1,4 +1,6 @@
-![[Pasted image 20230522092522.png]]
+# St.Galler Management Modell (SGMM)
+
+![](media/Pasted%20image%2020230522092522.png)
 
 ## Umweltsphären
 Bezeichnen relevante Bezugsräume im Umfeld der Unternehmung.
@@ -16,7 +18,7 @@ Betrifft den Menschen mit seinen Wünschen und Vorstellungen (politische und ges
 Betrifft den Gesamthaushalt der Natur (Rohstoffe, Energie, Klima, Abfälle, etc)
 
 ## Anspruchsgruppen / Stakeholder
-![[Pasted image 20230522093150.png]]
+![](media/Pasted%20image%2020230522093150.png)
 
 ## Begriffskategorien
 ### Ordnungsmomente

@@ -1,14 +1,18 @@
-![[Pasted image 20230522154421.png]]
+# Strategie
+
+![](media/Pasted%20image%2020230522154421.png)
 
 ## Strategische Analyse
 
 ### SWOT-Analyse
-![[Pasted image 20230522173721.png]]
-![[Pasted image 20230522173754.png]]
+![](media/Pasted%20image%2020230522173721.png)
+
+![](media/Pasted%20image%2020230522173754.png)
+
 ### PESTEL-Analyse
-![[Pasted image 20230522173819.png]]
+![](media/Pasted%20image%2020230522173819.png)
 ### 5-Forces Modell von Porter
-![[Pasted image 20230522173840.png]]
+![](media/Pasted%20image%2020230522173840.png)
 
 ## Unternehmensstrategie
 
@@ -36,6 +40,6 @@
 **Müssen zur Kultur, der Organisation, den Werten und zum Leitbild passen!**
 
 ### Strategisches Planen
-![[Pasted image 20230522202343.png]]
+![](media/Pasted%20image%2020230522202343.png)
 
-![[Pasted image 20230522202420.png]]
+![](media/Pasted%20image%2020230522202420.png)

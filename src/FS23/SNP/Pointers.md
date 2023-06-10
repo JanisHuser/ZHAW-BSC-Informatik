@@ -166,7 +166,7 @@ char *jagged[] = {
 	"December" };
 
 
-if (jagged[3][2] == ‘r') {
+if (jagged[3][2] == 'r') {
 ...
 }
 // jagged[3] is “April”

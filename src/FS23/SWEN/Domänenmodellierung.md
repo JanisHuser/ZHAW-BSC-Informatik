@@ -2,18 +2,19 @@ Das Domänenmodell dient als Überblick der gesamten Anwendung. Dabei werden die
 
 Die Verbindungen zwischen diesen Blöcken sind beschreibend, also Verben. Das Modell wird als **UML Klassendiagramm in einer vereinfachten Form** gezeichnet.
 
-![[Pasted image 20230602162156.png]]
+![](media/Pasted%20image%2020230602162156.png)
 
 # Beziehungen
 
 ## Komposition
 Ein Objekt kann ohne das andere (Parent) nicht existieren. Wird das Parent gelöscht, so stirbt auch das Kind. Ein Parent kann mehrere Kinder besitzen. (1 -> \*)
 
-![[Pasted image 20230602162417.png]]
+![](media/Pasted%20image%2020230602162417.png)
 
 ## Aggregation
 Es besteht eine **hat** Beziehung. Ein Parent kann mehrere Kinder besitzen (1 -> \*) 
-![[Pasted image 20230602162701.png]]
+
+![](media/Pasted%20image%2020230602162701.png)
 
 ## Generalisierung / Spezialisierung
 Eine Zusammenhang wird genauer definiert. Somit hat ein Typ nur noch die Funktionen, die **NUR** ihm zugeordnet werden können. Die **isA** Regel, sowie die **100%** Regel darf nicht verletzt werden.
@@ -21,7 +22,7 @@ Eine Zusammenhang wird genauer definiert. Somit hat ein Typ nur noch die Funktio
 isA: Ist ein
 100%: Eine Spezialisierung darf nicht etwas anderes können, als die Kasse selber es könnte.
 
-![[Pasted image 20230602162807.png]]
+![](media/Pasted%20image%2020230602162807.png)
 
 # Vorgehen
 Die Vorgehensweise eines Kartografens wird angewendet, also zuerst das Grobe bestimmen / identifizieren und danach mit weiteren Details ausschmücken. Zudem wird unwichtiges weggelassen. Es wird **NUR** vorhandenes hinzugefügt.

@@ -9,18 +9,22 @@ Zeigt Aktiv- und Passivbestände am Schluss bzwh. am Anfang einer Rechnungsperio
 ## Erfolgsrechnung
 Sie zeigt die einer Rechnungs-periode, also in einem **Zeitraum**, entstandenen Aufwendungen und Erträge. Sie gibt dinene Einblick in das betriebliche Geschehen (Leistung) der Unternehmung und zeigt die **Finanzierung des Vermögens**.
 
-![[Pasted image 20230522204950.png]]
+![](media/Pasted%20image%2020230522204950.png)
+
 
 ## Aktiven
-![[Pasted image 20230522205414.png]]
+
+![](media/Pasted%20image%2020230522205414.png)
 
 ## Passiven
-![[Pasted image 20230522205428.png]]
+
+![](media/Pasted%20image%2020230522205428.png)
 
 ## Erfolgsrechnung
-![[Pasted image 20230522205550.png]]
 
-![[Pasted image 20230522205631.png]]
+![](media/Pasted%20image%2020230522205550.png)
 
+![](media/Pasted%20image%2020230522205631.png)
 
-![[Pasted image 20230522205811.png]]
+![](media/Pasted%20image%2020230522205811.png)
+

@@ -123,9 +123,10 @@ Adapter für die Konvertierung von Daten aus Datenbank oder web
 - Wichtige Aspekte: Architektonisch wichtige Ucs, deren nichtfunktionale Anforderungen und deren Implementation
 - **UML: UC-Diagramm, Systemsequenzdiagramme, UC- Realisierungen**
 
-![[Pasted image 20230602171531.png]]
+![](media/Pasted%20image%2020230602171531.png)
 
 
 
 ## Paketdiagramme
-![[Pasted image 20230602170946.png]]
+
+![](media/Pasted%20image%2020230602170946.png)
