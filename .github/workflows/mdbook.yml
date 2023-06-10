@@ -44,7 +44,7 @@ jobs:
           cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install mdbook-katex
           git clone https://github.com/JanisHuser/mdbook-pyscript.git
-          cargo install mdbook-pyscript --path mdbook-pyscript
+          cargo install --path mdbook-pyscript
           mdbook build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
