@@ -43,7 +43,7 @@ jobs:
           rustup update
           cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install mdbook-katex
-          git clone https://github.com/JanisHuser/mdbook-pyscript
+          git clone https://github.com/JanisHuser/mdbook-pyscript.git
           cargo install mdbook-pyscript --path mdbook-pyscript
           mdbook build
       - name: Upload artifact
