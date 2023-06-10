@@ -23,6 +23,15 @@
 	- [Strategie](FS23/WING/Strategie.md)
 	- [Marketing](FS23/WING/Marketing.md)
 
+
+- [HM2]()
+	- [Linearisierung](FS23/HM2/Numerische%20L%C3%B6sung/Linearisierungen.md)
+	- [Partielle Ableitung](FS23/HM2/Numerische%20L%C3%B6sung/Partielle%20Ableitung.md)
+	- [Interpolation](FS23/HM2/Interpolation.md)
+	- [Ausgleichsrechnung](FS23/HM2/Ausgleichsrechnung.md)
+	- [Numerische Integration](FS23/HM2/Numerische%20Integration.md)
+	- [Gewöhnliche Differentialgleichung](FS23/HM2/Gewoehnliche%20Differentialgleichungen.md)
+
 - [SNP](FS23/SNP/Readme.md)
 	- [Grundlagen](FS23/SNP/Grundlagen.md)
 	- [Arrays](FS23/SNP/Arrays.md)

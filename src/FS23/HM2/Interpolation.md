@@ -1,56 +1,38 @@
-# Polynominterpolation
+# Interpolation
+Die Interpolation ist ein Speziialfall der linearen Ausgleichsrechnung, bei dem wir zu einer Menge von vorgegebenen Punkten eine Funktion suchen, die exakt (und nicht nur näherungsweise) durch diese Punkte verläuft.
 
-Gegeben sind n+1 Stützpunkte
 
-| $x$ | $x_0$ | $x_1$ | $x_2$ | ... |  $x_n$ |
-|-|-|-|-|-|-|
-| $y$ | $y_0$ | $y_1$ | $y_2$ | ... |  $y_n$ |
+## Polynominterpolation
 
-$$
-P_n(x) 
-=
-a_0
-+
-a_1 x
-+
-a_2 x^2
-+
-...
-+
-a_nx^n
-$$
+```python
+# Sample data points
+x = [1, 2, 3, 4, 5]
+y = [2, 1, 3, 2, 4]
 
-# Lagrange Interpolationsformel
+# Polynomial interpolation
+n = len(x)
+coefficients = []
 
-$$
-P_n (x_i)
-=
-y_i
-,
-i = 0,1,...,n
-$$
+for k in range(n):
+    numerator = 1
+    denominator = 1
 
-$$
-P_n(x) =
-\sum\limits_{i=0}^n
-l_i(x) y_i
-$$
+    for j in range(n):
+        if j != k:
+            numerator *= (x[k] - x[j])
+            denominator *= (x[k] - x[j])
 
-$$
-l_i(x)
-=
-\prod
-\limits_{j=0}^n
-\frac{
-	x - x_j
-}{
-	x_i - x_j
-}
+    coefficient = y[k] * (numerator / denominator)
+    coefficients.append(coefficient)
 
-(
-	i = 0, 1, ... n
-)
-$$
+# Evaluate the polynomial at a specific point
+x_new = 2.5
+y_new = sum(coefficients[i] * x_new**(n-1-i) for i in range(n))
+
+print("Interpolated value at x =", x_new, "is y =", y_new)
+```
+
+## Lagrange Interpolation
 
 ```python
 x = [8.00, 10.00, 12.00, 14.00]
@@ -75,7 +57,9 @@ for i in range(n+1):
 print (f"Y Wert für x= {xp}: {yp}")
 ```
 
-# Natürliche Kubische Splinefunktion
+
+
+## Splineinterpolation
 
 ```python
 # Function to calculate the cubic spline coefficients
