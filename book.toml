@@ -60,4 +60,4 @@ inline-delimiter = { left = "$", right = "$" }
 
 
 [preprocessor.python]
-command = "/home/mdbook/.cargo/bin/mdbook-python
+command = "mdbook-python"
