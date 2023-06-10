@@ -38,12 +38,10 @@ print("Interpolated value at x =", x_new, "is y =", y_new)
 x = [8.00, 10.00, 12.00, 14.00]
 y = [11.2, 13.4, 15.3, 19.5]
 
-#X für welches y berechnet werden soll  
 xp = 11
 
 m = len(x)
 
-#Grad des Polynoms
 n = m -1
 yp = 0
 
