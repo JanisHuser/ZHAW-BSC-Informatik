@@ -20,7 +20,7 @@ Ein Use Case beschreibt einen einzelnen Prozess des Kontextszenarios. Im Gegensa
 ## Anwendungsfalldiagramm (Use-Case Diagramm)
 Beschreibt, wer (Systeme & Personas) mit den Anwendungsfällen interagiert. Jeder Use Case muss mit einer Nummer eindeutig identifizierbar sein. 
 
-![[Pasted image 20230602161058.png]]
+![](media/Pasted%20image%2020230602161058.png)
 
 ### Spezifikationen
 - Name des Use Cases und Use Case Nummer zwecks eindeutiger Identifizierung

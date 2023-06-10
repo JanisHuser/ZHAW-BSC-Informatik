@@ -140,7 +140,8 @@ int ret = system("/bin/ls -l");
 ```
 
 # POPEN
-![[Pasted image 20230527193800.png]]
+
+![](media/Pasted%20image%2020230527193800.png)
 
 # Threads
 
