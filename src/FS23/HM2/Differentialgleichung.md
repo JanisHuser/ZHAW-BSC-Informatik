@@ -2,59 +2,79 @@
 
 ## Transformation in DGL System 1. Ordnung
 
-1. DGL 2. Ordnung gegeben
+
+1. Die Differentialgleichung nach der höchsten vorkommenden Ableitung der unbekannten Funktion auflösen.
+2. Neue Hilfsfunktionen für die unbekannte Funktion und deren Ableitungen bis Ordnung der höchsten Ableitung minus 1 einführen.
+3. Das System erster Ordnung durch Ersetzen der höheren Ableitung durch die Funktionen aufstellen.
+4. Das entsprechende Anfangswertproblem in vektorieller Form aufschreiben.
 
 $$
-y'' + 2y + x = 0
+Lq'' + Rq' + \frac{1}{C}q = U
 $$
 
-2. Ersatzvariablen einführen
-$ y_1 = y $ und $y_2 = y'$
-
-3. Ersatzvariablen in DGL einsetzen. Somit ist die DGL 2. Ordnung jetzt 1. Ordnung.
+Aus Ableitungen die Funktion nehmen
 
 $$
-y_2' + 2 y_1 + x = 0
+Lq''(t) + Rq'(t) + \frac{1}{C}q(t) = U
 $$
 
-3. In System umbauen
 
 $$
-y_1 = y \to y_2 = y' = y_1'
+\Rightarrow
+Lq''(t) = U - Rq'(t) - \frac{1}{C}q(t)
+\\
+\Rightarrow
+q''(t) = \frac{1}{L} \cdot (U - Rq'(t) - \frac{1}{C}q(t))
 $$
 
-$$
-y_1' = y_2
-$$
 
-4. Umstellen der DGL 1. Ordnung (Schritt 2)
+**Ersatzwerte für Funktionen erstellen**
 
 $$
-y_2 = -2y_1 - x
+z_1(x) = q(t) \;\;\;\;\;\;, z_2(x) = q'(t) \\
+z_1'(x) = q'(t) \;\;\;\;\;\;, z_2'(x) = q''(t) \\
 $$
 
-5. In Matrixschreibweise schreiben
+**Ersatzwerte einsetzen**
 
 $$
+
+q''(t) = \frac{1}{L} \cdot (U - Rq'(t) - \frac{1}{C}q(t))
+\\
+\Rightarrow
+q''(t) 
+= \frac{1}{L} \cdot (U - R \cdot z_2(x) - \frac{1}{C}\cdot z_1(x))
+=
+z_2'(x)
+$$
+
+**Gleichungssystem aufstellen**
+
+$$
+
+z'
+=
 \begin{pmatrix}
-y_1' \\
-y_2'
+z_1'(x) \\
+z_2(x)
 \end{pmatrix}
 =
 \begin{pmatrix}
-0 & 1 \\
--2 & 0
-\end{pmatrix}
-
-\begin{pmatrix}
-y_1 \\
-y_2
-\end{pmatrix}
-+
-
-\begin{pmatrix}
-0 \\
--x
+z_2(x) \\
+\frac{1}{L} \cdot (U - R \cdot z_2(x) - \frac{1}{C}\cdot z_1(x))
 \end{pmatrix}
 $$
 
+
+**Wenn Anfangswert gegeben:**
+
+mit
+
+$$
+z(0)
+=
+\begin{pmatrix}
+\sigma \\
+\sigma
+\end{pmatrix}
+$$
