@@ -30,6 +30,7 @@
 	- [Interpolation](FS23/HM2/Interpolation.md)
 	- [Ausgleichsrechnung](FS23/HM2/Ausgleichsrechnung.md)
 	- [Numerische Integration](FS23/HM2/Numerische%20Integration.md)
+	- [Differentialgleichungen](FS23/HM2/Differentialgleichung.md)
 	- [Gewöhnliche Differentialgleichung](FS23/HM2/Gewoehnliche%20Differentialgleichungen.md)
 	- [Chat GPT Zusammenfassung](FS23/HM2/ChatGPTExport.md)
 
