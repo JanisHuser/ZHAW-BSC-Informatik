@@ -6,7 +6,6 @@ ChatGPT:
 - Polynomial interpolation in Python can be done using the NumPy library. Here's a simple example:
 
 ```python
-
 import numpy as np
 
 # Sample data points
@@ -39,7 +38,6 @@ ChatGPT:
 - If you don't want to use NumPy, you can still perform polynomial interpolation in Python using the `polyfit` function from the `numpy.polynomial` module. Here's an example:
 
 ```python
-
 from numpy.polynomial import Polynomial
 
 # Sample data points
@@ -83,7 +81,6 @@ ChatGPT:
 - Wenn Sie die polynomiale Interpolation manuell in Python ohne die Verwendung von NumPy durchführen möchten, können Sie dies mit den grundlegenden Funktionen und Listen in Python erreichen. Hier ist ein Beispiel:
 
 ```python
-
 # Sample data points
 x = [1, 2, 3, 4, 5]
 y = [2, 1, 3, 2, 4]
@@ -126,7 +123,6 @@ ChatGPT:
 - Wenn Sie das lineare Ausgleichsproblem in Python ohne die Verwendung externer Bibliotheken lösen möchten, können Sie die Methode der kleinsten Quadrate implementieren. Hier ist ein Beispiel:
 
 ```python
-
 # Sample data points
 x = [1, 2, 3, 4, 5]
 y = [2, 1, 3, 2, 4]
@@ -163,7 +159,6 @@ ChatGPT:
 - Die Rechteckregel ist eine einfache numerische Methode zur Approximation von Integralen. Hier ist ein Beispiel für die Implementierung der Rechteckregel in Python:
 
 ```python
-
 def rectangle_rule(f, a, b, n):
     """
     Approximates the integral of a function using the rectangle rule.
@@ -197,7 +192,6 @@ Die Funktion berechnet die Breite jedes Rechtecks als `(b - a) / n`. Dann wird d
 Hier ist ein Beispiel, wie Sie die `rectangle_rule`-Funktion verwenden können:
 
 ```python
-
 # Example usage
 def f(x):
     return x**2  # Function to integrate
@@ -221,7 +215,6 @@ ChatGPT:
 - Die Trapezregel ist eine weitere numerische Methode zur Approximation von Integralen. Hier ist ein Beispiel für die Implementierung der Trapezregel in Python:
 
 ```python
-
 def trapezoidal_rule(f, a, b, n):
     """
     Approximates the integral of a function using the trapezoidal rule.
@@ -256,7 +249,6 @@ Die Funktion teilt das Intervall in `n` Abschnitte mit einer Breite von `width =
 Hier ist ein Beispiel, wie Sie die `trapezoidal_rule`-Funktion verwenden können:
 
 ```python
-
 # Example usage
 def f(x):
     return x**2  # Function to integrate
@@ -280,7 +272,6 @@ ChatGPT:
 - Die Simpson-Regel ist eine weitere numerische Methode zur Approximation von Integralen. Hier ist ein Beispiel für die Implementierung der Simpson-Regel in Python ohne Verwendung externer Bibliotheken:
 
 ```python
-
 def simpson_rule(f, a, b, n):
     """
     Approximates the integral of a function using Simpson's rule.
@@ -317,7 +308,6 @@ Die Funktion verwendet eine Schleife, um das Intervall in `n` Abschnitte zu unte
 Hier ist ein Beispiel, wie Sie die `simpson_rule`-Funktion verwenden können:
 
 ```python
-
 # Beispielverwendung
 def f(x):
     return x**2  # Funktion, die integriert werden soll
@@ -341,7 +331,6 @@ ChatGPT:
 - Die summierte Simpson-Regel (auch bekannt als zusammengesetzte Simpson-Regel) erweitert die Grundidee der Simpson-Regel auf mehrere Teilintervalle, um eine genauere Approximation des Integrals zu erhalten. Hier ist ein Beispiel für die Implementierung der summierten Simpson-Regel in Python ohne Verwendung externer Bibliotheken:
 
 ```python
-
 def composite_simpson_rule(f, a, b, n):
     """
     Approximates the integral of a function using the composite Simpson's rule.
@@ -377,7 +366,6 @@ Die Summe der Funktionswerte wird anschließend mit `h / 3` multipliziert, um di
 Hier ist ein Beispiel, wie Sie die `composite_simpson_rule`-Funktion verwenden können:
 
 ```python
-
 # Beispielverwendung
 def f(x):
     return x**2  # Funktion, die integriert werden soll
@@ -411,7 +399,6 @@ Es ist jedoch wichtig zu beachten, dass die genaue Berechnung des Fehlers oft sc
 Hier ist ein Beispiel, wie Sie den Fehler der summierten Quadraturformel für die summierte Simpson-Regel in Python berechnen können:
 
 ```python
-
 def composite_simpson_error(f, a, b, n):
     """
     Estimates the error of the composite Simpson's rule.
@@ -460,7 +447,6 @@ ChatGPT:
 Hier ist ein Beispiel für die Implementierung der Romberg-Extrapolation in Python:
 
 ```python
-
 def romberg_integration(f, a, b, n):
     """
     Approximates the integral of a function using Romberg integration.
@@ -501,7 +487,6 @@ Diese Implementierung verwendet eine Matrix `r`, um die approximierten Werte wä
 Hier ist ein Beispiel, wie Sie die `romberg_integration`-Funktion verwenden können:
 
 ```python
-
 # Beispielverwendung
 def f(x):
     return x**2  # Funktion, die integriert werden soll
@@ -532,7 +517,6 @@ ChatGPT:
 Hier ist ein Beispielcode in Python, der ein Richtungsfeld für die Differentialgleichung dydx=x+y\frac{dy}{dx} = x + ydxdy​=x+y erstellt:
 
 ```python
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -567,7 +551,6 @@ ChatGPT:
 - Um eine Lösungskurve in das Richtungsfeld einzufügen, können wir die Differentialgleichung numerisch mit einem geeigneten Verfahren lösen. Ein einfaches numerisches Verfahren ist das Euler-Verfahren. Hier ist der aktualisierte Code, der das Richtungsfeld mit der Lösungskurve für die Anfangsbedingung y(0)=3y(0) = 3y(0)=3 zeigt:
 
 ```python
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -625,7 +608,6 @@ ChatGPT:
 - Entschuldigung für das Missverständnis. Hier ist der Code, der das Euler-Verfahren zur Lösung der Differentialgleichung verwendet und die Lösungskurve in das Richtungsfeld einfügt:
 
 ```python
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -683,7 +665,6 @@ ChatGPT:
 - Das Runge-Kutta-Verfahren ist eine beliebte Methode zur numerischen Lösung von gewöhnlichen Differentialgleichungen. Es verwendet eine Kombination von Funktionsauswertungen an verschiedenen Punkten, um die Genauigkeit der Approximation zu verbessern. Hier ist eine Implementierung des klassischen Runge-Kutta-Verfahrens (auch bekannt als RK4) in Python:
 
 ```python
-
 def runge_kutta(f, x0, y0, h, num_steps):
     x = [x0]
     y = [y0]
@@ -707,7 +688,6 @@ Diese Funktion `runge_kutta` nimmt die Differentialgleichung `f`, den Anfangswer
 Hier ist ein Beispiel, wie du das Runge-Kutta-Verfahren verwenden kannst:
 
 ```python
-
 def dy_dx(x, y):
     return x + y
 
@@ -742,7 +722,6 @@ ChatGPT:
 Für das Runge-Kutta-Verfahren (RK4) kann die Stabilitätsfunktion als Polynom dargestellt werden. Hier ist eine Implementierung der Stabilitätsfunktion für das RK4-Verfahren in Python:
 
 ```python
-
 import numpy as np
 import matplotlib.pyplot as plt
 
