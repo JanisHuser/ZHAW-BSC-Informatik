@@ -32,6 +32,7 @@
 	- [Numerische Integration](FS23/HM2/Numerische%20Integration.md)
 	- [Differentialgleichungen](FS23/HM2/Differentialgleichung.md)
 	- [Gewöhnliche Differentialgleichung](FS23/HM2/Gewoehnliche%20Differentialgleichungen.md)
+	- [Mittelpunktverfahren](FS23/HM2/Mittelpunktverfahren.md)
 	- [Chat GPT Zusammenfassung](FS23/HM2/ChatGPTExport.md)
 
 - [SNP](FS23/SNP/Readme.md)
