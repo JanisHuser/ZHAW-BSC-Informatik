@@ -61,3 +61,7 @@ inline-delimiter = { left = "$", right = "$" }
 
 [preprocessor.python]
 command = "mdbook-python"
+
+[output.html.print]
+enable = true    # include support for printable output
+page-break = false # insert page-break after each chapter
