@@ -50,3 +50,9 @@
 	- [Multithreading](FS23/SNP/Multithreading%20und%20so%20weiter.md)
 	- [IPC](FS23/SNP/IPC%20-%20Inter%20Process%20Communication.md)
 	- [Sync](FS23/SNP/Sync.md)
+
+- [SWEN1](FS23/SWEN1/Readme.md)
+	- [Anforderungsanalyse](FS23/SWEN1/Anforderungsanalye.md)
+	- [Dömänenmodell](FS23/SWEN1/Dom%C3%A4nenmodellierung.md)
+	- [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
+	- [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
