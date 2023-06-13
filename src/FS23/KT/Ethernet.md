@@ -77,6 +77,6 @@ Vom grössten Netz zum kleinsten.
 - FLP: Autonegotiation, Autopolarity
 
 
-<img src="media/EthernetFrame.png" width="300" />
+<img src="media/EthernetFrame.png" width="600" />
 
 ## Codierungen
