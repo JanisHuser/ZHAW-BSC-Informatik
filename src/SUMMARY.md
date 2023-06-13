@@ -5,6 +5,7 @@
 - [KT](FS23/KT/Readme.md)
 	- [Formeln](FS23/KT/Formeln.md)
 	- [OSI Schichten](FS23/KT/OSI%20Referenzmodell.md)
+	- [Serielle Schnittstelle](FS23/KT/SerielleSchnittstelle.md)
 	- [Übertragungsmedien](FS23/KT/Uebertragungsmedien.md)
 	- [Layers]()
 		- [Application Layer](FS23/KT/Layers/Application%20Layer.md)

@@ -17,6 +17,8 @@
 | Bandbreite | $B$ | $\frac{bits}{s}$ | |
 | max. Symbolrate | $f_s$ | Hz | $2B$ |
 
+## Log Umwandeln
 
+$2^x = 8$ => $x = \log_2 8$
 
 

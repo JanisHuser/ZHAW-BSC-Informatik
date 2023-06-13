@@ -6,6 +6,7 @@
 
 
 | Beschreibung | Domain |
+|-|-|
 | Fully Qualified Fomain Name | bob.sw.eng. |
 | Root | . |
 | TLD (Top Level Domain) | eng |

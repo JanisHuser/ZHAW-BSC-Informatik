@@ -44,6 +44,9 @@ Es werden jeweils zwei Adressen für benötigt:
 
 **Anzahl nutzbare Adressen**: $ 2^(32-CIDR) - 2 $
 
+### Subnetze aufteilen
+Die Subnetzmaske darf sich von der kleinsten zur grössten nicht ändern. Also von klein nach gross. 
+
 ## VLAN
 
 Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Port am Switch kann einem beliebigen VLAN zugeordnet werden.
@@ -61,6 +64,9 @@ Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Po
 2. Direkt angeschlossene Bridges bestätigen
 3. Weitere Verbindungen abhängig von Kosten und Bridge-Identifier eintragen
 
+## Routing
+Vom grössten Netz zum kleinsten.
+
 ## Ethernet Systeme
 
 **Autonegotiation**: Ermittlung der besten Betriebsart durch Austausch derLeistungsmerkmale zweier Netzwerkkomponenten
@@ -72,3 +78,5 @@ Erlaubt es ein grosses Netz in unabhängige logische Netze aufzuteilen. Jeder Po
 
 
 <img src="media/EthernetFrame.png" width="300" />
+
+## Codierungen
