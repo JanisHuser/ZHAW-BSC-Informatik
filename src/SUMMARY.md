@@ -7,7 +7,7 @@
 	- [OSI Schichten](FS23/KT/OSI%20Referenzmodell.md)
 	- [Serielle Schnittstelle](FS23/KT/SerielleSchnittstelle.md)
 	- [Übertragungsmedien](FS23/KT/Uebertragungsmedien.md)
-	- [Layers]()
+	- [Layers](FS23/KT/Layers/Readme.md)
 		- [Application Layer](FS23/KT/Layers/Application%20Layer.md)
 		- [Transport Layer](FS23/KT/Layers/Transport%20Layer.md)
 		- [Network Layer](FS23/KT/Layers/Network%20Layer.md)
@@ -52,7 +52,7 @@
 	- [IPC](FS23/SNP/IPC%20-%20Inter%20Process%20Communication.md)
 	- [Sync](FS23/SNP/Sync.md)
 
-- [SWEN1](FS23/SWEN1/Readme.md)
+- [SWEN1](FS23/SWEN1/Readme.md)
 	- [Anforderungsanalyse](FS23/SWEN1/Anforderungsanalye.md)
 	- [Dömänenmodell](FS23/SWEN1/Dom%C3%A4nenmodellierung.md)
 	- [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
