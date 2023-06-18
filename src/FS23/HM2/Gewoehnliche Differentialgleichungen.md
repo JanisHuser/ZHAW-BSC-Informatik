@@ -122,34 +122,75 @@ plt.show()
 ```python
 
 import numpy as np
+import matplotlib.pyplot as plt
 
-def runge_kutta_vector(f, y0, t0, tn, h):
-    num_steps = int((tn - t0) / h)
-    t = np.linspace(t0, tn, num_steps + 1)
-    y = np.zeros((num_steps + 1, len(y0)))
-    y[0] = y0
 
-    for i in range(num_steps):
-        k1 = h * f(t[i], y[i])
-        k2 = h * f(t[i] + h/2, y[i] + k1/2)
-        k3 = h * f(t[i] + h/2, y[i] + k2/2)
-        k4 = h * f(t[i] + h, y[i] + k3)
-        y[i + 1] = y[i] + (k1 + 2*k2 + 2*k3 + k4) / 6
+def rk4_vektor(f, a, b, y0, h):
+    x = np.arange(a, b + h, h)
+    y = np.zeros((y0.size, x.size))
+    n = x.size
+    # AB
+    y[:, 0] = y0
 
-    return t, y
+    for i in range(0, n-1):
+        k1 = f(x[i], y[:, i])
+        k2 = f(x[i] + h / 2, y[:, i] + h / 2 * k1)
+        k3 = f(x[i] + h / 2, y[:, i] + h / 2 * k2)
+        k4 = f(x[i] + h, y[:, i] + h * k3)
+        y[:, i + 1] = y[:, i] + h/6 * (k1 + 2*k2 + 2*k3 + k4)
 
-# Example usage
-def f(t, y):
-    return np.array([y[1], -y[0]])
+    return x, y
 
-t0 = 0
-tn = 1
+
+def fh(t, z):
+    u = (300000.0 - 80000.0) / 190.0
+    vrel = 2600.0
+    ma = 300000.0
+    g = 9.81
+    z1 = z[0]
+    z2 = z[1]
+    return np.array([z2, vrel*(u/(ma - u * t)) - g - (np.exp(-z1/8000.0)/(ma - u * t)) * z2**2])
+
+
+# Tstart
+a = 0.
+
+# Tende
+b = 190.0
+
 h = 0.1
-y0 = np.array([0, 1])
 
-t, y = runge_kutta_vector(f, y0, t0, tn, h)
-print("t:", t)
-print("y:", y)
+# h(0) = h'(0) = 0
+y0 = np.array([0.0, 0.0])
+
+# z[0] = z1 = h(t); z[1] = z2 = v(t)
+x, z = rk4_vektor(fh, a, b, y0, h)
+
+
+def z3(t, z):
+    u = (300000.0 - 80000.0) / 190.0
+    vrel = 2600.0
+    ma = 300000.0
+    g = 9.81
+    z1 = z[0]
+    z2 = z[1]
+    return vrel*(u/(ma - u * t)) - g - (np.exp(-z1/8000.0)/(ma - u * t)) * z2**2
+
+
+plt.plot(x, z[0, :], label="h(t)")
+plt.title("h(t)")
+plt.grid()
+plt.figure()
+plt.plot(x, z[1, :], label="v(t)")
+plt.title("v(t)")
+plt.grid()
+plt.figure()
+plt.plot(x, z3(x, z), label="a(t)")
+plt.title("a(t)")
+plt.grid()
+
+plt.show()
+
 ```
 
 
