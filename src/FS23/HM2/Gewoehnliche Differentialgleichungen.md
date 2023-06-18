@@ -81,6 +81,7 @@ plt.show()
 ## Runge Kutta Verfahren
 
 ```python
+
 def runge_kutta(f, x0, y0, h, num_steps):
     x = [x0]
     y = [y0]
@@ -113,6 +114,42 @@ plt.title('Lösungskurve der Differentialgleichung dy/dx = x + y mit dem Runge-K
 plt.grid(True)
 plt.legend()
 plt.show()
+```
+
+
+### Runge Kutta in Vektorieller Form
+
+```python
+
+import numpy as np
+
+def runge_kutta_vector(f, y0, t0, tn, h):
+    num_steps = int((tn - t0) / h)
+    t = np.linspace(t0, tn, num_steps + 1)
+    y = np.zeros((num_steps + 1, len(y0)))
+    y[0] = y0
+
+    for i in range(num_steps):
+        k1 = h * f(t[i], y[i])
+        k2 = h * f(t[i] + h/2, y[i] + k1/2)
+        k3 = h * f(t[i] + h/2, y[i] + k2/2)
+        k4 = h * f(t[i] + h, y[i] + k3)
+        y[i + 1] = y[i] + (k1 + 2*k2 + 2*k3 + k4) / 6
+
+    return t, y
+
+# Example usage
+def f(t, y):
+    return np.array([y[1], -y[0]])
+
+t0 = 0
+tn = 1
+h = 0.1
+y0 = np.array([0, 1])
+
+t, y = runge_kutta_vector(f, y0, t0, tn, h)
+print("t:", t)
+print("y:", y)
 ```
 
 
