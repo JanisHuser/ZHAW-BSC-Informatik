@@ -30,8 +30,8 @@
 
 
 - [HM2](FS23/HM2/Readme.md)
-	- [Linearisierung](FS23/HM2/Numerische%20L%C3%B6sung/Linearisierungen.md)
-	- [Partielle Ableitung](FS23/HM2/Numerische%20L%C3%B6sung/Partielle%20Ableitung.md)
+	- [Linearisierung](FS23/HM2/Numerische%20Loesung/Linearisierungen.md)
+	- [Partielle Ableitung](FS23/HM2/Numerische%20Loesung/Partielle%20Ableitung.md)
 	- [Interpolation](FS23/HM2/Interpolation.md)
 	- [Ausgleichsrechnung](FS23/HM2/Ausgleichsrechnung.md)
 	- [Numerische Integration](FS23/HM2/Numerische%20Integration.md)
