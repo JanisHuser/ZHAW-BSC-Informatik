@@ -57,3 +57,4 @@
 	- [Dömänenmodell](FS23/SWEN1/Dom%C3%A4nenmodellierung.md)
 	- [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
 	- [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
+	- [GRASP](FS23/SWEN1/Grasp.md)
