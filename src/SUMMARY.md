@@ -54,7 +54,7 @@
 
 - [SWEN1](FS23/SWEN1/Readme.md)
 	- [Anforderungsanalyse](FS23/SWEN1/Anforderungsanalye.md)
-	- [Dömänenmodell](FS23/SWEN1/Dom%C3%A4nenmodellierung.md)
+	- [Dömänenmodell](FS23/SWEN1/Domaenenmodellierung.md)
 	- [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
 	- [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
 	- [GRASP](FS23/SWEN1/Grasp.md)
