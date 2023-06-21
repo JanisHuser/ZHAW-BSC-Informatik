@@ -30,19 +30,49 @@ Ein Controller koordiniert / empfängt als erstes Objekte jenseits der UI-Schich
 **Controller macht selber nur wenig und delegiert fast alles**
 
 
-**LE06**
-
-
 ## Low Coupling
+
+Kopplung = Mass für die Abhängigkeit von anderen Elementen.
+
+- Hohe Kopplung: Element ist von vielen anderen Elementen abhängig
+- Niedrige Kopplung: Element ist nur von wenigen anderen Elementen abhängig
+
+Der Aufruf der Funktionen sollte in einer Linie geschehen. 
 
 
 ## High Cohesion
 
+Mass für die Verwandtschat und Fokussierung eines Elements.
+
+- Hohe Kohäsion: Element erledigt nur wenige Aufgaben, die **eng** miteinander verwandt sind.
+- Geringe Kohäsion: Element das für viele unzusammenhängende Dinge verantwortlich ist.
+
+
+Wie bei Low Coupling, sollten die Aufgaben gebündelt werden. 
 
 ## Polymorphism
 
+Polymorphism ist das bündeln von typengleichen oder ähnlichen Verhalten.
+
+**Tier**
+
+Ein Hund ist auch ein Tier
+
 ## Pure Fabrication
+
+
+Künstliche Hilfsklassen erzeugen um dem Domänenmodell gleich zu sein. Wird nur verwendet, um eine bessere Wiederverwendbarkeit zu realisieren.
 
 ## Indirection
 
+Direkte Kopplung zwischen zwei oder mehreren Objekten vermeiden.
+
+-> Vermittler 
+
 ## Protected Variants
+
+Veränderungen im Objekt sollen **keinen** Einfluss auf andere Elemente haben.
+
+-> Interfaces einführen
+
+- Spekulationen sind zu vermeiden, da dies zu unnötiger Komplexität führt.
