@@ -61,7 +61,7 @@
     - [HERE]()
         - [Auslosetool](FS23/SWEN1/Uebungsaufgaben/AusloseTool/Readme.md)
         - [Swift4Restaurant](FS23/SWEN1/Uebungsaufgaben/Swift4Restaurants/Readme.md)
-        - [Diskussionsforum](FS23/SWEN1/Uebungsaufgaben/Diskussionsforum/Readme.md)
+        - [Diskussionsforum](FS23/SWEN1/Uebungsaufgaben/Forum/Readme.md)
         - [Lampentool](FS23/SWEN1/Uebungsaufgaben/Lampentool/Readme.md)
 	- [GRASP](FS23/SWEN1/Grasp.md)
 

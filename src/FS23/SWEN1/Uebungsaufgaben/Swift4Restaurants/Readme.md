@@ -6,10 +6,10 @@
 
 ## Stakeholder Map
 
-![](Swift4Restaurants/stakeholder_map.png)
+![](stakeholder_map.png)
 
 ## Domänenmodell
 
-![](Swift4Restaurants/domain_modell.png)
+![](domain_modell.png)
 
 Jede Servierperson besitzt ein Mobilgerät, auf dem sie Ihre Bestellungen erfasst. Die Menus werden direkt auf das Display in der Küche geschickt, die sie zubereitet. Die Getränkebestellungen werden auf dem Zentralcomputer an der Theke angezeigt. Eine Servierperson kann eine laufende Bestellung von einer anderen Servierperson übernehmen, indem sie einfach die entsprechende Tischnummer eingibt auf dem Mobilgerät.
