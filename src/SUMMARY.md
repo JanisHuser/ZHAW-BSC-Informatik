@@ -58,7 +58,7 @@
     - [Dömänenmodell](FS23/SWEN1/Domaenenmodellierung.md)
     - [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
     - [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
-    - [Uebungsaufgaben]()
+    - [HERE](FS23/SWEN1/Design%20Patterns.md)
         - [Auslosetool](FS23/SWEN1/Uebungsaufgaben/AusloseTool.md)
         - [Swift4Restaurant](FS23/SWEN1/Uebungsaufgaben/Swift4Restaurants.md)
         - [Diskussionsforum](FS23/SWEN1/Uebungsaufgaben/Diskussionsforum.md)
