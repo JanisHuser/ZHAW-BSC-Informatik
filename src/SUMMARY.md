@@ -58,10 +58,10 @@
     - [Dömänenmodell](FS23/SWEN1/Domaenenmodellierung.md)
     - [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
     - [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
-    - [GRASP](FS23/SWEN1/Grasp.md)
-    - [Uebungsaufgaben](FS23/SWEN1/Grasp.md)
+    - [Uebungsaufgaben]()
         - [Auslosetool](FS23/SWEN1/Uebungsaufgaben/AusloseTool.md)
         - [Swift4Restaurant](FS23/SWEN1/Uebungsaufgaben/Swift4Restaurants.md)
         - [Diskussionsforum](FS23/SWEN1/Uebungsaufgaben/Diskussionsforum.md)
+	- [GRASP](FS23/SWEN1/Grasp.md)
 
 -----------
