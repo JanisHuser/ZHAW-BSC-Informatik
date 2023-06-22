@@ -2,7 +2,7 @@
 
 ## Design-Klassendiagram (DCD)
 
-![Alt text](image.png)
+![Alt text](Design_diagramm.png)
 
 ## Use Cases
 
@@ -26,7 +26,7 @@
 
 Gibt die Anzahl Diskussionsbeitrage "Klasse Contribution" im gesamten Forum zurück.
 
-![](Forum/getNbrOfContributions.png)
+![](getNbrOfContributions.png)
 
 - Die Systemoperation zur Berechnung der Anzahl Beiträge "Contributions" wird so realisiert, dass über alle Stufen der Zugehörigkeithierarchie "containment hierarch" iteriert wird und die jeweiligen Zwischenresultate aufsummiert werden.
 - Alle oben aufgeführten Methoden müssen zusätzlich im DCD eingetragen werden. Beachten Sie die herarchische Nummerierung. Bezüglich Low Coupling .wird auf die Diskussion von getTotal() der Fallstudie verwiesen.
@@ -43,7 +43,7 @@ Gibt die Anzahl Diskussionsbeitrage "Klasse Contribution" im gesamten Forum zur�
 
 Es muss überprüft werden, ob so eine Diskussion bereits existiert und in diesem Fall muss eine Exception geworfen werden.
 
-![](Forum/addNewDiscussion.png)
+![](addNewDiscussion.png)
 
 - Vom Fassaden-Controller aus wird zuerst das Access-Token validiert. Dann wird das richti- ge Thema («Topic») gewählt. Auf dem Topic wird die Diskussion («Discussion») erzeugt. Die Diskussion muss dann noch mit dem Topic verknüpft werden.
 - Die Authentifizierung ist gemäss Aufgabenstellung ein Variationspunkt. Darum wird für die Validierung des Access-Tokens ein Interface «AccessTokenValidatorService» mit der Me- thode «isValidToken()» erstellt (analog für die Authentifzierung gemäss I in SOLID Interface Segregation). Zur Laufzeit kann dann eine konkrete Instanz eines AccessTokenValidator- Service dem Forum injiziert werden (Konstruktor).
@@ -51,3 +51,10 @@ Es muss überprüft werden, ob so eine Diskussion bereits existiert und in diese
 - Alle oben aufgeführten Methoden müssen zusätzlich im DCD eingetragen werden (s. DCD auf der nächsten Seite). Die Zugriffe auf die Container Klassen wurden nicht explizit model- liert, dafür aber entsprechende Methoden auf der jeweiligen Domänenklasse angelegt (getXyzForName(...)). Diese können auch dafür verwendet werden, eine Exception zu wer- fen, wenn das Domänenobjekt mit dem gesuchten Namen nicht vorhanden ist. Werden die- se Tests explizit eingezeichnet, kann dies leicht zu einem unübersichtlichen Diagramm führen.
 - Die Implementation folgt exakt den Diagrammen. Für die Erzeugung der aktuellen «Instant» wurde auf die abstrakte Klasse «java.time.Clock» zurückgegriffen. Man kann eine Variante davon erzeugen, die wirklich die aktuelle Systemzeit mit der eingestellten Zeitzone reprä- sentiert. Es gibt aber auch eine Variante, die immer dieselbe Zeit liefert. Diese ist primär für Testfälle gedacht. Die Erzeugung der aktuellen «Instant» wird der Controller Klasse zuge- ordnet, da dadurch nur eine Instanz von Clock notwendig ist, die bei der Instanziierung dem Controller «Forum» übergeben wird.
 
+## Erkennen von unangemessener Sprache
+
+![Alt text](unangemessener_sprache.png)
+
+![Alt text](unangemessener_sprache_2.png)
+
+![Alt text](unangemessener_sprache_3.png)

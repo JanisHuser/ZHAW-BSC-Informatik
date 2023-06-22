@@ -26,4 +26,4 @@
 
 ## Logische Architektur
 
-![](AusloseTool/Paket_diagram.png)
+![](Paket_diagram.png)
