@@ -58,7 +58,7 @@
 	- [Dömänenmodell](FS23/SWEN1/Domaenenmodellierung.md)
 	- [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
 	- [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
-	- [Encoding]()
+	- [Uebungsaufgaben]()
 		- [Auslosetool](FS23/SWEN1/Uebungsaufgaben/AusloseTool/Readme.md)
 		- [Swift4Restaurant](FS23/SWEN1/Uebungsaufgaben/Swift4Restaurants/Readme.md)
 		- [Diskussionsforum](FS23/SWEN1/Uebungsaufgaben/Forum/Readme.md)
