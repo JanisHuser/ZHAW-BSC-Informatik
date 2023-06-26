@@ -31,27 +31,31 @@ FILE *f = fopen("Pfad", "mode");
 #include <stdio.h>
 #include <stdlib.h>
 
-char * line = NULL;
-size_t len = 0;
-ssize_t read;
-FILE *f = fopen("Pfad", "r");
-
-if (f == NULL) { // das gleiche wie if (!f)
-	perror("Datei konnte nicht geöffnet werden!");
-	exit(-1);
-}
-
-while ((read = getline(&line, &len, f)) != -1) {
-	printf("Retrieved line of length %zu:\n", read);
-	printf("%s", line);
-}
-
-// Datei wieder schliessen
-fclose(f);
-
-if (line)
+int main(void)
 {
-	free (line);
+	char * line = NULL;
+	size_t len = 0;
+	ssize_t read;
+	FILE *f = fopen("Pfad", "r");
+	
+	if (f == NULL) { // das gleiche wie if (!f)
+		perror("Datei konnte nicht geöffnet werden!");
+		exit(-1);
+	}
+	
+	while ((read = getline(&line, &len, f)) != -1) {
+		printf("Retrieved line of length %zu:\n", read);
+		printf("%s", line);
+	}
+	
+	// Datei wieder schliessen
+	fclose(f);
+	
+	if (line)
+	{
+		free (line);
+	}
+	return EXIT_SUCCESS;
 }
 
 ```
@@ -62,27 +66,28 @@ if (line)
 #include <stdio.h>
 #include <stdlib.h>
 
-char * line = NULL;
-size_t len = 0;
-ssize_t read;
-FILE *f = fopen("Pfad", "w");
 
-if (f == NULL) { // das gleiche wie if (!f)
-	perror("Datei konnte nicht geöffnet werden!");
-	exit(-1);
-}
-
-fprintf(f, "format\n", arg1);
-
-
-// Datei wieder schliessen
-fclose(f);
-
-if (line)
+int main(void)
 {
-	free (line);
-}
+	char * line = NULL;
+	size_t len = 0;
+	ssize_t read;
+	FILE *f = fopen("Pfad", "w");
+	
+	if (f == NULL) { // das gleiche wie if (!f)
+		perror("Datei konnte nicht geöffnet werden!");
+		exit(-1);
+	}
+	// Datei wieder schliessen
+	fclose(f);
+	
+	if (line)
+	{
+		free (line);
+	}
+	return EXIT_SUCCESS;
 
+}
 ```
 
 
@@ -92,26 +97,25 @@ if (line)
 #include <stdio.h>
 #include <stdlib.h>
 
-char * line = NULL;
-size_t len = 0;
-ssize_t read;
-FILE *f = fopen("Pfad", "a
-				");
-
-if (f == NULL) { // das gleiche wie if (!f)
-	perror("Datei konnte nicht geöffnet werden!");
-	exit(-1);
-}
-
-fprintf(f, "format\n", arg1);
-
-
-// Datei wieder schliessen
-fclose(f);
-
-if (line)
-{
-	free (line);
+int main(void)
+{	
+	char * line = NULL;
+	size_t len = 0;
+	ssize_t read;
+	FILE *f = fopen("Pfad", "a");
+	
+	if (f == NULL) { // das gleiche wie if (!f)
+		perror("Datei konnte nicht geöffnet werden!");
+		exit(-1);
+	}
+	// Datei wieder schliessen
+	fclose(f);
+	
+	if (line)
+	{
+		free (line);
+	}
+ 	return EXIT_SUCCESS;
 }
 
 ```
