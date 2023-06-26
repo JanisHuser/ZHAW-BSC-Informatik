@@ -16,12 +16,12 @@
 
 ```c
 #include <stdio.h>    //printf
-#include <stdlih.h>
+#include <stdlib.h>
 
 int main (void)
 {
 	printf("Hello world in C\n"); // Newline ist wichtig
-	return EXIT_STATUS;
+	return EXIT_SUCCESS;
 }
 ```
 
