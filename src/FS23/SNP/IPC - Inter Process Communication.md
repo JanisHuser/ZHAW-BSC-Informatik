@@ -46,76 +46,78 @@ if (status != 0)
 
 static pid_t start_child(int wait_for_signal)
 {
-	pid_t cpid = fork();
-	if (cpid == -1)
-	{
-		perror ("Fehler beim fork");
-		exit(EXIT_FAILURE);
-	}
+    pid_t cpid = fork();
+    if (cpid == -1)
+    {
+        perror ("Fehler beim fork");
+        exit(EXIT_FAILURE);
+    }
 
-	if (cpid > 0)
-	{
-		// Der Parent gibt die child id zurück
-		// child hat cpid von 0
-		return cpid;
-	}
+    if (cpid > 0)
+    {
+        // Der Parent gibt die child id zurück
+        // child hat cpid von 0
+        return cpid;
+    }
 
-	// Nur der Child Prozess kommt soweit
-	if (wait_for_signal)
-	{
-		// Nur der child 2 kommt soweit
-		if (pause() == -1)
-		{
-			perror("Fehler bei pause()");
-			exit(EXIT_FAILURE);
-		}
-	}
-	
+    // Nur der Child Prozess kommt soweit
+    if (wait_for_signal)
+    {
+        // Nur der child 2 kommt soweit
+        if (pause() == -1)
+        {
+            perror("Fehler bei pause()");
+            exit(EXIT_FAILURE);
+        }
+    }
+    
 
-	exit (123);
+    exit (123);
 }
 
 static void wait_for_child()
 {
-	int wsts;
+    int wsts;
 
-	// bllockiere bis ein Child Prozess beendet ist
-	pid_t = wait(&wsts);
+    // bllockiere bis ein Child Prozess beendet ist
+    pid_t wpid = wait(&wsts);
 
-	if (wpid == -1)
-	{
-		perror("Fehler in wait");
-		exit(EXIT_FAILURE);
-	}
+    if (wpid == -1)
+    {
+        perror("Fehler in wait");
+        exit(EXIT_FAILURE);
+    }
 
-	if (WIFEXITED(wsts))
-	{
-		printf("Child %d: exit=%d (status=0x%04X)\n", wpid, WEXITSTATUS(wsts), wsts); 
-	}
+    if (WIFEXITED(wsts))
+    {
+        printf("Child %d: exit=%d (status=0x%04X)\n", wpid, WEXITSTATUS(wsts), wsts); 
+    }
 
-	if (WIFSIGNALED(wsts))
-	{
-		printf("Child %d: signal=%d (status=0x%04X)\n", wpid, WTERMSIG(wsts), wsts);
-	}
+    if (WIFSIGNALED(wsts))
+    {
+        printf("Child %d: signal=%d (status=0x%04X)\n", wpid, WTERMSIG(wsts), wsts);
+    }
 }
 
 int main()
 {
-	pid_t cpid1 = start_child(0); // beendet mit exit code
-	pid_t cpid2 = start_chld(1); // beendet mit signal
+    pid_t cpid1 = start_child(0); // beendet mit exit code
+    pid_t cpid2 = start_child(1); // beendet mit signal
 
-	sleep(1);
+    sleep(1);
 
-	// sag dem Prozess2 dass er sich beenden soll
-	if (kill(cpid2, SIGTERM) == -1)
-	{
-		perror("Prozess 2 konnte nicht beendet werden");
-		exit(EXIT_FAILURE);
-	}
+    // sag dem Prozess2 dass er sich beenden soll
+    if (kill(cpid2, SIGTERM) == -1)
+    {
+        perror("Prozess 2 konnte nicht beendet werden");
+        exit(EXIT_FAILURE);
+    }
 
-	wait_for_chlid();
-	wait_for_chld();
+    wait_for_child();
+    wait_for_child();
 }
+
+
 
 ```
 
@@ -155,70 +157,75 @@ read(fd[0], buffer, BUFFER_SIZE);
 ## Anonymous Pipe
 ```c
 
+#include <stdlib.h> 
+#include <stdio.h> 
 #include <sys/types.h>
-#includne <unistd.h>
+#include <unistd.h>
 
 const int BUFFER_SIZE = 100;
 
 void main (void)
 {
-	int fd[2];
-	char buffer[BUFFER_SIZE];
-	ssize_t nBytes;
+    int fd[2];
+    char buffer[BUFFER_SIZE];
+    ssize_t nBytes;
+    int status;
 
-	status = pipe(fd);
-	if (status == -1)
-	{
-		perror("Pipe konnte nicht erstellt werden");
-		exit(EXIT_FAILURE);
-	}
+    status = pipe(fd);
+    if (status == -1)
+    {
+        perror("Pipe konnte nicht erstellt werden");
+        exit(EXIT_FAILURE);
+    }
 
-	pid_t child_id = fork();
+    pid_t child_id = fork();
 
-	if (child_id == -1)
-	{
-		perror("Child Prozess konnte nicht erstellt werden");
-		exit(EXIT_FAILURE);
-	}
+    if (child_id == -1)
+    {
+        perror("Child Prozess konnte nicht erstellt werden");
+        exit(EXIT_FAILURE);
+    }
 
-	if (child_id == 0)
-	{
-		// Wir sind in Child Prozess
+    if (child_id == 0)
+    {
+        // Wir sind in Child Prozess
 
-		// Da wir nichts mit der Schreibpipe zu tun haben, 
-		// können wir diese schliessen
-		close(fd[1]);
+        // Da wir nichts mit der Schreibpipe zu tun haben, 
+        // können wir diese schliessen
+        close(fd[1]);
 
-		// Lese Daten von readpipe in buffer
-		// Maximale Länge BUFFER_SIZE
-		nbytes = read(fd[0], buffer, BUFFER_SIZE);
+        // Lese Daten von readpipe in buffer
+        // Maximale Länge BUFFER_SIZE
+        nBytes = read(fd[0], buffer, BUFFER_SIZE);
 
-		// Wir haben unser Zeugs mit der readpipe gemacht,
-		// jetzt können wir die pipe schliessen
-		close(fd[0]);
+        // Wir haben unser Zeugs mit der readpipe gemacht,
+        // jetzt können wir die pipe schliessen
+        close(fd[0]);
 
-		exit(EXIT_SUCESS);
-	}
+        exit(EXIT_SUCCESS);
+    }
 
-	if (child_id != 0)
-	{
-		// Sind in Parent Prozess
-		// Dieses if ist eigentlich nicht mehr notwendig
+    if (child_id != 0)
+    {
+        // Sind in Parent Prozess
+        // Dieses if ist eigentlich nicht mehr notwendig
 
-		// Wir wollen nichts lesen,
-		// daher können wir in diesem Prozess die Pipe zumachen
-		close(fd[0]);
+        // Wir wollen nichts lesen,
+        // daher können wir in diesem Prozess die Pipe zumachen
+        close(fd[0]);
 
-		// Jetzt schreiben wir unsere Daten auf
-		// die Lesepipe
-		write (fd[1], "Hello world\n", 12);
+        // Jetzt schreiben wir unsere Daten auf
+        // die Lesepipe
+        write (fd[1], "Hello world\n", 12);
 
-		// Schliessen der Pipe
-		close(fd[1]);
+        // Schliessen der Pipe
+        close(fd[1]);
 
-		exit(EXIT_SUCCESS);
-	}
+        exit(EXIT_SUCCESS);
+    }
 }
+
+
 
 ```
 
@@ -226,70 +233,83 @@ void main (void)
 In machen Fällen ist es notwendig, dass wir die Lesevorgänge der Pipe nicht blockierend machen. 
 
 ```c
+#include <stdlib.h> 
+#include <stdio.h> 
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <errno.h>
+
+const static int BUFFER_SIZE = 100;
+
 void set_nonblocking(int fd)
 {
-	// Lese alle bisher gesetzten Flags
-	// Wir wollen nur das nonblocking flag setzen
-	int flags = fcntl (fd, F_GETFL, 0);
+    // Lese alle bisher gesetzten Flags
+    // Wir wollen nur das nonblocking flag setzen
+    int flags = fcntl (fd, F_GETFL, 0);
 
-	if (flags == -1)
-	{
-		perror("Pipe Attribute konnten nicht gelesen werden");
-		exit(EXIT_FAILURE);
-	}
+    if (flags == -1)
+    {
+        perror("Pipe Attribute konnten nicht gelesen werden");
+        exit(EXIT_FAILURE);
+    }
 
-	int result = fcntl(fd, F_SETFL, flags | O_NONBLOCK);
-	if (result == -1)
-	{
-		perror("Pipe Attribute konnten nicht gesetzt werden");
-		exit(EXIT_FAILURE);
-	}
+    int result = fcntl(fd, F_SETFL, flags | O_NONBLOCK);
+    if (result == -1)
+    {
+        perror("Pipe Attribute konnten nicht gesetzt werden");
+        exit(EXIT_FAILURE);
+    }
 }
 
-
-int fd[2];
-
-if (pipe(fd))
+int main (void)
 {
-	perror("Pipe konnte nicht erstellt werden");
-	exit(EXIT_FAILURE);
-}
+    char buffer[BUFFER_SIZE];
+    int fd[2];
 
-// pipe auf non blocking setzen
-set_nonblocking(fd[0]);
+    if (pipe(fd))
+    {
+        perror("Pipe konnte nicht erstellt werden");
+        exit(EXIT_FAILURE);
+    }
+
+    // pipe auf non blocking setzen
+    set_nonblocking(fd[0]);
 
 
-// HOWTO LESEN
-int reading = 1;
-while (reading)
-{
-	int n = read(fd[0], buffer, BUFFER_SIZE);
-	
-	if (n == 0)
-	{
-		// polling aufhören
-		// da pipe geschlossen worden ist
-		close(fd[0]);
-		reading = 0;
-		continue;
-	}
+    // HOWTO LESEN
+    int reading = 1;
+    while (reading)
+    {
+        int n = read(fd[0], buffer, BUFFER_SIZE);
+        
+        if (n == 0)
+        {
+            // polling aufhören
+            // da pipe geschlossen worden ist
+            close(fd[0]);
+            reading = 0;
+            continue;
+        }
 
-	if (n > 0)
-	{
-		// gelesene Daten verwenden
-	}
-	else if (errno = EAGAIN)
-	{
-		// poll interval abwarten
-		// Es kann passieren, dass wir den Intervall so kurz halten
-		// dass wir das Lock der pipe nicht wirklich frei lassen
-		// dies wird als spin-lock bezeichnet 
-	}
-	else
-	{
-		// Da haben wir verkackt
-		// Ernsthafter fehler
-	}
+        if (n > 0)
+        {
+            // gelesene Daten verwenden
+        }
+        else if (n = EAGAIN)
+        {
+            // poll interval abwarten
+            // Es kann passieren, dass wir den Intervall so kurz halten
+            // dass wir das Lock der pipe nicht wirklich frei lassen
+            // dies wird als spin-lock bezeichnet 
+        }
+        else
+        {
+            // Da haben wir verkackt
+            // Ernsthafter fehler
+        }
+    }
+
 }
 ```
 
@@ -438,6 +458,84 @@ int main(void)
     return 0;
 }
 ```
+
+# POSIX Queue
+
+```c
+#include <mqueue.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+#define PERROR_AND_WAIT(M) do { perror(M); exit(EXIT_FAILURE);} while(0)
+
+// Zeigt auf das root verzeichnis
+#define QNAME "/demo" 
+#define MSIZE 10
+
+
+int main(void)
+{
+    int q = 0;
+    int cpid = 0;
+    int n = 0;
+    int wpid = 0;
+
+    struct mq_attr a = {
+        .mq_maxmsg = 10,
+        .mq_msgsize = MSIZE
+    };
+
+    if ((q = mq_open(QNAME, O_CREAT | O_RDWR | O_NONBLOCK | O_EXCL, 0666, &a)) == -1) {
+        PERROR_AND_WAIT("mq_open");
+    }
+
+    if (cpid > 0) {
+        //parent: shares queue descriptor with child
+
+        if (mq_unlink(QNAME) == -1) {
+            PERROR_AND_WAIT("mq_unlink");
+        }
+        char msg[MSIZE +1];
+        while (wpid == 0) {
+            sleep(1);
+            while ((n = mq_receive(q, msg, MSIZE, NULL)) > 0) {
+                msg[n] = '\0';
+                printf("Message: '%s'\n", msg);
+            }
+
+            if (n == -1 && errno != EAGAIN) {
+                PERROR_AND_WAIT("mq_receive");
+            } 
+
+            if ((wpid = waitpid(cpid, NULL, WNOHANG)) == -1) {
+                PERROR_AND_WAIT("waitpid");
+            }
+        }
+        if (mq_close(q) == -1) {
+            PERROR_AND_WAIT("mq_close");
+        }
+    } else 
+    {
+        if (mq_send(q, "Hello", sizeof("hello"), 1) == -1) {
+            PERROR_AND_WAIT("mq_send");
+        }
+        sleep(2);
+
+        if (mq_send(q, "Hello", sizeof("Queue"), 1) == -1) {
+            PERROR_AND_WAIT("Queue");
+        }
+    }
+}
+
+```
+
+```shell
+gcc -lrt t09/posix_queue.c
+```
+
 
 # POSIX Socket
 Erlaubt Kommunikation über Netzwerk, oder über virtuelles LAN in einem System.
