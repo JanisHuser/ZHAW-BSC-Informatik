@@ -142,6 +142,63 @@ int ret = system("/bin/ls -l");
 
 # POPEN
 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#define PERROR_AND_EXIT(M) do { perror(M); exit(EXIT_FAILURE); } while(0)
+
+const static int BUFSIZE = 100; 
+
+int main()
+{
+    // 2 = error pipe in null schreiben, also entsorgen
+    FILE *df = popen("df -k --output=pcent . 2>/dev/null", "r");
+
+    if (!df) {
+        PERROR_AND_EXIT("popen: df -k .");
+    }
+
+    char line[BUFSIZE];
+    char *end = NULL;
+
+    long int used = -1;
+
+    while (fgets(line, BUFSIZE, df)) {
+        used = strtol(line, &end, 10);
+        if (end && end != line && *end == '%') {
+            break;
+        }
+        used = -1;
+    }
+
+    if (pclose(df)) {
+        PERROR_AND_EXIT("failed with pclose()");
+    }
+
+    if (used < 0 || used > 100) {
+        errno = ERANGE;
+        PERROR_AND_EXIT("df -k .");
+    }
+
+    char *msg
+        = used < 60 ? "Plenty of disk space (%d%% available) \n"
+        : used < 80 ? "Maybe some future disk space problems (%d%% available) \n"
+        : used < 90 ? "Need to clear out files (%d%% available) \n"
+        : "You may face soon some severe disk space problems (%d%% available) \n";
+
+    printf(msg, 100-used);
+    return EXIT_SUCCESS;
+}
+```
+
+**SO BAUEN**
+
+```shell
+gcc -pthread t08/popen.c
+```
+
 ![](media/Pasted%20image%2020230527193800.png)
 
 # Threads
