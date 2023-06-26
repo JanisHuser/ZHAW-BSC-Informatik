@@ -31,39 +31,39 @@ Nach dem fork existiert der Kindprozess als Kopie des original Prozesses.
 int main()
 {
 
-	// Erstelle neuen Child prozess
-	// setzt DANACH die childId
-	pid_t childId = fork();
-	if (childId == -1)
-	{
-	  PERROR_AND_EXIT("fork");
-	}
+    // Erstelle neuen Child prozess
+    // setzt DANACH die childId
+    pid_t childId = fork();
+    if (childId == -1)
+    {
+      PERROR_AND_EXIT("fork");
+    }
   
-	if (childId > 0)
-	{
-		// ChildId ist gesetzt, also sind wir im Parent
-		printf("Parent: %d forked child %d\n", getpid(), cpid);
-	
-		int wstatus;
+    if (childId > 0)
+    {
+        // ChildId ist gesetzt, also sind wir im Parent
+        printf("Parent: %d forked child %d\n", getpid(), childId);
+    
+        int wstatus;
 
-		// Jetzt warten wir, bis der Prozess des Kindes
-		// fertig ist, 0 -> kein timeout also unendlich lange
-		pid_t wpid = waitpid(cpid, &wstatus, 0);
-		printf("Child exited with status: %d \n", WEXITSTATUS(wstatus));
+        // Jetzt warten wir, bis der Prozess des Kindes
+        // fertig ist, 0 -> kein timeout also unendlich lange
+        pid_t wpid = waitpid(childId, &wstatus, 0);
+        printf("Child exited with status: %d \n", WEXITSTATUS(wstatus));
 
-		// jetzt beenden wir den Parent mit Success
-		exit(EXIT_SUCCESS);
-	}
-	else
-	{
-		// Da childId noch nicht gesetzt ist, zum Zeitpunkt des forks
-		// Wissen wir, dass wir im child sind
+        // jetzt beenden wir den Parent mit Success
+        exit(EXIT_SUCCESS);
+    }
+    else
+    {
+        // Da childId noch nicht gesetzt ist, zum Zeitpunkt des forks
+        // Wissen wir, dass wir im child sind
 
 
-		printf("Child: %d forked by parent %d\n", getpid(), getppid());
-		sleep(3);
-		exit(123);
-	}
+        printf("Child: %d forked by parent %d\n", getpid(), getppid());
+        sleep(3);
+        exit(123);
+    }
 }
 
 // Parent erstellt neues Kind
@@ -84,47 +84,48 @@ Ersetzt den Childprozess durch ein anders ausführbares Programm.
 
 int main()
 {
-	// Erstelle neuen Child prozess
-	// setzt DANACH die childId
-	pid_t childId = fork(); // Erstelle neues Kind
-	if (childId == -1)
-	{
-		PERROR_AND_EXIT("fork");
-	}
-	
-	if (childId > 0)
-	{
-		// ChildId ist gesetzt, also sind wir im Parent
-		printf("Parent: %d forked child %d\n", getpid(), cpid);
-	
-		int wstatus;
+    // Erstelle neuen Child prozess
+    // setzt DANACH die childId
+    pid_t childId = fork(); // Erstelle neues Kind
+    if (childId == -1)
+    {
+        PERROR_AND_EXIT("fork");
+    }
+    
+    if (childId > 0)
+    {
+        // ChildId ist gesetzt, also sind wir im Parent
+        printf("Parent: %d forked child %d\n", getpid(), childId);
+    
+        int wstatus;
 
-		// Jetzt warten wir, bis der Prozess des Kindes
-		// fertig ist, 0 -> kein timeout also unendlich lange
-		pid_t wpid = waitpid(cpid, &wstatus, 0);
-		printf("Child exited with status: %d \n", WEXITSTATUS(wstatus));
+        // Jetzt warten wir, bis der Prozess des Kindes
+        // fertig ist, 0 -> kein timeout also unendlich lange
+        pid_t wpid = waitpid(childId, &wstatus, 0);
+        printf("Child exited with status: %d \n", WEXITSTATUS(wstatus));
 
-		// jetzt beenden wir den Parent mit Success
-		exit(EXIT_SUCCESS);
-	}
-	else
-	{
-		// Da childId noch nicht gesetzt ist, zum Zeitpunkt des forks
-		// Wissen wir, dass wir im child sind
+        // jetzt beenden wir den Parent mit Success
+        exit(EXIT_SUCCESS);
+    }
+    else
+    {
+        // Da childId noch nicht gesetzt ist, zum Zeitpunkt des forks
+        // Wissen wir, dass wir im child sind
 
 
-		// Wir definieren die Befehle einzel
-		// in diesem fall „ls -l“
-		static char *eargv[] = { "ls", "-l", NULL };
-		
-		if (execv("/bin/ls", eargv) == -1)
-		{
-			PERROR_AND_EXIT("execv: /bin/ls")
-		}
+        // Wir definieren die Befehle einzel
+        // in diesem fall „ls -l“
+        static char *eargv[] = { "ls", "-l", NULL };
+        
+        if (execv("/bin/ls", eargv) == -1)
+        {
+            PERROR_AND_EXIT("execv: /bin/ls");
+        }
 
-		// Das exec denn Prozess ersetzt, wird diese Zeile nie getroffen
-	}
+        // Das exec denn Prozess ersetzt, wird diese Zeile nie getroffen
+    }
 }
+
 ```
 
 # System
@@ -160,44 +161,49 @@ Da das OS die Threads selber verwaltet, kann es sein, dass die Ausgabe auf der K
 // wird im thread später ausgeführt
 void *worker(void *arg)
 {
-	printf("worker\n");
-	sleep(3);
-	static int ret_value = 123;
-	return &ret_value;
+    printf("worker\n");
+    sleep(3);
+    static int ret_value = 123;
+    return &ret_value;
 }
 
 int main()
 {
-	pthread_t thread;
+    pthread_t thread;
 
-	// erstelle neuen thread
-	// thread -> speichere diesen in die thread adresse
-	// NULL -> pthread_attr_t: erlaubt also einige Attribute zu setzen
-	// worker -> welche Funktion soll ausgefüht werden
-	// NULL -> argument zur Funktion, da kann auch alles mögliche drin stehen
-	
-	int status = pthread_create(&thread, NULL, worker, NULL);
-	if (status != 0)
-	{
-		// Thread konnte nicht erstellt werden
-		exit (status);
-	}
+    // erstelle neuen thread
+    // thread -> speichere diesen in die thread adresse
+    // NULL -> pthread_attr_t: erlaubt also einige Attribute zu setzen
+    // worker -> welche Funktion soll ausgefüht werden
+    // NULL -> argument zur Funktion, da kann auch alles mögliche drin stehen
+    
+    int status = pthread_create(&thread, NULL, worker, NULL);
+    if (status != 0)
+    {
+        // Thread konnte nicht erstellt werden
+        exit (status);
+    }
 
-	printf("main\n");
-	
-	static void *retVal;
-	status = pthread_join(thread, &retVal);
-	if (status != 0)
-	{
-		// Thread konnte nicht beigetreten werden,
-		// es ist etwas schief gelaufen
-		exit (status);
-	}
+    printf("main\n");
+    
+    static void *retVal;
+    status = pthread_join(thread, &retVal);
+    if (status != 0)
+    {
+        // Thread konnte nicht beigetreten werden,
+        // es ist etwas schief gelaufen
+        exit (status);
+    }
 
-	printf("worker retval = %d\n", *((int*)retval));
-	exit (EXIT_SUCCESS);
+    printf("worker retval = %d\n", *((int*)retVal));
+    exit (EXIT_SUCCESS);
 }
+```
 
+**DU SO BAUEN**
+
+```shell
+gcc -pthread t08/threads.c
 ```
 
 ## Loslassen eines Threads (Detach)
