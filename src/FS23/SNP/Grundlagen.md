@@ -18,7 +18,7 @@
 #include <stdio.h>    //printf
 #include <stdlih.h>
 
-void main (void)
+int main (void)
 {
 	printf("Hello world in C\n"); // Newline ist wichtig
 	return EXIT_STATUS;
