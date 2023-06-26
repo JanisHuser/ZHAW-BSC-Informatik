@@ -55,7 +55,7 @@ int main(void)
 	{
 		free (line);
 	}
-	return EXIT_STATUS;
+	return EXIT_SUCCESS;
 }
 
 ```
@@ -78,10 +78,6 @@ int main(void)
 		perror("Datei konnte nicht geöffnet werden!");
 		exit(-1);
 	}
-	
-	fprintf(f, "format\n", arg1);
-	
-	
 	// Datei wieder schliessen
 	fclose(f);
 	
@@ -89,7 +85,7 @@ int main(void)
 	{
 		free (line);
 	}
-	return EXIT_STATUS;
+	return EXIT_SUCCESS;
 
 }
 ```
@@ -98,27 +94,20 @@ int main(void)
 ## Datei anfügen
 ```c
 
-int main(void)
-{
-	
+#include <stdio.h>
+#include <stdlib.h>
 
-	#include <stdio.h>
-	#include <stdlib.h>
-	
+int main(void)
+{	
 	char * line = NULL;
 	size_t len = 0;
 	ssize_t read;
-	FILE *f = fopen("Pfad", "a
-					");
+	FILE *f = fopen("Pfad", "a");
 	
 	if (f == NULL) { // das gleiche wie if (!f)
 		perror("Datei konnte nicht geöffnet werden!");
 		exit(-1);
 	}
-	
-	fprintf(f, "format\n", arg1);
-	
-	
 	// Datei wieder schliessen
 	fclose(f);
 	
@@ -126,7 +115,7 @@ int main(void)
 	{
 		free (line);
 	}
- 	return EXIT_STATUS;
- }
+ 	return EXIT_SUCCESS;
+}
 
 ```

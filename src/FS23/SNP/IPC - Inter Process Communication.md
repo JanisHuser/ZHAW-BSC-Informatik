@@ -39,8 +39,8 @@ if (status != 0)
 ## Signale verarbeiten
 ```c
 #include <stdio.h>
-#incldue <stdlib.h>
-#incldue <unistd.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <sys/wait.h>
 
 
