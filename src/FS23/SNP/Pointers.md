@@ -36,7 +36,7 @@ op = p;
 
 Pointer müssen immer auf etwas zeigen, sonst wird **IRGENDEIN** Speicher modifizert.
 
-## Der geilste Pointer
+## Der alles mögliche Pointer (Void pointer)
 
 ```c
 double d = 1.0;
