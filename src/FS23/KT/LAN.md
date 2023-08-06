@@ -7,6 +7,8 @@
 | Framelänge | $F_L$ |Bits| Data + Prä + SFD + FCS = Data + 7Bit + 1Bit + 4Byte |
 | Nutzbitrate | $N$ | | $N = F_R \cdot P \cdot 8$|
 | Payload | $P$ | | |
+| InterFrameGap | IFG | Bytes | 12 |
+ 
 
 ## Übertragungsarten
 

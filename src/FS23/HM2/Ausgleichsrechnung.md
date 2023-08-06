@@ -57,3 +57,47 @@ y_new = slope * x_new + intercept
 
 print("Interpolated value at x =", x_new, "is y =", y_new)
 ```
+
+
+
+## Gauss Newton mit QR ohne Dämfpung
+
+```python
+
+import numpy as np
+
+def gauss_newton_no_damping(J, r, x0, max_iter=100, tol=1e-6):
+    x = x0
+    for i in range(max_iter):
+        Jx = J(x)
+        rx = r(x)
+        Q, R = np.linalg.qr(Jx)
+        delta = np.linalg.lstsq(R, -rx, rcond=None)[0]
+        x += delta
+        if np.linalg.norm(delta) < tol:
+            break
+    return x
+
+# Beispielanwendung
+def J(x):
+    # Jacobimatrix
+    n = len(observed_x_values)
+    Jx = np.zeros((n, 3))  # 3 ist die Anzahl der Parameter (a, b, c)
+    Jx[:, 0] = observed_x_values ** 2  # Ableitung nach dem Parameter a
+    Jx[:, 1] = observed_x_values  # Ableitung nach dem Parameter b
+    Jx[:, 2] = 1  # Ableitung nach dem Parameter c
+    return Jx
+
+def r(x):
+    # Residuenvektor
+    a, b, c = x
+    return a * observed_x_values ** 2 + b * observed_x_values + c - observed_y_values
+
+observed_x_values = np.array([0., 1., 2.])
+observed_y_values = np.array([1., 2., 8.])
+
+x0 = np.array([1.0, 1.0, 1.0])  # Anfangswert für die Parameter a, b, c
+result = gauss_newton_no_damping(J, r, x0)
+
+print("Ergebnis:", result)
+```

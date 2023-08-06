@@ -10,5 +10,9 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.banditEnabled": false,
-    "python.linting.pylamaEnabled": true
+    "python.linting.pylamaEnabled": true,
+
+    "markdown.copyFiles.destination": {
+        "**/*": "${documentDirName}/media/"
+    } 
 }

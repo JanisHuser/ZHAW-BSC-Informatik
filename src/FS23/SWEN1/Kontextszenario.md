@@ -1,4 +1,6 @@
 
+
+
 # Kontextszenario
 Das Kontextszenario beschreibt, wie das Produkt **effektiv** verwendet wird. Es werden keine technischen Anforderungen beschrieben.
 
@@ -22,7 +24,10 @@ Beschreibt, wer (Systeme & Personas) mit den Anwendungsfällen interagiert. Jede
 
 ![](media/Pasted%20image%2020230602161058.png)
 
-### Spezifikationen
+
+
+
+# Fully dressed Use Case
 - Name des Use Cases und Use Case Nummer zwecks eindeutiger Identifizierung
 - Akteure
 - Auslöser

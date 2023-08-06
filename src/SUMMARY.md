@@ -8,8 +8,9 @@
 - [KT](FS23/KT/Readme.md)
 	- [Formeln](FS23/KT/Formeln.md)
 	- [OSI Schichten](FS23/KT/OSI%20Referenzmodell.md)
+	- [Serielle Schnittstelle](FS23/KT/SerielleSchnittstelle.md)
 	- [Übertragungsmedien](FS23/KT/Uebertragungsmedien.md)
-	- [Layers]()
+	- [Layers](FS23/KT/Layers/Readme.md)
 		- [Application Layer](FS23/KT/Layers/Application%20Layer.md)
 		- [Transport Layer](FS23/KT/Layers/Transport%20Layer.md)
 		- [Network Layer](FS23/KT/Layers/Network%20Layer.md)
@@ -32,8 +33,8 @@
 
 
 - [HM2](FS23/HM2/Readme.md)
-	- [Linearisierung](FS23/HM2/Numerische%20L%C3%B6sung/Linearisierungen.md)
-	- [Partielle Ableitung](FS23/HM2/Numerische%20L%C3%B6sung/Partielle%20Ableitung.md)
+	- [Linearisierung](FS23/HM2/Numerische%20Loesung/Linearisierungen.md)
+	- [Partielle Ableitung](FS23/HM2/Numerische%20Loesung/Partielle%20Ableitung.md)
 	- [Interpolation](FS23/HM2/Interpolation.md)
 	- [Ausgleichsrechnung](FS23/HM2/Ausgleichsrechnung.md)
 	- [Numerische Integration](FS23/HM2/Numerische%20Integration.md)
@@ -53,3 +54,18 @@
 	- [Multithreading](FS23/SNP/Multithreading%20und%20so%20weiter.md)
 	- [IPC](FS23/SNP/IPC%20-%20Inter%20Process%20Communication.md)
 	- [Sync](FS23/SNP/Sync.md)
+
+- [SWEN1](FS23/SWEN1/Readme.md)
+	- [Anforderungsanalyse](FS23/SWEN1/Anforderungsanalyse.md)
+	- [Kontextszenario](FS23/SWEN1/Kontextszenario.md)
+	- [Dömänenmodell](FS23/SWEN1/Domaenenmodellierung.md)
+	- [Softwarearchitektur](FS23/SWEN1/Softwarearchitektur.md)
+	- [Design Patterns](FS23/SWEN1/Design%20Patterns.md)
+	- [Uebungsaufgaben]()
+		- [Auslosetool](FS23/SWEN1/Uebungsaufgaben/AusloseTool/Readme.md)
+		- [Swift4Restaurant](FS23/SWEN1/Uebungsaufgaben/Swift4Restaurants/Readme.md)
+		- [Diskussionsforum](FS23/SWEN1/Uebungsaufgaben/Forum/Readme.md)
+		- [Lampentool](FS23/SWEN1/Uebungsaufgaben/Lampentool/Readme.md)
+	- [GRASP](FS23/SWEN1/Grasp.md)
+
+-----------

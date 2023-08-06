@@ -15,8 +15,9 @@
 | Unterscheidbare Signalzustände | $M$ | Anzahl||
 | Amplitude | $A$ | | $A = (M-1) \cdot \Delta V$ |
 | Bandbreite | $B$ | $\frac{bits}{s}$ | |
-| max. Symbolrate | $f_s$ | Hz | $2B$ |
+| max. Symbolrate | $f_s$ | Hz | $2B$ oder $\frac{1}{T_s}$ |
+| Symboldauer | $T_s$ | s |  |
 
+**Log Umwandeln**: $2^x = 8$ => $x = \log_2 8$
 
-
-
+**dB umwandeln**:  $10 \cdot log(10^{-2}) = 20$

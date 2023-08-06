@@ -30,3 +30,16 @@ IP-Packet besteht aus einem Header (min. 20 Bytes) und Nutzdaten
 **Maximale Daten bei gegebener MTU** $\text{MTU} - \text{IP Header} - \text{ICMP Header}$
 ## TCP
 
+<img src="media/tcp_header.jpeg" width="300">
+
+<img src="media/tcp_verbindungsaufbau.png" width="300">
+
+<img src="media/tcp_verbindungsabbau.png" width="300">
+
+<img src="media/tcp_datenaustausch.png" width="300">
+
+## ARP
+
+<img src="media/arp.png" width="300">
+
+<img src="media/image.gif" width="300">

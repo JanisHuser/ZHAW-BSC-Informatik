@@ -81,6 +81,7 @@ plt.show()
 ## Runge Kutta Verfahren
 
 ```python
+
 def runge_kutta(f, x0, y0, h, num_steps):
     x = [x0]
     y = [y0]
@@ -113,6 +114,83 @@ plt.title('Lösungskurve der Differentialgleichung dy/dx = x + y mit dem Runge-K
 plt.grid(True)
 plt.legend()
 plt.show()
+```
+
+
+### Runge Kutta in Vektorieller Form
+
+```python
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def rk4_vektor(f, a, b, y0, h):
+    x = np.arange(a, b + h, h)
+    y = np.zeros((y0.size, x.size))
+    n = x.size
+    # AB
+    y[:, 0] = y0
+
+    for i in range(0, n-1):
+        k1 = f(x[i], y[:, i])
+        k2 = f(x[i] + h / 2, y[:, i] + h / 2 * k1)
+        k3 = f(x[i] + h / 2, y[:, i] + h / 2 * k2)
+        k4 = f(x[i] + h, y[:, i] + h * k3)
+        y[:, i + 1] = y[:, i] + h/6 * (k1 + 2*k2 + 2*k3 + k4)
+
+    return x, y
+
+
+def fh(t, z):
+    u = (300000.0 - 80000.0) / 190.0
+    vrel = 2600.0
+    ma = 300000.0
+    g = 9.81
+    z1 = z[0]
+    z2 = z[1]
+    return np.array([z2, vrel*(u/(ma - u * t)) - g - (np.exp(-z1/8000.0)/(ma - u * t)) * z2**2])
+
+
+# Tstart
+a = 0.
+
+# Tende
+b = 190.0
+
+h = 0.1
+
+# h(0) = h'(0) = 0
+y0 = np.array([0.0, 0.0])
+
+# z[0] = z1 = h(t); z[1] = z2 = v(t)
+x, z = rk4_vektor(fh, a, b, y0, h)
+
+
+def z3(t, z):
+    u = (300000.0 - 80000.0) / 190.0
+    vrel = 2600.0
+    ma = 300000.0
+    g = 9.81
+    z1 = z[0]
+    z2 = z[1]
+    return vrel*(u/(ma - u * t)) - g - (np.exp(-z1/8000.0)/(ma - u * t)) * z2**2
+
+
+plt.plot(x, z[0, :], label="h(t)")
+plt.title("h(t)")
+plt.grid()
+plt.figure()
+plt.plot(x, z[1, :], label="v(t)")
+plt.title("v(t)")
+plt.grid()
+plt.figure()
+plt.plot(x, z3(x, z), label="a(t)")
+plt.title("a(t)")
+plt.grid()
+
+plt.show()
+
 ```
 
 

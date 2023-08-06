@@ -40,6 +40,34 @@ approximation = rectangle_rule(f, a, b, n)
 print("Approximated integral:", approximation)
 ```
 
+### Summierte Rechteckregel
+
+```python
+import numpy as np
+
+# Implementation
+def sum_reckteck(f, a, b , h):
+    n = int((b-a)/h)
+    R = 0
+    for i in range(0, n):
+        x = a + i *h
+        R = R + f(x+h/2)
+    R = h*R
+    
+    return R
+
+# Beispiel
+def f(x):
+    return 1./x
+
+a = 2.
+b = 4.
+h = 0.5
+
+R = sum_reckteck(f, a, b, h)
+print ('R =', R)
+```
+
 ## Trapezregel
 
 ```python
@@ -77,6 +105,34 @@ n = 100  # Number of subdivisions
 
 approximation = trapezoidal_rule(f, a, b, n)
 print("Approximated integral:", approximation)
+```
+
+### Summierte Trapezregel
+
+```python
+import numpy as np
+
+# Implementation
+def sum_trapez(f, a, b , h):
+    n = int((b-a)/h)
+    T = (f(a) + f(b))/2
+    for i in range(1, n):
+        x = a + i *h
+        T = T + f(x)
+    T = h*T
+    
+    return T
+
+# Beispiel
+def f(x):
+    return 1./x
+
+a = 2.
+b = 4.
+h = 0.5
+
+T = sum_trapez(f, a, b, h)
+print ('T =', T)
 ```
 
 ## Simpson-Regel
