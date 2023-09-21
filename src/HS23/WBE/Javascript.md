@@ -186,4 +186,17 @@ typeof(true)				// 'boolean'
 1 < 2 && 2 < 3				// true
 4 >= 5 || !(1 == 2)			// true
 "ab" == "a" + "b"			// true
+
+NaN == NaN					// false
+```
+
+## Spezielle Werte
+
+
+```javascript
+null 						// null
+undefined					// undefined
+
+let wert					// wert = undefined
+wert						// undefined
 ```
