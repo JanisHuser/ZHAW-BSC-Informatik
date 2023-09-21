@@ -68,4 +68,16 @@
 		- [Lampentool](FS23/SWEN1/Uebungsaufgaben/Lampentool/Readme.md)
 	- [GRASP](FS23/SWEN1/Grasp.md)
 
+# HS23
+- [CT1](HS23/CT1/Readme.md)
+
+- [ITR](HS23/ITR/Readme.md)
+
+- [ITS](HS23/ITS/Readme.md)
+
+- [MLDM](HS23/MLDM/Readme.md)
+
+- [SCAD](HS23/SCAD/Readme.md)
+
+- [WBE](HS23/WBE/Readme.md)
 -----------
