@@ -4,6 +4,21 @@
 - [Helpers](Helpers/Readme.md)
 	- [Hex / Binary Helper](Helpers/HexHelper.md)
 
+
+# HS23
+- [CT1](HS23/CT1/Readme.md)
+- [ITR](HS23/ITR/Readme.md)
+	- [Impressum](HS23/ITR/Impressum.md)
+- [ITS](HS23/ITS/Readme.md)
+- [MLDM](HS23/MLDM/Readme.md)
+	- [Data Processing](HS23/MLDM/Data%20Processing.md)
+	
+- [SCAD](HS23/SCAD/Readme.md)
+- [WBE](HS23/WBE/Readme.md)
+	- [Web Architektur](HS23/WBE/WebArchitektur.md)
+	- [Javascript](HS23/WBE/Javascript.md)
+	- [NodeJS](HS23/WBE/Nodejs.md)
+
 # FS23
 - [KT](FS23/KT/Readme.md)
 	- [Formeln](FS23/KT/Formeln.md)
@@ -68,17 +83,6 @@
 		- [Lampentool](FS23/SWEN1/Uebungsaufgaben/Lampentool/Readme.md)
 	- [GRASP](FS23/SWEN1/Grasp.md)
 
-# HS23
-- [CT1](HS23/CT1/Readme.md)
-- [ITR](HS23/ITR/Readme.md)
-- [ITS](HS23/ITS/Readme.md)
-- [MLDM](HS23/MLDM/Readme.md)
-	- [Data Processing](HS23/MLDM/Data%20Processing.md)
-	
-- [SCAD](HS23/SCAD/Readme.md)
-- [WBE](HS23/WBE/Readme.md)
-	- [Web Architektur](HS23/WBE/WebArchitektur.md)
-	- [Javascript](HS23/WBE/Javascript.md)
-	- [NodeJS](HS23/WBE/Nodejs.md)
+
 
 -----------
