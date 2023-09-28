@@ -4,7 +4,7 @@
 - [Helpers](Helpers/Readme.md)
 	- [Hex / Binary Helper](Helpers/HexHelper.md)
 
-# HS23
+# HS23
 
 - [CT1](HS23/CT1/Readme.md)
 - [ITR](HS23/ITR/Readme.md)
