@@ -4,7 +4,6 @@
 - [Helpers](Helpers/Readme.md)
 	- [Hex / Binary Helper](Helpers/HexHelper.md)
 
-
 # HS23
 
 - [CT1](HS23/CT1/Readme.md)
@@ -13,11 +12,10 @@
 - [ITS](HS23/ITS/Readme.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
-	- [Lerntypen]
+	- [Lerntypen]()
 		- [Reinforcement Learning](HS23/MLDM/Lerntypen/Reinforcement%20Learning.md)
 		- [Supervised Learning](HS23/MLDM/Lerntypen/Supervised%20Machine%20Learning.md)
 		- [Unsupervised Learning](HS23/MLDM/Lerntypen/Unsupervised%20ML.md)
-	
 - [SCAD](HS23/SCAD/Readme.md)
 - [WBE](HS23/WBE/Readme.md)
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
