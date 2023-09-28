@@ -54,3 +54,7 @@ Private - Private
 ## Betreibung
 
 Bricht eine Partei einen Vertrag, dann kann der andere Partner die Vertragbrechende Person betreiben.
+
+## Parteikosten wegschlagen
+
+- Die Kosten der eigenen Verteidigung müssen selber übernommen haben.
