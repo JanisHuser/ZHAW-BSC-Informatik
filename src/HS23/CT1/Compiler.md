@@ -11,3 +11,11 @@
 
 ## Compiler
 - Übersetzt CPU unabhängigem Code CPU in CPU spezifischen Code
+
+## Assembler
+
+Wandelt CPU unabhängigen Code in binären maschinencode um
+
+## Linker
+
+"Linkt" weitere Assembler files dazu.

@@ -7,6 +7,11 @@
 # HS23
 
 - [CT1](HS23/CT1/Readme.md)
+	- [Cortex Architektur](HS23/CT1/Cortext.md)
+	- [IO]()
+		- [7 Segment](HS23/CT1/IO/7Segment.md)
+		- [Schalter](HS23/CT1/IO/Schalter.md)
+	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
 - [ITS](HS23/ITS/Readme.md)
