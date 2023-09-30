@@ -12,7 +12,7 @@ Um dieses Problem zu lösen, werden Flanken erkannt. Also die Zuständsänderung
 uint8_t is_positive_flank(uint8_t previous, uint8_t current, uint8_t mask)
 {
 
-    if (previous & mask == 0x00 && current & mask == mask)
+    if ((previous & mask) == 0x00 && (current & mask) == mask)
     {
         return 1;
     }
@@ -23,7 +23,7 @@ uint8_t is_positive_flank(uint8_t previous, uint8_t current, uint8_t mask)
 uint8_t is_negative_flank(uint8_t previous, uint8_t current, uint8_t mask)
 {
 
-    if ((previous & mask) == mask && current & mask == 0x00)
+    if ((previous & mask) == mask && (current & mask) == 0x00)
     {
         return 1;
     }
