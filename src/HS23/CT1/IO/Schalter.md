@@ -2,7 +2,7 @@
 
 Im Gegensatz zu digitalen Schaltern, sind analoge Schalter nicht sofort 1/0. Sie prellen.
 
-![](images/Schalter/IMG_0242.png)
+![](images/Schalter/IMG_0254.webp)
 
 Um dieses Problem zu lösen, werden Flanken erkannt. Also die Zuständsänderungen.
 
