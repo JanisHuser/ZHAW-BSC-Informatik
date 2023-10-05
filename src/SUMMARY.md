@@ -22,6 +22,7 @@
 		- [Supervised Learning](HS23/MLDM/Lerntypen/Supervised%20Machine%20Learning.md)
 		- [Unsupervised Learning](HS23/MLDM/Lerntypen/Unsupervised%20ML.md)
 - [SCAD](HS23/SCAD/Readme.md)
+	- [Architektur](HS23/SCAD/Architekturen.md)
 - [WBE](HS23/WBE/Readme.md)
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
 	- [Javascript](HS23/WBE/Javascript.md)
