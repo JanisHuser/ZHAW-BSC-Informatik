@@ -26,6 +26,9 @@
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
 	- [Javascript](HS23/WBE/Javascript.md)
 	- [NodeJS](HS23/WBE/Nodejs.md)
+	- [Objekte](HS23/WBE/Objekte.md)
+	- [Arrays](HS23/WBE/Arrays.md)
+	- [Funktionen](HS23/WBE/Funktionen.md)
 
 # FS23
 
