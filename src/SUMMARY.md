@@ -14,6 +14,10 @@
 	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
+	- [Rechtsstaat](HS23/ITR/Rechtsstaat.md)
+	- [Strafverfahren](HS23/ITR/Strafverfahren.md)
+	- [Zivilprozess](HS23/ITR/Zivilprozess.md)
+	- [IT-Verträge](HS23/ITR/IT-Vertrag.md)
 - [ITS](HS23/ITS/Readme.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
