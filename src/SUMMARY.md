@@ -4,22 +4,35 @@
 - [Helpers](Helpers/Readme.md)
 	- [Hex / Binary Helper](Helpers/HexHelper.md)
 
+# HS23
 
-# HS23
 - [CT1](HS23/CT1/Readme.md)
+	- [Cortex Architektur](HS23/CT1/Cortext.md)
+	- [IO]()
+		- [7 Segment](HS23/CT1/IO/7Segment.md)
+		- [Schalter](HS23/CT1/IO/Schalter.md)
+	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
 - [ITS](HS23/ITS/Readme.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
-	
+	- [Lerntypen]()
+		- [Reinforcement Learning](HS23/MLDM/Lerntypen/Reinforcement%20Learning.md)
+		- [Supervised Learning](HS23/MLDM/Lerntypen/Supervised%20Machine%20Learning.md)
+		- [Unsupervised Learning](HS23/MLDM/Lerntypen/Unsupervised%20ML.md)
 - [SCAD](HS23/SCAD/Readme.md)
+	- [Architektur](HS23/SCAD/Architekturen.md)
 - [WBE](HS23/WBE/Readme.md)
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
 	- [Javascript](HS23/WBE/Javascript.md)
 	- [NodeJS](HS23/WBE/Nodejs.md)
+	- [Objekte](HS23/WBE/Objekte.md)
+	- [Arrays](HS23/WBE/Arrays.md)
+	- [Funktionen](HS23/WBE/Funktionen.md)
 
 # FS23
+
 - [KT](FS23/KT/Readme.md)
 	- [Formeln](FS23/KT/Formeln.md)
 	- [OSI Schichten](FS23/KT/OSI%20Referenzmodell.md)

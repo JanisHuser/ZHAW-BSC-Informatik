@@ -18,6 +18,10 @@ In den meisten Fällen haben nah beieinander liegende Datenpunkte auch ähnliche
 
 ## Linear Regression
 
+Die Daten sind linear, es gibt also eine Linie. Diese kann dafür verwendet werden, anhand einer Gerade einen Wert Y zu dem Wert X zu bestimmen.
+
+![](images/IMG_0244.jpeg)
+
 $$
 h(x; \theta_0, theta_1) = theta_0 + theta_1 x
 $$
@@ -29,3 +33,48 @@ $$
 \^{y}_m = h(x_m; \theta_0, \theta_1) = \theta_0 + \theta_1 x_m
 $$
 
+### Loss
+Abstand von einem Sample Wert zu seinem richtigen Wert
+
+Wird pro einzelnes Samples berechnet
+
+$$
+L_{RSS}(\theta_0, \theta_1; \{x_m, y_m\})
+=
+\sum\limits_{m=1}^{M}(y_m - \hat{y}_m)^2
+=
+
+\sum\limits_{m=1}^{M} \varepsilon_{m}^2 
+
+$$
+
+
+### Cost
+
+Abstand aller Samples zu ihrem korrekten Wert.
+
+$$
+J(\theta_0, \theta_1) = \frac{1}{2M}
+\sum\limits_{m=1}^{M}(y_m - \hat{y}_m)^2
+
+$$
+
+### Beispiel
+
+| X | Y |
+|--|--|
+| 1.00 | 1.00 |
+| 2.00 | 2.00 |
+| 3.00 | 1.30 |
+| 4.00 | 3.75 |
+| 5.00 | 2.25 |
+
+## Eigenschaften
+
+**Linearity**: Die Abhängigkeit zwischen X und Y muss linear sein.
+
+**Homoscedasticity**: Die Varianz ist für alle Werte gleich
+
+**Independence**: Der Ausgangswert ist unabhängig der Eingabewerte
+
+**Normality**: Glockenkurve der Varianz
