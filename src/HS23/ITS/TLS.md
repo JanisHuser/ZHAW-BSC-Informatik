@@ -58,3 +58,17 @@ Data meaningful to applications (not for TLS)
 ## TLS message formats
 
 ![](images/TLS/Screenshot%202023-10-13%20102640.png)
+
+## Phases
+
+### Handshake
+
+Authentication and establishment of cryptographic algorithms and key material
+
+### Data Exchange
+
+Exchange protected data
+
+### Connection teardown
+
+Disconnect safely
