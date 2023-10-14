@@ -1,4 +1,4 @@
-# Arithmetic Operations
+# Arithmetic Operations
 
 | Mnemonic | Insruction | Function |
 |--|--|--|
@@ -10,7 +10,7 @@
 | RSBS | Reverse Subtract (negative) | -1 * A |
 | MULS | Multiplication | A * B |
 
-## Add Instruction
+## Add Instruction
 
 
 ### Register
