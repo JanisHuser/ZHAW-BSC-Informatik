@@ -13,7 +13,7 @@
 ## Add Instruction
 
 
-### Register
+### Update flags
 
 - Update of Flags
 - Result and two operands
@@ -23,10 +23,10 @@
 ADDS <Rd>, <Rn>, <Rm>       ; Rd = Rn + Rm
 ```
 
-### Register
+### Dont update flags
 
 - No update of flags
-- High of low registers
+- High and low registers
 - Rdn contains result and operand
 
 
