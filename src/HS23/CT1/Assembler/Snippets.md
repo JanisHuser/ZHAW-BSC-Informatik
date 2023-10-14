@@ -5,19 +5,19 @@
 ```assembler
 ADDR_DIP_SWITCH_7_0         EQU     0x60000200
 
-LDR		R0, =ADDR_DIP_SWITCH_7_0 	; read dip switch address into r0
-LDR		R0, [R0]					; read dip switches 15 to 8 into r0
+LDR     R0, =ADDR_DIP_SWITCH_7_0 	; read dip switch address into r0
+LDR     R0, [R0]					; read dip switches 15 to 8 into r0
 ```
 
-## Storing Value
+## Storing Value
 
 ### Store byte
 
 ```assembler
 ADDR_LED_31_24              EQU     0x60000103
 
-LDR		R6, =ADDR_LED_31_24 		; store led address in R6
-STRB	R3, [R6] 					; display array_index
+LDR     R6, =ADDR_LED_31_24 		; store led address in R6
+STRB    R3, [R6] 					; display array_index
 ```
 
 ### Store halfword
@@ -41,7 +41,7 @@ ANDS	R0, R0, R2					; store into r0 <- (r0 and mask: r2)
 ```
 
 
-## Incrementing address
+## Incrementing address
 
 Increment R4 by one
 
@@ -51,7 +51,7 @@ ADDS	R4, R4, #1					; increment register address
 
 ## Shift 
 
-### Shift Left
+### Shift Left
 
 ```assembler
 LSLS	R1, R1, #1					; increment index by multiplying it x2
