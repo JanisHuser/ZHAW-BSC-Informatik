@@ -22,3 +22,11 @@
 | Zero | Result = 0 | Z = 1 | signed, unsigned |
 | Carry | Carry | C = 1 | unsigned |
 | Overflow | Overflow | V = 1 | signed |
+
+
+### Usage 
+
+```assembler
+MRS <Rd>, APSR          ; Rd = APSR
+MSR APSR, <Rn>          ; APSR = Rn
+```

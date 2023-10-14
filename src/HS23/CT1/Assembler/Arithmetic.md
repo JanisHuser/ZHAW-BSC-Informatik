@@ -1,5 +1,15 @@
 # Arithmetic Operations
 
+| Mnemonic | Insruction | Function |
+|--|--|--|
+| ADD /ADDS | Addition | A + B |
+| ADCS | Addiction with carry | A + B + c |
+| ADR | Address to register | PC + A |
+| SUB / SUBS | Subtraction | A - B |
+| SBCS | Subtraction with carry (borrow) | A - B - NOT(c) |
+| RSBS | Reverse Subtract (negative) | -1 * A |
+| MULS | Multiplication | A * B |
+
 ## Add Instruction
 
 
@@ -56,4 +66,25 @@ $$
 ```assembler
 RSBS <Rd>, <Rn>, #0
 Rd = 0 - Rn
+```
+
+## Subtraction
+
+```assembler
+SUBS <Rd>, <Rn>, <Rm>       ; Rd = Rn - Rm
+                            ;    = Rn + NOT(Rm) + 1
+```
+
+## Mutli-Word Arithmetic
+
+```assembler
+ADCS <Rdn>, <Rm>            ; Rdn = Rdn + Rm + C
+SBCS <Rdb>, <Rm>            ; Rdn = Rdn - Rm - NOT(C)
+                            ;     = Rdn + NOT(Rm) + C
+```
+
+## Multiplication
+
+```assembler
+MULS <Rdm>, <Rn>, <Rdm>     ; Rdm = Rn + Rdm
 ```
