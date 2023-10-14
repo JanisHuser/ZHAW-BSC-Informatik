@@ -11,6 +11,9 @@
 	- [IO]()
 		- [7 Segment](HS23/CT1/IO/7Segment.md)
 		- [Schalter](HS23/CT1/IO/Schalter.md)
+	- [Assembler]()
+		- [Data Transfer](HS23/CT1/Assembler/Data%20Transfer.md)
+		- [Snippets](HS23/CT1/Assembler/Snippets.md)
 	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)

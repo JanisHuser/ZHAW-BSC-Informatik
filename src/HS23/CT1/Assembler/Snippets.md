@@ -1,6 +1,6 @@
 # Assembler
 
-## Load value at registers
+## Load value from registers
 
 ```assembler
 ADDR_DIP_SWITCH_7_0         EQU     0x60000200
