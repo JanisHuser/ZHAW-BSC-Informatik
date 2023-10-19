@@ -41,6 +41,7 @@
 	- [Objekte](HS23/WBE/Objekte.md)
 	- [Arrays](HS23/WBE/Arrays.md)
 	- [Funktionen](HS23/WBE/Funktionen.md)
+	- [Prototypen](HS23/WBE/Prototypen.md)
 
 # FS23
 
