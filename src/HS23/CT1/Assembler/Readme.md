@@ -24,9 +24,47 @@
 | Overflow | Overflow | V = 1 | signed |
 
 
+**N:** Wenn MSB des Resultats =1 ist
+
+**Z:** Wenn Resultat =0 ist
+
+**C:** Wee
+
+### Overflow
+
+The overflow flag is thus set when the most significant bit (here considered the sign bit) is changed by adding two numbers with the same sign (or subtracting two numbers with opposite signs). Overflow cannot occur when the sign of two addition operands are different (or the sign of two subtraction operands are the same).
+
+
+
 ### Usage 
 
 ```assembler
 MRS <Rd>, APSR          ; Rd = APSR
 MSR APSR, <Rn>          ; APSR = Rn
+```
+
+### Calculation
+
+Binäre Subtraktion
+
+```
+HEX:    0x82 - 0x12
+BIN:    1000'0010 - 0001'0010
+
+subtrahend invertieren
+        1000'0010 - 1110'1101
+    
+subtrahend +1 
+        1000'0010 - 1110'1110
+    
+Zahlen addieren
+        1000'0010 +
+        1110'1110
+        ---------
+       10111'0000
+        ========= 
+
+
+
+
 ```
