@@ -1,6 +1,6 @@
 # Alu
 
-```python,editable
+```python
 def has_carry(result, bit_limits):
     m = (1<<bit_limits)
     return result & m == m
