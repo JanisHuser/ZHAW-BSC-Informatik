@@ -71,3 +71,51 @@ LSLS	R1, R1, #1					; increment index by multiplying it x2
 ```assembler
 MOV		R5, R1						; copy R1 into R5
 ```
+
+## Type Casting
+
+### Sign Extension (signed)
+
+Extend word without changing value
+
+```assembler
+SXTB    R3, R7                     ; extend R7 into R3 (8 bit to 32 bit)
+SXTH    R3, R7                     ; extend R7 into R3 (16 bit to 32 bit)
+```
+
+### Zero Extension (signed)
+
+Extend word without changing value
+
+```assembler
+UXTB    R3, R7                     ; extend R7 into R3 (8 bit to 32 bit)
+UXTH    R3, R7                     ; extend R7 into R3 (16 bit to 32 bit)
+```
+
+## Bitmanipulation
+
+
+### OR
+
+```assembler
+ORRS    R3, R7                     ; OR MASK
+```
+
+### CLR - Clear Bits
+
+```assembler
+BICS    R3, R7                     ; 
+```
+
+### XOR - Bitwise invert
+
+```assembler
+EORS    R3, R7                     ; 
+```
+
+### AND
+
+```assembler
+ANDS    R3, R7                     ; 
+```
+
