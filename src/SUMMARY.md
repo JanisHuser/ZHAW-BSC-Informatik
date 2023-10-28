@@ -15,6 +15,7 @@
 		- [Data Transfer](HS23/CT1/Assembler/Data%20Transfer.md)
 		- [Arithmetics](HS23/CT1/Assembler/Arithmetic.md)
 		- [Snippets](HS23/CT1/Assembler/Snippets.md)
+	- [ALU](HS23/CT1/ALU.md)
 	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
@@ -34,6 +35,7 @@
 		- [Linear Regression](HS23/MLDM/Regression/Linear%20Regression.md)
 		- [Polynomial Regression](HS23/MLDM/Regression/Polynomial%20Regression.md)
 	- [Classification](HS23/MLDM/Classification/Readme.md)
+	- [SVM](HS23/MLDM/SVM.md)
 - [SCAD](HS23/SCAD/Readme.md)
 	- [Architektur](HS23/SCAD/Architekturen.md)
 		- [CaaS](HS23/SCAD/CaaS.md)
