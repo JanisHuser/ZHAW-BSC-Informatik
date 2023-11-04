@@ -119,3 +119,16 @@ EORS    R3, R7                     ;
 ANDS    R3, R7                     ; 
 ```
 
+### Bits löschen
+
+```assembler
+ADDRESS      ECU     ...
+
+LDR         R6, =ADDRESS        ; ADDRESSE in R6 laden
+LDR         R1, [R6]            ; Wert von R6 in R1 laden
+LDR         R2, =0x2220         ; Maske 0x2220 in R2 laden
+BICS        R1, R2              ; Bits R2 in R1 löschen
+STR         R1, [R6]            ; R1 in R6 schreiben
+```
+
+### Bits invertieren
