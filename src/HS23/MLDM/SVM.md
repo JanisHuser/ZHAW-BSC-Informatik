@@ -108,3 +108,11 @@ mean_accuracy = accuracy_scores.mean()
 
 print("Mean Accuracy:", mean_accuracy)
 ```
+
+
+## Hyperplane
+
+### Standardization and Normalization
+
+Ist wichtig, wenn die Features numerisch sehr unterschiedlich sind.
+
