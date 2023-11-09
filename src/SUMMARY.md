@@ -47,6 +47,8 @@
 	- [Arrays](HS23/WBE/Arrays.md)
 	- [Funktionen](HS23/WBE/Funktionen.md)
 	- [Prototypen](HS23/WBE/Prototypen.md)
+	- [Webserver](HS23/WBE/Webserver.md)
+	- [DOM](HS23/WBE/DOM.md)
 
 # FS23
 
