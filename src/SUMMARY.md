@@ -16,6 +16,7 @@
 		- [Arithmetics](HS23/CT1/Assembler/Arithmetic.md)
 		- [Snippets](HS23/CT1/Assembler/Snippets.md)
 	- [ALU](HS23/CT1/ALU.md)
+	- [Memory](HS23/CT1/Memory.md)
 	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
@@ -24,6 +25,8 @@
 	- [Zivilprozess](HS23/ITR/Zivilprozess.md)
 	- [IT-Verträge](HS23/ITR/IT-Vertrag.md)
 - [ITS](HS23/ITS/Readme.md)
+	- [TLS](HS23/ITS/TLS.md)
+	- [VPN](HS23/ITS/VPN.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
 	- [Cost Function](HS23/MLDM/CostFunction.md)

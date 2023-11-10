@@ -131,4 +131,36 @@ BICS        R1, R2              ; Bits R2 in R1 löschen
 STR         R1, [R6]            ; R1 in R6 schreiben
 ```
 
-### Bits invertieren
+
+# Kontrollstrukturen
+
+## Switch Case
+
+```assembly
+
+NR_CASES                EQU     0x2
+
+jump_table      ; ordered table containing the labels of all cases
+                ; STUDENTS: To be programmed 
+				DCD		case_dark
+				DCD 	case_add
+				DCD		...
+
+
+case_dark       
+                LDR  R0, =0
+                B    display_result  
+
+case_add        
+                ADDS R0, R0, R1
+                B    display_result
+
+
+                CMP	R2, #NR_CASES
+				BHS	case_bright
+				LSLS R2, #2		; * 4
+				LDR R7,=jump_table
+				LDR R7, [R7, R2]
+				BX R7
+
+```
