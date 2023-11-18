@@ -15,6 +15,8 @@
 		- [Data Transfer](HS23/CT1/Assembler/Data%20Transfer.md)
 		- [Arithmetics](HS23/CT1/Assembler/Arithmetic.md)
 		- [Snippets](HS23/CT1/Assembler/Snippets.md)
+	- [ALU](HS23/CT1/ALU.md)
+	- [Memory](HS23/CT1/Memory.md)
 	
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
@@ -23,8 +25,11 @@
 	- [Zivilprozess](HS23/ITR/Zivilprozess.md)
 	- [IT-Verträge](HS23/ITR/IT-Vertrag.md)
 - [ITS](HS23/ITS/Readme.md)
+	- [TLS](HS23/ITS/TLS.md)
+	- [VPN](HS23/ITS/VPN.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
+	- [Cost Function](HS23/MLDM/CostFunction.md)
 	- [Lerntypen]()
 		- [Reinforcement Learning](HS23/MLDM/Lerntypen/Reinforcement%20Learning.md)
 		- [Supervised Learning](HS23/MLDM/Lerntypen/Supervised%20Machine%20Learning.md)
@@ -32,8 +37,11 @@
 	- [Regression](HS23/MLDM/Regression/Readme.md)
 		- [Linear Regression](HS23/MLDM/Regression/Linear%20Regression.md)
 		- [Polynomial Regression](HS23/MLDM/Regression/Polynomial%20Regression.md)
+	- [Classification](HS23/MLDM/Classification/Readme.md)
+	- [SVM](HS23/MLDM/SVM.md)
 - [SCAD](HS23/SCAD/Readme.md)
 	- [Architektur](HS23/SCAD/Architekturen.md)
+		- [CaaS](HS23/SCAD/CaaS.md)
 - [WBE](HS23/WBE/Readme.md)
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
 	- [Javascript](HS23/WBE/Javascript.md)
@@ -41,6 +49,9 @@
 	- [Objekte](HS23/WBE/Objekte.md)
 	- [Arrays](HS23/WBE/Arrays.md)
 	- [Funktionen](HS23/WBE/Funktionen.md)
+	- [Prototypen](HS23/WBE/Prototypen.md)
+	- [Webserver](HS23/WBE/Webserver.md)
+	- [DOM](HS23/WBE/DOM.md)
 
 # FS23
 

@@ -71,3 +71,96 @@ LSLS	R1, R1, #1					; increment index by multiplying it x2
 ```assembler
 MOV		R5, R1						; copy R1 into R5
 ```
+
+## Type Casting
+
+### Sign Extension (signed)
+
+Extend word without changing value
+
+```assembler
+SXTB    R3, R7                     ; extend R7 into R3 (8 bit to 32 bit)
+SXTH    R3, R7                     ; extend R7 into R3 (16 bit to 32 bit)
+```
+
+### Zero Extension (signed)
+
+Extend word without changing value
+
+```assembler
+UXTB    R3, R7                     ; extend R7 into R3 (8 bit to 32 bit)
+UXTH    R3, R7                     ; extend R7 into R3 (16 bit to 32 bit)
+```
+
+## Bitmanipulation
+
+
+### OR
+
+```assembler
+ORRS    R3, R7                     ; OR MASK
+```
+
+### CLR - Clear Bits
+
+```assembler
+BICS    R3, R7                     ; 
+```
+
+### XOR - Bitwise invert
+
+```assembler
+EORS    R3, R7                     ; 
+```
+
+### AND
+
+```assembler
+ANDS    R3, R7                     ; 
+```
+
+### Bits löschen
+
+```assembler
+ADDRESS      ECU     ...
+
+LDR         R6, =ADDRESS        ; ADDRESSE in R6 laden
+LDR         R1, [R6]            ; Wert von R6 in R1 laden
+LDR         R2, =0x2220         ; Maske 0x2220 in R2 laden
+BICS        R1, R2              ; Bits R2 in R1 löschen
+STR         R1, [R6]            ; R1 in R6 schreiben
+```
+
+
+# Kontrollstrukturen
+
+## Switch Case
+
+```assembly
+
+NR_CASES                EQU     0x2
+
+jump_table      ; ordered table containing the labels of all cases
+                ; STUDENTS: To be programmed 
+				DCD		case_dark
+				DCD 	case_add
+				DCD		...
+
+
+case_dark       
+                LDR  R0, =0
+                B    display_result  
+
+case_add        
+                ADDS R0, R0, R1
+                B    display_result
+
+
+                CMP	R2, #NR_CASES
+				BHS	case_bright
+				LSLS R2, #2		; * 4
+				LDR R7,=jump_table
+				LDR R7, [R7, R2]
+				BX R7
+
+```

@@ -41,3 +41,18 @@ Daher BaaS welche stateful ist mit low latency
 Dafür zusätliche kosten.
 
 Databases, Message brokers …
+
+## Platform as a Service (PaaS)
+
+- Long Lived
+- More Flexible resource models
+- Language constrained
+
+
+## Container as a Service (CaaS)
+
+- Long Lived
+- More flexible resource models
+- unconstrained runtime
+- "serverless CaaS": short-lived, resource constraints
+- often underlying PaaS/FaaS, especially "FaaS with contaniers"

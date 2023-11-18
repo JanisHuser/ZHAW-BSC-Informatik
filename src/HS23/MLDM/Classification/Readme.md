@@ -57,3 +57,17 @@ $$
 
 - Comparing training and testing result. If training accuracy is nearly 100%, it is overfitting.
 - Since testing data is new data, it is used to test the accuracy on completely new data
+
+
+# Confusion Matrix
+
+**T** = True
+**F** = False
+
+**Precision:** TPos / (TPos + TNeg + TNeu)
+
+**Recall:** TPos / (TPos / FNeg / FNeu)
+
+**F-Measure:** 2*precision * recall (precision + recall)
+
+**Accuracy:** (all true) / (all data)
