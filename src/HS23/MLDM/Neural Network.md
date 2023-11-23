@@ -31,3 +31,45 @@ Goal: For Classification tasks with mutually exclusive classese, in the output l
 
 ![](images/Neural%20Networks/IMG_0327.jpeg)
 
+[Ableitungsrechner](https://de.symbolab.com/solver/multivariable-partial-derivative-calculator/%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%20x%7D%5Cleft(y-%20x%5Cright)%5E%7B2%7D?or=input)
+
+## Backpropagation
+
+The **reuse of previous computations** (from later layers when computing the partial derivatives for earlier layers as those marked in blue) **makes backpropagation efficient**.
+
+## Number of Parameters
+
+- $n_i$: Number of neurons on layer $i$
+- $n_{i-1}$: number of neurons on the previous layer
+- $w_i$ number of weights connecting each neuron in layer $i-1$ to each neuron in layer $i$
+- $b_i$ number of biases for each neuron in layer $i$
+
+### Trainable Parameters per layer
+
+$$
+P_i = (n_{i-1} + 1) \times n_i
+$$
+
+### Total Trainable Parameters
+
+$$
+
+\sum\limits_{i=1}^{k} P_i
+$$
+
+### Number of Paths (HIDDEN LAYERS ONLY)
+
+- $k$: Hidden layers
+- $w$: Width
+
+$$
+w^{(k+1)}
+$$
+
+#### WITH ADDITIONAL INPUT LAYER
+
+$$
+$$
+w^{(k+2)}
+$$
+$$
