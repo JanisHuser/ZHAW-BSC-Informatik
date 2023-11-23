@@ -84,3 +84,5 @@ $$
 ## Hyperparameter Tuning
 
 Hyperparameter sind Einstellungen oder Konfigurationen, die vor dem Training eines maschinellen Lernalgorithmus festgelegt werden müssen. Sie steuern Aspekte des Lernprozesses und beeinflussen, wie ein Modell trainiert wird. Im Gegensatz zu den Modellparametern, die während des Trainings aus den Daten gelernt werden, werden Hyperparameter manuell ausgewählt und können die Leistung und das Verhalten eines Modells erheblich beeinflussen. Beispiele für Hyperparameter sind Lernrate in neuronalen Netzen, Tiefe eines Entscheidungsbaums in Entscheidungsbäumen und die Anzahl der Cluster in k-means Clustering. Die Auswahl geeigneter Hyperparameter ist oft ein wichtiger Schritt beim Entwickeln von Machine-Learning-Modellen.
+
+A hyperparameter in machine learning is a configuration setting that is external to the model and whose value cannot be learned from the data. Examples include learning rate, batch size, and the number of hidden layers in a neural network. Tuning hyperparameters is crucial for optimizing a model's performance.

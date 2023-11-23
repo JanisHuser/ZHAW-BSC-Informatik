@@ -39,6 +39,7 @@
 		- [Polynomial Regression](HS23/MLDM/Regression/Polynomial%20Regression.md)
 	- [Classification](HS23/MLDM/Classification/Readme.md)
 	- [SVM](HS23/MLDM/SVM.md)
+	- [Neural Networks](HS23/MLDM/Neural%20Network.md)
 - [SCAD](HS23/SCAD/Readme.md)
 	- [Architektur](HS23/SCAD/Architekturen.md)
 		- [CaaS](HS23/SCAD/CaaS.md)

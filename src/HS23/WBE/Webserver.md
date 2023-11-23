@@ -155,3 +155,61 @@ app.use('/static', express.static('public'))
 // http://localhost:3000/static/css/style.css
 // Pfad zur Datei: public/css/style.css
 ```
+
+## Cookies
+
+- HTTP als zustandsloses Protokoll konzipiert
+- Cookies: Speichern von Informationen **auf dem Client**
+- RFC 2965: HTTP State Management Mechanism
+- REsponse: *Set-Cookie*-Header, Request: *Cookie*-Header
+- Zugriff mit JavaScript möglich (ausser *HttpOnly* ist gesetzt)
+
+## Sessions
+
+- Cookies auf dem Client leicht manipulierbar
+- Session: Client-spezifische Daten auf dem Server speichern
+- Identifikation des Clients über *Session-ID* (Cookie o.ä.)
+- **GEFAHR**: Session-ID gerät in falsche Hände (Session-Hijacking)
+
+```javascript
+const express = require('express')
+const cookieParser = require ('cookie-parser')
+const session = require('express-session')
+const app = express();
+
+app.use(cookieParser())
+app.use(session({secret: "Strong Secret Here!"}))
+
+app.get('/', function(req, res) {
+  if (req.session.page_views) {
+    req.session.page_views++
+    res.send(`You visited this page ${req.session.page_views} times`) 
+  }
+  else {
+    req.session.page_views = 0
+    res.send("Welcome to this page for the first time")
+  }
+})
+
+app.listen(3000)
+```
+
+## Fetch API
+
+```javascript
+
+const url = "https://.."
+
+fetch(url).then(response => {
+  console.log(response.status)    // 200
+  console.log(response.headers.get("Content-Type")) // text/plain
+
+  response.text().then(text => {
+    // GET TEXT
+  })
+
+  response.json().then(json => {
+    // GET JSON
+  })
+})
+```
