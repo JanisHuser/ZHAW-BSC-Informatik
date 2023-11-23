@@ -1,5 +1,35 @@
 # Webserver
 
+| Port | Service |
+|---|---|
+| 20 | FTP - Data |
+| 21 | FTP - Control |
+| 22 | SSH Remote Login Protocol |
+| 23 | Telnet |
+| 25 | Simple Mail Transfer Protocol (SMTP) |
+| 53 | Domain Name System (DNS) |
+| 80 | HTTP |
+| 443 | HTTPs |
+
+## HTTP Requests 
+
+| Methode | Beschreibung |
+|--|--|
+| GET | Resource Laden |
+| POST | Information senden |
+| PUT | Resource anlegen, überschreiben |
+| PATCH | Rresource anpassen |
+| DELETE | REsource löschen |
+
+## HTTP Response Codes
+
+| Code | Beschreibung |
+|---|--|
+| 1xx | Information (101 switching protocols) |
+| 2xx | Erolg (200 OK) |
+| 3xx | Weiterleitung (301 moved permanently) |
+| 4xx | Fehler in Anfrage (403 Forbidden, 404 Not Found) |
+| 5xx | Server-Fehler (501 Not implemented) |
 
 ## Einfacher Web Server
 ```javascript

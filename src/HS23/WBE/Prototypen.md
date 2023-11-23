@@ -111,6 +111,23 @@ var sparky = new Dragon({
 ## Klassen
 
 ```javascript
+class Person {
+    constructor (name) {
+        this.name = name
+    }
+
+    toString() {
+        return `Person with name '${this.name}'`
+    }
+}
+
+let john = new Person("John")
+console.log(john.toString())    // Person with name 'John'
+```
+
+### Vererbung
+
+```javascript
 class DateFormatter extends Date {
   get FormattedDate() {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
