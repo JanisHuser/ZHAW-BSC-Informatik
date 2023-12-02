@@ -68,3 +68,17 @@ Master source: Software Heritage append-only archive
 ## TOSCA (Topology and Orchestration Specification for Cloud Applications)
 
 ![Topology Template](images/deployment/IMG_0334.png)
+
+TOSCA is an open standard language used to describe cloud applications and their components, including their relationships, dependencies, and deployment configurations. It facilitates the automation of cloud application management tasks such as deployment, scaling, and configuration.
+
+Key benefits of using TOSCA include:
+
+1. **Portability:** TOSCA enables cloud applications to be defined and deployed across different cloud platforms, promoting portability and reducing vendor lock-in.
+
+2. **Automation and Reusability:** TOSCA templates can be reused to automate cloud application deployment and management tasks, saving time and effort.
+
+3. **Standardized Language:** TOSCA provides a common language for defining cloud applications, fostering collaboration and communication among developers and operators.
+
+4. **Extensible Framework:** TOSCA supports extensions for specific use cases or vendor-specific requirements, allowing for customization and flexibility.
+
+5. **Integration with Tools and Platforms:** TOSCA integrates with various cloud management tools and platforms, providing a comprehensive solution for cloud application management.
