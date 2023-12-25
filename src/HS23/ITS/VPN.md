@@ -42,5 +42,3 @@
 ### Message Flow
 
 ![](images/VPN/IMG_0303.jpeg)
-
-##

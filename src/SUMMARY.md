@@ -28,6 +28,7 @@
 	- [Zertifikate](HS23/ITS/Zertifikate.md)
 	- [TLS / DTLS / QUIC](HS23/ITS/TLS.md)
 	- [Layer 2 Security](HS23/ITS/Layer%20Security.md)
+	- [Network Security](HS23/ITS/Network%20Security.md)
 	- [VPN](HS23/ITS/VPN.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
