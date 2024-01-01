@@ -27,6 +27,69 @@ Der Attacker probiert alle möglichen Schlüssel aus, bis er den richtigen gefun
 
 Durschnittliche Anzahl Versuche, bis der richtige Schlüssel gefunden wird.
 
+### Zufälligen Schlüssel der Länge n bits
+
+$$
+\text{WF} = (2^n + 1)/2
+$$
+
+#### Approxmimiert
+
+$$
+\text{WF} = 2^{n-1}
+$$
+
+### Work factor in bits
+
+$$
+\frac{\log(WF)}{\log{2}}
+$$
+
+### How long does it take to break a key
+
+$$
+t =
+\frac{WF}
+{\text{cpu freq} \times
+\text{cycles per byte}}
+$$
+
+## Algorithmen
+
+### sichere algorithmen
+
+soffern ein Schlüssel > 128 bits gewählt wird.
+
+- AES
+- RC5
+- Blowfish
+
+### unsichere Algorithmen
+
+- DES
+- 3DES
+
+
+### AES
+
+AES ist aktuell der am häufigsten verwendete Secret Key Algorithmus. AES gibt es in verschiedenen Varianten und bietet je nach Variante unterschiedliche Garantien.
+
+#### Schlüssellänge: 128, 192, 256
+
+Unter aktuellen Gesichtspunkten ist eine Schlüssellänge von 128bit ausreichend, um ein Work Faktor von 128bit zu erreichen. Sollten sich Quantencomputer durchsetzen, müsste die Schlüssellänge auf 256bit verdoppelt werden, um den geforderten Work Faktor von 128 bit zu erreichen
+
+#### Modes: ECB, CBC, CTR, CCM, GCM
+
+AES, wie alle Block Ciphers, hat verschiedene Modes, in denen es betrieben werden kann. Sie unterscheiden sich in der Art und Weise, wie die verschiedenen Blöcke miteinander verbunden werden. Die folgende Tabelle stellt die unterschiedlichen Modes einander gegenüber
+
+| Mode | Name | Garantien / Beschreibungen | Empfehlungen |
+|------|------|----------------------------|--------------|
+| ECB | Electronic Code Book | keine <br/> Es wird kein IV und kein MAC verwendet | Soll nicht verwendet werden, da kein wirklicher Schutz der Daten erreicht wird |
+| CBC | Cipher Block Chaining | Confidentiality <br/> Es wird nur ein IV aber kein MAC verwendet | Soll nicht verwendet werden, da kein Schutz gegen Verändern der Daten |
+| CTR | Counter Mode | Confidentiality <br/> Es wird nur ein IV aber kein MAC verwendet | Soll nicht verwendet werden, da kein Schutz gegen Verändern der Daten |
+| CCM | Counter with cipher block chaining | Confidentiallity and integrity (authenticity) <br/> Es werden sowohl IV als auch MAC verwendet | Kann verwendet werden, ist aber langsamer als GCM und bringt sonst keine Vorteile. |
+| GCM | Galois Counter mode | Confidentiallity and integrity (authenticity) <br/> Es werden sowohl IV als auch MAC verwendet | Dies ist der aktuelle Standard und soll wenn immer möglich verwendet werden.|
+
 ### Verschlüsselungsalgorithmus
 
 Je nach verwendetem Algorithmus ist die Berechnung des Work Faktors anders. Wir werden in den entsprechenden Kapiteln jeweils den dazugehörenden Work Faktor auflisten.
@@ -78,7 +141,6 @@ auch wenn sich die Inputs nur wenig unterscheiden.
 
 - 256 bit => 128 bit work factor
 - 512 bit => 256 bit work factor
-
 
 ## Diffie-Hellman Key Exchange
 
