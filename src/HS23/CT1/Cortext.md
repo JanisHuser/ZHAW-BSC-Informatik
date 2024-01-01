@@ -100,3 +100,12 @@ Prozessoren interpretieren binären Code als Instruktionen.
 ### Styleguide
 
 ![](images/Cortex/IMG_0253.jpeg)
+
+## Program Execution
+
+
+![Alt text](media/image-3.png)
+
+## Memory Layout
+
+![Alt text](media/image-4.png)

@@ -35,6 +35,13 @@ ADD <Rdn>, <Rm>             ; Rdn = Rdn + Rm
 ```
 
 
+### Multi-Word Addition
+
+```assembelr
+ADCS <Rdn>, <Rm>
+Rdn = Rdn + Rm + C
+```
+
 ### Immediate (3 bytes)
 
 - Update of flags
@@ -87,4 +94,30 @@ SBCS <Rdb>, <Rm>            ; Rdn = Rdn - Rm - NOT(C)
 
 ```assembler
 MULS <Rdm>, <Rn>, <Rdm>     ; Rdm = Rn + Rdm
+```
+
+
+# Application Program Status Register (APSR)
+
+Die vordersten 4 Bit (31 - 28) stehen für (N Z C V).
+
+Nur Instruktionen die mit "S" enden beinflussen die Flags. Diese werden nach jeder Operation gesetzt.
+
+| Flag | Meaning | Action | Operands |
+|------|---------|--------|----------|
+| Negative | MSB = 1 | N = 1 | signed |
+| Zero | Result = 0 | Z = 1 | signed, unsigned |
+| Carry | Carry | C = 1 | unsigned |
+| Overflow | Overflow | V = 1 | signed | 
+
+## APSR Lesen
+
+```assembler
+MRS <Rd>, APSR
+```
+
+## APSR schreiben
+
+```assembler
+MSR APSR, <Rn>
 ```

@@ -1,8 +1,11 @@
 # Assembler
 
+Whenever a command ends with the letter "S", the flags are updated, and only low registers (R0 - R7) can be used.
+
+
 ## Load value from registers
 
-### Load Byte value
+### Load Byte value
 ```assembler
 ADDR_DIP_SWITCH_7_0         EQU     0x60000200
 
@@ -10,7 +13,7 @@ LDR     R0, =ADDR_DIP_SWITCH_7_0 	; read dip switch address into r0
 LDRB    R0, [R0]					; read dip switches 15 to 8 into r0
 ```
 
-### Load half word value
+### Load half word value
 ```assembler
 ADDR_DIP_SWITCH_7_0         EQU     0x60000200
 
@@ -18,6 +21,22 @@ LDR     R0, =ADDR_DIP_SWITCH_7_0 	; read dip switch address into r0
 LDRH    R0, [R0]					; read dip switches 15 to 8 into r0
 ```
 
+### Load signed byte
+```assembler
+ADDR_DIP_SWITCH_7_0         EQU     0x60000200
+
+LDR     R0, =ADDR_DIP_SWITCH_7_0 	; read dip switch address into r0
+LDRSB   R0, [R0]					; read dip switches 15 to 8 into r0
+```
+
+
+### Load signed half word
+```assembler
+ADDR_DIP_SWITCH_7_0         EQU     0x60000200
+
+LDR     R0, =ADDR_DIP_SWITCH_7_0 	; read dip switch address into r0
+LDRSH   R0, [R0]					; read dip switches 15 to 8 into r0
+```
 ## Storing Value
 
 ### Store byte
@@ -36,34 +55,6 @@ ADDR_SEG7_BIN   			EQU		0x60000114
 
 LDR     R6, =ADDR_SEG7_BIN			; load address
 STRH    R0, [r6, #0]				; Store Index and Value to SSD
-```
-
-## Bitwise AND
-
-
-Bitwise and between value and address
-```assembler
-BITMASK_LOWER_NIBBLE        EQU     0x0F
-
-LDR		R2, =BITMASK_LOWER_NIBBLE	; read address of lower bitmask nibble
-ANDS	R0, R0, R2					; store into r0 <- (r0 and mask: r2)
-```
-
-
-## Incrementing address
-
-Increment R4 by one
-
-```assembler
-ADDS	R4, R4, #1					; increment register address
-```
-
-## Shift 
-
-### Shift Left
-
-```assembler
-LSLS	R1, R1, #1					; increment index by multiplying it x2
 ```
 
 ## Moving Register
@@ -92,43 +83,92 @@ UXTB    R3, R7                     ; extend R7 into R3 (8 bit to 32 bit)
 UXTH    R3, R7                     ; extend R7 into R3 (16 bit to 32 bit)
 ```
 
-## Bitmanipulation
+# Bitmanipulation
+
+Flags
+
+- Z = 1 if result = 0
+- Z = 0 otherwise
+- C and V unchanged
 
 
-### OR
+## ANDS - Bitwise AND
 
 ```assembler
-ORRS    R3, R7                     ; OR MASK
+ANDS <Rdn>, <Rdn>, <Rm>				; Rdn = Rdn & Rm
 ```
 
-### CLR - Clear Bits
+## BICS - Clear Bits
 
 ```assembler
-BICS    R3, R7                     ; 
+BICS <Rdn>, <Rdn>, <Rm>				; Rdn = Rdn & !Rm
 ```
 
-### XOR - Bitwise invert
+## EORS - Invert Bits
 
 ```assembler
-EORS    R3, R7                     ; 
+EORS <Rdn>, <Rdn>, <Rm>				; Rdn = Rdn $ Rm
 ```
 
-### AND
+## MVNS - Bitwise Not
 
 ```assembler
-ANDS    R3, R7                     ; 
+MVNS <Rd>, <Rm>						; Rd = !Rm
 ```
 
-### Bits löschen
+## ORRS - Set Bits
 
 ```assembler
-ADDRESS      ECU     ...
+ORRS    <Rdn>, <Rdn>, <Rm>			; Rdn = Rdn # Rm
+```
 
-LDR         R6, =ADDRESS        ; ADDRESSE in R6 laden
-LDR         R1, [R6]            ; Wert von R6 in R1 laden
-LDR         R2, =0x2220         ; Maske 0x2220 in R2 laden
-BICS        R1, R2              ; Bits R2 in R1 löschen
-STR         R1, [R6]            ; R1 in R6 schreiben
+```assembler
+MOVS	R2, #0x48
+ORRS	R1, R1, R2					; R1 = R1 | R2
+```
+
+# Shift / Rotate Instructions
+
+## Shift Left
+
+Shift Rdn left by Rm\<7:0\> bits, fill with zeros
+
+```assembler
+LSLS <Rdn>, <Rdn>, <Rm>				; Rdn = Shift Rdn left by Rm\<7:0\> bits, fill with zeros
+```
+
+### Immediate
+
+```assembler
+LSLS <Rdn>, <Rdn>, #<imm5>				; Rdn = Shift Rdn left by <imm5> bits, fill with zeros
+```
+
+## Shift Right
+
+Shift Rdn right by Rm\<7:0\> bits, fill with zeros
+
+```assembler
+LSRS <Rdn>, <Rdn>, <Rm>				; Rdn = Shift Rdn right by Rm\<7:0\> bits, fill with zeros
+```
+
+### Immediate
+
+```assembler
+LSRS <Rdn>, <Rdn>, #<imm5>				; Rdn = Shift Rdn right by <imm5> bits, fill with zeros
+```
+
+### Fill with MSB
+
+```assembler
+ASRS <Rdn>, <Rdn>, <Rm>				; Rdn = Shift Rdn right by Rm\<7:0\> bits, fill with MSB
+```
+
+## Rotate right
+
+cyclic rotate right by Rm\<7:0\> bits
+
+```assembler
+RORS <Rdn>, <Rdn>, <Rm>				; Rdn = cyclic rotate right by Rm\<7:0\> bits
 ```
 
 

@@ -14,7 +14,10 @@
 	- [Assembler](HS23/CT1/Assembler/Readme.md)
 		- [Data Transfer](HS23/CT1/Assembler/Data%20Transfer.md)
 		- [Arithmetics](HS23/CT1/Assembler/Arithmetic.md)
+		- [Branching](HS23/CT1/Assembler/Branching.md)
+		- [Control Structures](HS23/CT1/Assembler/Control%20Structures.md)
 		- [Snippets](HS23/CT1/Assembler/Snippets.md)
+		- [Subroutines and Stack](HS23/CT1/Assembler/Subroutines%20and%20Stack.md)
 	- [ALU](HS23/CT1/ALU.md)
 	- [Memory](HS23/CT1/Memory.md)
 	
