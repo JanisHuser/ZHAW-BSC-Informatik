@@ -13,15 +13,18 @@
 
 ## Building Blocks
 
+Ordered by strength of security
+
 - Strong block ciphers (AES, Twofish, ...)
 - Authenticated encryption mpdes (GCM, CCM)
 - Diffie-Hellman Key agreement
-- Groups that yield small keys and fast DH operations (ECC)
+- Groups that yield small keys and fast DH operations (ECC, ECB)
 - Public key authentication with certificates
 - Authentication trough signatures
 - Cryptographic hash functions for key generation (HKDF) (e.g. AES session keys)
 
 A cipher suite determinces the **set of cryptographic algrogithms** to be used.
+
 
 ## Layer
 
