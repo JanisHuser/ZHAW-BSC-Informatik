@@ -65,5 +65,8 @@ Serverless computing allows to run code without having a centreal server (P2P).
 
 ## Service types
 
-- FaaS (Function as a Service)
 - BaaS (Backend as a service)
+- PaaS (Platform as a Service)
+- FaaS (Function as a Service)
+- CaaS (Container as a Service)
+- XaaS (Everything as a Service)

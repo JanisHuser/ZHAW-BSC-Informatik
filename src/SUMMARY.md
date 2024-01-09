@@ -54,6 +54,8 @@
 - [SCAD](HS23/SCAD/Readme.md)
 	- [FaaS](HS23/SCAD/FaaS.md)
 	- [CaaS](HS23/SCAD/CaaS.md)
+	- [Cloud Development](HS23/SCAD/Cloud%20Development.md)
+	- [Cloud Applications](HS23/SCAD/Cloud%20Application.md)
 - [WBE](HS23/WBE/Readme.md)
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
 	- [Javascript](HS23/WBE/Javascript.md)

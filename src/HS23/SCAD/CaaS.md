@@ -35,9 +35,12 @@ c.attach_wait(f)
 
 ## Docker / Podman 
 
+Docker is a light-weight virtualisation software, that implements the commands (in a docker file) in layers. It uses the "Dockerfile" file format.
+
 - os-independent
 - booting from a docker containered image with a layered file system
 	- images created by interpretation of Dockerfiles
+
 
 ```Dockerfile
 FROM python:3
@@ -63,6 +66,43 @@ docker run -p 8080:8080 -it --rm \
 	-v /var/www/html/:/usr/local/tomcat/webapps/news \
 	tomcat:8.0
 ```
+
+
+### Metadata
+
+Each docker image has at least the the following properties
+
+- scheme: "official", "unofficial"
+- name
+- pull count
+- number of tags
+- full size
+- os: linux, windows, ...
+- architecture: amd64, arm64, i64, ...
+- latest: true
+
+### In detail
+
+![Alt text](media/image-20.png)
+
+### Best practices
+
+- decide whether manual building is required
+  - PaaS/FaaS build containers under the hood
+- ensure clean build context
+  - make use of .dockerignore files
+- design for “cattle“ operation
+  - permits fast startup - partially driven by functional minimalism
+  - survives fast shutdown
+  - ephemeral/stateless usage
+  - fast/lightweight base image
+- instruction optimisation
+  - multi-stage builds
+  - conscious use of RUN/COPY/ADD which introduce new layers
+  - use --without-recommends & similar package trimming commands
+- manageability
+  - use labels according to consistently enforced policy
+  - regular assurance of build success in batch mode
 
 ### Docker Compose
 
@@ -125,6 +165,8 @@ volumes:
   coder_data:
 ```
 
+
+
 ## Comparison
 
 | Container Technology | Background | Booting | Namespacing | Integration |
@@ -137,3 +179,32 @@ volumes:
 ## Platforms and stacks
 
 ![Alt text](media/image-19.png)
+
+
+# Container Quality
+
+
+## Error density metrics
+
+| Code | Name | Calculation formula |
+|------|------|---------------------|
+| CED | Code Error Density | $\frac{\text{NCE}}{\text{KLOC}}$ |
+| DED | Development Error Density | $\frac{\text{NDE}}{\text{KLOC}}$ |
+| WCED | Weighted Code Error Density | $\frac{\text{WCE}}{\text{KLOC}}$ |
+| WDED | Weighted Development Error Density | $C\frac{\text{WDE}}{\text{KLOC}}$ |
+| WCEF | Weighted Development Error Density | $\frac{\text{WCE}}{\text{NFP}}$ |
+| WDEF | Weighted Development Error per Function Pont | $\frac{\text{WDE}}{\text{NFP}}$ |
+
+- **NCE**: The number of code error detected by code inspections and testing
+- **NDE**: total number of development (design and code) errors detected ni the development process
+- **WCE**: weighted total code errors detected by code inspections and testing
+- **WDE**: total weighted development (design and code) errors detected in development process.
+
+**Cyclomatic complexity**
+
+- McCabe number for code «How many paths lead to the goal (end of program)?»
+
+## Quality Checks:
+
+- Dockerfile: hadolint, docekrfilelint, dockerlint, ...
+- container images: anchore, dockscan, DIVA, ...
