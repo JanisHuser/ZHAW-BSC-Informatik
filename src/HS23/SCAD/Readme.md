@@ -70,3 +70,4 @@ Serverless computing allows to run code without having a centreal server (P2P).
 - FaaS (Function as a Service)
 - CaaS (Container as a Service)
 - XaaS (Everything as a Service)
+- DBaaS (Database as a Service)
