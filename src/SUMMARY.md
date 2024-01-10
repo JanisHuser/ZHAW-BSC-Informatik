@@ -38,6 +38,7 @@
 	- [VPN](HS23/ITS/VPN.md)
 	- [Authentication](HS23/ITS/Authentication.md)
 	- [Authorisation](HS23/ITS/Authorisation.md)
+	- [SEP Fragestunde](HS23/ITS/SEP.md)
 - [MLDM](HS23/MLDM/Readme.md)
 	- [Data Processing](HS23/MLDM/Data%20Processing.md)
 	- [Cost Function](HS23/MLDM/CostFunction.md)
