@@ -1,8 +1,14 @@
 # IT Verträge
 
+![Alt text](media/image-3.png)
+
 - **Vertrauen ist extrem wichtig**
 - Klare, einfache Verträge sind wichtig
 - An das Ende der Zusammenarbeit denken
+- Prozessbezogens Denken
+- Nicht nur den Beginn, sondern auch an das Ende der Zusammenarbeit denken (Exit-Klauseln, Mitwirkungspflichten bei Hosting und SaaS)
+
+
 
 ## Anforderungen
 
@@ -112,3 +118,22 @@ Gesetzlich **NICHT** geregelte Vertragsformen. Das Prinzip der Vertragsfreiheit 
 - andere Mängel (Nichtigkeit, Unmöglichkeit, Übervorteilung, etc.)
 
 **Wenn es schwierig wird - "Papier" (Beweismittel) produzieren**
+
+### Verzug
+
+- Man unterscheidet Gläubiger- und Schuldnerverzug (Art. 91/102 OR)
+- Verzug und Mahnung: normalerweise erst mit ausdrücklichem Hinweis, dass die geschuldete Leistung nun fällig ist!
+- Mitwirkungspflichten
+- Verzugsfolgen allgemein (Art. 103 ff OR)
+
+### SCHLECHT- ODER NICHTERFÜLLUNG?
+
+- Mängelrügen (197, 367 OR)
+- Nichterfüllung ≠ Schlechterfüllung
+- Schlechterfüllung ≠ kleinere Mängel & Anpassungen!
+- Grundsätzlich kommt dem Anbieter als Spezialist eine besondere Aufklärungspflicht und Haftung zu!
+
+**ACHTUNG: Produktivnutzung der Software impliziert regelmässig, dass das System tauglich ist & über keine grösseren Mängel verfügt!**
+
+## Vertragstypen
+
