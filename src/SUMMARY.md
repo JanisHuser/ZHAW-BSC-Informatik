@@ -18,7 +18,6 @@
 		- [Control Structures](HS23/CT1/Assembler/Control%20Structures.md)
 		- [Snippets](HS23/CT1/Assembler/Snippets.md)
 		- [Subroutines and Stack](HS23/CT1/Assembler/Subroutines%20and%20Stack.md)
-	- [ALU](HS23/CT1/ALU.md)
 	- [Memory](HS23/CT1/Memory.md)
 	
 - [ITR](HS23/ITR/Readme.md)

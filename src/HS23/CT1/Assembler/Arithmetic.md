@@ -121,3 +121,22 @@ MRS <Rd>, APSR
 ```assembler
 MSR APSR, <Rn>
 ```
+
+## Manual Multiplication
+
+Multiply 10 x 12
+
+1. Komplexere Zahl in Register R0 laden (12)
+2. Einfachere Zahl in 2er Kompotenzen aufteilen (10 => 8+2 => $2^3 + 2^1$ )
+3. R1 = R0 << 3
+4. R2 = R0 << 1
+5. R0 = R1 + R2
+
+```assembler
+
+MOVS R0, #12
+LSLS R1, R0, #3
+LSLS R2, R0, #1
+ADDS R0, R1, R2
+
+```
