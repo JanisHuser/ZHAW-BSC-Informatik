@@ -47,7 +47,7 @@ The goal of Linear Regression is to minimize the value of 𝐽($\theta$)
 
 ## Normal equation
 
-Lässt sich für alle Probleme anwenden.
+Can be computed for **smaller** problems. Calculation of larger problems, with more than 20'000 features can **not be computed in reasonable time** with the normal equation.
 
 $$
 y = X \theta + e
