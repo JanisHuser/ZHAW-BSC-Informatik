@@ -61,13 +61,20 @@ $$
 
 # Confusion Matrix
 
-**T** = True
-**F** = False
+Types
+- **TP**: True Positive, predicted==1 && actual==1
+- **TN**: True Negative, predicted==0 && actual==0
+- **FP**: False Positive, predicted==1 && actual==0
+- **FN**: False Negative, predicted==0 && actual==1
 
-**Precision:** TPos / (TPos + TNeg + TNeu)
+Calculations
+- **Accuracy:** $\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$
+- **Precision**: $\frac{\text{TP}}{\text{TP}+\text{FP}}$
+- **Recall/Sensitivity, True positive rate**: $\frac{\text{TP}}{\text{TP}+\text{FN}}$
+- **F1 Score**: $\frac{2*\text{TP}}{2*\text{TP}+\text{FP}+\text{FN}}$
 
-**Recall:** TPos / (TPos / FNeg / FNeu)
 
-**F-Measure:** 2*precision * recall (precision + recall)
-
-**Accuracy:** (all true) / (all data)
+| | Actual Positives | Actual Negatives |
+|-|------------------|------------------|
+| Predicted Positives | TP | FP |
+| Predicted Negative | FN | TN |
