@@ -174,9 +174,9 @@ print (f"secret bob: {SB1 == SB2}, {SB1}")
 
 ## RSA
 
-$e$: public key exponent, usually set to 65537
-$d$: private key exponent
-$n$: Modulus, grosse Primzahl. Die Länge von n entspricht der Schlüssellänge
+- $e$: public key exponent, usually set to 65537
+- $d$: private key exponent
+- $n$: Modulus, grosse Primzahl. Die Länge von n entspricht der Schlüssellänge
 
 - Verschlüsselung: $c = p^3 mod n$
 - Entschlüsselung: $s = p^d mod n$
