@@ -2,13 +2,20 @@
 
 ## If - then - else
 
+![Alt text](media/image-9.png)
+
 ```c
+int32_t nr;
+int32_t isPositive;
+
 if (nr >= 0) {
 	isPositive = 1;
 } else {
 	isPositive = 0;
 }
 ```
+
+
 
 ```assembler
 		CMP		R1, #0x00
@@ -20,13 +27,20 @@ else
 end_if
 ```
 
+
 ## Do - While Loop
 
+![Alt text](media/image-11.png)
+
 ```c
-R2 = 0;
+int32_t nr;
+int32_t sum;
+
+sum = 0;
+
 do {
-	R2 += R1;
-} while (R2 < 100);
+	sum += nr;
+} while (sum < 100);
 ``` 
 
 ```assembler
@@ -38,10 +52,15 @@ loop	ADDS	R2, R2, R1
 
 ## While Loop
 
+![Alt text](media/image-12.png)
+
 ```c
-R2 = 1;
-while (R2 < 100) {
-	R2 *= R1;
+int32_t nr;
+int32_t prod;
+
+prod = 1;
+while (prod < 100) {
+	prod *= nr;
 }
 ``` 
 
@@ -75,6 +94,8 @@ while (text-expr) {
 
 
 ## Switch statements
+
+![Alt text](media/image-13.png)
 
 ```c
 switch (n) {
@@ -118,3 +139,7 @@ jump_table		DCD		case_0
 				DCD		case_default
 				DCD		case_3_5
 ```
+
+### Jump Tables
+
+![Alt text](media/image-14.png)

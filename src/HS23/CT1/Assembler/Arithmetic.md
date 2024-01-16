@@ -140,3 +140,28 @@ LSLS R2, R0, #1
 ADDS R0, R1, R2
 
 ```
+
+## Sign Casting
+
+### Extension
+
+#### Unsigned Extension
+
+Bei der Extension, werden Nullen vor dem MSB hinzugefügt
+```
+1011 -> 0000 1011
+0011 -> 0000 0011
+```
+
+#### Signed Extension
+
+Bei der Extension, wird der Wert des MSB vor dem MSB hinzugefügt
+
+```
+1011 -> 1111 1011
+0011 -> 0000 0011
+```
+
+### Truncation
+
+Die Linken Ziffern werden abgeschnitten.
