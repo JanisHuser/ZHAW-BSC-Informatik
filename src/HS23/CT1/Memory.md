@@ -12,7 +12,7 @@ specifies that the current file preserves 8-byte alignment of the stack
 - Provides 16 Bit instruction set
 - fetches instructions by 2 bytes
 
-### ARM
+### ARM
 - Provides 32 bit instruction set
 - Fetches instructions by 4 bytes
 
@@ -39,7 +39,7 @@ The AREA directive instructs the assembler to assemble a new code or data area. 
     AREA name{,attr}{,attr}...
 ```
 
-![Arm Reference](https://developer.arm.com/documentation/dui0041/c/Assembler/Directives/AREA-directive)
+[Arm Reference](https://developer.arm.com/documentation/dui0041/c/Assembler/Directives/AREA-directive)
 
 ### Code
 
