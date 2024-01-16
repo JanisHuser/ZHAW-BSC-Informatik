@@ -45,11 +45,23 @@ Rdn = Rdn + Rm + C
 ### Immediate (3 bytes)
 
 - Update of flags
-- Two different low registers and immediate value 0-7
+- Two different low registers and immediate value 0-7d
 
 ```assembler
 ADDS <Rd>,<Rn>, #<imm3>     ; Rd = Rn + <imm3>
 ```
+
+### Intermediate (5 bytes)
+
+- Update of flags
+- Low register with intermediate value 0-31d
+- Rdn stores result and operation
+
+```assembler
+ADDS <Rdn>, <#imm5>         ; Rdn = Rdn + <imm5>
+```
+
+
 
 ### Intermediate (8 bytes)
 
@@ -165,3 +177,5 @@ Bei der Extension, wird der Wert des MSB vor dem MSB hinzugefügt
 ### Truncation
 
 Die Linken Ziffern werden abgeschnitten.
+
+## 

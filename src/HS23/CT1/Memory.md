@@ -5,7 +5,7 @@
 ### REQUIRE8
 specifies that the current file requires 8-byte alignment of the stack
 
-### PRESERVE8
+### PRESERVE8
 specifies that the current file preserves 8-byte alignment of the stack
 
 ### THUMB
