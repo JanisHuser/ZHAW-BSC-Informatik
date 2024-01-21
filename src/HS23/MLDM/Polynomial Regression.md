@@ -6,12 +6,22 @@ Assume the equation $h_{\theta} (x) = \theta_0 + \theta_1 x + \theta_2 x^2+ \the
 2. Reformulate the hypothesis as $h_{\theta} (x) = \theta_0 z_0+ \theta_1 z_1 + \theta_2 z_2+ \theta_3 z_3$
 3. Apply gradient descent
 
-## Over- and Underfitting
-
 - Degree 1: Underfitting (too generic, does not predict well with new data)
-- Degree 15: Overfitting (too precise on the data, does not predict well with new data)
+- Degree 15: Overfitting (too precise on the data, does not predict well with new data). 
 
 ![](https://github.zhaw.ch/pages/doem/mldm_book/pics/regression2/over-and-underfitting.png)
+
+## Underfitting
+
+- The model is too generic
+- neither training nor testing data is acurate (when testing)
+
+## Overfitting
+
+- The model is too precise
+- training data is nearly 100% acurate, but testing data is not acurate enough.
+
+
 
 ## Regularization
 

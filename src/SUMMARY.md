@@ -59,6 +59,7 @@
 	- [Cloud Applications](HS23/SCAD/Cloud%20Application.md)
 	- [Dependencies](HS23/SCAD/Dependencies.md)
 	- [Scalability](HS23/SCAD/Scalability.md)
+	- [Resilience](HS23/SCAD/Resilience.md)
 - [WBE](HS23/WBE/Readme.md)
 	- [Web Architektur](HS23/WBE/WebArchitektur.md)
 	- [Javascript](HS23/WBE/Javascript.md)

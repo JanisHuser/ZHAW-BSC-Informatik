@@ -8,6 +8,8 @@ In $\mathbb{N}$ dimensional space, a hyperplane is a flat affine subspace of **d
 
 ## Hyperplance
 
+A hyperplane is a seperator between two sets of data, it can be in any dimension.
+
 $$
 b
 + w_1 x_1 
@@ -24,3 +26,10 @@ $$
 $$
 b + w^T x = 0
 $$
+
+## Maximal Margin Classifier
+
+- Designed for linearly separable data
+
+
+![Alt text](media/image-6.png)

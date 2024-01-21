@@ -31,6 +31,8 @@ Visual example on K=6 fold
 
 ## Sigmoid functions
 
+![Alt text](media/image-11.png)
+
 ### Threshold
 
 $$
