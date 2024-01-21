@@ -33,3 +33,9 @@ $$
 
 
 ![Alt text](media/image-6.png)
+
+### Construction
+
+![https://github.zhaw.ch/pages/doem/mldm_book/pics/svm/geometry.svg](https://github.zhaw.ch/pages/doem/mldm_book/pics/svm/geometry.svg)
+
+## Soft Margin Classifier
