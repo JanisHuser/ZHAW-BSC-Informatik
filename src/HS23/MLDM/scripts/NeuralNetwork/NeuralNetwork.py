@@ -14,13 +14,31 @@ class LayerType(IntEnum):
 class ActivationFuncton(IntEnum):
 	NONE = 1
 	LOGISTICAL = 2
-	
 
+	
+import numpy as np
+def logistic(val):
+	return 1 / (1 + np.e ** (-val) )
+
+def logistic_partial(x):
+	return x * (1-x)
+
+
+def get_activation_function(function: ActivationFuncton):
+    if int(function) == int(ActivationFuncton.LOGISTICAL):
+        return logistic
+    
+def get_pd_activation_function(function: ActivationFuncton):
+    if int(function) == int(ActivationFuncton.LOGISTICAL):
+        return logistic_partial
+    
 class NeuralNetwork():
+    LEARNING_RATE = 0.5
     def __init__(self, num_input):
         self.hidden_layers: List[NeuronLayer] = []
         self.num_input = num_input
         self.output_layer: NeuronLayer = None
+        self.total_weights = 0
           
     def add_output_layer(self, num_neurons: Number, function: ActivationFuncton, weights=None, bias=None):
         layer = NeuronLayer(num_neurons, function, bias)
@@ -30,17 +48,18 @@ class NeuralNetwork():
             previous_nodes = self.hidden_layers[-1].num_neurons
 
         i = 0
-        for _ in range(previous_nodes):
-            for k in range(num_neurons):
+        for j in range(previous_nodes):
+            for _ in range(num_neurons):
                 weight = random.random()
 
                 if len(weights) > i:
                     weight = weights[i]
 
-                layer.neurons[k].weights.append(weight)
+                layer.neurons[j].weights.append(weight)
                 i += 1
 
         self.output_layer = layer
+        self.total_weights += i
 		
     def add_hidden_layer(self, num_neurons: Number, function: ActivationFuncton, weights=None, bias=None):
         layer = NeuronLayer(num_neurons, function, bias)
@@ -50,15 +69,17 @@ class NeuralNetwork():
             previous_nodes = self.hidden_layers[-1].num_neurons
             
         i = 0
-        for _ in range(previous_nodes):
-            for k in range(num_neurons):
+        for j in range(previous_nodes):
+            for _ in range(num_neurons):
                 weight = random.random()
 
                 if len(weights) > i:
                     weight = weights[i]
 
-                layer.neurons[k].weights.append(weight)
+                layer.neurons[j].weights.append(weight)
                 i += 1
+        self.total_weights += i
+
         self.hidden_layers.append(layer)
 
 
@@ -89,12 +110,14 @@ class NeuralNetwork():
                 layer_positions[node_name] = (i, -j)
                 node_label_dict[node_name] = round(neuron.bias, 2)
 
-                for prev_node in prev_layer_nodes:
-                    weight = random.random()  # Random weight for demonstration
+                
+                for k, prev_node in enumerate(prev_layer_nodes):
+                    weight = neuron.weights[k]
                     G.add_edge(prev_node, node_name)
                     edge_label_dict[(prev_node, node_name)] = round(weight, 2)
 
             prev_layer_nodes = current_layer_nodes
+
 
         # Prepare output layer nodes separately to color them differently
         output_layer_nodes = []
@@ -106,10 +129,10 @@ class NeuralNetwork():
             layer_positions[node_name] = (len(self.hidden_layers) + 1, -j)
             node_label_dict[node_name] = round(neuron.bias, 2)
 
-            for prev_node in prev_layer_nodes:
-                weight = random.random()  # Random weight for demonstration
+            for k, prev_node in enumerate(prev_layer_nodes):
+                weight = neuron.weights[k]
                 G.add_edge(prev_node, node_name)
-                edge_label_dict[(prev_node, node_name)] = 0.3
+                edge_label_dict[(prev_node, node_name)] = weight
 
         # Function to calculate edge label position (near the target node)
         def edge_label_position(source, target, offset):
@@ -126,13 +149,13 @@ class NeuralNetwork():
         for edge in G.edges():
             source, target = edge  # Unpack the edge tuple into source and target
             if source in layer_positions and target in layer_positions:
-                edge_label_pos[source] = edge_label_position(source, target, 0.01)
-                edge_label_pos[target] = edge_label_position(source, target, 0.9)
+                edge_label_pos[source] = edge_label_position(source, target, 0)
+                edge_label_pos[target] = edge_label_position(source, target, 1)
                 new_edge_label_dict[edge] = edge_label_dict[edge]
 
 
         # Draw the graph
-        plt.figure(figsize=(12, 8))
+        plt.figure(figsize=(12, 4))
         # Draw input layer in green
         nx.draw(G, pos=layer_positions, nodelist=input_layer_nodes, 
                 with_labels=True, labels=node_label_dict, node_size=3000, node_color='lightgreen')
@@ -152,26 +175,66 @@ class NeuralNetwork():
         plt.title("Neural Network Visualization")
         plt.show()
 
-
-
-
-
-
-
     def feed_forward(self, inputs):
+        nets = []
+        outs = []
         if len(inputs) != self.num_input:
             raise ValueError("number of inputs must be equal to num_inputs")
+        
         for layer in self.hidden_layers:
-            outputs = layer.feed_forward(inputs)
+            net, outputs = layer.feed_forward(inputs)
             inputs = outputs
 
-        return self.output_layer.feed_forward(inputs)
+            nets.append(net)
+            outs.append(outputs)
+
+        net, outputs = self.output_layer.feed_forward(inputs)
+        nets.append(net)
+        outs.append(outputs)
+        return nets, outs
     
+    def train(self, training_inputs, training_outputs):
+        nets, outs = self.feed_forward(training_inputs)
+
+        print ("pd(z) => Partial Derative of z, in this case logistic function and so on")
+        print ("outputs per neuron (forward feed)", outs)
+
+        outs_output = outs[-1]
+        outs_last_hidden = outs[-2]
+        
+        # pd output activation func
+        pd_out_func = get_pd_activation_function(self.output_layer.function)
+        new_output_weight = []
+        
+
+        output_weight_count = self.total_weights - self.output_layer.num_neurons * len(self.output_layer.neurons[0].weights) + 1
+        print("---------------")
+        print ("1. Calculating new weights for output layer, DO NOT CHANGE THEM YET")
+        for i, out_o in enumerate(outs_output):
+            for j, out_h in enumerate(outs_last_hidden):
+                
+                pd_total_output_weight = -(training_outputs[i] - out_o) * pd_out_func(out_o) * out_h
+                new_weight = self.output_layer.neurons[i].weights[j] - NeuralNetwork.LEARNING_RATE * pd_total_output_weight
+                new_output_weight.append(new_weight)
+                print ()
+                print ("\t",f"Calculating new value of w{output_weight_count}")
+                print ("\t",f"∂Err_total/∂w{output_weight_count}=-(y{i+1} - out_o{i+1}) * pd(g(out_o{i+1})) * out_h{j+1})", f",g={str(self.output_layer.function).replace('ActivationFuncton.', '')}")
+                print ("\t",f"∂Err_total/∂w{output_weight_count}=-({training_outputs[i]} - {out_o}) * {pd_out_func(out_o)} * {out_h}")
+                print ("\t",f"w{output_weight_count}=w{output_weight_count}-α * ∂Err_total/∂w{output_weight_count}")
+                print ("\t",f"w{output_weight_count}={self.output_layer.neurons[i].weights[j]} - {NeuralNetwork.LEARNING_RATE} * {pd_total_output_weight}")
+                print ("\t",f"w{output_weight_count}={new_weight}")
+
+                output_weight_count += 1
+
+        
+
+
+
 class NeuronLayer:
     def __init__(self, num_neurons, function: ActivationFuncton, bias):
 
         self.function = function
-        self.num_neurons = num_neurons
+        self.num_neurons = int(num_neurons)
         # Every neuron in a layer shares the same bias
         self.bias = bias if bias else random.random()
 
@@ -188,10 +251,22 @@ class NeuronLayer:
             print('  Bias:', self.bias)
 
     def feed_forward(self, inputs):
-        outputs = []
+        nets = []
+        outs = []
+            
+        net = 0
+
         for neuron in self.neurons:
-            outputs.append(neuron.calculate_output(inputs))
-        return outputs
+            net = self.bias
+
+
+            for i, input in enumerate(inputs):
+                net += neuron.weights[i] * input
+
+            nets.append(net)
+            outs.append(get_activation_function(self.function)(net))
+        
+        return nets, outs
 
     def get_outputs(self):
         outputs = []
@@ -205,13 +280,18 @@ class Neuron:
         self.bias = bias
         self.weights = []
 
-    def calculate_output(self, inputs):
+    def calculate_output(self, inputs, function):
         self.inputs = inputs
-        self.output = self.squash(self.calculate_total_net_input())
-        return self.output
+        nets = self.calculate_total_net_input()
+        outs = function(nets)
+
+        self.output =  outs
+        return (nets, outs)
 
     def calculate_total_net_input(self):
         total = 0
+
+        
         for i in range(len(self.inputs)):
             total += self.inputs[i] * self.weights[i]
         return total + self.bias
@@ -229,8 +309,9 @@ class Neuron:
     # This value is also known as the delta (δ) [1]
     # δ = ∂E/∂zⱼ = ∂E/∂yⱼ * dyⱼ/dzⱼ
     #
-    def calculate_pd_error_wrt_total_net_input(self, target_output):
-        return self.calculate_pd_error_wrt_output(target_output) * self.calculate_pd_total_net_input_wrt_input();
+
+    def calc_delta_rule(self, target_output, pd_activation_function):
+        return self.calculate_pd_error_wrt_output(target_output) * pd_activation_function(self.output)
 
     # The error for each neuron is calculated by the Mean Square Error method:
     def calculate_error(self, target_output):
@@ -250,14 +331,6 @@ class Neuron:
     def calculate_pd_error_wrt_output(self, target_output):
         return -(target_output - self.output)
 
-    # The total net input into the neuron is squashed using logistic function to calculate the neuron's output:
-    # yⱼ = φ = 1 / (1 + e^(-zⱼ))
-    # Note that where ⱼ represents the output of the neurons in whatever layer we're looking at and ᵢ represents the layer below it
-    #
-    # The derivative (not partial derivative since there is only one variable) of the output then is:
-    # dyⱼ/dzⱼ = yⱼ * (1 - yⱼ)
-    def calculate_pd_total_net_input_wrt_input(self):
-        return self.output * (1 - self.output)
 
     # The total net input is the weighted sum of all the inputs to the neuron and their respective weights:
     # = zⱼ = netⱼ = x₁w₁ + x₂w₂ ...
