@@ -68,13 +68,14 @@ class NeuralNetwork():
         layer_positions = {}
         node_label_dict = {}
         edge_label_dict = {}
+        edge_label_pos = {}
 
-        # Create input layer nodes
+        # Initialize input layer nodes
         input_layer_nodes = [f"Input Layer_Neuron{i}" for i in range(self.num_input)]
         for i, node_name in enumerate(input_layer_nodes):
             G.add_node(node_name)
-            layer_positions[node_name] = (0, -i)
-            node_label_dict[node_name] = f"i{i}"
+            layer_positions[node_name] = (0, -i)  # Position for input nodes
+            node_label_dict[node_name] = f"i_{i}"  # Label for input nodes
 
         # Add hidden layers to the graph
         prev_layer_nodes = input_layer_nodes
@@ -89,7 +90,7 @@ class NeuralNetwork():
                 node_label_dict[node_name] = round(neuron.bias, 2)
 
                 for prev_node in prev_layer_nodes:
-                    weight = random.random()  # Assign a random weight for demonstration
+                    weight = random.random()  # Random weight for demonstration
                     G.add_edge(prev_node, node_name)
                     edge_label_dict[(prev_node, node_name)] = round(weight, 2)
 
@@ -106,12 +107,32 @@ class NeuralNetwork():
             node_label_dict[node_name] = round(neuron.bias, 2)
 
             for prev_node in prev_layer_nodes:
-                weight = random.random()  # Assign a random weight for demonstration
+                weight = random.random()  # Random weight for demonstration
                 G.add_edge(prev_node, node_name)
-                edge_label_dict[(prev_node, node_name)] = round(weight, 2)
+                edge_label_dict[(prev_node, node_name)] = 0.3
+
+        # Function to calculate edge label position (near the target node)
+        def edge_label_position(source, target, offset):
+            x0, y0 = layer_positions[source]
+            x1, y1 = layer_positions[target]
+            
+            return (
+                    x1 * offset + x0 * (1 - offset),
+                    y1 * offset + y0 * (1 - offset)
+                )
+
+        new_edge_label_dict = {}
+        # Calculate positions for edge labels
+        for edge in G.edges():
+            source, target = edge  # Unpack the edge tuple into source and target
+            if source in layer_positions and target in layer_positions:
+                edge_label_pos[source] = edge_label_position(source, target, 0.01)
+                edge_label_pos[target] = edge_label_position(source, target, 0.9)
+                new_edge_label_dict[edge] = edge_label_dict[edge]
+
 
         # Draw the graph
-        plt.figure(figsize=(12, 4))
+        plt.figure(figsize=(12, 8))
         # Draw input layer in green
         nx.draw(G, pos=layer_positions, nodelist=input_layer_nodes, 
                 with_labels=True, labels=node_label_dict, node_size=3000, node_color='lightgreen')
@@ -121,14 +142,25 @@ class NeuralNetwork():
         # Draw output layer in orange
         nx.draw(G, pos=layer_positions, nodelist=output_layer_nodes, 
                 with_labels=False, node_size=3000, node_color='orange')
-        nx.draw_networkx_edge_labels(G, pos=layer_positions, edge_labels=edge_label_dict)
+        # Draw edge labels near the target nodes
+
+
+        nx.draw_networkx_edge_labels(G,
+                                     pos=edge_label_pos,
+                                     edge_labels=new_edge_label_dict,
+                                     label_pos=0.25)
         plt.title("Neural Network Visualization")
         plt.show()
 
 
 
-    def feed_forward(self, inputs):
 
+
+
+
+    def feed_forward(self, inputs):
+        if len(inputs) != self.num_input:
+            raise ValueError("number of inputs must be equal to num_inputs")
         for layer in self.hidden_layers:
             outputs = layer.feed_forward(inputs)
             inputs = outputs
