@@ -2,6 +2,20 @@
 
 The idea of gradient descent, is to find an optimal value for a problem. This is done using the **learning rate** $\alpha$. $\alpha$ is stepped towards the minimum, after every step the learning rate is decreased.
 
+
+## EXAMPLE
+
+- **Gradienten:** $g=\frac{dN}{dw}=-0.5$
+- **Gewicht:** $w=1$
+- **Learning Rate:** $\alpha =0.1$
+
+
+$$
+w' = w - \alpha * g \\
+= 1 - (0.1 * (-0.5)) = 1 - (-0.05) = 1.05
+
+$$
+
 ![](https://github.zhaw.ch/pages/doem/mldm_book/pics/regression2/gradient-descent-3d.png)
 
 ## Learning rate adjustments
