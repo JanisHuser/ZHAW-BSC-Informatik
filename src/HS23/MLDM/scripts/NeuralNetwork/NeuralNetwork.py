@@ -5,6 +5,7 @@ from enum import IntEnum
 from typing import List
 import matplotlib.pyplot as plt
 import networkx as nx
+from IPython.display import display, Math
 
 class LayerType(IntEnum):
     INPUT = 1
@@ -193,10 +194,38 @@ class NeuralNetwork():
         outs.append(outputs)
         return nets, outs
     
+    def get_weight(self, index):
+        i = 0
+        for layer in self.hidden_layers:
+            for neuron in layer.neurons:
+                for w in neuron.weights:
+                    if i == index:
+                        return w
+                    
+                    i += 1
+
+        for neuron in self.output_layer.neurons:
+            for w in neuron.weights:
+                if i == index:
+                    return w
+                
+                i += 1
+
+        return None
+    
     def train(self, training_inputs, training_outputs):
-        nets, outs = self.feed_forward(training_inputs)
+
+        new_network_weights = []
+        nets = [[]]
+        outs = [training_inputs]
+        
+        nets_, outs_ = self.feed_forward(training_inputs)
+        nets.extend(nets_)
+        outs.extend(outs_)
+
 
         print ("pd(z) => Partial Derative of z, in this case logistic function and so on")
+        print ("out_n / net_n => w_n")
         print ("outputs per neuron (forward feed)", outs)
 
         outs_output = outs[-1]
@@ -210,6 +239,9 @@ class NeuralNetwork():
         output_weight_count = self.total_weights - self.output_layer.num_neurons * len(self.output_layer.neurons[0].weights) + 1
         print("---------------")
         print ("1. Calculating new weights for output layer, DO NOT CHANGE THEM YET")
+
+
+        new_layer_weights = []
         for i, out_o in enumerate(outs_output):
             for j, out_h in enumerate(outs_last_hidden):
                 
@@ -218,15 +250,132 @@ class NeuralNetwork():
                 new_output_weight.append(new_weight)
                 print ()
                 print ("\t",f"Calculating new value of w{output_weight_count}")
-                print ("\t",f"∂Err_total/∂w{output_weight_count}=-(y{i+1} - out_o{i+1}) * pd(g(out_o{i+1})) * out_h{j+1})", f",g={str(self.output_layer.function).replace('ActivationFuncton.', '')}")
-                print ("\t",f"∂Err_total/∂w{output_weight_count}=-({training_outputs[i]} - {out_o}) * {pd_out_func(out_o)} * {out_h}")
-                print ("\t",f"w{output_weight_count}=w{output_weight_count}-α * ∂Err_total/∂w{output_weight_count}")
+                print ("\t",f"∂E_total/∂w{output_weight_count}=-(y{i+1} - out_o{i+1}) * pd(g(out_o{i+1})) * out_h{j+1})", f",g={str(self.output_layer.function).replace('ActivationFuncton.', '')}")
+                print ("\t",f"∂E_total/∂w{output_weight_count}=-({training_outputs[i]} - {out_o}) * {pd_out_func(out_o)} * {out_h}")
+                print ("\t",f"w{output_weight_count}=w{output_weight_count}-α * ∂E_total/∂w{output_weight_count}")
                 print ("\t",f"w{output_weight_count}={self.output_layer.neurons[i].weights[j]} - {NeuralNetwork.LEARNING_RATE} * {pd_total_output_weight}")
                 print ("\t",f"w{output_weight_count}={new_weight}")
 
                 output_weight_count += 1
 
+                new_layer_weights.append(new_weight)
+
+        new_network_weights.append(new_layer_weights)
+                
+
+        last_layer = self.output_layer
+        processed_weight_count = self.output_layer.num_neurons * len(self.output_layer.neurons[0].weights)
+        weights_left = self.total_weights - processed_weight_count
+
+        layer_index = 2
+        output_errors = [
+            -(training_outputs[i] - outs[-1][i]) for i in range(len(training_outputs))
+        ]
+        print("---------------")
         
+        for i, layer in enumerate(self.hidden_layers):
+
+            new_layer_weights = []
+            layer_weights = layer.num_neurons * last_layer.num_neurons
+            start_weight = weights_left - layer_weights
+
+            print (f"{i+2}. Calculating new weights for Hidden layer {len(self.hidden_layers)-i} , DO NOT CHANGE THEM YET")
+            print (f"Therefore updating weights ({start_weight+1}-{start_weight+layer_weights})")
+
+            outs_prev = outs[-(layer_index+1)]
+            outs_this = outs[-layer_index]
+            nets_this = nets[-layer_index]
+            outs_next = outs[-(layer_index-1)]
+            nets_next = nets[-(layer_index-1)]
+
+            wi = 0
+            output_wi_counter = weights_left
+            for ni, neuron in enumerate(layer.neurons):
+                weight_index = start_weight+wi
+                print ("\t", f"Calculate w{weight_index}")
+
+                expression =rf"""
+                             \frac{{\partial{{E_{{total}}}}}}{{\partial{{w_{weight_index+1}}}}}=
+                             \frac{{\partial{{E_{{total}}}}}}{{\partial{{out_{{h{i+1}{ni+1}}}}}}} *
+                             \frac{{\partial{{out_{{h{i+1}{ni+1}}}}}}}{{\partial{{net_{{h{i+1}{ni+1}}}}}}} *
+                             \frac{{\partial{{net_{{h{i+1}{ni+1}}}}}}}{{\partial{{w_{{{weight_index+1}}}}}}}
+                             \\\\"""
+                
+                expression += rf"\frac{{\partial{{E_{{total}}}}}}{{\partial{{w_{weight_index+1}}}}}=("
+                for oi in range(self.output_layer.num_neurons):
+                    expression +=  rf"\frac{{\partial{{E_{{o{oi+1}}}}}}}{{\partial{{out_{{h{i+1}{ni+1}}}}}}}+"
+
+                expression = expression[:-1]
+                expression += ")"
+                expression += rf"""
+                *
+                \frac{{\partial{{out_{{h{i+1}{ni+1}}}}}}}{{\partial{{net_{{h{i+1}{ni+1}}}}}}} *
+                \frac{{\partial{{net_{{h{i+1}{ni+1}}}}}}}{{\partial{{w_{{{weight_index+1}}}}}}}
+                \\\\
+                """
+
+
+                
+                expression += rf"\frac{{\partial{{E_{{total}}}}}}{{\partial{{w_{weight_index+1}}}}}=(("
+                for oi in range(self.output_layer.num_neurons):
+                    expression += rf"\frac{{\partial{{E_{{o{oi+1}}}}}}}{{\partial{{net_{{o{i+1}{ni+1}}}}}}} *"
+                    expression += rf"\frac{{\partial{{net_{{o{oi+1}}}}}}}{{\partial{{out_{{h{i+1}{ni+1}}}}}}}"
+                    expression += ")+("
+
+                expression = expression[:-2]
+
+                expression += rf"""
+                )*
+                \frac{{\partial{{out_{{h{i+1}{ni+1}}}}}}}{{\partial{{net_{{h{i+1}{ni+1}}}}}}} *
+                \frac{{\partial{{net_{{h{i+1}{ni+1}}}}}}}{{\partial{{w_{{{weight_index+1}}}}}}}
+                """
+
+                expression += rf"=(("
+
+                # CALCULATE the error values
+                p1 = 0
+                p2 = 0
+                p3 = 0
+                for oi in range(self.output_layer.num_neurons):
+                    
+                    expression += rf"\frac{{\partial{{E_{{o{oi+1}}}}}}}{{\partial{{net_{{o{i+1}{ni+1}}}}}}} *"
+                    expression += rf"w_{{{output_wi_counter}}}"
+
+                    pd_E_net__pd_net = output_errors[oi] * get_pd_activation_function(layer.function)(outs_next[oi])
+
+                    
+                    eq = pd_E_net__pd_net * self.get_weight(output_wi_counter)
+
+                    p1 += eq
+                    expression += ")+("
+
+                    output_wi_counter += 1
+
+                expression = expression[:-2]
+
+
+                
+                expression += rf")* \partial{{g(out_{{h{i+1}{ni+1}}})}} *"
+                expression += rf"out_{{h{i+1}{ni+1}}}"
+                
+                p2 = get_pd_activation_function(layer.function)(outs_this[ni])
+                p3 = outs_prev[ni]
+                values_multiplied = p1 *p2*p3
+                expression += f"\\\\={p1} * {p2} * {p3} = {values_multiplied}"
+
+                display(Math(expression))
+
+                new_weight = self.get_weight(weight_index) - NeuralNetwork.LEARNING_RATE *values_multiplied
+
+                wi += 1
+
+                new_layer_weights.append(new_weight)
+
+            new_network_weights.insert(0, new_layer_weights)
+
+        print (new_network_weights)
+
+                
 
 
 
