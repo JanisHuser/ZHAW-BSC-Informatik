@@ -33,6 +33,11 @@ Mit der Normal Equation können wir die optimalen Theta Werte bestimmen.
 
 # Univariate Linear Regression
 
+$$
+h(x) = \theta_0 + \theta_1*x_0 + \theta_2*x_1
+$$
+
+
 **HAS Only one input variable (X)**
 
 $$
