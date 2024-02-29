@@ -4,6 +4,17 @@
 - [Helpers](Helpers/Readme.md)
 	- [Hex / Binary Helper](Helpers/HexHelper.md)
 
+# FS24
+
+- [SWEN2](FS24/SWEN2/Readme.md)
+	- [eXtreme Programming](FS24/SWEN2/XP.md)
+- [IVEST](FS24/IVEST/Readme.md)
+	- [Bestandsrechnung](FS24/IVEST/Bestandsrechnung.md)
+- [MPC](FS24/MPC/Readme.md)
+	- [Patterns](FS24/MPC/Patterns.md)
+	- [Processes](FS24/MPC/Processes.md)
+	- [Threads](FS24/MPC/Threads.md)
+
 # HS23
 
 - [CT1](HS23/CT1/Readme.md)
