@@ -63,9 +63,35 @@ succeed.
 - Developers respect the expertise of the customers and vice versa.
 - Management respects our right to accept responsibility and receive authority over our own work.
 
+## Cost of Change
+
+### Traditional View
+![alt text](media/image-2.png)
+
+### The XP View
+
+![alt text](media/image-3.png)
+
 ## Basic Principles
 
-![alt text](media/image-1.png)
+**Fundamental principles**
+- Rapid feedback
+- Assume simplicity
+- Incremental change
+- Embracing change
+- Quality work
+
+**Other principles (contd)**
+- Teach learning
+- Small inital investment
+- Play to win
+- Concrete experiments
+- Open, honest communication
+- Work with people's instincts, not against them
+- Accepted responsibility
+- Local adaption
+- Travel light
+- Honest mesurement
 
 ## Practices
 
@@ -174,7 +200,7 @@ succeed.
 - test-first programming
 - incremental design
 
-## Corollary practices
+## Corollary practices (logische praktiken)
 
 - Real customer involment
 - incremental deployment
