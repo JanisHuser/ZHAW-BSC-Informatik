@@ -7,7 +7,8 @@
 
 In vielen Schemas wird ein negiertes Signal, dass heist wenn Signal=0, dann aktiv, mit einem "N"\[Signalname\] bezeichnet.
 
-## Clock
+
+## CLK - Clock
 
 Die CLK ist ein (meistens) gleichbleibendes Signal.
 
@@ -22,7 +23,8 @@ Die CLK ist ein (meistens) gleichbleibendes Signal.
 
 - Master und Slave haben je ein **eigenes, voneinander unabhängiges** CLK Signal 
 
-## Synchrones Bus Signal
+
+## Synchrones Bus Signal
 
 Der bus des CT-Boardes wird durch eine **steigende Flanke** (rising edge)  des **CLK-Signals** getriggert.
 
@@ -43,7 +45,6 @@ Ein synchrones bus signal, besteht aus folgenden Komponenten:
 
 ![alt text](media/image-2.png)
 
-
 #### NBL Signal - NOT Byte Line
 
 Das NBL Signal zeigt, wann welche Bytes geschrieben werden sollen. Es ist invertiert, also 0=>aktiv
@@ -54,3 +55,11 @@ Das NBL Signal zeigt, wann welche Bytes geschrieben werden sollen. Es ist invert
 ### CPU Schreibzeit
 
 ![alt text](<media/Bildschirmfoto 2024-03-02 um 11.45.48.png>)
+
+## GND - Ground
+
+Das GND Signal wird als virtuellen Nullpunkt bezeichnet. Das GND Signal ist in einem System das meist verbreitete
+
+## VCC - Voltage Common Collector
+
+Das VCC Signal ist die Eingangsspannung des Gerätes. Es wird immer relativ zum GND Signal bemessen.

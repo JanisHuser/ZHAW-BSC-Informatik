@@ -17,6 +17,7 @@
 - [CT2]()
 	- [Signale / Bus](FS24/CT2/Signale.md)
 	- [GPIO](FS24/CT2/GPIO.md)
+	- [SPI](FS24/CT2/SPI.md)
 
 # HS23
 
