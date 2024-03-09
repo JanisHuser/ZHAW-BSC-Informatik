@@ -60,3 +60,14 @@ Das Timing Diagram sieht zwar Komplex aus, ist es aber eigentlich gar nicht.
 - RX: raising edge
 
 ![alt text](media/image-9.png)
+
+
+## Synchronisierung
+
+### TX
+
+Sobald das Signal (TXE / TX Buffer Empty) HIGH ist, kann das nächste TX Byte auf das Register SPI_DR geschrieben werden
+
+### RXNE
+
+Ist dann aktiv, wenn Daten auf SPI_DR sind. Also können wir dann Daten von diesem Register lesen gehen.
