@@ -4,6 +4,8 @@
 - Die Pins können mit Code / Software konfiguriert werden
 - Die meisten GPIO Pins haben eine alternative digitale oder analoge Funktion. Man kann also auswählen, was man braucht.
 
+Nachfolgend eine Tabelle mit den Abkürzungen, diese sind weit verbreitet, und in den meisten Schemas (die Skizeen mit den Strichen und Blöcken) auch so bezeichnet.
+
 | Pin bezeichung | Beschreibung |
 |----------------|--------------|
 | GP | General purpose |
@@ -13,55 +15,84 @@
 | OD | Open Drain |
 | AF | Alternate Function |
 
-## Wechsel zwischen INput und OUTput
 
-Wie bereits oben beschrieben, kann ein Pin mehrere Funktionen haben. Diese werden durch digitale Schalter konfiguriert.
+## Funktionsmodis
 
-| MODER\[1:\0] | Beschreibung |
+Wie bereits oben beschrieben, haben GPIOs **IMMER** mehrere Funktionen. Diese können konfiguriert werden.
+
+
+- Mit den grauen Blöcken wird der Port jediglich konfiguriert.
+- Pinke Signale sind dann aktiv, wenn die **alternativen Funktionen** aktiv sind.
+
+![alt text](media/image-24.png)
+
+
+### 1) Schmitt-Trigger
+
+Der Schmitt trigger wandelt analoge Signale in ein digitales (HIGH / LOW) um.
+
+![alt text](media/image-20.png)
+
+## Konfiguration
+
+Die Konfiguration von Pins wird in der echten Welt **selten** händisch gelöst. Dafür gibt es diverse IDE's die einem das Leben weitgehend vereinfachen. (z.B. STM32CubeIDE) Dies hat den Grund, da jede Konfiguration **herstellerabhängig** ist.
+
+Die Registernamen haben ein *R* am Ende des Namens, was für Register steht. Bitte nenne es nicht MODER sonder MODE-REGISTER.
+
+### Direction (MODER)
+
+Die Richtung muss immer konfiguriert werden. Gelesen kann vom GPIO auch dann, wenn dieser als Output definiert ist.
+
+| MODER\[1:0\] | Beschreibung |
 |--------------|--------------|
 | 00 | Input |
 | 01 | General purpose output mode |
 | 10 | Alternate function mode |
 | 11 | Analog mode |
 
-![alt text](media/image-3.png)
+### Output Type (OTYPER)
 
-## Output Typen
+![alt text](media/image-25.png)
 
-### PUSH PULL
+| OTYPER | Beschreibung | 
+|--------|--------------|
+| 0 | Push - Pull (Reset State) |
+| 1 | Open Drain |
 
-Der output kann entweder HIGH oder LOW, nichts dazwischen.
-
-Dabei wird der Output, wenn dieser näher bei HIGH liegt, nach oben gezogen, also auf das HIGH Signal (x). Alternativ, wird dieses nach unten (in den meisten fällen auf das GND ) gezogen.
 
 
-![alt text](media/image-4.png)
+#### Push Pull
+
+Push Pull ist der Reset State. Bei diesem sind HIGH / LOW möglich. Der Pegel kann nach oben oder unten gezogen werden.
 
 ### Open Drain
 
-Das Signal wird auf ein anderes Signal, in den meisten Fällen, auf GND gezogen. Und **NUR** auf das eine Signal.
-
-## Port Geschwindigkeiten
-
-| OSPEEDR\[1:0\] | Beschreibung |
-|----------------|--------------|
-| 00 | Low Speed |
-| 01 | Medium Speed |
-| 10 | High Speed |
-| 11 | Very high speed |
+Open Drain wird dann verwendet, wenn du einige Geräte an diesem Port anschliessen wilst. Der Pin kann **NUR** nach LOW gezogen werden. 
 
 
-## Pull Up / Down
+### Pull-up / Pull-down / floating
 
-- In der Elektronik haben wir das Problem, dass, wenn ein Signal nicht gesetzt wird, dann ist es schwebend (floating). Schwebend bedeutet dann, dass der Wert schwankend ist. Dies wollen wir soweit wie möglich vermeiden. Deshalb verbinden wir das Eingangssignal über einen Widerstand zu HIGH / LOW. Wird die Leitung nun von aussen geschaltet, so wird das Signal, entgegen des Widerstandes gezogen.
+
+- In der Elektronik haben wir das Problem, dass, wenn ein Signal nicht gesetzt wird, dann ist es schwebend (floating). Schwebend bedeutet dann, dass der Wert irgendetwas sein kann. Dies wollen wir soweit wie möglich vermeiden. Deshalb verbinden wir das Eingangssignal über einen Widerstand zu HIGH / LOW. Wird die Leitung nun von aussen gesetzt, so **muss** das Signal, entgegen des Widerstandes gezogen werden.
 - HIGH aktive Signale haben normalerweise eine Pulldown-Koniguration
 - LOW Aktive (invertierte / NOT) Signale normalerweise eine Pullup Konfiguration ()
 
 ![alt text](media/5DA671DF-002F-45DD-B999-590E1F072500.jpeg)
 
-## Konfiguration
 
-Wie kann denn nun ein Port konfiguriert werden. Wir können selten ein einzelnes Signal direkt steuern. Wir müssen diesen über einen Port steuern. Denn ein Port ist der Zugang zum einzelnen Signal.
+### Speed
+
+| OSPEEDR\[1:0\] | Beschreibung | Geschwindigkeit |
+|----------------|--------------|-----------------|
+| 00 | Low Speed (Reset State)| 2 MHz |
+| 01 | Medium Speed | 10 MHz |
+| 10 | High Speed | 50 MHz |
+| 11 | Very high speed | 100 MHz |
+
+
+## Code
+
+Wie kann denn nun ein GPIO Pin konfiguriert werden. Wir können selten einen einzelnen GPIO über ein eigenes Register steuern. Wir müssen diesen über einen Port steuern. Denn ein Port ist der Zugang zum einzelnen GPIO Pin.
 
 ![](media/GPIO/Ports.png)
 
