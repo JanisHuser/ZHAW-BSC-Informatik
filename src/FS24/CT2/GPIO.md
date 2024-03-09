@@ -27,12 +27,6 @@ Wie bereits oben beschrieben, haben GPIOs **IMMER** mehrere Funktionen. Diese k�
 ![alt text](media/image-24.png)
 
 
-### 1) Schmitt-Trigger
-
-Der Schmitt trigger wandelt analoge Signale in ein digitales (HIGH / LOW) um.
-
-![alt text](media/image-20.png)
-
 ## Konfiguration
 
 Die Konfiguration von Pins wird in der echten Welt **selten** händisch gelöst. Dafür gibt es diverse IDE's die einem das Leben weitgehend vereinfachen. (z.B. STM32CubeIDE) Dies hat den Grund, da jede Konfiguration **herstellerabhängig** ist.
@@ -65,9 +59,20 @@ Die Richtung muss immer konfiguriert werden. Gelesen kann vom GPIO auch dann, we
 
 Push Pull ist der Reset State. Bei diesem sind HIGH / LOW möglich. Der Pegel kann nach oben oder unten gezogen werden.
 
+![alt text](media/image-26.png)
+
+Ist Internal Signal
+- LOW, so ist das Output Signal HIGH (links)
+- HIGH, so ist das Output Signal LOW
+
 ### Open Drain
 
-Open Drain wird dann verwendet, wenn du einige Geräte an diesem Port anschliessen wilst. Der Pin kann **NUR** nach LOW gezogen werden. 
+Open Drain wird dann verwendet, wenn du mehrere Geräte an diesem Port anschliessen wilst. Der Pin kann **NUR** nach LOW gezogen werden. 
+
+Ist Internal Signal
+- LOW, so ist das Output Signal floating
+- HIGH, so ist das Output Signal LOW
+
 
 
 ### Pull-up / Pull-down / floating
