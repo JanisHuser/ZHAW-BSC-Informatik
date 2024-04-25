@@ -71,3 +71,22 @@ Sobald das Signal (TXE / TX Buffer Empty) HIGH ist, kann das nächste TX Byte au
 ### RXNE
 
 Ist dann aktiv, wenn Daten auf SPI_DR sind. Also können wir dann Daten von diesem Register lesen gehen.
+
+
+## Modes
+
+### MODE=0, CPOL = 0, CPHA = 0, SCK idle state = low
+
+![](media/SPI/SPI-1.png)
+
+### MODE=1, CPOL = 0, CPHA = 1, SCK idle state = low
+
+![](media/SPI/SPI-2.png)
+
+### MODE=2, CPOL = 1, CPHA = 0, SCK idle state = high
+
+![](media/SPI/SPI-3.png)
+
+### MODE=3, CPOL = 1, CPHA = 1, SCK idle state = high
+
+![](media/SPI/SPI-4.png)
