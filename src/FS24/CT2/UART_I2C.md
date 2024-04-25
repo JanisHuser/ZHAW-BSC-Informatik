@@ -66,6 +66,23 @@ Typische Werte sind:
 - even
 - odd
 
+
+## CPOL=0,CPHA=0
+
+![](media/USART/USART%20-%201.png)
+
+## CPOL=0,CPHA=1
+
+![](media/USART/USART%20-%202.png)
+
+## CPOL=1,CPHA=0
+
+![](media/USART/USART%20-%203.png)
+
+## CPOL=1,CPHA=1
+
+![](media/USART/USART%20-%204.png)
+
 # RS-485
 
 - Braucht 4 Leitungen, jeh zwei zum Senden / Empfangen
@@ -127,3 +144,4 @@ Typische Werte sind:
 ![alt text](media/image-18.png)
 
 1. Master zeiht SDA von LOW zu HIGH
+

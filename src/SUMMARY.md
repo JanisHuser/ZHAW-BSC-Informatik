@@ -19,6 +19,7 @@
 	- [GPIO](FS24/CT2/GPIO.md)
 	- [SPI](FS24/CT2/SPI.md)
 	- [UART & I2C](FS24/CT2/UART_I2C.md)
+	- [Timer & counter](FS24/CT2/Timer.md)
 
 # HS23
 
