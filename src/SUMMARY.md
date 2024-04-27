@@ -20,6 +20,7 @@
 	- [SPI](FS24/CT2/SPI.md)
 	- [UART & I2C](FS24/CT2/UART_I2C.md)
 	- [Timer, counter & pwm](FS24/CT2/Timer.md)
+	- [ADC](FS24/CT2/adc.md)
 
 # HS23
 

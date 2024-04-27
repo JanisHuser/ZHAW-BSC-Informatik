@@ -91,6 +91,8 @@ Und für den ARR
 	- ARR = 100'000 - 1 = 99'999
 
 
+![alt text](media/image-30.png)
+
 # PWM - Pulse Width Modulation
 
 Mit PWM wird mit gan schnellem ein-und ausschalten ein Sinussignal nachgemacht.
