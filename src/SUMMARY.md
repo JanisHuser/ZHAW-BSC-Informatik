@@ -12,6 +12,8 @@
 	- [Patterns](FS24/MPC/Patterns.md)
 	- [Processes](FS24/MPC/Processes.md)
 	- [Threads](FS24/MPC/Threads.md)
+	- [OpenMP](FS24/MPC/OpenMP.md)
+	- [NEON Intrinsics](FS24/MPC/Neon_Intrinsics.md)
 - [BSY](FS24/BSY/Readme.md)
 	- [OS](FS24/BSY/os.md)
 - [CT2](FS24/CT2/Readme.md)

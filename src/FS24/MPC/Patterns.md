@@ -40,6 +40,7 @@ Data can be
 
 ### Fork Join
 
+- An implementation mechanism
 - Implies the cloning of a section of code into another (structurally - but necessarily in terms of data) independent task
 - is **NOT** an abstraction of the POSIX fork.
 
@@ -48,4 +49,30 @@ Data can be
 - Recursive structures, such as trees
 - Irregular sets of connected taks
 - Where different functions are mapped onto different tasks
+
+
+## Loop Parallelization
+
+### Independent
+
+When data is not shared across multiple indexes. This allows that each iteration could be parallelized
+
+```c
+for (int i = 0; i < N; i++) {
+    a[i] = b[i] + c[i];
+}
+```
+
+
+### Dependent
+
+Each loop needs to wait for the previous index to finish
+```c
+for (int i = 1; i < N; i++) {
+    a[i] = a[i-1] + b[i];
+}
+```
+
+
+## Distributed Array Pattern
 
