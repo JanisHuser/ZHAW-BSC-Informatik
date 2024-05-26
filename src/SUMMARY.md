@@ -10,8 +10,6 @@
 	- [eXtreme Programming](FS24/SWEN2/XP.md)
 - [MPC](FS24/MPC/Readme.md)
 	- [Patterns](FS24/MPC/Patterns.md)
-	- [Processes](FS24/MPC/Processes.md)
-	- [Threads](FS24/MPC/Threads.md)
 	- [OpenMP](FS24/MPC/OpenMP.md)
 	- [NEON Intrinsics](FS24/MPC/Neon_Intrinsics.md)
 - [BSY](FS24/BSY/Readme.md)

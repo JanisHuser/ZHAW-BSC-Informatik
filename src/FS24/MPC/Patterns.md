@@ -1,78 +1,187 @@
 # Patterns
 
-## Dependency Analysis
+Multiple patterns may be used concurrently.
 
-### Group Tasks Pattern
+## How to find concurrency?
 
-- Tasks share the **same** constraints and data
+1. Finding a general solution and applying that pattern
+2. Perform a dependency analysis
+3. Either progress to algorithm-structure or return to finding a general solution
 
-### Order Tasks Pattern
+### Finding Concurrency
 
-- Following tasks may not start until previous tasks have completed
+- Task Decomposition pattern
+- Dependency analysis pattern
+
+### Algorithm structure
+
+- Task parallelism pattern
+
+### Supporting Structure
+
+- Fork / Join pattern
+
+### Implemenation mechanism
+
+- Processes & Threads
+
+## State Pattern
+
+- Allows an object to alter its behavior when its internal state changes
+
+![https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/State_Design_Pattern_UML_Class_Diagram.svg/2880px-State_Design_Pattern_UML_Class_Diagram.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/State_Design_Pattern_UML_Class_Diagram.svg/2880px-State_Design_Pattern_UML_Class_Diagram.svg.png)
+
+## Task Decomposition Pattern
+
+- Decomposes a problem into concurrently executable **tasks**
+
+1. Define the **solution space** of a task, as independent as possible
+2. Define the features of said task
+
+### Possible solutions
+
+- **Functional Decomposition**: When splitting the program based on the function
+- **Loop Splitting**: Distinct iterations of a loop
+
+### Control Flow Graph
+
+The control flow graph displays all possible execution paths of a program
+
+![alt text](media/image-8.png)
+
+
+-> Each buble represents a **identifiable task** 
+
+
+
+## Dependency analysis pattern
+
+### Group Task Pattern
+
+- How to group tasks that make up a problem to simplify analysing dependencies
+
+### Order Task Pattern
+
+- How must the groups of tasks be ordered to satisfy constrains
 
 ### Data Sharing Pattern
 
-Data can be
-- Read-only
-- Effectively-local
-- Read write
+- How is data shared amongst tasks
+
+#### Solution
+
+Shared Data can be:
+
+- read only
+- effectively-local
+- read write
 	- accumulate
-	- multiple read single-write
+	- multiple-read single-write
 
+## Task Parallelism pattern
 
-## Task Parallelism Pattern
+### Dependencies
 
-- At least as many tasks as unit of execution (UEs), preferably more
-- Computation effort enough to offset management overhead
-
-- Order dependencies must be enforced
+- Order Dependencies must be encored
 - Data dependencies
-	- **Removable dependencies**: can be removed by code/loop transformation
-	- **Seperable dependencies**: data structures could be replicated
+	- Removable dependencies - can be removed by code / loop transformation
+	- seperable dependencies - data strouctrues could be replicated (replicated data)
 
 ### Schedule
 
-- **Static Schedule**: defined a priori, low management effort but low number of tasks
-- **Dynamic schedule**: higher management effort but unknown or unpredictable task load
-	- Define a task queue and when UE completes its current task it gets a new one from the queue (UEs with tasks completed faster will take more from the queue)
-- **Work-Stealing**: if UE has nothign to do, it looks to the queue of other UEs and takes a task to do 
-	- Adds <span style="text-decoration: underline">significant</span> complexity
+- How are tasks assigned to UEs and how are they scheduled for execution?
 
-### Fork Join
+#### Static Scheulde
 
-- An implementation mechanism
-- Implies the cloning of a section of code into another (structurally - but necessarily in terms of data) independent task
-- is **NOT** an abstraction of the POSIX fork.
+- Defined a priori
+- low management effort but low numebers of tasks
 
-#### USe-Cases
+#### Dynamic schedule
 
-- Recursive structures, such as trees
-- Irregular sets of connected taks
-- Where different functions are mapped onto different tasks
+Higher management but for unknown or unpredictable task load
 
+- Define a task queue and when UE completes is current task,  it gets a new one from the queue
 
-## Loop Parallelization
+-> UEs with tasks completed faster will take more from the queue
 
-### Independent
-
-When data is not shared across multiple indexes. This allows that each iteration could be parallelized
-
-```c
-for (int i = 0; i < N; i++) {
-    a[i] = b[i] + c[i];
-}
-```
+**Work-Stealing**: if UE has nothign to do, it looks to the queue of otehr UEs and takes a task to do (adds significant complexity)
 
 
-### Dependent
+## Fork / Join Pattern
 
-Each loop needs to wait for the previous index to finish
-```c
-for (int i = 1; i < N; i++) {
-    a[i] = a[i-1] + b[i];
-}
-```
+- Implies the cloning of section of code into another (structurally - but not necessarily in terms of data) independent task
+- teh fork-join pattern is **NOT** an abstraction of the POSIX fork, if anything vice-versa
+
+### Use-cases
+
+- recursive structure, such as trees - lend themselves to fork-join
+- irregular sets of connected tasks
+- where diffeent functions are mapped onto different tasks
 
 
-## Distributed Array Pattern
+# General Solutions
 
+- Array based computations
+- Recursive data structures
+
+![alt text](media/image-7.png)
+
+# Tasks
+
+## Distinct
+
+- independently of each other
+- do not rely on each other's results & resources during their execution
+
+## Dependent
+
+- relies on the results of another task
+
+# Processes
+
+- Unit of resource ownership
+- Unit of scheduling
+- POSIX defined
+
+## Definition
+
+- has its own main
+- owns resources (memory, file handles, ...)
+- is assumed to have exclusive access to all computing and hardware resources 100% of the time
+- may be managed by an operating system
+- in a multi-process OS, the OS will schedule the processes accoring to some policy
+- the memory protection unit (HW) will protecte the integrity of the process' memory from other processes
+
+# POSIX Processes
+
+## Portable Operating System Interface (POSIX)
+
+- Behavioural specification
+- defines how processes and threads are created and terminated
+- operating systems may (or may not) suppport POSIX
+
+![alt text](media/image-10.png)
+
+- Process is created through a fork
+- fork clones (total copy) the calling process to child 
+- child inherits copies of resources
+	- child/parent variables are handled seperateely (copy on write)
+- parent and child run independently of each other
+	- os scheduled seperately by the OS
+
+
+# POSIX Threads
+
+- Under POSIX, created within a process
+- Operates in the context of a process
+- Can access all process reosurce including memory
+- Kernel management threads -> kernel knows threads exist and schedules them
+	- default-linux-behaviour
+- user-threads -> threading in user space
+	- kernel does not know of their existence
+	- user-threads library schedules, not OS scheduler, schedules threads
+
+# UE - Units of Execution
+
+- Creation and destruction of threads are costly
+- reuse them as much as possible
