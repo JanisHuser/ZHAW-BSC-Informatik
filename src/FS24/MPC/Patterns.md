@@ -119,6 +119,11 @@ Higher management but for unknown or unpredictable task load
 - where diffeent functions are mapped onto different tasks
 
 
+## Data Decomposition
+
+- TODO
+
+
 # General Solutions
 
 - Array based computations
