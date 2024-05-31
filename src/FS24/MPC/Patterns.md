@@ -118,6 +118,60 @@ Higher management but for unknown or unpredictable task load
 - irregular sets of connected tasks
 - where diffeent functions are mapped onto different tasks
 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+#define NUM_PROCESSES 4
+#define ARRAY_SIZE 1000
+
+int array[ARRAY_SIZE];
+
+void sum_array(int start, int end, int* result) {
+    for (int i = start; i < end; i++) {
+        *result += array[i];
+    }
+}
+
+int main() {
+    // Initialize array with values 1 to ARRAY_SIZE
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        array[i] = i + 1;
+    }
+
+    pid_t pids[NUM_PROCESSES];
+    int partial_sum[NUM_PROCESSES] = {0};
+
+    for (int i = 0; i < NUM_PROCESSES; i++) {
+        pids[i] = fork();
+
+        if (pids[i] < 0) {
+            perror("fork");
+            exit(EXIT_FAILURE);
+        } else if (pids[i] == 0) {
+            int start = i * (ARRAY_SIZE / NUM_PROCESSES);
+            int end = (i + 1) * (ARRAY_SIZE / NUM_PROCESSES);
+            sum_array(start, end, &partial_sum[i]);
+            exit(partial_sum[i]);
+        }
+    }
+
+    int total_sum = 0;
+    for (int i = 0; i < NUM_PROCESSES; i++) {
+        int status;
+        waitpid(pids[i], &status, 0);
+        total_sum += WEXITSTATUS(status);
+    }
+
+    printf("Total sum using fork-join: %d\n", total_sum);
+
+    return 0;
+}
+
+```
+
 ## Geometric Decomposition
 
 - Sequence of operations on a **core** data structure
@@ -306,6 +360,58 @@ Managing interactions between multiple processors running the same program but o
 - user-threads -> threading in user space
 	- kernel does not know of their existence
 	- user-threads library schedules, not OS scheduler, schedules threads
+
+```c
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define NUM_THREADS 4
+#define ARRAY_SIZE 1000
+
+int array[ARRAY_SIZE];
+int partial_sum[NUM_THREADS] = {0};
+pthread_t threads[NUM_THREADS];
+
+void* sum_array(void* arg) {
+    int thread_part = *((int*)arg);
+    int start = thread_part * (ARRAY_SIZE / NUM_THREADS);
+    int end = (thread_part + 1) * (ARRAY_SIZE / NUM_THREADS);
+
+    for (int i = start; i < end; i++) {
+        partial_sum[thread_part] += array[i];
+    }
+
+    pthread_exit(0);
+}
+
+int main() {
+    // Initialize array with values 1 to ARRAY_SIZE
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        array[i] = i + 1;
+    }
+
+    int thread_parts[NUM_THREADS];
+    for (int i = 0; i < NUM_THREADS; i++) {
+        thread_parts[i] = i;
+        pthread_create(&threads[i], NULL, sum_array, &thread_parts[i]);
+    }
+
+    for (int i = 0; i < NUM_THREADS; i++) {
+        pthread_join(threads[i], NULL);
+    }
+
+    int total_sum = 0;
+    for (int i = 0; i < NUM_THREADS; i++) {
+        total_sum += partial_sum[i];
+    }
+
+    printf("Total sum using pthreads: %d\n", total_sum);
+
+    return 0;
+}
+
+```
 
 # UE - Units of Execution
 

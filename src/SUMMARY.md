@@ -8,6 +8,8 @@
 
 - [SWEN2](FS24/SWEN2/Readme.md)
 	- [eXtreme Programming](FS24/SWEN2/XP.md)
+	- [CFD](FS24/SWEN2/CFD.md)
+	- [SEP](FS24/SWEN2/SEP.md)
 - [MPC](FS24/MPC/Readme.md)
 	- [Patterns](FS24/MPC/Patterns.md)
 	- [OpenMP](FS24/MPC/OpenMP.md)
