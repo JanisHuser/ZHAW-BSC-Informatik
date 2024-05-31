@@ -1,5 +1,10 @@
 # OpenMP - Open Multi-Processing
 
+- Operates on top of an OS
+- Supports a shared memory model
+- Opens – per directive - a team of threads to parallelise code sections - Operates according to the Fork-Join pattern
+master thread
+
 ## omp_get_thread_num()
 
 - retreive the unique integer of the currently executing thread within the parallel region
