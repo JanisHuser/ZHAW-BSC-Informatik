@@ -9,6 +9,9 @@
 	- If no -> cache miss -> processor accesses the address in memory and reads a line/block
 		- whilst being read by processor, the line read is also put into the cache memory
 
+
+-> Good for speeding up transfers into the core
+
 ## Paging
 
 - An address space is divided into pages (typically 4k, now -> 2M)
