@@ -132,3 +132,34 @@ typedef struct {
 #define GPIOA   ((reg_gpio_t *) 0x40020000)
 ```
 
+
+
+## Continously read from address
+
+```c
+#define ADDRESS 0x43004000
+volatile uint32_t* const registerAddress = (volatile uint32_t*) ADDRESS;
+uint32_t value;
+
+while(1) {
+    value = *registerAddress;
+
+    // Check if bit 6 is set
+    if (value & (1 << 6)) {
+        break;  // Exit the loop if bit 6 is 1
+    }
+}
+```
+
+
+### Continously write to address
+
+```c
+#define ADDRESS 0x43004000
+volatile uint32_t* const registerAddress = (volatile uint32_t*) ADDRESS;
+uint32_t value = 0x00;
+
+while(1) {
+    *registerAddress = value;
+}
+```
