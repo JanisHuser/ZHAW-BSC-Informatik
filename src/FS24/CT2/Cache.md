@@ -25,5 +25,40 @@
 - **Grösse einer Cache-Zeile in Bytes (nur Nutzdaten)**: 2^o
 - **Grösse des Cache in Bytes (Cache Size, nur Nutzdaten)**: 2^i * 2^o
 
-## Dimensionen
+## Cache Organization
 
+![alt text](media/image-47.png)
+
+![alt text](media/image-43.png)
+
+
+### Fully Associative
+![alt text](media/image-44.png)
+
+### Direct Mapped
+
+![alt text](media/image-45.png)
+
+### N-Way Set Associative
+
+- max index corresponds to number of sets (s=m/n)
+
+![alt text](media/image-46.png)
+
+## Memory Hierarchy
+
+![alt text](media/image-41.png)]
+
+![alt text](media/image-42.png)
+
+## Principle of locality
+
+```c
+for (i=0; i < 10000; i++) {
+	a[i] = b[i];					// spatial locality
+}
+
+if (a[1234] == a[4320]) {			// temporal locality
+	a[1234] = 0;
+}
+```
