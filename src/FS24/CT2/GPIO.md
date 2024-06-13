@@ -130,8 +130,17 @@ typedef struct {
 // Hier sagen wir wo der GPIOA im Memory liegt
 // Indem wir einen Pointer (Zeiger) erstellen, der direkt auf die Adresse zeigt
 #define GPIOA   ((reg_gpio_t *) 0x40020000)
+#define GPIOB   ((reg_gpio_t *) 0x40020400)
+#define GPIOC   ((reg_gpio_t *) 0x40020800)
+#define GPIOD   ((reg_gpio_t *) 0x40020c00)
+#define GPIOE   ((reg_gpio_t *) 0x40021000)
+#define GPIOF   ((reg_gpio_t *) 0x40021400)
+#define GPIOG   ((reg_gpio_t *) 0x40021800)
+#define GPIOH   ((reg_gpio_t *) 0x40021c00)
+#define GPIOI   ((reg_gpio_t *) 0x40022000)
+#define GPIOJ   ((reg_gpio_t *) 0x40022400)
+#define GPIOK   ((reg_gpio_t *) 0x40022800)
 ```
-
 
 
 ## Continously read from address
