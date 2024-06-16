@@ -34,6 +34,7 @@
 	- [CPU-Architectures](FS24/MPC/CPU-Architectures.md)
 	- [GPU-Architectures](FS24/MPC/GPU-Architectures.md)
 	- [MPI](FS24/MPC/MPI.md)
+	- [QA](FS24/MPC/qa.md)
 - [BSY](FS24/BSY/Readme.md)
 	- [OS](FS24/BSY/os.md)
 - [CT2](FS24/CT2/Readme.md)
