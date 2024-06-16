@@ -170,3 +170,20 @@ int main() {
     }
 }
 ```
+
+## Do not Wait
+
+- nowait
+```c
+a();
+#pragma omp parallel
+{
+    b();
+    #pragma omp for nowait
+    for (int i = 0; i < 10; ++i) {
+        c(i);
+    }
+    d();
+}
+z();
+```
