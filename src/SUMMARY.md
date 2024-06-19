@@ -25,6 +25,7 @@
 		- [Software Architektur](FS24/SWEN2/SEP/Software%20Architektur.md)
 		- [Cynefin Framework / Codefin](FS24/SWEN2/SEP/Cynefin%20Framework%20-%20Codefin.md)
 		- [Kanban / Lean Software Development](FS24/SWEN2/SEP/Kanban%20-%20Lean%20Software%20Development.md)
+		- [Tidy First](FS24/SWEN2/SEP/Tidy_First.md)
 - [MPC](FS24/MPC/Readme.md)
 	- [Patterns](FS24/MPC/Patterns.md)
 	- [OpenMP](FS24/MPC/OpenMP.md)
