@@ -8,3 +8,5 @@ book
 __pycache__
 
 /HS22/HM1/SEP/**
+
+!/src/FS24/CT2/reference_manual.pdf
