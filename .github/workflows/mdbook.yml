@@ -28,7 +28,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     env:
       MDBOOK_VERSION: 0.4.21
     steps:
