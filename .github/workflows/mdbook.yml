@@ -42,20 +42,10 @@ jobs:
           cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install mdbook-katex
           cargo install --git https://github.com/JanisHuser/mdbook-pyscript
+      - name: Build mdbook
+        run: |
           mdbook build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./book
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: self-hosted
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2

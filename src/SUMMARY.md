@@ -4,6 +4,10 @@
 - [Helpers](Helpers/Readme.md)
 	- [Hex / Binary Helper](Helpers/HexHelper.md)
 
+# FS25
+- [MC2](FS25/MC2/Readme.md)
+	- [Embedded Linux](FS25/MC2/EmbeddedLinux.md)
+
 # FS24
 
 - [SWEN2](FS24/SWEN2/Readme.md)
