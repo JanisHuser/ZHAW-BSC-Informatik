@@ -7,7 +7,8 @@ name: Deploy mdBook site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", "fs24"]
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,15 +28,12 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu
     env:
       MDBOOK_VERSION: 0.4.21
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
       - name: Install mdBook
         run: |
           curl https://sh.rustup.rs -sSf | sh -s -- -y
