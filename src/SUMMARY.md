@@ -7,6 +7,8 @@
 # FS25
 - [MC2](FS25/MC2/Readme.md)
 	- [Embedded Linux](FS25/MC2/EmbeddedLinux.md)
+	- [GPIO](FS25/MC2/GPIO.md)
+	- [Device Tree](FS25/MC2/DeviceTree.md)
 
 # FS24
 

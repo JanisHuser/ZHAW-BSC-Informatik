@@ -46,3 +46,16 @@ BBLAYERS ?= " \
 | := | immediately expand the value |
 | ?= | assign if no other value was previously assigned |
 | ??= | same as previous, with a lower precedence |
+
+
+## Linking
+
+### Static linking
+
+- Linker holt aus der library alle Dateien, die benötigt werden
+- Library ist nicht notwendig
+- Kann nicht kopiert werden
+
+### Dynamic linking
+
+- dll unter windnows, .so unter linux
