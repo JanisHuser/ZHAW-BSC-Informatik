@@ -52,7 +52,7 @@
 | 32 bit | legacy |
 | 35 bit | arm |
 
-```python,editable
+```python
 def hex_to_bits(hex_num):
     # Convert the hex number to an integer
     decimal_num = int(hex_num, 16)
