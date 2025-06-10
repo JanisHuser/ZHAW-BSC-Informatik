@@ -9,6 +9,16 @@
 	- [Embedded Linux](FS25/MC2/EmbeddedLinux.md)
 	- [GPIO](FS25/MC2/GPIO.md)
 	- [Device Tree](FS25/MC2/DeviceTree.md)
+	- [Vorlesungen]()
+		- [Einführung](FS25/MC2/vorlesungen/01-einfuehrung.md)
+		- [Embedded Linux](FS25/MC2/vorlesungen/02-embedded-linux.md)
+		- [Linux GPIO](FS25/MC2/vorlesungen/03-linux-gpio.md)
+		- [Linux Kernel](FS25/MC2/vorlesungen/04-linux-kernel.md)
+		- [ARM-Architektur](FS25/MC2/vorlesungen/05-arm-architektur.md)
+		- [Scheduling](FS25/MC2/vorlesungen/06-scheduling.md)
+		- [Lizenzen](FS25/MC2/vorlesungen/07-lizenzen.md)
+		- [Open CV](FS25/MC2/vorlesungen/09-open-cv.md)
+		- [Machine Learning](FS25/MC2/vorlesungen/10-machine-learning.md)
 
 # FS24
 
