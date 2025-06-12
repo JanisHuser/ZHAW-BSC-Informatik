@@ -9,6 +9,8 @@
 	- [Embedded Linux](FS25/MC2/EmbeddedLinux.md)
 	- [GPIO](FS25/MC2/GPIO.md)
 	- [Device Tree](FS25/MC2/DeviceTree.md)
+	- [Kernel Module](FS25/MC2/Kernel%20Module.md)
+	- [Linux Licenses](FS25/MC2/Linux%20Linceses.md)
 	- [Vorlesungen]()
 		- [Einführung](FS25/MC2/vorlesungen/01-einfuehrung.md)
 		- [Embedded Linux](FS25/MC2/vorlesungen/02-embedded-linux.md)
