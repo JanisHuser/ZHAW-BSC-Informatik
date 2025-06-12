@@ -338,3 +338,124 @@ static int sevenseg_remove(struct platform_device* pdev) {
 }
 ```
 
+![alt text](media/structure%20sevenseg-%20Kernel%20Module.png)
+
+## Interrupts
+
+Device Tree Interrupt Definition:
+```
+Interupt Controler:											Interupt Handling Device
+								<------Device Tree------>
+HW that "initiates" interrupt								Hardware that "reacts" to interupt → i.e. where ISR is implemented
+```
+
+![alt text](media/gic%20-%20Kernel%20Module.png)
+
+Definition in Device Tree:
+
+![alt text](media/ic%20device%20tree-%20Kernel%20Module.png)
+![alt text](media/ic%20device%20tree2%20-%20Kernel%20Module.png)
+
+Code Example
+```c
+static irqreturn_t irq_handler(int this_irq, void* data) {
+	... // interrupt logic here
+    // clear Interrupt
+    iowrite32(0x1 << keys[1], pdata->base_addr + GPEDSX_OFFSET(keys[1]));
+    iowrite32(0x1 << keys[0], pdata->base_addr + GPEDSX_OFFSET(keys[0]));
+											 //  ^ GPIO Pin Event Detect Status Register
+    return IRQ_HANDLED;
+}
+
+static int sevenseg_probe(struct platform_device* pdev) {
+	...
+
+    pdata->irq = irq_of_parse_and_map(pdata->dev->of_node, 0);       // <------ Parse Device Tree for Interrupt
+    if(pdata->irq != 0) {
+        if(devm_request_irq(pdata->dev, pdata->irq, irq_handler,
+                            IRQF_TRIGGER_NONE, "sevenseg", pdata)) { // <------ Register Interrupt Handler
+            pr_err("Error: Could not request IRQ\n");
+            return -ENODEV;
+        }
+    }
+
+	...
+
+    return 0;
+}
+
+```
+
+Interrupt Handler using GIC
+```c
+static void set_trigger_gpio(struct sevenseg_platform_data *pdata,
+							int gpio, int mode) {
+	switch(mode) {
+		case GPIO_EDGE_FALLING:
+			offset = GPFENX_OFFSET(gpio);
+		break;
+
+	}
+	...
+	rdval  = ioread32(pdata->base_addr + offset);
+	rdval |= (0x1 << gpio);
+	iowrite32(rdval, pdata->base_addr + offset);
+}
+
+static int sevenseg_probe(struct platform_device *pdev) {
+	....
+	// Initialize GPIO and set trigger
+	init_gpio(pdata, keys[1], GPIO_IN);
+	set_trigger_gpio(pdata, keys[1], GPIO_EDGE_FALLING);
+	
+	return 0;
+}
+```
+## Threads
+
+```c
+kthread_run(threadfn, data, namefmt);
+```
+Create a new thread and run it
+- Threadfn: Function name to run
+- Data: Pointer to function arguments, given when started
+- Namefmt: The name of the thread (visible in ps)
+- Returns a task_struct
+
+```c
+kthread_should_stop();						// Check, if thread needs to stop
+kthread_stop(struct task_struct *thread);   // stops thread
+```
+
+Example from out `sevenseg` implementation:
+```c
+static int thread_fn(void* data) {
+    struct sevenseg_platform_data* pdata = (struct sevenseg_platform_data*)data;
+    int i = 0;
+
+    pr_info("Info: Thread entered\n");
+    while(!kthread_should_stop()) {
+        if(pdata->mode == COUNTING) {
+            pdata->counter = pdata->counter == 0 ? 99 : --pdata->counter;
+        }
+
+        sevenseg_write(pdata, pdata->counter);
+        msleep(500);
+    }
+    return 0;
+}
+
+static int sevenseg_probe(struct platform_device *pdev) {
+	....
+	pdata->kthread_sevenseg = kthread_run(thread_fn, pdata, "kthread_7seg");
+	
+	return 0;
+}
+
+static int sevenseg_remove(struct platform_device* pdev) {
+	....
+    kthread_stop(pdata->kthread_sevenseg);
+
+    return 0;
+}
+```
