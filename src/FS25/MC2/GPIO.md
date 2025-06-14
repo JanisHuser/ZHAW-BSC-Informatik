@@ -20,6 +20,14 @@ Can be found in the PDF on section 5.2 (Register View)
 
 ![alt text](media/image.png)
 
+
+Kommandozeilen Befehl um die GPIOChip Nummern für Zugriff über pseudo Filesystem 
+
+```bash
+ls gpiochip*/device/driver
+```
+
+
 ## Pseudo Filesystem
 
 GPIO can be accessed using the pseudo file system mapped at "/sys/class/gpio"
@@ -54,7 +62,7 @@ echo "direction" >> /sys/class/gpio/gpioXX/direction
 | HIGH | 1 |
 | LOW | 0 |
 
-#### Set Value
+#### Set Value
 
 ```shell
 echo "1" >> /sys/class/gpio/gpioXX/value
@@ -68,7 +76,7 @@ cat /sys/class/gpio/gpioXX/value
 ```
 
 
-### C-Code
+### C-Code
 
 #### Export GPIO 
 ```c

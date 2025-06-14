@@ -13,7 +13,7 @@
 
 ## Mechanism
 
-1. Device Tree is parsd
+1. Device Tree is parsed
 2. Compatible Driver in Kernel is searched and started
 3. Driver gets additional properties from Device Tree
 
@@ -44,6 +44,9 @@
 };
 ```
 
+![alt text](media/example%20-%20Dev%20Tree.png)
+
+![alt text](media/translation%20example%20-%20Dev%20Tree.png)
 
 ## Is ARM or Legacy?
 
