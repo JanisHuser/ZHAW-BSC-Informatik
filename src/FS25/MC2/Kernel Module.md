@@ -51,12 +51,12 @@ Minimal viable LKM:
 
 // init function
 static int __init my_module_init(void) {
-	...
+    ...
 }
 
 // exit function
 static void __exit my_module_exit(void) {
-	...
+    ...
 }
 
 /*
@@ -85,7 +85,7 @@ Avoid Kernel namespace pollution: always use `static` for global vars. to give i
 - Registersthe device to the Kernel in the `__init` method
 - Similarly unregisters the device in the `__exit` method
 
-### Prob:  
+### Probe:  
 Input: a structure describing the device:
 ```C
 int driver_probe(struct platform_driver *pdev)
@@ -115,31 +115,31 @@ Put everything together with LKM:
 
 // Example struct device desc.
 struct platform_driver {
-	int (*probe) (structplatform_device *);
-	int (*remove) (structplatform_device *);
-	void (*shutdown) (structplatform_device *);
-	int( *suspend) (structplatform_device *, pm_message_tstate);
-	int (*resume) (structplatform_device *);
-	struct device_driverdriver;
-	const struct platform_device_id *id_table;
+    int (*probe) (structplatform_device *);
+    int (*remove) (structplatform_device *);
+    void (*shutdown) (structplatform_device *);
+    int( *suspend) (structplatform_device *, pm_message_tstate);
+    int (*resume) (structplatform_device *);
+    struct device_driverdriver;
+    const struct platform_device_id *id_table;
 };
 
 // Initialization Platform Driver Definition
 static struct platform_driver sevenseg_driver = {
     .driver = {.name = "sevenseg",
                .owner = THIS_MODULE,
-			   .of_match_table = sevenseg_device_tree_ids, // see point "3. Platform Driver with Device Tree"
-	},
+               .of_match_table = sevenseg_device_tree_ids, // see point "3. Platform Driver with Device Tree"
+    },
     .probe = sevenseg_probe,     // Declare probe function
     .remove = sevenseg_remove    // Declare remove function
 };
 
 static int sevenseg_probe(struct platform_device *pdev) {
-	...
+    ...
 }
 
 static int sevenseg_remove(struct platform_device *pdev) {
-	...
+    ...
 }
 
 // registration
@@ -160,7 +160,7 @@ Platform Driver has to be linked somehow to the correct device node in the Devic
 In Device Tree:
 ```c
 sevenseg {
-	compatible = "sevenseg"; //<---- searched string
+    compatible = "sevenseg"; //<---- searched string
 }
 ```
 
@@ -178,8 +178,8 @@ MODULE_DEVICE_TABLE(of, sevenseg_device_tree_ids);
 static struct platform_driver sevenseg_driver = {
     .driver = {.name = "sevenseg",
                .owner = THIS_MODULE,
-			   .of_match_table = sevenseg_device_tree_ids, // <----- look here
-	},
+               .of_match_table = sevenseg_device_tree_ids, // <----- look here
+    },
     .probe = sevenseg_probe,     // Declare probe function
     .remove = sevenseg_remove    // Declare remove function
 };
@@ -209,11 +209,11 @@ typedef struct sevenseg_platform_data {
 ...
 
 static int sevenseg_probe(struct platform_device *pdev) {
-	struct sevenseg_platform_data* pdata;
-	...
-	pdata = devm_kzalloc(&pdev->dev, sizeof(pdata), GFP_KERNEL); // allocate memory
-	platform_set_drvdata(pdev, pdata); // register bzw. set struct as "driver data"
-	...
+    struct sevenseg_platform_data* pdata;
+    ...
+    pdata = devm_kzalloc(&pdev->dev, sizeof(pdata), GFP_KERNEL); // allocate memory
+    platform_set_drvdata(pdev, pdata); // register bzw. set struct as "driver data"
+    ...
 }
 ```
 
@@ -224,7 +224,7 @@ How to get resource and virtual address from Device Tree, implement in `prob` fu
 static int sevenseg_probe(struct platform_device* pdev) {
     struct sevenseg_platform_data* pdata;
     struct resource* res;
-	...
+    ...
     res = platform_get_resource(pdev, IORESOURCE_MEM, 0); // <-------- get resource from Device Tree
     if(res == NULL) {
         pr_err("platform_get_resource() failed! \n");
@@ -255,13 +255,13 @@ Example usage in device setup:
 static int sevenseg_probe(struct platform_device* pdev) {
     struct sevenseg_platform_data* pdata;
     struct resource* res;
-	...
+    ...
     // Configure different GPIOs
     // Setup keys as GPIO_IN
     init_gpio(pdata, keys[1], GPIO_IN);              	 // <----- uses iowrite32 & ioread32
     set_trigger_gpio(pdata, keys[1], GPIO_EDGE_FALLING); // <----- uses iowrite32 & ioread32
     
-	init_gpio(pdata, keys[0], GPIO_IN);              	 // <----- uses iowrite32 & ioread32
+    init_gpio(pdata, keys[0], GPIO_IN);              	 // <----- uses iowrite32 & ioread32
     set_trigger_gpio(pdata, keys[0], GPIO_EDGE_FALLING); // <----- uses iowrite32 & ioread32
 
     // Setup the two sevenseg's to GPIO_OUT
@@ -296,7 +296,7 @@ static ssize_t counter_store(struct device* dev,
                              struct device_attribute* attr,
                              const char* buf,
                              size_t count) {
-	...
+    ...
 }
 
 // user reads from file "counter"
@@ -316,7 +316,7 @@ Location of „File“: `/sys/bus/platform/drivers/sevenseg/fe200000.sevenseg/co
 static int sevenseg_probe(struct platform_device* pdev) {
     struct sevenseg_platform_data* pdata;
     struct resource* res;
-	...
+    ...
     // Create File "counter"
     ret = device_create_file(&pdev->dev, &dev_attr_counter);    //<----- create
     if(ret != 0) {
@@ -345,7 +345,7 @@ static int sevenseg_remove(struct platform_device* pdev) {
 Device Tree Interrupt Definition:
 ```
 Interupt Controler:											Interupt Handling Device
-								<------Device Tree------>
+                                <------Device Tree------>
 HW that "initiates" interrupt								Hardware that "reacts" to interupt → i.e. where ISR is implemented
 ```
 
@@ -359,16 +359,16 @@ Definition in Device Tree:
 Code Example
 ```c
 static irqreturn_t irq_handler(int this_irq, void* data) {
-	... // interrupt logic here
+    ... // interrupt logic here
     // clear Interrupt
     iowrite32(0x1 << keys[1], pdata->base_addr + GPEDSX_OFFSET(keys[1]));
     iowrite32(0x1 << keys[0], pdata->base_addr + GPEDSX_OFFSET(keys[0]));
-											 //  ^ GPIO Pin Event Detect Status Register
+                                             //  ^ GPIO Pin Event Detect Status Register
     return IRQ_HANDLED;
 }
 
 static int sevenseg_probe(struct platform_device* pdev) {
-	...
+    ...
 
     pdata->irq = irq_of_parse_and_map(pdata->dev->of_node, 0);       // <------ Parse Device Tree for Interrupt
     if(pdata->irq != 0) {
@@ -379,7 +379,7 @@ static int sevenseg_probe(struct platform_device* pdev) {
         }
     }
 
-	...
+    ...
 
     return 0;
 }
@@ -389,26 +389,26 @@ static int sevenseg_probe(struct platform_device* pdev) {
 Interrupt Handler using GIC
 ```c
 static void set_trigger_gpio(struct sevenseg_platform_data *pdata,
-							int gpio, int mode) {
-	switch(mode) {
-		case GPIO_EDGE_FALLING:
-			offset = GPFENX_OFFSET(gpio);
-		break;
+                            int gpio, int mode) {
+    switch(mode) {
+        case GPIO_EDGE_FALLING:
+            offset = GPFENX_OFFSET(gpio);
+        break;
 
-	}
-	...
-	rdval  = ioread32(pdata->base_addr + offset);
-	rdval |= (0x1 << gpio);
-	iowrite32(rdval, pdata->base_addr + offset);
+    }
+    ...
+    rdval  = ioread32(pdata->base_addr + offset);
+    rdval |= (0x1 << gpio);
+    iowrite32(rdval, pdata->base_addr + offset);
 }
 
 static int sevenseg_probe(struct platform_device *pdev) {
-	....
-	// Initialize GPIO and set trigger
-	init_gpio(pdata, keys[1], GPIO_IN);
-	set_trigger_gpio(pdata, keys[1], GPIO_EDGE_FALLING);
-	
-	return 0;
+    ....
+    // Initialize GPIO and set trigger
+    init_gpio(pdata, keys[1], GPIO_IN);
+    set_trigger_gpio(pdata, keys[1], GPIO_EDGE_FALLING);
+    
+    return 0;
 }
 ```
 ## Threads
@@ -446,14 +446,14 @@ static int thread_fn(void* data) {
 }
 
 static int sevenseg_probe(struct platform_device *pdev) {
-	....
-	pdata->kthread_sevenseg = kthread_run(thread_fn, pdata, "kthread_7seg");
-	
-	return 0;
+    ....
+    pdata->kthread_sevenseg = kthread_run(thread_fn, pdata, "kthread_7seg");
+    
+    return 0;
 }
 
 static int sevenseg_remove(struct platform_device* pdev) {
-	....
+    ....
     kthread_stop(pdata->kthread_sevenseg);
 
     return 0;
