@@ -3,7 +3,7 @@
 
 
 
-## Calculate Number of Page Entries
+## Calculate Number of Page Entries, VPN, VPO, PPN, PPO
 
 ```python
 import math
@@ -26,8 +26,10 @@ def n_page_entries(vir_addr_space, page_size, phy_memory_size):
 
 # Example usage
 vir_addr_space = 16  # in bits 
-page_size = 4000     # in bits
+page_size = 4000     # in byte
 
+# phy_memory_size != n_phy_addr_lines 
+# if n_phy_addr_lines is given -> phy_memory_size = (2^n_phy_addr_lines)   
 phy_memory_size = 16e3 # in bytes 
 
 n_pages, vpn_size, vpo_size, n_phy_addr_lines, ppn_size, ppo_size \
