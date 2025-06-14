@@ -91,4 +91,4 @@ In addition, the MIT license also explicitly allows:
 
 ## Comparison of open licenses
 
-https://choosealicense.com/licenses/
+[https://choosealicense.com/licenses/](https://choosealicense.com/licenses/)

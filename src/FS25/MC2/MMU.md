@@ -6,6 +6,8 @@
 ## Calculate Number of Page Entries
 
 ```python
+import math
+
 def n_page_entries(vir_addr_space, page_size):
     # Determine virtual page offset (VPO) size 
     vpo_size = round(math.log(page_size, 2))
