@@ -181,3 +181,73 @@ static void mmap_gpio_set(int gpio, int value)
 	
 }
 ```
+
+## I2C
+
+Read / Write Cycle
+
+![alt text](media/image-4.png)
+
+
+## Writing / REading Data
+
+![alt text](media/image-5.png)
+
+- For more details checkout [CT2 I2C](https://janishuser.github.io/ZHAW-BSC-Informatik/FS24/CT2/UART_I2C.html?highlight=i2c#i2c)
+
+
+- Only one driver can open the bus
+
+
+```c
+#include <linux/i2c-dev.h>
+#include <sys/ioctl.h>
+
+int fd;
+char *filename = "/dev/i2c-1";
+
+if ((fd = open(filename, O_RDWR)) < 0) {
+	/* ERROR HANDLING: you can check errno to see what went wrong */
+	perror("Failed to open the i2c bus");
+	exit(1);
+}
+
+```
+
+```c
+// Sets up the I2C controller with I2C-bus mode and I2C slave address
+int addr = 0x20;
+if ( ioctl(fd, I2C_SLAVE, addr ) < 0) {
+	printf("Failed to acquire I2C bus access and/or talk to slave.\n");
+	exit(1);
+}
+```
+
+```c
+// WRITE
+uint8_t wr_buf[2];
+wr_buf[0] = register_address;
+wr_buf[1] = register_data;
+if ( write(fd, wr_buf, 2) != 2 ) {
+	printf("Failed to write to the i2c bus.\n");
+}
+```
+
+
+```c
+//READ
+uint8_t data = 0;
+uint8_t wr_buf[1];
+uint8_t rd_buf[1];
+
+wr_buf[0] = register_addr;
+if ( write(fd, wr_buf, 1) != 1 ) {
+	printf("Failed to write to the i2c bus.\n");
+}
+
+if ( read(fd, rd_buf, 1) != 1 ) {
+	printf("Failed to read from the i2c bus.\n");
+} else {
+	data = rd_buf[0];
+}
+```
