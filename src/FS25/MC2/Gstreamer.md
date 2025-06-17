@@ -1,5 +1,4 @@
-# Gstreamer
-
+# Gstreamer 
 
 Gstreamer uses a Bin / Pipeline architecture, where data from a source is pushed into a sink
 
@@ -148,7 +147,7 @@ int main(int argc, char* argv[]) {
 ```
 
 
-## Advanced Linux Sound Architecture (ASLA)
+## Advanced Linux Sound Architecture (ASLA)
 
 - Automatic configuration of sound hardware and easy handling of multiple sound devices in one system
 - Released under GPL and LGPL
@@ -158,8 +157,7 @@ int main(int argc, char* argv[]) {
 
 ![alt text](media/image-25.png)
 
-## Video for Linux
-
+## Video for Linux
 ```shell
 v4l2-ctl --list-devices
 ```

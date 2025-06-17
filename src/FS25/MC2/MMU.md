@@ -1,6 +1,44 @@
 # MMU
 
+![alt text](media/principle%20-%20mmu.png)
 
+
+![alt text](media/principle%202%20-%20mmu.png)
+
+## Expanding Address Space (Historical)
+
+![alt text](media/overlay%20tech%20-%20mmu.png)
+
+![alt text](media/bank%20switching%20-%20mmu.png)
+
+![alt text](media/bank%20switching%202%20-%20mmu.png)
+
+## "Expanding" Physical memory
+
+### MEMORY MANAGEMENT USING SEGMENTATION
+
+See presentation pages 19-22.
+
+### MEMORY MANAGEMENT BY PAGING
+
+![alt text](media/principle%20paging%20-%20mmu.png)
+
+![alt text](media/principle%20addr.%20translation%20-%20mmu.png)
+
+For more detail on Paging see slides pages 27ff.
+
+Loading the pages using the DMA - See page 50.
+
+## Segmenting vs. Paging
+
+|               | Paging | Segmentation |
+|---------------|-------------|-------------|
+| Advantages    | <ul><li>No Adder needed</li><li>Equal Page Size, easy Swapping</li><li>Transparent to programmer</li><li>Easy Memory management algorithm</li></ul> | <ul><li>Segment table use lesser memory than page table</li><li>Flexible segment size saved memory</li></ul> |
+| Disadvantages | <ul><li>Longer Memory look up times</li><li>Page tables consume additional memory</li><li>Transparent to programmer</li><li>Because of fixed Page size not full memory</li></ul> | <ul><li>Unequal page size disadvantage for swapping</li><li>Demands Programmer intervention</li><li>Costly management algorithm</li><li>Adder/Comparator uses chip size</li></ul> |
+
+## Cache and Translation Look Aside Buffer
+
+See presentation pages 60-66.
 
 
 ## Calculate Number of Page Entries, VPN, VPO, PPN, PPO
