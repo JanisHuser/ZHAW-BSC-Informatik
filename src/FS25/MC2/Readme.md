@@ -9,7 +9,7 @@
 | TTY | Teletype | |
 | NFS | Network File System |
 
-# Toolchain
+# Toolchain
 
 ![alt text](media/image-2.png)
 
@@ -83,7 +83,7 @@
 
 ![alt text](media/image-9.png)
 
-#### Kernel Mode (Priviledged Mode)
+#### Kernel Mode (Priviledged Mode)
 
 - Complete and unrestricted access to underlyng hardware
 - Can execute any CPU instruction and access any memory address
