@@ -34,11 +34,17 @@
 ![alt text](media/image-3.png)
 
 
+# Linux Root Filesystem
+
+![alt text](media/linux%20file%20sys%20struct.png)
+
 # Kernel Architectures
 
 - Monolythic Kernels are easier to program and debug
 
 ![alt text](media/image-6.png)
+
+![alt text](media/linux%20arch.png)
 
 ## Monolitic Kernel
 

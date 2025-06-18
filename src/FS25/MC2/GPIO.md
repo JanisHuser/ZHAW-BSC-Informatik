@@ -189,7 +189,7 @@ Read / Write Cycle
 ![alt text](media/image-4.png)
 
 
-## Writing / REading Data
+## Writing / Reading Data
 
 ![alt text](media/image-5.png)
 

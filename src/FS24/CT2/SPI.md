@@ -38,7 +38,7 @@ Die Implementierung wird dabei mit Hilfe einse Schieberegisters implementiert. D
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/SPI_basic_operation%2C_single_Main_%26_Sub.svg/1920px-SPI_basic_operation%2C_single_Main_%26_Sub.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/SPI_basic_operation%2C_single_Main_%26_Sub.svg/1920px-SPI_basic_operation%2C_single_Main_%26_Sub.svg.png)
 
 
-## Timing Diagramm
+## Timing Diagramm
 
 Das Timing Diagram sieht zwar Komplex aus, ist es aber eigentlich gar nicht.
 
@@ -62,13 +62,13 @@ Das Timing Diagram sieht zwar Komplex aus, ist es aber eigentlich gar nicht.
 ![alt text](media/image-9.png)
 
 
-## Synchronisierung
+## Synchronisierung
 
 ### TX
 
 Sobald das Signal (TXE / TX Buffer Empty) HIGH ist, kann das nächste TX Byte auf das Register SPI_DR geschrieben werden
 
-### RXNE
+### RXNE
 
 Ist dann aktiv, wenn Daten auf SPI_DR sind. Also können wir dann Daten von diesem Register lesen gehen.
 

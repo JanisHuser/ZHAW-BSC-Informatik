@@ -1,4 +1,4 @@
-# Timer / Counter
+# Timer / Counter
 
 Ein Timer, auch Eieruhr genannt, hat den Zweck, zu sich wiederholenden Zeiten ein Signal oder einen Interrupt auszuführen.
 
@@ -30,7 +30,7 @@ while (1) {
 
 Es gibt zwei Arten von Zählern:
 
-### Up-Counter
+### Up-Counter
 
 - Zählt nach oben, beginnt bei 0, endet bei ARR
 - Generiert einen Overflow, also wenn der Wert über ARR kommt
@@ -93,7 +93,7 @@ Und für den ARR
 
 ![alt text](media/image-30.png)
 
-# PWM - Pulse Width Modulation
+# PWM - Pulse Width Modulation
 
 Mit PWM wird mit gan schnellem ein-und ausschalten ein Sinussignal nachgemacht.
 

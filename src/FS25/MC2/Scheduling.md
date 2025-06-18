@@ -45,7 +45,7 @@ Like processes, threads are an independent sequence of commands that execute a s
 ![alt text](media/image-13.png)
 
 
-## Task Scheduling
+## Task Scheduling
 
 - Tasks mostly have variable timeslots and different priorities
 - Which task runss next and how long is a decision of the task **scheduler**
@@ -110,7 +110,7 @@ Like processes, threads are an independent sequence of commands that execute a s
 - Ready queues of different priority
 - Higher priority task can be preempting
 
-## Round Robin (RR)
+## Round Robin (RR)
 
 - Each task has a fixed time slice (sched_rr_timeslice_ms)
 - Task runs for a configured timeslice or until it is blocked
@@ -133,15 +133,15 @@ Like processes, threads are an independent sequence of commands that execute a s
 ![alt text](media/image-22.png)
 
 
-## Condition Variables
+## Condition Variables
 ![alt text](media/image-23.png)
 
 
-## Semaphores
+## Semaphores
 
 ![alt text](media/image-24.png)
 
-### Semaphore Functions
+### Semaphore Functions
 
 | Funktion | Beschreibung |
 |----------|--------------|

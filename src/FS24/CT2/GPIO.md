@@ -95,7 +95,7 @@ Ist Internal Signal
 | 11 | Very high speed | 100 MHz |
 
 
-## Code
+## Code
 
 Wie kann denn nun ein GPIO Pin konfiguriert werden. Wir können selten einen einzelnen GPIO über ein eigenes Register steuern. Wir müssen diesen über einen Port steuern. Denn ein Port ist der Zugang zum einzelnen GPIO Pin.
 
