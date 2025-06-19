@@ -2,11 +2,11 @@
 
 ## GNU General Public License
 
-General “Four Freedoms”:
-0. The freedom to runthe program, for any purpose.
-1. The freedom to studyhow the program works, and modifyit so it does your computing as you wish.
-2. The freedom to redistributecopies so you can help your others.
-3. The freedom to distribute copies of your modifiedversions to others.
+General “Four Freedoms”:  
+0. The freedom to run the program, for any purpose.  
+1. The freedom to study how the program works, and modify it so it does your computing as you wish.
+2. The freedom to redistribute copies so you can help your others.
+3. The freedom to distribute copies of your modified versions to others.
 
 Condition
 - The source code needs to be available!
