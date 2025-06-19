@@ -49,13 +49,13 @@ Bitbake reads the recipe files and executes tasks defined in the recipe files an
 
 # Kernel Architectures
 
-- Monolythic Kernels are easier to program and debug
+- Monolithic Kernels are easier to program and debug
 
 ![alt text](media/image-6.png)
 
 ![alt text](media/linux%20arch.png)
 
-## Monolitic Kernel
+## Monolithic Kernel
 
 ![alt text](media/image-7.png)
 
@@ -98,9 +98,9 @@ Bitbake reads the recipe files and executes tasks defined in the recipe files an
 
 ![alt text](media/image-9.png)
 
-#### Kernel Mode (Priviledged Mode)
+#### Kernel Mode (Privileged Mode)
 
-- Complete and unrestricted access to underlyng hardware
+- Complete and unrestricted access to underlying hardware
 - Can execute any CPU instruction and access any memory address
 - Kernel mode is reserved for the lowest-level most trusted functions of the operating system
 - crashes in kernel mode also crash the system
@@ -108,7 +108,7 @@ Bitbake reads the recipe files and executes tasks defined in the recipe files an
 
 ### User Mode
 - No ability to directly access hardware or reference memory
-- access to hardware or memory delgated through system calls
+- access to hardware or memory delegated through system calls
 - crashes in user mode are recoverable
 - most of the code should be executed in user mode
 
