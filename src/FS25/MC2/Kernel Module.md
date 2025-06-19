@@ -245,7 +245,7 @@ static int sevenseg_probe(struct platform_device* pdev) {
 }
 ```
 
-Write to Peripheral: `void iowrite{$X$}(u{$X$} value, void* addr);`
+Write to Peripheral: `void iowrite{$X$}(u{$X$} value, void* addr);`  
 Read from Peripheral: `void ioread{$X$}(void* addr);`
 
 With `{$X$}` = `8` or `16` or `32`
