@@ -33,6 +33,15 @@
 
 ![alt text](media/image-3.png)
 
+## Recipes
+
+A Bitbake recipe is a set of instructions that the Bitbake build engine takes as input to generate packages. The .bb extension is used for recipe files in the Yocto Project. Inside the Poky directory, many meta-layers contain recipe files, each associated with a particular software package.
+
+Yocto recipe provides the following information to Bitbake.
+
+![alt text](media/recipe-image.jpg)
+
+Bitbake reads the recipe files and executes tasks defined in the recipe files and classes (.bbclass files) to generate the package.
 
 # Linux Root Filesystem
 
