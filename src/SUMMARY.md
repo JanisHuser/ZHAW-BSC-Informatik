@@ -42,6 +42,20 @@
 		- [Taylorreihen](FS1/AN2/Reihen/Taylorreihen.md)
 	- [Zusammenfassung](FS1/AN2/Zusammenfassung.md)
 
+- [DB](DB/Readme.md)
+	- [DDL](DB/DDL_DML/DDL.md)
+	- [DML](DB/DDL_DML/DML.md)
+	- [SQL]()
+		- [Aggregatsfunktionen](DB/SQL/Aggregatfunktionen.md)
+		- [Datentpen](DB/SQL/datentypen.md)
+		- [DDL](DB/SQL/ddl.md)
+		- [EBNF](DB/SQL/ebnf.md)
+		- [Probleme](DB/SQL/Probleme.md)
+		- [Views](DB/SQL/View.md)
+		- [Common Table Expresions](DB/SQLQueries/CTEs.md)
+	- [PgSQL](DB/pgSQL.md)
+	- [Konsitenzbedingungen](DB/Konsistenzbedingungen.md)
+
 - [CT1](HS23/CT1/Readme.md)
 	- [Cortex Architektur](HS23/CT1/Cortext.md)
 	- [IO]()
@@ -69,6 +83,17 @@
 	- [Boot](FS24/BSY/boot.md)
 	- [scheduling](FS24/BSY/scheduling.md)
 	- [SEP](FS24/BSY/SEP.md)
+
+- [GED](GED/Readme.md)
+	- [Physikalische Kräfte](GED/Grundbegriffe/PhysikalischeKraefte.md)
+	- [Würfe](GED/Grundbegriffe/Wuerfe.md)
+	- [Ladungen](GED/Ladungen.md)
+	- [Wechselspannung](GED/Elektrotechnik/Wechselspannung.md)
+	- [Transformator](GED/Elektrotechnik/Elektrotechnik.md)
+	- [Elektrische Spannung](GED/Elektrodynamik/ElektrischeSpannung.md)
+	- [Fluss](GED/Elektrodynamik/Fluss.md)
+	- [Linienintegral](GED/Elektrodynamik/Linienintegral.md)
+
 
 - [ITR](HS23/ITR/Readme.md)
 	- [Impressum](HS23/ITR/Impressum.md)
